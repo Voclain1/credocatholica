@@ -9,7 +9,120 @@
 * 🟢 You can import this file directly.
 */
 
+export const CelebrationRank = {
+  SOLEMNITY: 'SOLEMNITY',
+  FEAST: 'FEAST',
+  MEMORIAL: 'MEMORIAL',
+  OPTIONAL_MEMORIAL: 'OPTIONAL_MEMORIAL'
+} as const
+
+export type CelebrationRank = (typeof CelebrationRank)[keyof typeof CelebrationRank]
 
 
-// This file is empty because there are no enums in the schema.
-export {}
+export const LiturgicalColor = {
+  GREEN: 'GREEN',
+  VIOLET: 'VIOLET',
+  WHITE: 'WHITE',
+  RED: 'RED',
+  ROSE: 'ROSE',
+  BLACK: 'BLACK'
+} as const
+
+export type LiturgicalColor = (typeof LiturgicalColor)[keyof typeof LiturgicalColor]
+
+
+export const ReadingType = {
+  FIRST_READING: 'FIRST_READING',
+  RESPONSORIAL_PSALM: 'RESPONSORIAL_PSALM',
+  SECOND_READING: 'SECOND_READING',
+  GOSPEL_ACCLAMATION: 'GOSPEL_ACCLAMATION',
+  GOSPEL: 'GOSPEL',
+  OTHER: 'OTHER'
+} as const
+
+export type ReadingType = (typeof ReadingType)[keyof typeof ReadingType]
+
+
+export const EcclesialStatus = {
+  SERVANT_OF_GOD: 'SERVANT_OF_GOD',
+  VENERABLE: 'VENERABLE',
+  BLESSED: 'BLESSED',
+  SAINT: 'SAINT'
+} as const
+
+export type EcclesialStatus = (typeof EcclesialStatus)[keyof typeof EcclesialStatus]
+
+
+export const HistoricalConfidence = {
+  HISTORICALLY_DOCUMENTED: 'HISTORICALLY_DOCUMENTED',
+  STRONG_TRADITIONAL_SOURCES: 'STRONG_TRADITIONAL_SOURCES',
+  PIOUS_TRADITION: 'PIOUS_TRADITION'
+} as const
+
+export type HistoricalConfidence = (typeof HistoricalConfidence)[keyof typeof HistoricalConfidence]
+
+
+export const PrayerType = {
+  BASIC: 'BASIC',
+  MARIAN: 'MARIAN',
+  NOVENA_PRAYER: 'NOVENA_PRAYER',
+  LITANY: 'LITANY',
+  CREED: 'CREED',
+  LITURGICAL: 'LITURGICAL',
+  CHAPLET: 'CHAPLET',
+  DEVOTIONAL: 'DEVOTIONAL'
+} as const
+
+export type PrayerType = (typeof PrayerType)[keyof typeof PrayerType]
+
+
+export const CatechismPillar = {
+  PART_1_PROFESSION_OF_FAITH: 'PART_1_PROFESSION_OF_FAITH',
+  PART_2_SACRAMENTS: 'PART_2_SACRAMENTS',
+  PART_3_LIFE_IN_CHRIST: 'PART_3_LIFE_IN_CHRIST',
+  PART_4_CHRISTIAN_PRAYER: 'PART_4_CHRISTIAN_PRAYER'
+} as const
+
+export type CatechismPillar = (typeof CatechismPillar)[keyof typeof CatechismPillar]
+
+
+export const DocumentType = {
+  ENCYCLICAL: 'ENCYCLICAL',
+  APOSTOLIC_EXHORTATION: 'APOSTOLIC_EXHORTATION',
+  BULL: 'BULL',
+  MOTU_PROPRIO: 'MOTU_PROPRIO',
+  COUNCIL_CONSTITUTION: 'COUNCIL_CONSTITUTION',
+  COUNCIL_DECREE: 'COUNCIL_DECREE',
+  DECLARATION: 'DECLARATION',
+  CATECHISM: 'CATECHISM'
+} as const
+
+export type DocumentType = (typeof DocumentType)[keyof typeof DocumentType]
+
+
+export const PublicationStatus = {
+  DRAFT: 'DRAFT',
+  IN_REVIEW: 'IN_REVIEW',
+  APPROVED: 'APPROVED',
+  PUBLISHED: 'PUBLISHED',
+  ARCHIVED: 'ARCHIVED'
+} as const
+
+export type PublicationStatus = (typeof PublicationStatus)[keyof typeof PublicationStatus]
+
+
+export const YearCycle = {
+  YEAR_A: 'YEAR_A',
+  YEAR_B: 'YEAR_B',
+  YEAR_C: 'YEAR_C'
+} as const
+
+export type YearCycle = (typeof YearCycle)[keyof typeof YearCycle]
+
+
+export const WeekdayCycle = {
+  YEAR_1: 'YEAR_1',
+  YEAR_2: 'YEAR_2'
+} as const
+
+export type WeekdayCycle = (typeof WeekdayCycle)[keyof typeof WeekdayCycle]

@@ -17,4 +17,113 @@ import * as Prisma from './internal/prismaNamespaceBrowser'
 export { Prisma }
 export * as $Enums from './enums'
 export * from './enums';
-
+/**
+ * Model LiturgicalSeason
+ * 
+ */
+export type LiturgicalSeason = Prisma.LiturgicalSeasonModel
+/**
+ * Model LiturgicalDay
+ * 
+ */
+export type LiturgicalDay = Prisma.LiturgicalDayModel
+/**
+ * Model Celebration
+ * 
+ */
+export type Celebration = Prisma.CelebrationModel
+/**
+ * Model LiturgicalDayCelebration
+ * 
+ */
+export type LiturgicalDayCelebration = Prisma.LiturgicalDayCelebrationModel
+/**
+ * Model Reading
+ * 
+ */
+export type Reading = Prisma.ReadingModel
+/**
+ * Model Saint
+ * 
+ */
+export type Saint = Prisma.SaintModel
+/**
+ * Model Patronage
+ * 
+ */
+export type Patronage = Prisma.PatronageModel
+/**
+ * Model SaintPatronage
+ * 
+ */
+export type SaintPatronage = Prisma.SaintPatronageModel
+/**
+ * Model Vocation
+ * 
+ */
+export type Vocation = Prisma.VocationModel
+/**
+ * Model SaintVocation
+ * 
+ */
+export type SaintVocation = Prisma.SaintVocationModel
+/**
+ * Model Prayer
+ * 
+ */
+export type Prayer = Prisma.PrayerModel
+/**
+ * Model SaintPrayer
+ * 
+ */
+export type SaintPrayer = Prisma.SaintPrayerModel
+/**
+ * Model Novena
+ * 
+ */
+export type Novena = Prisma.NovenaModel
+/**
+ * Model SaintNovena
+ * 
+ */
+export type SaintNovena = Prisma.SaintNovenaModel
+/**
+ * Model NovenaDay
+ * 
+ */
+export type NovenaDay = Prisma.NovenaDayModel
+/**
+ * Model CatechismEntry
+ * 
+ */
+export type CatechismEntry = Prisma.CatechismEntryModel
+/**
+ * Model ChurchDocument
+ * 
+ */
+export type ChurchDocument = Prisma.ChurchDocumentModel
+/**
+ * Model Reflection
+ * 
+ */
+export type Reflection = Prisma.ReflectionModel
+/**
+ * Model FormationPathway
+ * 
+ */
+export type FormationPathway = Prisma.FormationPathwayModel
+/**
+ * Model FormationModule
+ * 
+ */
+export type FormationModule = Prisma.FormationModuleModel
+/**
+ * Model FormationLesson
+ * 
+ */
+export type FormationLesson = Prisma.FormationLessonModel
+/**
+ * Model MigrationRecord
+ * 
+ */
+export type MigrationRecord = Prisma.MigrationRecordModel

@@ -51,7 +51,28 @@ export const AnyNull = runtime.AnyNull
 
 
 export const ModelName = {
-
+  LiturgicalSeason: 'LiturgicalSeason',
+  LiturgicalDay: 'LiturgicalDay',
+  Celebration: 'Celebration',
+  LiturgicalDayCelebration: 'LiturgicalDayCelebration',
+  Reading: 'Reading',
+  Saint: 'Saint',
+  Patronage: 'Patronage',
+  SaintPatronage: 'SaintPatronage',
+  Vocation: 'Vocation',
+  SaintVocation: 'SaintVocation',
+  Prayer: 'Prayer',
+  SaintPrayer: 'SaintPrayer',
+  Novena: 'Novena',
+  SaintNovena: 'SaintNovena',
+  NovenaDay: 'NovenaDay',
+  CatechismEntry: 'CatechismEntry',
+  ChurchDocument: 'ChurchDocument',
+  Reflection: 'Reflection',
+  FormationPathway: 'FormationPathway',
+  FormationModule: 'FormationModule',
+  FormationLesson: 'FormationLesson',
+  MigrationRecord: 'MigrationRecord'
 } as const
 
 export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -68,4 +89,384 @@ export const TransactionIsolationLevel = runtime.makeStrictEnum({
 } as const)
 
 export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
+
+
+export const LiturgicalSeasonScalarFieldEnum = {
+  id: 'id',
+  code: 'code',
+  name: 'name',
+  defaultColor: 'defaultColor',
+  summary: 'summary',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type LiturgicalSeasonScalarFieldEnum = (typeof LiturgicalSeasonScalarFieldEnum)[keyof typeof LiturgicalSeasonScalarFieldEnum]
+
+
+export const LiturgicalDayScalarFieldEnum = {
+  id: 'id',
+  date: 'date',
+  calendarCode: 'calendarCode',
+  seasonId: 'seasonId',
+  seasonWeek: 'seasonWeek',
+  yearCycle: 'yearCycle',
+  weekdayCycle: 'weekdayCycle',
+  liturgicalColor: 'liturgicalColor',
+  gloriaRequired: 'gloriaRequired',
+  creedRequired: 'creedRequired',
+  notes: 'notes',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type LiturgicalDayScalarFieldEnum = (typeof LiturgicalDayScalarFieldEnum)[keyof typeof LiturgicalDayScalarFieldEnum]
+
+
+export const CelebrationScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  rank: 'rank',
+  color: 'color',
+  isMovable: 'isMovable',
+  fixedMonth: 'fixedMonth',
+  fixedDay: 'fixedDay',
+  saintId: 'saintId',
+  biographySummary: 'biographySummary',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CelebrationScalarFieldEnum = (typeof CelebrationScalarFieldEnum)[keyof typeof CelebrationScalarFieldEnum]
+
+
+export const LiturgicalDayCelebrationScalarFieldEnum = {
+  id: 'id',
+  liturgicalDayId: 'liturgicalDayId',
+  celebrationId: 'celebrationId',
+  precedenceOrder: 'precedenceOrder',
+  isOptional: 'isOptional',
+  isCommemoration: 'isCommemoration',
+  isTransferred: 'isTransferred'
+} as const
+
+export type LiturgicalDayCelebrationScalarFieldEnum = (typeof LiturgicalDayCelebrationScalarFieldEnum)[keyof typeof LiturgicalDayCelebrationScalarFieldEnum]
+
+
+export const ReadingScalarFieldEnum = {
+  id: 'id',
+  liturgicalDayId: 'liturgicalDayId',
+  celebrationId: 'celebrationId',
+  type: 'type',
+  readingOrder: 'readingOrder',
+  citationRef: 'citationRef',
+  response: 'response',
+  text: 'text',
+  copyrightInfo: 'copyrightInfo',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReadingScalarFieldEnum = (typeof ReadingScalarFieldEnum)[keyof typeof ReadingScalarFieldEnum]
+
+
+export const SaintScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  fullName: 'fullName',
+  slug: 'slug',
+  titleTeaser: 'titleTeaser',
+  biography: 'biography',
+  birthYear: 'birthYear',
+  deathYear: 'deathYear',
+  century: 'century',
+  feastDateMonth: 'feastDateMonth',
+  feastDateDay: 'feastDateDay',
+  ecclesialStatus: 'ecclesialStatus',
+  canonizationYear: 'canonizationYear',
+  canonizedBy: 'canonizedBy',
+  isDoctorOfTheChurch: 'isDoctorOfTheChurch',
+  isMartyr: 'isMartyr',
+  religiousOrder: 'religiousOrder',
+  historicalConfidence: 'historicalConfidence',
+  regionSpecificStatus: 'regionSpecificStatus',
+  primaryImageUrl: 'primaryImageUrl',
+  relicImageUrl: 'relicImageUrl',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type SaintScalarFieldEnum = (typeof SaintScalarFieldEnum)[keyof typeof SaintScalarFieldEnum]
+
+
+export const PatronageScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type PatronageScalarFieldEnum = (typeof PatronageScalarFieldEnum)[keyof typeof PatronageScalarFieldEnum]
+
+
+export const SaintPatronageScalarFieldEnum = {
+  id: 'id',
+  saintId: 'saintId',
+  patronageId: 'patronageId'
+} as const
+
+export type SaintPatronageScalarFieldEnum = (typeof SaintPatronageScalarFieldEnum)[keyof typeof SaintPatronageScalarFieldEnum]
+
+
+export const VocationScalarFieldEnum = {
+  id: 'id',
+  name: 'name',
+  slug: 'slug',
+  description: 'description',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type VocationScalarFieldEnum = (typeof VocationScalarFieldEnum)[keyof typeof VocationScalarFieldEnum]
+
+
+export const SaintVocationScalarFieldEnum = {
+  id: 'id',
+  saintId: 'saintId',
+  vocationId: 'vocationId'
+} as const
+
+export type SaintVocationScalarFieldEnum = (typeof SaintVocationScalarFieldEnum)[keyof typeof SaintVocationScalarFieldEnum]
+
+
+export const PrayerScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  latinTitle: 'latinTitle',
+  slug: 'slug',
+  bodyText: 'bodyText',
+  latinText: 'latinText',
+  prayerType: 'prayerType',
+  isOfficialFormula: 'isOfficialFormula',
+  isIndulgenced: 'isIndulgenced',
+  seasonalUse: 'seasonalUse',
+  sourceDocumentId: 'sourceDocumentId',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type PrayerScalarFieldEnum = (typeof PrayerScalarFieldEnum)[keyof typeof PrayerScalarFieldEnum]
+
+
+export const SaintPrayerScalarFieldEnum = {
+  id: 'id',
+  saintId: 'saintId',
+  prayerId: 'prayerId'
+} as const
+
+export type SaintPrayerScalarFieldEnum = (typeof SaintPrayerScalarFieldEnum)[keyof typeof SaintPrayerScalarFieldEnum]
+
+
+export const NovenaScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  summary: 'summary',
+  openingPrayer: 'openingPrayer',
+  closingPrayer: 'closingPrayer',
+  historicalOrigin: 'historicalOrigin',
+  isIndulgenced: 'isIndulgenced',
+  saintId: 'saintId',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type NovenaScalarFieldEnum = (typeof NovenaScalarFieldEnum)[keyof typeof NovenaScalarFieldEnum]
+
+
+export const SaintNovenaScalarFieldEnum = {
+  id: 'id',
+  saintId: 'saintId',
+  novenaId: 'novenaId'
+} as const
+
+export type SaintNovenaScalarFieldEnum = (typeof SaintNovenaScalarFieldEnum)[keyof typeof SaintNovenaScalarFieldEnum]
+
+
+export const NovenaDayScalarFieldEnum = {
+  id: 'id',
+  novenaId: 'novenaId',
+  dayNumber: 'dayNumber',
+  title: 'title',
+  intention: 'intention',
+  prayerText: 'prayerText',
+  reflectionText: 'reflectionText',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type NovenaDayScalarFieldEnum = (typeof NovenaDayScalarFieldEnum)[keyof typeof NovenaDayScalarFieldEnum]
+
+
+export const CatechismEntryScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  paragraphStart: 'paragraphStart',
+  paragraphEnd: 'paragraphEnd',
+  pillar: 'pillar',
+  doctrinalLevel: 'doctrinalLevel',
+  magisterialWeight: 'magisterialWeight',
+  councilSource: 'councilSource',
+  bodyText: 'bodyText',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type CatechismEntryScalarFieldEnum = (typeof CatechismEntryScalarFieldEnum)[keyof typeof CatechismEntryScalarFieldEnum]
+
+
+export const ChurchDocumentScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  latinTitle: 'latinTitle',
+  slug: 'slug',
+  documentType: 'documentType',
+  promulgationDate: 'promulgationDate',
+  issuingAuthority: 'issuingAuthority',
+  officialUrl: 'officialUrl',
+  summary: 'summary',
+  bodyText: 'bodyText',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ChurchDocumentScalarFieldEnum = (typeof ChurchDocumentScalarFieldEnum)[keyof typeof ChurchDocumentScalarFieldEnum]
+
+
+export const ReflectionScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  author: 'author',
+  bodyText: 'bodyText',
+  liturgicalDayId: 'liturgicalDayId',
+  celebrationId: 'celebrationId',
+  readingId: 'readingId',
+  saintId: 'saintId',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReflectionScalarFieldEnum = (typeof ReflectionScalarFieldEnum)[keyof typeof ReflectionScalarFieldEnum]
+
+
+export const FormationPathwayScalarFieldEnum = {
+  id: 'id',
+  title: 'title',
+  slug: 'slug',
+  summary: 'summary',
+  description: 'description',
+  estimatedHours: 'estimatedHours',
+  publicationStatus: 'publicationStatus',
+  publishedAt: 'publishedAt',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type FormationPathwayScalarFieldEnum = (typeof FormationPathwayScalarFieldEnum)[keyof typeof FormationPathwayScalarFieldEnum]
+
+
+export const FormationModuleScalarFieldEnum = {
+  id: 'id',
+  pathwayId: 'pathwayId',
+  moduleOrder: 'moduleOrder',
+  title: 'title',
+  slug: 'slug',
+  summary: 'summary',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type FormationModuleScalarFieldEnum = (typeof FormationModuleScalarFieldEnum)[keyof typeof FormationModuleScalarFieldEnum]
+
+
+export const FormationLessonScalarFieldEnum = {
+  id: 'id',
+  moduleId: 'moduleId',
+  lessonOrder: 'lessonOrder',
+  title: 'title',
+  slug: 'slug',
+  summary: 'summary',
+  bodyText: 'bodyText',
+  catechismEntryId: 'catechismEntryId',
+  churchDocumentId: 'churchDocumentId',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type FormationLessonScalarFieldEnum = (typeof FormationLessonScalarFieldEnum)[keyof typeof FormationLessonScalarFieldEnum]
+
+
+export const MigrationRecordScalarFieldEnum = {
+  id: 'id',
+  sourceSystem: 'sourceSystem',
+  legacyObjectType: 'legacyObjectType',
+  legacyObjectId: 'legacyObjectId',
+  legacySlug: 'legacySlug',
+  legacyUrl: 'legacyUrl',
+  migrationVersion: 'migrationVersion',
+  importedAt: 'importedAt',
+  saintId: 'saintId',
+  prayerId: 'prayerId',
+  novenaId: 'novenaId',
+  readingId: 'readingId',
+  liturgicalDayId: 'liturgicalDayId',
+  catechismEntryId: 'catechismEntryId',
+  churchDocumentId: 'churchDocumentId',
+  formationPathwayId: 'formationPathwayId'
+} as const
+
+export type MigrationRecordScalarFieldEnum = (typeof MigrationRecordScalarFieldEnum)[keyof typeof MigrationRecordScalarFieldEnum]
+
+
+export const SortOrder = {
+  asc: 'asc',
+  desc: 'desc'
+} as const
+
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+export const QueryMode = {
+  default: 'default',
+  insensitive: 'insensitive'
+} as const
+
+export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+
+
+export const NullsOrder = {
+  first: 'first',
+  last: 'last'
+} as const
+
+export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 

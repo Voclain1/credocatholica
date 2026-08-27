@@ -6,3 +6,561 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+// ==========================================
+// CANONICAL ENUMS (APPROVED FOR M0.3)
+// ==========================================
+
+enum CelebrationRank {
+  SOLEMNITY
+  FEAST
+  MEMORIAL
+  OPTIONAL_MEMORIAL
+}
+
+enum LiturgicalColor {
+  GREEN
+  VIOLET
+  WHITE
+  RED
+  ROSE
+  BLACK
+}
+
+enum ReadingType {
+  FIRST_READING
+  RESPONSORIAL_PSALM
+  SECOND_READING
+  GOSPEL_ACCLAMATION
+  GOSPEL
+  OTHER
+}
+
+enum EcclesialStatus {
+  SERVANT_OF_GOD
+  VENERABLE
+  BLESSED
+  SAINT
+}
+
+enum HistoricalConfidence {
+  HISTORICALLY_DOCUMENTED
+  STRONG_TRADITIONAL_SOURCES
+  PIOUS_TRADITION
+}
+
+enum PrayerType {
+  BASIC
+  MARIAN
+  NOVENA_PRAYER
+  LITANY
+  CREED
+  LITURGICAL
+  CHAPLET
+  DEVOTIONAL
+}
+
+enum CatechismPillar {
+  PART_1_PROFESSION_OF_FAITH
+  PART_2_SACRAMENTS
+  PART_3_LIFE_IN_CHRIST
+  PART_4_CHRISTIAN_PRAYER
+}
+
+enum DocumentType {
+  ENCYCLICAL
+  APOSTOLIC_EXHORTATION
+  BULL
+  MOTU_PROPRIO
+  COUNCIL_CONSTITUTION
+  COUNCIL_DECREE
+  DECLARATION
+  CATECHISM
+}
+
+enum PublicationStatus {
+  DRAFT
+  IN_REVIEW
+  APPROVED
+  PUBLISHED
+  ARCHIVED
+}
+
+enum YearCycle {
+  YEAR_A
+  YEAR_B
+  YEAR_C
+}
+
+enum WeekdayCycle {
+  YEAR_1
+  YEAR_2
+}
+
+// ==========================================
+// LITURGICAL CORE DOMAIN
+// ==========================================
+
+model LiturgicalSeason {
+  id           String          @id @default(cuid())
+  code         String          @unique
+  name         String
+  defaultColor LiturgicalColor
+  summary      String?         @db.Text
+  createdAt    DateTime        @default(now())
+  updatedAt    DateTime        @updatedAt
+
+  liturgicalDays LiturgicalDay[]
+}
+
+model LiturgicalDay {
+  id              String           @id @default(cuid())
+  date            DateTime         @db.Date
+  calendarCode    String           @default("UNIVERSAL")
+  seasonId        String
+  season          LiturgicalSeason @relation(fields: [seasonId], references: [id], onDelete: Restrict)
+  seasonWeek      Int?
+  yearCycle       YearCycle
+  weekdayCycle    WeekdayCycle
+  liturgicalColor LiturgicalColor
+  gloriaRequired  Boolean          @default(false)
+  creedRequired   Boolean          @default(false)
+  notes           String?          @db.Text
+  publishedAt     DateTime?
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+
+  celebrations     LiturgicalDayCelebration[]
+  readings         Reading[]
+  reflections      Reflection[]
+  migrationRecords MigrationRecord[]
+
+  @@unique([calendarCode, date])
+  @@index([date])
+  @@index([calendarCode])
+}
+
+model Celebration {
+  id               String           @id @default(cuid())
+  title            String
+  slug             String           @unique
+  rank             CelebrationRank
+  color            LiturgicalColor?
+  isMovable        Boolean          @default(false)
+  fixedMonth       Int?
+  fixedDay         Int?
+  saintId          String?
+  saint            Saint?           @relation(fields: [saintId], references: [id], onDelete: SetNull)
+  biographySummary String?          @db.Text
+  publishedAt      DateTime?
+  createdAt        DateTime         @default(now())
+  updatedAt        DateTime         @updatedAt
+
+  liturgicalDays LiturgicalDayCelebration[]
+  readings       Reading[]
+  reflections    Reflection[]
+
+  @@index([slug])
+  @@index([rank])
+  @@index([fixedMonth, fixedDay])
+}
+
+model LiturgicalDayCelebration {
+  id              String        @id @default(cuid())
+  liturgicalDayId String
+  liturgicalDay   LiturgicalDay @relation(fields: [liturgicalDayId], references: [id], onDelete: Cascade)
+  celebrationId   String
+  celebration     Celebration   @relation(fields: [celebrationId], references: [id], onDelete: Cascade)
+  precedenceOrder Int           @default(1)
+  isOptional      Boolean       @default(false)
+  isCommemoration Boolean       @default(false)
+  isTransferred   Boolean       @default(false)
+
+  @@unique([liturgicalDayId, celebrationId])
+  @@index([liturgicalDayId])
+  @@index([celebrationId])
+}
+
+model Reading {
+  id              String         @id @default(cuid())
+  liturgicalDayId String?
+  liturgicalDay   LiturgicalDay? @relation(fields: [liturgicalDayId], references: [id], onDelete: SetNull)
+  celebrationId   String?
+  celebration     Celebration?   @relation(fields: [celebrationId], references: [id], onDelete: SetNull)
+  type            ReadingType
+  readingOrder    Int            @default(1)
+  citationRef     String
+  response        String?        @db.Text
+  text            String         @db.Text
+  copyrightInfo   String         @default("Public Domain — Douay-Rheims Translation")
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  reflections      Reflection[]
+  migrationRecords MigrationRecord[]
+
+  @@index([liturgicalDayId, readingOrder])
+  @@index([celebrationId, readingOrder])
+}
+
+// ==========================================
+// SAINTS REFERENCE DOMAIN
+// ==========================================
+
+model Saint {
+  id                   String               @id @default(cuid())
+  name                 String
+  fullName             String?
+  slug                 String               @unique
+  titleTeaser          String?
+  biography            String               @db.Text
+  birthYear            String? // Preserves textual dates e.g. "c. 304", "late 4th century"
+  deathYear            String? // Preserves textual dates e.g. "c. 304"
+  century              Int? // Optional numeric century fallback e.g. 13
+  feastDateMonth       Int? // Optional fixed devotional feast month (1-12)
+  feastDateDay         Int? // Optional fixed devotional feast day (1-31)
+  ecclesialStatus      EcclesialStatus
+  canonizationYear     String?
+  canonizedBy          String?
+  isDoctorOfTheChurch  Boolean              @default(false)
+  isMartyr             Boolean              @default(false)
+  religiousOrder       String?
+  historicalConfidence HistoricalConfidence
+  regionSpecificStatus String?
+  primaryImageUrl      String?
+  relicImageUrl        String?
+  publicationStatus    PublicationStatus    @default(DRAFT)
+  publishedAt          DateTime?
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime             @updatedAt
+
+  celebrations     Celebration[]
+  patronages       SaintPatronage[]
+  vocations        SaintVocation[]
+  prayers          SaintPrayer[]
+  novenas          SaintNovena[]
+  novenaList       Novena[]
+  reflections      Reflection[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([ecclesialStatus])
+  @@index([feastDateMonth, feastDateDay])
+  @@index([publicationStatus])
+}
+
+model Patronage {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  saints SaintPatronage[]
+}
+
+model SaintPatronage {
+  id          String    @id @default(cuid())
+  saintId     String
+  saint       Saint     @relation(fields: [saintId], references: [id], onDelete: Cascade)
+  patronageId String
+  patronage   Patronage @relation(fields: [patronageId], references: [id], onDelete: Cascade)
+
+  @@unique([saintId, patronageId])
+  @@index([saintId])
+  @@index([patronageId])
+}
+
+model Vocation {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  slug        String   @unique
+  description String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  saints SaintVocation[]
+}
+
+model SaintVocation {
+  id         String   @id @default(cuid())
+  saintId    String
+  saint      Saint    @relation(fields: [saintId], references: [id], onDelete: Cascade)
+  vocationId String
+  vocation   Vocation @relation(fields: [vocationId], references: [id], onDelete: Cascade)
+
+  @@unique([saintId, vocationId])
+  @@index([saintId])
+  @@index([vocationId])
+}
+
+// ==========================================
+// PRAYERS & NOVENAS DOMAIN
+// ==========================================
+
+model Prayer {
+  id                String            @id @default(cuid())
+  title             String
+  latinTitle        String?
+  slug              String            @unique
+  bodyText          String            @db.Text
+  latinText         String?           @db.Text
+  prayerType        PrayerType
+  isOfficialFormula Boolean           @default(false)
+  isIndulgenced     Boolean           @default(false)
+  seasonalUse       String?
+  sourceDocumentId  String?
+  sourceDocument    ChurchDocument?   @relation(fields: [sourceDocumentId], references: [id], onDelete: SetNull)
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  saints           SaintPrayer[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([prayerType])
+  @@index([publicationStatus])
+}
+
+model SaintPrayer {
+  id       String @id @default(cuid())
+  saintId  String
+  saint    Saint  @relation(fields: [saintId], references: [id], onDelete: Cascade)
+  prayerId String
+  prayer   Prayer @relation(fields: [prayerId], references: [id], onDelete: Cascade)
+
+  @@unique([saintId, prayerId])
+  @@index([saintId])
+  @@index([prayerId])
+}
+
+model Novena {
+  id                String            @id @default(cuid())
+  title             String
+  slug              String            @unique
+  summary           String            @db.Text
+  openingPrayer     String?           @db.Text
+  closingPrayer     String?           @db.Text
+  historicalOrigin  String?           @db.Text
+  isIndulgenced     Boolean           @default(false)
+  saintId           String?
+  saint             Saint?            @relation(fields: [saintId], references: [id], onDelete: SetNull)
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  days             NovenaDay[]
+  saints           SaintNovena[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([publicationStatus])
+}
+
+model SaintNovena {
+  id       String @id @default(cuid())
+  saintId  String
+  saint    Saint  @relation(fields: [saintId], references: [id], onDelete: Cascade)
+  novenaId String
+  novena   Novena @relation(fields: [novenaId], references: [id], onDelete: Cascade)
+
+  @@unique([saintId, novenaId])
+  @@index([saintId])
+  @@index([novenaId])
+}
+
+model NovenaDay {
+  id             String   @id @default(cuid())
+  novenaId       String
+  novena         Novena   @relation(fields: [novenaId], references: [id], onDelete: Cascade)
+  dayNumber      Int
+  title          String
+  intention      String   @db.Text
+  prayerText     String   @db.Text
+  reflectionText String?  @db.Text
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  @@unique([novenaId, dayNumber])
+  @@index([novenaId])
+}
+
+// ==========================================
+// CATECHISM & CHURCH DOCUMENTS DOMAIN
+// ==========================================
+
+model CatechismEntry {
+  id                String            @id @default(cuid())
+  title             String
+  slug              String            @unique
+  paragraphStart    Int
+  paragraphEnd      Int
+  pillar            CatechismPillar
+  doctrinalLevel    String?
+  magisterialWeight String?
+  councilSource     String?
+  bodyText          String            @db.Text
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  formationLessons FormationLesson[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([paragraphStart, paragraphEnd])
+  @@index([pillar])
+  @@index([publicationStatus])
+}
+
+model ChurchDocument {
+  id                String            @id @default(cuid())
+  title             String
+  latinTitle        String?
+  slug              String            @unique
+  documentType      DocumentType
+  promulgationDate  DateTime?
+  issuingAuthority  String
+  officialUrl       String?
+  summary           String            @db.Text
+  bodyText          String            @db.Text
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  prayers          Prayer[]
+  formationLessons FormationLesson[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([documentType])
+  @@index([publicationStatus])
+}
+
+model Reflection {
+  id                String            @id @default(cuid())
+  title             String
+  slug              String            @unique
+  author            String
+  bodyText          String            @db.Text
+  liturgicalDayId   String?
+  liturgicalDay     LiturgicalDay?    @relation(fields: [liturgicalDayId], references: [id], onDelete: SetNull)
+  celebrationId     String?
+  celebration       Celebration?      @relation(fields: [celebrationId], references: [id], onDelete: SetNull)
+  readingId         String?
+  reading           Reading?          @relation(fields: [readingId], references: [id], onDelete: SetNull)
+  saintId           String?
+  saint             Saint?            @relation(fields: [saintId], references: [id], onDelete: SetNull)
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  @@index([slug])
+  @@index([liturgicalDayId])
+  @@index([celebrationId])
+  @@index([saintId])
+  @@index([publicationStatus])
+}
+
+// ==========================================
+// FORMATION PATHWAYS DOMAIN
+// ==========================================
+
+model FormationPathway {
+  id                String            @id @default(cuid())
+  title             String
+  slug              String            @unique
+  summary           String            @db.Text
+  description       String            @db.Text
+  estimatedHours    Int?
+  publicationStatus PublicationStatus @default(DRAFT)
+  publishedAt       DateTime?
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  modules          FormationModule[]
+  migrationRecords MigrationRecord[]
+
+  @@index([slug])
+  @@index([publicationStatus])
+}
+
+model FormationModule {
+  id          String           @id @default(cuid())
+  pathwayId   String
+  pathway     FormationPathway @relation(fields: [pathwayId], references: [id], onDelete: Cascade)
+  moduleOrder Int
+  title       String
+  slug        String           @unique
+  summary     String           @db.Text
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  lessons FormationLesson[]
+
+  @@unique([pathwayId, moduleOrder])
+  @@index([pathwayId])
+}
+
+model FormationLesson {
+  id               String          @id @default(cuid())
+  moduleId         String
+  module           FormationModule @relation(fields: [moduleId], references: [id], onDelete: Cascade)
+  lessonOrder      Int
+  title            String
+  slug             String          @unique
+  summary          String          @db.Text
+  bodyText         String          @db.Text
+  catechismEntryId String?
+  catechismEntry   CatechismEntry? @relation(fields: [catechismEntryId], references: [id], onDelete: SetNull)
+  churchDocumentId String?
+  churchDocument   ChurchDocument? @relation(fields: [churchDocumentId], references: [id], onDelete: SetNull)
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  @@unique([moduleId, lessonOrder])
+  @@index([moduleId])
+}
+
+// ==========================================
+// MIGRATION PROVENANCE DOMAIN
+// ==========================================
+
+model MigrationRecord {
+  id               String   @id @default(cuid())
+  sourceSystem     String   @default("wordpress")
+  legacyObjectType String
+  legacyObjectId   Int
+  legacySlug       String?
+  legacyUrl        String?
+  migrationVersion String   @default("1.0")
+  importedAt       DateTime @default(now())
+
+  // Referential Safety: Explicit Nullable Foreign Keys to Canonical Models
+  saintId            String?           @unique
+  saint              Saint?            @relation(fields: [saintId], references: [id], onDelete: SetNull)
+  prayerId           String?           @unique
+  prayer             Prayer?           @relation(fields: [prayerId], references: [id], onDelete: SetNull)
+  novenaId           String?           @unique
+  novena             Novena?           @relation(fields: [novenaId], references: [id], onDelete: SetNull)
+  readingId          String?           @unique
+  reading            Reading?          @relation(fields: [readingId], references: [id], onDelete: SetNull)
+  liturgicalDayId    String?           @unique
+  liturgicalDay      LiturgicalDay?    @relation(fields: [liturgicalDayId], references: [id], onDelete: SetNull)
+  catechismEntryId   String?           @unique
+  catechismEntry     CatechismEntry?   @relation(fields: [catechismEntryId], references: [id], onDelete: SetNull)
+  churchDocumentId   String?           @unique
+  churchDocument     ChurchDocument?   @relation(fields: [churchDocumentId], references: [id], onDelete: SetNull)
+  formationPathwayId String?           @unique
+  formationPathway   FormationPathway? @relation(fields: [formationPathwayId], references: [id], onDelete: SetNull)
+
+  @@unique([sourceSystem, legacyObjectType, legacyObjectId])
+  @@index([legacyObjectType, legacyObjectId])
+}

@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.2: Data Model Design & WordPress Migration Mapping Specification**
+**Phase M0.3: Canonical Prisma Schema Implementation**
 
-Current status: Canonical data model architecture (`docs/DATA-MODEL.md`) and exhaustive WordPress field-by-field migration mapping inventory (`docs/WORDPRESS-MAPPING.md`) established. Next.js 16.3.3 baseline active. Code changes remain strictly documentation-only for M0.2; database migrations and Prisma model generation will take place in subsequent approved phases.
+Current status: Canonical Prisma schema (`prisma/schema.prisma`) implemented, formatted, validated, and generated into `src/generated/prisma`. 22 canonical domain models and explicit join entities established. Schema validated with zero TypeScript or ESLint baseline errors. Migration creation pending provisioned development PostgreSQL database credentials.
 
 ---
 

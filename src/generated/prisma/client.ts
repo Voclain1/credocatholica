@@ -31,8 +31,8 @@ export * from "./enums"
  * const prisma = new PrismaClient({
  *   adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL })
  * })
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more LiturgicalSeasons
+ * const liturgicalSeasons = await prisma.liturgicalSeason.findMany()
  * ```
  * 
  * Read more in our [docs](https://pris.ly/d/client).
@@ -41,4 +41,113 @@ export const PrismaClient = $Class.getPrismaClientClass()
 export type PrismaClient<LogOpts extends Prisma.LogLevel = never, OmitOpts extends Prisma.PrismaClientOptions["omit"] = Prisma.PrismaClientOptions["omit"], ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = $Class.PrismaClient<LogOpts, OmitOpts, ExtArgs>
 export { Prisma }
 
-
+/**
+ * Model LiturgicalSeason
+ * 
+ */
+export type LiturgicalSeason = Prisma.LiturgicalSeasonModel
+/**
+ * Model LiturgicalDay
+ * 
+ */
+export type LiturgicalDay = Prisma.LiturgicalDayModel
+/**
+ * Model Celebration
+ * 
+ */
+export type Celebration = Prisma.CelebrationModel
+/**
+ * Model LiturgicalDayCelebration
+ * 
+ */
+export type LiturgicalDayCelebration = Prisma.LiturgicalDayCelebrationModel
+/**
+ * Model Reading
+ * 
+ */
+export type Reading = Prisma.ReadingModel
+/**
+ * Model Saint
+ * 
+ */
+export type Saint = Prisma.SaintModel
+/**
+ * Model Patronage
+ * 
+ */
+export type Patronage = Prisma.PatronageModel
+/**
+ * Model SaintPatronage
+ * 
+ */
+export type SaintPatronage = Prisma.SaintPatronageModel
+/**
+ * Model Vocation
+ * 
+ */
+export type Vocation = Prisma.VocationModel
+/**
+ * Model SaintVocation
+ * 
+ */
+export type SaintVocation = Prisma.SaintVocationModel
+/**
+ * Model Prayer
+ * 
+ */
+export type Prayer = Prisma.PrayerModel
+/**
+ * Model SaintPrayer
+ * 
+ */
+export type SaintPrayer = Prisma.SaintPrayerModel
+/**
+ * Model Novena
+ * 
+ */
+export type Novena = Prisma.NovenaModel
+/**
+ * Model SaintNovena
+ * 
+ */
+export type SaintNovena = Prisma.SaintNovenaModel
+/**
+ * Model NovenaDay
+ * 
+ */
+export type NovenaDay = Prisma.NovenaDayModel
+/**
+ * Model CatechismEntry
+ * 
+ */
+export type CatechismEntry = Prisma.CatechismEntryModel
+/**
+ * Model ChurchDocument
+ * 
+ */
+export type ChurchDocument = Prisma.ChurchDocumentModel
+/**
+ * Model Reflection
+ * 
+ */
+export type Reflection = Prisma.ReflectionModel
+/**
+ * Model FormationPathway
+ * 
+ */
+export type FormationPathway = Prisma.FormationPathwayModel
+/**
+ * Model FormationModule
+ * 
+ */
+export type FormationModule = Prisma.FormationModuleModel
+/**
+ * Model FormationLesson
+ * 
+ */
+export type FormationLesson = Prisma.FormationLessonModel
+/**
+ * Model MigrationRecord
+ * 
+ */
+export type MigrationRecord = Prisma.MigrationRecordModel
