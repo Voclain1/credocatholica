@@ -1,0 +1,24 @@
+[
+  {
+    "attachment_id": 501,
+    "url": "https://credocatholica.com/wp-content/uploads/2024/01/st-joseph.jpg",
+    "filename": "st-joseph.jpg",
+    "mime_type": "image/jpeg",
+    "title": "Saint Joseph Painting",
+    "caption": "Traditional painting of St. Joseph with Jesus",
+    "alt_text": "Saint Josephholding the Child Jesus",
+    "width": 800,
+    "height": 1200
+  },
+  {
+    "attachment_id": 502,
+    "url": "https://credocatholica.com/wp-content/uploads/2024/01/st-joseph-relic.jpg",
+    "filename": "st-joseph-relic.jpg",
+    "mime_type": "image/jpeg",
+    "title": "Relic of St. Joseph Cloak",
+    "caption": "Holy cloak relic of Saint Joseph",
+    "alt_text": "Relic of Saint Joseph",
+    "width": 600,
+    "height": 800
+  }
+]

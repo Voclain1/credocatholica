@@ -1,0 +1,34 @@
+[
+  {
+    "term_taxonomy_id": 1,
+    "term_id": 1,
+    "taxonomy": "cc_patronage",
+    "description": "Patronage of workers",
+    "parent": 0,
+    "count": 1
+  },
+  {
+    "term_taxonomy_id": 2,
+    "term_id": 2,
+    "taxonomy": "cc_patronage",
+    "description": "Patronage of fathers",
+    "parent": 0,
+    "count": 1
+  },
+  {
+    "term_taxonomy_id": 3,
+    "term_id": 3,
+    "taxonomy": "cc_vocation",
+    "description": "Vocation of family fathers",
+    "parent": 0,
+    "count": 1
+  },
+  {
+    "term_taxonomy_id": 4,
+    "term_id": 4,
+    "taxonomy": "cc_unknown_taxonomy",
+    "description": "Unknown custom taxonomy for testing",
+    "parent": 0,
+    "count": 1
+  }
+]

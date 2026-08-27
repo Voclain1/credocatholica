@@ -1,0 +1,245 @@
+[
+  {
+    "ID": 101,
+    "post_type": "cc_saint",
+    "post_title": "Saint Joseph",
+    "post_name": "saint-joseph",
+    "post_content": "<p>Saint Joseph was the foster father of Jesus Christ. <script>alert('unsafe')</script></p>",
+    "post_excerpt": "Husband of Mary and Patron of the Universal Church.",
+    "post_status": "publish",
+    "post_date": "2024-01-19 08:00:00",
+    "post_modified": "2024-03-19 12:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_saint&p=101",
+    "featured_media_id": 501,
+    "acf": {
+      "biography_teaser": "Foster Father of Jesus",
+      "birth_year": "c. 100 BC",
+      "death_year": "c. 18 AD",
+      "century": 1,
+      "feast_date_month": 3,
+      "feast_date_day": 19,
+      "ecclesial_status": "Saint",
+      "canonization_year": "Pre-Congregation",
+      "canonized_by": "Traditional",
+      "is_doctor_of_church": false,
+      "is_martyr": false,
+      "religious_order": null,
+      "historical_confidence": "Historically Documented",
+      "region_specific_status": "Patron of the Universal Church",
+      "relic_image_id": 502,
+      "linked_prayers": [201],
+      "linked_novenas": [301]
+    }
+  },
+  {
+    "ID": 102,
+    "post_type": "cc_saint",
+    "post_title": "Saint Joseph Duplicate",
+    "post_name": "saint-joseph",
+    "post_content": "<p>Duplicate slug test case.</p>",
+    "post_excerpt": "Duplicate",
+    "post_status": "publish",
+    "post_date": "2024-01-20 08:00:00",
+    "post_modified": "2024-03-20 12:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_saint&p=102",
+    "acf": {
+      "ecclesial_status": "Saint",
+      "historical_confidence": "Historically Documented"
+    }
+  },
+  {
+    "ID": 201,
+    "post_type": "cc_prayer",
+    "post_title": "Prayer to Saint Joseph",
+    "post_name": "prayer-to-saint-joseph",
+    "post_content": "<p>O Saint Joseph, whose protection is so great, so strong, so prompt before the throne of God... <a href=\"javascript:void(0)\" onclick=\"alert(1)\">Click here</a></p>",
+    "post_excerpt": "Traditional prayer to Saint Joseph.",
+    "post_status": "publish",
+    "post_date": "2024-01-20 08:00:00",
+    "post_modified": "2024-03-19 12:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_prayer&p=201",
+    "acf": {
+      "latin_title": "Oratio ad Sanctum Ioseph",
+      "latin_text": "O Sancte Ioseph...",
+      "prayer_type": "Devotional",
+      "is_official_formula": true,
+      "is_indulgenced": true,
+      "seasonal_use": "March / Feast Days",
+      "linked_saints": [101]
+    }
+  },
+  {
+    "ID": 301,
+    "post_type": "cc_novena",
+    "post_title": "Novena to Saint Joseph",
+    "post_name": "novena-to-saint-joseph",
+    "post_content": "<p>Nine-day novena in honor of St. Joseph.</p>",
+    "post_excerpt": "Novena to St. Joseph.",
+    "post_status": "publish",
+    "post_date": "2024-01-21 08:00:00",
+    "post_modified": "2024-03-10 12:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_novena&p=301",
+    "acf": {
+      "summary": "Powerful 9-day novena to Saint Joseph.",
+      "opening_prayer": "In the name of the Father...",
+      "closing_prayer": "Amen.",
+      "historical_origin": "19th Century Devotion",
+      "is_indulgenced": false,
+      "linked_saint": 101,
+      "novena_days": [
+        {
+          "day_number": 1,
+          "day_title": "Day 1: St. Joseph, Model of Workers",
+          "intention": "For all who seek employment...",
+          "day_prayer": "Saint Joseph, guardian of Jesus...",
+          "day_reflection": "Reflection text for Day 1."
+        },
+        {
+          "day_number": 1,
+          "day_title": "Duplicate Day Number Test",
+          "intention": "Duplicate day number...",
+          "day_prayer": "Duplicate day prayer..."
+        }
+      ]
+    }
+  },
+  {
+    "ID": 401,
+    "post_type": "cc_reading",
+    "post_title": "Mass Reading for Solemnity of St. Joseph",
+    "post_name": "reading-st-joseph-solemnity",
+    "post_content": "",
+    "post_excerpt": "Mass readings for March 19.",
+    "post_status": "publish",
+    "post_date": "2024-03-19 00:00:00",
+    "post_modified": "2024-03-19 00:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_reading&p=401",
+    "acf": {
+      "liturgical_date": "2024-03-19",
+      "year_cycle": "Year B",
+      "weekday_cycle": "Year 2",
+      "feast_name": "Solemnity of Saint Joseph",
+      "liturgical_colour": "White",
+      "first_reading_ref": "2 Samuel 7:4-5a, 12-14a, 16",
+      "first_reading_text": "The Lord spoke to Nathan saying: Go and tell my servant David...",
+      "psalm_ref": "Psalm 89:2-3, 4-5, 27 and 29",
+      "psalm_response": "The son of David will live for ever.",
+      "psalm_text": "I will sing for ever of your mercies, O Lord...",
+      "second_reading_ref": "Romans 4:13, 16-18, 22",
+      "second_reading_text": "Brothers: The promise to Abraham...",
+      "gospel_acclamation_ref": "Psalm 84:5",
+      "gospel_acclamation_text": "Blessed are those who dwell in your house, O Lord.",
+      "gospel_ref": "Matthew 1:16, 18-21, 24a",
+      "gospel_text": "Jacob was the father of Joseph, the husband of Mary...",
+      "gloria_required": true,
+      "creed_required": true,
+      "linked_saint": 101
+    }
+  },
+  {
+    "ID": 501,
+    "post_type": "cc_catechism",
+    "post_title": "CCC 437: The Redeemer",
+    "post_name": "ccc-437-the-redeemer",
+    "post_content": "<p>Explanation of CCC paragraphs 437-440.</p>",
+    "post_excerpt": "CCC 437-440",
+    "post_status": "publish",
+    "post_date": "2024-01-22 08:00:00",
+    "post_modified": "2024-01-22 08:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_catechism&p=501",
+    "acf": {
+      "paragraph_start": 437,
+      "paragraph_end": 440,
+      "pillar": "Part 1: Profession of Faith",
+      "doctrinal_level": "Dogma",
+      "magisterial_weight": "Universal Catechism"
+    }
+  },
+  {
+    "ID": 601,
+    "post_type": "cc_document",
+    "post_title": "Redemptoris Custos",
+    "post_name": "redemptoris-custos",
+    "post_content": "<p>Apostolic Exhortation on the Person and Mission of St. Joseph.</p>",
+    "post_excerpt": "Encyclical on St. Joseph by St. John Paul II.",
+    "post_status": "publish",
+    "post_date": "1989-08-15 00:00:00",
+    "post_modified": "2024-01-01 00:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_document&p=601",
+    "acf": {
+      "latin_title": "Redemptoris Custos",
+      "document_type": "Apostolic Exhortation",
+      "promulgation_date": "1989-08-15",
+      "issuing_authority": "Pope John Paul II",
+      "official_url": "https://vatican.va/redemptoris-custos"
+    }
+  },
+  {
+    "ID": 701,
+    "post_type": "cc_reflection",
+    "post_title": "Reflection on St. Joseph",
+    "post_name": "reflection-st-joseph",
+    "post_content": "<p>Spiritual meditation on the silence of St. Joseph.</p>",
+    "post_excerpt": "Meditation on St. Joseph.",
+    "post_status": "publish",
+    "post_date": "2024-03-19 06:00:00",
+    "post_modified": "2024-03-19 06:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_reflection&p=701",
+    "acf": {
+      "author": "Editorial Team",
+      "linked_saint": 101,
+      "linked_reading": 401
+    }
+  },
+  {
+    "ID": 801,
+    "post_type": "cc_formation",
+    "post_title": "Course on the Sacraments",
+    "post_name": "course-on-the-sacraments",
+    "post_content": "<p>Structured introduction to Catholic Sacraments.</p>",
+    "post_excerpt": "Sacraments pathway.",
+    "post_status": "publish",
+    "post_date": "2024-02-01 00:00:00",
+    "post_modified": "2024-02-01 00:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_formation&p=801",
+    "acf": {
+      "summary": "Pathway on Sacramental Theology",
+      "estimated_hours": 4,
+      "modules": [
+        {
+          "module_order": 1,
+          "module_title": "Module 1: Sacraments of Initiation",
+          "module_slug": "module-1-initiation",
+          "module_summary": "Baptism, Confirmation, Eucharist",
+          "lessons": [
+            {
+              "lesson_order": 1,
+              "lesson_title": "Lesson 1: Baptism",
+              "lesson_slug": "lesson-1-baptism",
+              "lesson_summary": "The gateway sacrament.",
+              "lesson_body": "<p>Baptism is the holy sacrament of regeneration...</p>",
+              "linked_catechism": 501,
+              "linked_document": 601
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "ID": 901,
+    "post_type": "cc_saint",
+    "post_title": "Unpublished Draft Saint",
+    "post_name": "draft-saint",
+    "post_content": "<p>Draft saint content.</p>",
+    "post_excerpt": "Draft",
+    "post_status": "draft",
+    "post_date": "2024-04-01 00:00:00",
+    "post_modified": "2024-04-01 00:00:00",
+    "guid": "https://credocatholica.com/?post_type=cc_saint&p=901",
+    "acf": {
+      "ecclesial_status": "Unknown Enum Test",
+      "historical_confidence": "Historically Documented"
+    }
+  }
+]

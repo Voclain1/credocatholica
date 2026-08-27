@@ -1,0 +1,22 @@
+[
+  {
+    "term_id": 1,
+    "name": "Workers & Carpenters",
+    "slug": "workers-carpenters"
+  },
+  {
+    "term_id": 2,
+    "name": "Fathers & Families",
+    "slug": "fathers-families"
+  },
+  {
+    "term_id": 3,
+    "name": "Husband & Father",
+    "slug": "husband-father"
+  },
+  {
+    "term_id": 4,
+    "name": "Unknown Taxonomy Term",
+    "slug": "unknown-term"
+  }
+]

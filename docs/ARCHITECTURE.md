@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.3: Canonical Prisma Schema Implementation**
+**Phase M0.4: WordPress Migration Tooling & Pipeline**
 
-Current status: Canonical Prisma schema (`prisma/schema.prisma`) implemented, formatted, validated, and generated into `src/generated/prisma`. 22 canonical domain models and explicit join entities established. Schema validated with zero TypeScript or ESLint baseline errors. Migration creation pending provisioned development PostgreSQL database credentials.
+Current status: Migration pipeline framework, export specification (`docs/WORDPRESS-EXPORT-SPEC.md`), operational runbook (`docs/MIGRATION-RUNBOOK.md`), synthetic fixtures, HTML sanitizer, domain transformers, validation engine, reconciliation reporting, and unit test suite fully implemented and verified. Dry-run pipeline tested offline with zero errors. Production data import awaits generation of live export package.
 
 ---
 
