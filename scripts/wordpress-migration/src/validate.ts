@@ -1,7 +1,11 @@
 import { WpSourcePackage, ValidationIssue } from './types.js';
 import { PUBLICATION_STATUS_MAP } from './normalize.js';
+import { TransformedLiturgicalDayPackage } from './transform/readings.js';
 
-export function validateSourcePackage(pkg: WpSourcePackage): ValidationIssue[] {
+export function validateSourcePackage(
+  pkg: WpSourcePackage,
+  transformedReadings: TransformedLiturgicalDayPackage[] = []
+): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   const slugTracker: Record<string, Set<string>> = {};
 
@@ -83,6 +87,34 @@ export function validateSourcePackage(pkg: WpSourcePackage): ValidationIssue[] {
         severity: 'WARNING',
         category: 'UNKNOWN_TAXONOMY',
       });
+    }
+  }
+
+  // 5. LiturgicalDay Identity Collision Validation (Rule 3)
+  const dateGroups = new Map<string, TransformedLiturgicalDayPackage[]>();
+  for (const rPkg of transformedReadings) {
+    const key = `${rPkg.calendarCode}:${rPkg.formattedDate}`;
+    if (!dateGroups.has(key)) {
+      dateGroups.set(key, []);
+    }
+    dateGroups.get(key)!.push(rPkg);
+  }
+
+  for (const [key, group] of dateGroups.entries()) {
+    if (group.length > 1) {
+      const [cal, dt] = key.split(':');
+      const legacyIds = group.map((g) => g.legacyId);
+
+      for (const rPkg of group) {
+        issues.push({
+          legacyId: rPkg.legacyId,
+          postType: 'cc_reading',
+          field: 'liturgical_date',
+          message: `LITURGICAL_DAY_COLLISION: Multiple legacy reading records (IDs: [${legacyIds.join(', ')}]) map to same LiturgicalDay identity (calendarCode: ${cal}, date: ${dt}). Duplicate LiturgicalDay creation blocked.`,
+          severity: 'REQUIRES_REVIEW',
+          category: 'LITURGICAL_DAY_COLLISION',
+        });
+      }
     }
   }
 

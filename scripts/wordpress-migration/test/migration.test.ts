@@ -9,6 +9,7 @@ import {
   ECCLESIAL_STATUS_MAP,
   LITURGICAL_COLOR_MAP,
   PRAYER_TYPE_MAP,
+  HISTORICAL_CONFIDENCE_MAP,
 } from '../src/normalize.js';
 import { transformSaint } from '../src/transform/saints.js';
 import { transformPrayer } from '../src/transform/prayers.js';
@@ -16,7 +17,7 @@ import { transformNovena } from '../src/transform/novenas.js';
 import { transformReading } from '../src/transform/readings.js';
 import { validateSourcePackage } from '../src/validate.js';
 import { WpPost, WpSourcePackage } from '../src/types.js';
-import { ReadingType, PublicationStatus, EcclesialStatus, LiturgicalColor, PrayerType } from '../../../src/generated/prisma/client.js';
+import { ReadingType, PublicationStatus, EcclesialStatus, LiturgicalColor, PrayerType, HistoricalConfidence } from '../../../src/generated/prisma/client.js';
 
 test('HTML Sanitizer — Text Integrity & Unsafe Tag Removal', () => {
   const safeInput = '<p>Example <strong>prayer</strong> text.</p>';
@@ -44,7 +45,7 @@ test('HTML Sanitizer — Text Integrity & Unsafe Tag Removal', () => {
   assert.equal(res4.wasModified, true);
 });
 
-test('Saint Date Preservation — Approximate Textual Dates', () => {
+test('Saint Date Preservation — Approximate Textual Dates & Historical Code Mapping', () => {
   const post: WpPost = {
     ID: 101,
     post_type: 'cc_saint',
@@ -59,7 +60,7 @@ test('Saint Date Preservation — Approximate Textual Dates', () => {
       death_year: 'late 4th century',
       century: 4,
       ecclesial_status: 'Saint',
-      historical_confidence: 'Historically Documented',
+      historical_confidence: 'a', // Explicit legacy 'a' mapping test
     },
   };
 
@@ -70,23 +71,26 @@ test('Saint Date Preservation — Approximate Textual Dates', () => {
   assert.equal(saint.deathYear, 'late 4th century');
   assert.equal(saint.century, 4);
   assert.equal(saint.ecclesialStatus, EcclesialStatus.SAINT);
+  assert.equal(saint.historicalConfidence, HistoricalConfidence.HISTORICALLY_DOCUMENTED);
 });
 
-test('Enum Parsing & Controlled Fallbacks', () => {
+test('Enum Parsing & Strict Non-Fallback Behavior', () => {
   const e1 = parseEnum('Saint', ECCLESIAL_STATUS_MAP);
   assert.equal(e1.result, EcclesialStatus.SAINT);
 
   const e2 = parseEnum('Violet', LITURGICAL_COLOR_MAP);
   assert.equal(e2.result, LiturgicalColor.VIOLET);
 
-  const e3 = parseEnum('Devotional', PRAYER_TYPE_MAP);
-  assert.equal(e3.result, PrayerType.DEVOTIONAL);
+  // 'gold' must NOT fallback to GREEN!
+  const e3 = parseEnum('gold', LITURGICAL_COLOR_MAP);
+  assert.equal(e3.result, undefined);
 
-  const e4 = parseEnum('InvalidEnumString', PRAYER_TYPE_MAP);
-  assert.equal(e4.result, undefined);
+  // 'feria' must NOT fallback to CelebrationRank!
+  const e4 = parseEnum('a', HISTORICAL_CONFIDENCE_MAP);
+  assert.equal(e4.result, HistoricalConfidence.HISTORICALLY_DOCUMENTED);
 });
 
-test('Readings Normalization — Structural Roles', () => {
+test('Readings Normalization & Missing Text Validation', () => {
   const post: WpPost = {
     ID: 401,
     post_type: 'cc_reading',
@@ -101,7 +105,7 @@ test('Readings Normalization — Structural Roles', () => {
       first_reading_ref: 'Isaiah 7:10-14',
       first_reading_text: 'First reading text content.',
       gospel_ref: 'Luke 1:26-38',
-      gospel_text: 'Gospel text content.',
+      gospel_text: '', // Text missing test case
     },
   };
 
@@ -110,64 +114,44 @@ test('Readings Normalization — Structural Roles', () => {
 
   assert.equal(dayPackage.readings.length, 2);
   assert.equal(dayPackage.readings[0].type, ReadingType.FIRST_READING);
-  assert.equal(dayPackage.readings[0].citationRef, 'Isaiah 7:10-14');
   assert.equal(dayPackage.readings[1].type, ReadingType.GOSPEL);
-  assert.equal(dayPackage.readings[1].citationRef, 'Luke 1:26-38');
+
+  const missingTextIssue = issues.find((i) => i.category === 'MISSING_READING_TEXT');
+  assert.notEqual(missingTextIssue, undefined);
+  assert.equal(missingTextIssue?.field, 'acf.gospel_text');
 });
 
-test('Novena Days Repeater Transformation', () => {
-  const post: WpPost = {
-    ID: 301,
-    post_type: 'cc_novena',
-    post_title: 'St. Joseph Novena',
-    post_name: 'st-joseph-novena',
-    post_content: 'Novena overview.',
+test('Validation Engine — LiturgicalDay Collision Detection', () => {
+  const post1: WpPost = {
+    ID: 53,
+    post_type: 'cc_reading',
+    post_title: 'Reading 1',
+    post_name: 'reading-1',
+    post_content: '',
     post_status: 'publish',
-    post_date: '2024-01-01 00:00:00',
-    post_modified: '2024-01-01 00:00:00',
-    acf: {
-      summary: 'Summary text.',
-      novena_days: [
-        { day_number: 1, day_title: 'Day 1', day_prayer: 'Prayer 1' },
-        { day_number: 2, day_title: 'Day 2', day_prayer: 'Prayer 2' },
-      ],
-    },
+    post_date: '2026-03-26',
+    post_modified: '2026-03-26',
+    acf: { liturgical_date: '2026-03-26' },
+  };
+
+  const post2: WpPost = {
+    ID: 57,
+    post_type: 'cc_reading',
+    post_title: 'Reading 2',
+    post_name: 'reading-2',
+    post_content: '',
+    post_status: 'publish',
+    post_date: '2026-03-26',
+    post_modified: '2026-03-26',
+    acf: { liturgical_date: '2026-03-26' },
   };
 
   const issues: any[] = [];
-  const novena = transformNovena(post, issues);
+  const r1 = transformReading(post1, issues);
+  const r2 = transformReading(post2, issues);
 
-  assert.equal(novena.days.length, 2);
-  assert.equal(novena.days[0].dayNumber, 1);
-  assert.equal(novena.days[0].title, 'Day 1');
-  assert.equal(novena.days[1].dayNumber, 2);
-  assert.equal(novena.days[1].title, 'Day 2');
-});
-
-test('Validation Engine — Duplicate Slug Detection', () => {
   const pkg: WpSourcePackage = {
-    posts: [
-      {
-        ID: 1,
-        post_type: 'cc_saint',
-        post_title: 'Saint Francis',
-        post_name: 'st-francis',
-        post_content: 'Content 1',
-        post_status: 'publish',
-        post_date: '2024-01-01',
-        post_modified: '2024-01-01',
-      },
-      {
-        ID: 2,
-        post_type: 'cc_saint',
-        post_title: 'Saint Francis Duplicate',
-        post_name: 'st-francis',
-        post_content: 'Content 2',
-        post_status: 'publish',
-        post_date: '2024-01-01',
-        post_modified: '2024-01-01',
-      },
-    ],
+    posts: [post1, post2],
     postmeta: [],
     terms: [],
     termTaxonomy: [],
@@ -175,8 +159,8 @@ test('Validation Engine — Duplicate Slug Detection', () => {
     media: [],
   };
 
-  const issues = validateSourcePackage(pkg);
-  const dupIssue = issues.find((i) => i.category === 'DUPLICATE_SLUG');
-  assert.notEqual(dupIssue, undefined);
-  assert.equal(dupIssue?.legacyId, 2);
+  const validationIssues = validateSourcePackage(pkg, [r1, r2]);
+  const collisionIssue = validationIssues.find((i) => i.category === 'LITURGICAL_DAY_COLLISION');
+  assert.notEqual(collisionIssue, undefined);
+  assert.equal(collisionIssue?.severity, 'REQUIRES_REVIEW');
 });

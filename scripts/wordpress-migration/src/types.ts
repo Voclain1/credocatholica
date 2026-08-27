@@ -66,11 +66,19 @@ export interface WpSourcePackage {
   media: WpMedia[];
 }
 
+export interface ExclusionRule {
+  sourceSystem: string;
+  legacyObjectType: string;
+  legacyObjectId: number;
+  reason: string;
+  notes?: string;
+}
+
 // ==========================================
 // VALIDATION & SANITIZATION TYPES
 // ==========================================
 
-export type ValidationSeverity = 'WARNING' | 'ERROR';
+export type ValidationSeverity = 'WARNING' | 'ERROR' | 'REQUIRES_REVIEW' | 'INFO';
 
 export interface ValidationIssue {
   legacyId: number;
@@ -87,7 +95,12 @@ export interface ValidationIssue {
     | 'UNPUBLISHED_STATUS'
     | 'UNKNOWN_TAXONOMY'
     | 'MALFORMED_REPEATER'
-    | 'DEFERRED_FIELD';
+    | 'DEFERRED_FIELD'
+    | 'LITURGICAL_DAY_COLLISION'
+    | 'MISSING_READING_TEXT'
+    | 'SOURCE_CONTENT_REVIEW'
+    | 'EXCLUDED_BY_REVIEW'
+    | 'ORPHANED_RELATIONSHIP';
 }
 
 export interface SanitizationResult {
@@ -97,11 +110,23 @@ export interface SanitizationResult {
   reason?: string;
 }
 
+export interface PrayerTypeTermAudit {
+  termId: number;
+  name: string;
+  slug: string;
+  relationshipCount: number;
+  mappedType?: string;
+  status: 'MAPPED' | 'REQUIRES_REVIEW';
+}
+
 // ==========================================
 // RECONCILIATION METRICS
 // ==========================================
 
+export type MigrationVerdict = 'SAFE_TO_APPLY' | 'APPLY_AFTER_REVIEW' | 'NOT_SAFE_TO_APPLY' | 'NO_CANONICAL_POSTS_TO_IMPORT';
+
 export interface ReconciliationMetrics {
+  verdict: MigrationVerdict;
   source: {
     posts: number;
     postmeta: number;
@@ -115,17 +140,30 @@ export interface ReconciliationMetrics {
     wouldInsert: number;
     wouldUpdate: number;
     wouldSkip: number;
+    canonicalContentRecordsFromPosts: number;
     byEntityType: Record<string, { wouldInsert: number; wouldUpdate: number; wouldSkip: number }>;
   };
   quality: {
-    valid: number;
-    warnings: number;
+    sourceStructurallyValid: number;
+    canonicalReady: number;
+    excludedByReview: number;
+    requiresReview: number;
     failures: number;
     deferred: number;
     unresolvedRelationships: number;
+    orphanedRelationships: number;
     unknownEnums: number;
     duplicateSlugs: number;
     sanitizedFields: number;
+    liturgicalDayCollisions: number;
+    missingReadingTexts: number;
+    sourceContentReviews: number;
   };
+  classificationsAudit: {
+    patronages: { totalDefined: number; referenced: number };
+    vocations: { totalDefined: number; referenced: number };
+    seasons: { totalDefined: number; referenced: number };
+  };
+  prayerTypeAudit: PrayerTypeTermAudit[];
   issues: ValidationIssue[];
 }

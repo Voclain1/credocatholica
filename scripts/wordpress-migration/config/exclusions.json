@@ -1,0 +1,44 @@
+[
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_reading",
+    "legacyObjectId": 53,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  },
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_reading",
+    "legacyObjectId": 57,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  },
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_reading",
+    "legacyObjectId": 58,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  },
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_reading",
+    "legacyObjectId": 59,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  },
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_saint",
+    "legacyObjectId": 50,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  },
+  {
+    "sourceSystem": "wordpress",
+    "legacyObjectType": "cc_prayer",
+    "legacyObjectId": 52,
+    "reason": "DEVELOPMENT_TEST_CONTENT",
+    "notes": "Excluded by human editorial review (development/test content)"
+  }
+]

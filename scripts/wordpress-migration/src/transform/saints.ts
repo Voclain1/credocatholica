@@ -21,22 +21,24 @@ export interface TransformedSaint {
   century?: number;
   feastDateMonth?: number;
   feastDateDay?: number;
-  ecclesialStatus: EcclesialStatus;
+  ecclesialStatus?: EcclesialStatus;
   canonizationYear?: string;
   canonizedBy?: string;
   isDoctorOfTheChurch: boolean;
   isMartyr: boolean;
   religiousOrder?: string;
-  historicalConfidence: HistoricalConfidence;
+  historicalConfidence?: HistoricalConfidence;
   regionSpecificStatus?: string;
   publicationStatus: PublicationStatus;
   publishedAt?: Date;
   linkedPrayerIds: number[];
   linkedNovenaIds: number[];
+  isValidForCanonicalApply: boolean;
 }
 
 export function transformSaint(post: WpPost, issues: ValidationIssue[]): TransformedSaint {
   const acf = post.acf || {};
+  let isValidForCanonicalApply = true;
 
   const { sanitizedHtml, wasModified, reason } = sanitizeContent(post.post_content || acf.biography || '');
   if (wasModified) {
@@ -50,28 +52,48 @@ export function transformSaint(post: WpPost, issues: ValidationIssue[]): Transfo
     });
   }
 
-  const ecclesialParsed = parseEnum(acf.ecclesial_status || 'Saint', ECCLESIAL_STATUS_MAP);
-  if (!ecclesialParsed.result) {
+  const ecclesialRaw = acf.ecclesial_status;
+  const ecclesialParsed = ecclesialRaw ? parseEnum(ecclesialRaw, ECCLESIAL_STATUS_MAP) : { result: undefined, rawValue: '' };
+  if (ecclesialRaw && !ecclesialParsed.result) {
+    isValidForCanonicalApply = false;
     issues.push({
       legacyId: post.ID,
       postType: 'cc_saint',
       field: 'acf.ecclesial_status',
-      message: `Unknown ecclesial status '${acf.ecclesial_status}'. Falling back to SAINT.`,
-      severity: 'WARNING',
+      message: `Unknown ecclesial status '${ecclesialRaw}'. Requires review.`,
+      severity: 'REQUIRES_REVIEW',
       category: 'UNKNOWN_ENUM',
     });
   }
 
-  const historicalParsed = parseEnum(acf.historical_confidence || 'Historically Documented', HISTORICAL_CONFIDENCE_MAP);
-  if (!historicalParsed.result) {
+  const historicalRaw = acf.historical_confidence;
+  const historicalParsed = historicalRaw ? parseEnum(historicalRaw, HISTORICAL_CONFIDENCE_MAP) : { result: undefined, rawValue: '' };
+  if (historicalRaw && !historicalParsed.result) {
+    isValidForCanonicalApply = false;
     issues.push({
       legacyId: post.ID,
       postType: 'cc_saint',
       field: 'acf.historical_confidence',
-      message: `Unknown historical confidence '${acf.historical_confidence}'. Falling back to HISTORICALLY_DOCUMENTED.`,
-      severity: 'WARNING',
+      message: `Unknown historical confidence '${historicalRaw}'. Requires review.`,
+      severity: 'REQUIRES_REVIEW',
       category: 'UNKNOWN_ENUM',
     });
+  }
+
+  // Source Content Review: Rule 8 (Detect unusual/future death years e.g. St. Arinze legacyId 50)
+  const dYear = acf.death_year ? String(acf.death_year).trim() : '';
+  if (dYear) {
+    const numericYear = parseInt(dYear.replace(/\D/g, ''), 10);
+    if (!isNaN(numericYear) && numericYear > 2026) {
+      issues.push({
+        legacyId: post.ID,
+        postType: 'cc_saint',
+        field: 'death_year',
+        message: `SOURCE_CONTENT_REVIEW: Unusual/future historical death year '${dYear}' detected for post '${post.post_title}'.`,
+        severity: 'REQUIRES_REVIEW',
+        category: 'SOURCE_CONTENT_REVIEW',
+      });
+    }
   }
 
   const pubStatus = PUBLICATION_STATUS_MAP[post.post_status.toLowerCase()] || PublicationStatus.DRAFT;
@@ -100,5 +122,6 @@ export function transformSaint(post: WpPost, issues: ValidationIssue[]): Transfo
     publishedAt: pubStatus === PublicationStatus.PUBLISHED ? new Date(post.post_date) : undefined,
     linkedPrayerIds: Array.isArray(acf.linked_prayers) ? acf.linked_prayers : [],
     linkedNovenaIds: Array.isArray(acf.linked_novenas) ? acf.linked_novenas : [],
+    isValidForCanonicalApply,
   };
 }

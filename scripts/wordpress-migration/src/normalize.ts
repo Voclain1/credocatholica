@@ -40,6 +40,7 @@ export const CELEBRATION_RANK_MAP: Record<string, CelebrationRank> = {
   feast: CelebrationRank.FEAST,
   memorial: CelebrationRank.MEMORIAL,
   optional_memorial: CelebrationRank.OPTIONAL_MEMORIAL,
+  // Note: 'feria' / 'Feria' is intentionally EXCLUDED. Ferial status is LiturgicalDay context, NOT CelebrationRank.
 };
 
 export const LITURGICAL_COLOR_MAP: Record<string, LiturgicalColor> = {
@@ -50,6 +51,7 @@ export const LITURGICAL_COLOR_MAP: Record<string, LiturgicalColor> = {
   red: LiturgicalColor.RED,
   rose: LiturgicalColor.ROSE,
   black: LiturgicalColor.BLACK,
+  // Note: 'gold' is intentionally EXCLUDED. Unknown colors must yield UNKNOWN_ENUM / REQUIRES_REVIEW and NOT silently fallback to GREEN.
 };
 
 export const YEAR_CYCLE_MAP: Record<string, YearCycle> = {
@@ -77,6 +79,11 @@ export const ECCLESIAL_STATUS_MAP: Record<string, EcclesialStatus> = {
 };
 
 export const HISTORICAL_CONFIDENCE_MAP: Record<string, HistoricalConfidence> = {
+  // Legacy single-letter codes
+  a: HistoricalConfidence.HISTORICALLY_DOCUMENTED,
+  b: HistoricalConfidence.STRONG_TRADITIONAL_SOURCES,
+  c: HistoricalConfidence.PIOUS_TRADITION,
+  // Full descriptive strings
   historically_documented: HistoricalConfidence.HISTORICALLY_DOCUMENTED,
   'historically documented': HistoricalConfidence.HISTORICALLY_DOCUMENTED,
   strong_traditional_sources: HistoricalConfidence.STRONG_TRADITIONAL_SOURCES,
