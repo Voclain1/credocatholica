@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.1: Engineering Baseline & Repository Initialization**
+**Phase M0.2: Data Model Design & WordPress Migration Mapping Specification**
 
-Current status: Next.js App Router baseline established with TypeScript strict mode, Prisma 7 configuration, and domain directory scaffolding. Database models and data migrations are not yet active in this phase.
+Current status: Canonical data model architecture (`docs/DATA-MODEL.md`) and exhaustive WordPress field-by-field migration mapping inventory (`docs/WORDPRESS-MAPPING.md`) established. Next.js 16.3.3 baseline active. Code changes remain strictly documentation-only for M0.2; database migrations and Prisma model generation will take place in subsequent approved phases.
 
 ---
 
