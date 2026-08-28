@@ -47,7 +47,7 @@ export default async function HomePage() {
             </p>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <EditorialLink href="/#today" variant="primary">
+              <EditorialLink href="/today" variant="primary">
                 Today&apos;s Liturgy
               </EditorialLink>
               <EditorialLink href="/#library" variant="secondary">
@@ -538,7 +538,7 @@ export default async function HomePage() {
               Discover daily liturgical readings, explore saint biographies, and deepen your Catholic faith.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <EditorialLink href="/#today" variant="primary">
+              <EditorialLink href="/today" variant="primary">
                 Daily Liturgy
               </EditorialLink>
               <EditorialLink href="/#library" variant="secondary">

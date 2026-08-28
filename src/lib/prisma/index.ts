@@ -8,13 +8,10 @@ const globalForPrisma = globalThis as unknown as {
 
 /**
  * Lazy Prisma client singleton instance.
- * Uses Prisma 7 PrismaPg driver adapter when DATABASE_URL is configured.
+ * Uses Prisma 7 PrismaPg driver adapter.
  */
 function createPrismaClient(): PrismaClient {
-  const connectionString = process.env.DATABASE_URL;
-  if (!connectionString) {
-    return new PrismaClient({} as any);
-  }
+  const connectionString = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/credocatholica_dev';
   const pool = new pg.Pool({ connectionString });
   const adapter = new PrismaPg(pool);
   return new PrismaClient({ adapter });

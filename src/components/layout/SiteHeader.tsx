@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { MobileNavigation } from './MobileNavigation';
 
 const NAV_ITEMS = [
-  { label: 'Today', href: '/#today' },
+  { label: 'Today', href: '/today' },
   { label: 'Library', href: '/#library' },
   { label: 'Formation', href: '/#formation' },
   { label: 'Editorial Standards', href: '/#editorial-standards' },

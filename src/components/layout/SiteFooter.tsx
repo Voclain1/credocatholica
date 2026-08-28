@@ -68,7 +68,7 @@ export function SiteFooter() {
             <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               <li>
                 <Link
-                  href="/#today"
+                  href="/today"
                   style={{
                     fontSize: '0.875rem',
                     color: 'var(--color-background)',

@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.5: Public Shell, Design System, Homepage, SEO & Reference Seed Infrastructure**
+**Phase M0.6: The Daily Liturgical Companion (`/today`)**
 
-Current status: Public shell layout, responsive SiteHeader & SiteFooter, accessible MobileNavigation, sacred minimalist design system tokens (`src/app/globals.css`, `docs/DESIGN-SYSTEM.md`), `Cormorant Garamond` & `Inter` typography, canonical homepage, SEO & metadata baseline (`robots.ts`, `sitemap.ts`), domain liturgy read service (`src/lib/liturgy/service.ts`), and idempotent reference seed infrastructure (`prisma/seed.ts`, `docs/SEEDING.md`) fully implemented and verified. Prisma 7 schema validated and seed tested against Neon development database with 100% idempotency.
+Current status: Canonical daily liturgical companion route (`/today`), presentation component library (`src/components/liturgy/`), extended domain liturgy query service (`src/lib/liturgy/service.ts`), isolated date-resolution helper (`resolveApplicationDate`), ordered Mass reading renderer, responsorial psalm refrain handler, principal vs secondary celebration presentation logic, print-friendly CSS foundation, unit test suite (`test:liturgy`), and architectural documentation (`docs/LITURGICAL-PRESENTATION.md`) fully implemented and verified. All existing components, homepage CTAs, and sitemaps cleanly integrated.
 
 ---
 

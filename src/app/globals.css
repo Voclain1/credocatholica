@@ -195,3 +195,40 @@ h1, h2, h3, h4, h5, h6, .font-serif {
   }
 }
 
+/* Print-Friendly Foundation (Requirement 26) */
+@media print {
+  header,
+  footer,
+  .skip-link,
+  .mobile-nav-wrapper {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .reading-article,
+  .gospel-article,
+  .psalm-article {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 1rem 0 !important;
+    page-break-inside: avoid;
+  }
+
+  .scripture-text {
+    font-size: 11pt !important;
+    line-height: 1.5 !important;
+  }
+}
+
+
