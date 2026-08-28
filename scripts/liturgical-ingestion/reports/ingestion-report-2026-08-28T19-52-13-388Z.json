@@ -1,0 +1,126 @@
+{
+  "packageId": "universal-roman-2026-08-28-to-2026-09-03",
+  "packageHash": "44ea06472540fdc37b6b73b540d1494ebfc9a03a8ba1bca96674ace8f94307a5",
+  "generatedAt": "2026-08-28T19:52:13.383Z",
+  "metadata": {
+    "packageName": "universal-roman-2026-08-28-to-2026-09-03",
+    "sourceName": "Universal Roman Calendar & Douay-Rheims Reading Package",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-08-28-to-2026-09-03",
+    "sourceVersion": "2.2.0",
+    "extractionTimestamp": "2026-08-28T20:45:00Z",
+    "periodCovered": {
+      "start": "2026-08-28",
+      "end": "2026-09-03"
+    },
+    "scriptureTranslation": "Douay-Rheims Version, Challoner Revision",
+    "licensingBasis": "Public Domain in the United States (Douay-Rheims Challoner Revision / Vatican General Roman Calendar Baseline)",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
+  },
+  "counts": {
+    "daysTotal": 7,
+    "celebrationsTotal": 3,
+    "readingSetsTotal": 8,
+    "readingsTotal": 25,
+    "issuesBlockers": 0,
+    "issuesWarnings": 0
+  },
+  "quality": {
+    "structurallyValid": true,
+    "blockersCount": 0,
+    "warningsCount": 0,
+    "issues": [
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 33:1-2, 4-5, 10-11' on date '2026-08-28' does not supply an explicit refrain response.",
+        "date": "2026-08-28"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 71:1-2, 3-4a, 5-6ab, 15ab and 17' on date '2026-08-29' does not supply an explicit refrain response.",
+        "date": "2026-08-29"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 33:12-13, 14-15, 20-21' on date '2026-08-29' does not supply an explicit refrain response.",
+        "date": "2026-08-29"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 63:2, 3-4, 5-6, 8-9' on date '2026-08-30' does not supply an explicit refrain response.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 119:97, 98, 99, 100, 101, 102' on date '2026-08-31' does not supply an explicit refrain response.",
+        "date": "2026-08-31"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 145:8-9, 10-11, 12-13ab, 13cd-14' on date '2026-09-01' does not supply an explicit refrain response.",
+        "date": "2026-09-01"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 33:12-13, 14-15, 20-21' on date '2026-09-02' does not supply an explicit refrain response.",
+        "date": "2026-09-02"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 24:1bc-2, 3-4ab, 5-6' on date '2026-09-03' does not supply an explicit refrain response.",
+        "date": "2026-09-03"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "date": "2026-08-28",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-29",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-30",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-31",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-01",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-02",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-03",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    }
+  ],
+  "approval": {
+    "required": true,
+    "artifactFound": false,
+    "hashMatches": false
+  },
+  "verdict": "READY_FOR_HUMAN_APPROVAL"
+}

@@ -4,15 +4,15 @@
     "sourceName": "Universal Roman Calendar & Douay-Rheims Reading Package",
     "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
     "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-08-28-to-2026-09-03",
-    "sourceVersion": "2.1.0",
-    "extractionTimestamp": "2026-08-28T20:30:00Z",
+    "sourceVersion": "2.2.0",
+    "extractionTimestamp": "2026-08-28T20:45:00Z",
     "periodCovered": {
       "start": "2026-08-28",
       "end": "2026-09-03"
     },
     "scriptureTranslation": "Douay-Rheims Version, Challoner Revision",
     "licensingBasis": "Public Domain in the United States (Douay-Rheims Challoner Revision / Vatican General Roman Calendar Baseline)",
-    "reviewerStatus": "PENDING_HUMAN_EDITORIAL_REVIEW"
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
   },
   "records": [
     {
@@ -134,8 +134,8 @@
               "readingOrder": 2,
               "citationRef": "Psalm 71:1-2, 3-4a, 5-6ab, 15ab and 17",
               "scriptureRef": "Psalm 70:1-2, 3-4, 5-6, 15, 17",
-              "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me. Incline thy ear unto me, and save me. Be thou unto me a God, a protector, and a place of strength: that thou mayst make me safe. For thou art my patience, O Lord: my hope, O Lord, from my youth.",
-              "textStatus": "REQUIRES_MANUAL_SEGMENT_REVIEW",
+              "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me. Incline thy ear unto me, and save me. Be thou unto me a God, a protector, and a place of strength: that thou mayst make me safe. Deliver me, O my God, out of the hand of the sinner. For thou art my patience, O Lord: my hope, O Lord, from my youth. By thee have I been confirmed from the womb: from my mother's womb thou art my protector. My mouth shall show forth thy justice; thy salvation all the day long. Thou hast taught me, O God, from my youth: and till now I will declare thy wonderful works.",
+              "textStatus": "VERIFIED_EXACT",
               "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
             },
             {
@@ -331,8 +331,8 @@
               "readingOrder": 1,
               "citationRef": "1 Corinthians 2:10b-16",
               "scriptureRef": "1 Corinthians 2:10-16",
-              "text": "For the Spirit searcheth all things, yea, the deep things of God. For what man knoweth the things of a man, but the spirit of a man that is in him? So the things also that are of God no man knoweth, but the Spirit of God.",
-              "textStatus": "REQUIRES_MANUAL_SEGMENT_REVIEW",
+              "text": "For the Spirit searcheth all things, yea, the deep things of God. For what man knoweth the things of a man, but the spirit of a man that is in him? So the things also that are of God no man knoweth, but the Spirit of God. Now we have received not the spirit of this world, but the Spirit that is of God: that we may know the things that are given us from God. Which things also we speak, not in the learned words of human wisdom, but in the doctrine of the Spirit, comparing spiritual things with spiritual. But the sensual man perceiveth not these things that are of the Spirit of God: for it is foolishness to him, and he cannot understand, because it is spiritually examined. But the spiritual man judgeth all things: and he himself is judged of no man. For who hath known the mind of the Lord, that he may instruct him? But we have the mind of Christ.",
+              "textStatus": "VERIFIED_EXACT",
               "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
             },
             {
@@ -340,8 +340,8 @@
               "readingOrder": 2,
               "citationRef": "Psalm 145:8-9, 10-11, 12-13ab, 13cd-14",
               "scriptureRef": "Psalm 144:8-9, 10-11, 12-13, 14",
-              "text": "The Lord is gracious and merciful: patient, and plenteous in mercy. The Lord is sweet to all: and his tender mercies are over all his works. Let all thy works, O Lord, praise thee: and let thy saints bless thee. They shall speak of the glory of thy kingdom: and shall tell of thy power.",
-              "textStatus": "REQUIRES_MANUAL_SEGMENT_REVIEW",
+              "text": "The Lord is gracious and merciful: patient, and plenteous in mercy. The Lord is sweet to all: and his tender mercies are over all his works. Let all thy works, O Lord, praise thee: and let thy saints bless thee. They shall speak of the glory of thy kingdom: and shall tell of thy power. To make his might known to the sons of men: and the glory of the magnificence of his kingdom. Thy kingdom is a kingdom of all ages: and thy dominion endureth throughout all generations. The Lord is faithful in all his words: and holy in all his works. The Lord lifteth up all that fall: and setteth up all that are cast down.",
+              "textStatus": "VERIFIED_EXACT",
               "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
             },
             {
@@ -459,10 +459,10 @@
             {
               "type": "RESPONSORIAL_PSALM",
               "readingOrder": 2,
-              "citationRef": "Psalm 24:1-2, 3-4ab, 5-6",
+              "citationRef": "Psalm 24:1bc-2, 3-4ab, 5-6",
               "scriptureRef": "Psalm 23:1-2, 3-4, 5-6",
-              "text": "The earth is the Lord's, and the fulness thereof: the world, and all they that dwell therein. For he hath founded it upon the seas: and hath prepared it upon the rivers.",
-              "textStatus": "REQUIRES_MANUAL_SEGMENT_REVIEW",
+              "text": "The world, and all they that dwell therein. For he hath founded it upon the seas: and hath prepared it upon the rivers. Who shall ascend into the mountain of the Lord: or who shall stand in his holy place? The innocent in hands, and clean of heart. He shall receive a blessing from the Lord: and mercy from God his Saviour. This is the generation of them that seek him, of them that seek the face of the God of Jacob.",
+              "textStatus": "VERIFIED_EXACT",
               "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
             },
             {

@@ -238,7 +238,7 @@ test('12. Liturgical Ingestion — Apply Rejection when Verdict is NOT APPROVED_
   }
 });
 
-test('13. Liturgical Ingestion — Real Source Package Dry-Run Validation (0 Blockers)', () => {
+test('13. Liturgical Ingestion — Real Source Package Dry-Run Validation (0 Blockers, 0 Warnings)', () => {
   const realPkgPath = path.resolve(process.cwd(), 'scripts/liturgical-ingestion/input/universal-roman-2026-08-28-to-2026-09-03.json');
 
   assert.equal(fs.existsSync(realPkgPath), true);
@@ -249,10 +249,12 @@ test('13. Liturgical Ingestion — Real Source Package Dry-Run Validation (0 Blo
 
   const issues = validateIngestionPackage(pkg);
   const blockers = issues.filter((i) => i.severity === 'BLOCKER');
+  const warnings = issues.filter((i) => i.severity === 'WARNING');
   assert.equal(blockers.length, 0);
+  assert.equal(warnings.length, 0);
 
   const report = generateReconciliationReport(pkg, issues);
-  assert.equal(report.verdict, 'REQUIRES_REVIEW');
+  assert.equal(report.verdict, 'READY_FOR_HUMAN_APPROVAL');
 });
 
 test('14. Liturgical Ingestion — Deterministic Psalm Versification Resolver (Fail-Closed)', () => {
@@ -261,7 +263,7 @@ test('14. Liturgical Ingestion — Deterministic Psalm Versification Resolver (F
   assert.equal(mapModernPsalmToDouayRheims('Psalm 63:2, 3-4, 5-6, 8-9'), 'Psalm 62:2, 3-4, 5-6, 8-9');
   assert.equal(mapModernPsalmToDouayRheims('Psalm 119:97, 98, 99, 100, 101, 102'), 'Psalm 118:97, 98, 99, 100, 101, 102');
   assert.equal(mapModernPsalmToDouayRheims('Psalm 145:8-9, 10-11, 12-13ab, 13cd-14'), 'Psalm 144:8-9, 10-11, 12-13ab, 13cd-14');
-  assert.equal(mapModernPsalmToDouayRheims('Psalm 24:1-2, 3-4ab, 5-6'), 'Psalm 23:1-2, 3-4ab, 5-6');
+  assert.equal(mapModernPsalmToDouayRheims('Psalm 24:1bc-2, 3-4ab, 5-6'), 'Psalm 23:1bc-2, 3-4ab, 5-6');
 
   // Fail-closed test on unmapped chapter
   assert.throws(() => mapModernPsalmToDouayRheims('Psalm 99:1-5'), /Unsupported Psalm chapter '99'/);
@@ -364,6 +366,38 @@ test('16. Liturgical Ingestion — Aug 29 Multi-Option Canonical Truth (No False
   assert.equal(gospel1?.citationRef, 'Mark 6:17-29');
   assert.equal(gospel2?.citationRef, 'Mark 6:17-29');
 });
+
+test('17. Liturgical Ingestion — Sub-Verse Manual Verification & Deterministic Hashing Safety', () => {
+  const realPkgPath = path.resolve(process.cwd(), 'scripts/liturgical-ingestion/input/universal-roman-2026-08-28-to-2026-09-03.json');
+  const pkg: SourceIngestionPackage = JSON.parse(fs.readFileSync(realPkgPath, 'utf-8'));
+
+  // 1. Verify exact checksum of verified package
+  const originalHash = computePackageHash(pkg);
+  assert.equal(originalHash.length, 64);
+
+  // 2. Editing text payload must deterministically change package hash
+  const modifiedPkg: SourceIngestionPackage = JSON.parse(JSON.stringify(pkg));
+  if (modifiedPkg.records[0]?.readingSets?.[0]?.readings[0]) {
+    modifiedPkg.records[0].readingSets[0].readings[0].text += ' Extra text.';
+  }
+  const modifiedHash = computePackageHash(modifiedPkg);
+
+  assert.notEqual(originalHash, modifiedHash);
+
+  // 3. Reverting text status to REQUIRES_MANUAL_SEGMENT_REVIEW triggers warning warning
+  const unverifiedPkg: SourceIngestionPackage = JSON.parse(JSON.stringify(pkg));
+  if (unverifiedPkg.records[0]?.readingSets?.[0]?.readings[0]) {
+    unverifiedPkg.records[0].readingSets[0].readings[0].textStatus = 'REQUIRES_MANUAL_SEGMENT_REVIEW';
+  }
+
+  const issues = validateIngestionPackage(unverifiedPkg);
+  const warning = issues.find((i) => i.code === 'REQUIRES_MANUAL_SEGMENT_REVIEW');
+  assert.notEqual(warning, undefined);
+
+  const report = generateReconciliationReport(unverifiedPkg, issues);
+  assert.equal(report.verdict, 'REQUIRES_REVIEW');
+});
+
 
 
 
