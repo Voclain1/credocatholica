@@ -1,0 +1,117 @@
+{
+  "packageId": "universal-roman-2026-08-28-to-2026-09-03",
+  "packageHash": "308282ac1170a52ec0734e5f948c8342f8edab689c33f0ebd13af2fdebecb96b",
+  "generatedAt": "2026-08-28T18:59:46.491Z",
+  "metadata": {
+    "packageName": "universal-roman-2026-08-28-to-2026-09-03",
+    "sourceName": "Universal Roman Calendar & Douay-Rheims Reading Package",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-08-28-to-2026-09-03",
+    "sourceVersion": "1.1.0",
+    "extractionTimestamp": "2026-08-28T19:55:00Z",
+    "periodCovered": {
+      "start": "2026-08-28",
+      "end": "2026-09-03"
+    },
+    "scriptureTranslation": "Douay-Rheims Version, Challoner Revision",
+    "licensingBasis": "Public Domain in the United States (Douay-Rheims Challoner Revision / Vatican General Roman Calendar Baseline)",
+    "reviewerStatus": "PENDING_HUMAN_EDITORIAL_REVIEW"
+  },
+  "counts": {
+    "daysTotal": 7,
+    "celebrationsTotal": 3,
+    "readingsTotal": 22
+  },
+  "quality": {
+    "structurallyValid": true,
+    "blockersCount": 0,
+    "warningsCount": 0,
+    "issues": [
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 33:1-2, 4-5, 10-11' on date '2026-08-28' does not supply an explicit refrain response.",
+        "date": "2026-08-28"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 71:1-6, 15, 17' on date '2026-08-29' does not supply an explicit refrain response.",
+        "date": "2026-08-29"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 63:2-6, 8-9' on date '2026-08-30' does not supply an explicit refrain response.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 119:97-102' on date '2026-08-31' does not supply an explicit refrain response.",
+        "date": "2026-08-31"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 145:8-14' on date '2026-09-01' does not supply an explicit refrain response.",
+        "date": "2026-09-01"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 33:12-15, 20-21' on date '2026-09-02' does not supply an explicit refrain response.",
+        "date": "2026-09-02"
+      },
+      {
+        "severity": "INFO",
+        "code": "MISSING_PSALM_RESPONSE",
+        "message": "Responsorial Psalm 'Psalm 24:1-6' on date '2026-09-03' does not supply an explicit refrain response.",
+        "date": "2026-09-03"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "date": "2026-08-28",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-29",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-30",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-31",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-01",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-02",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-09-03",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    }
+  ],
+  "approval": {
+    "required": true,
+    "artifactFound": false,
+    "hashMatches": false
+  },
+  "verdict": "READY_FOR_HUMAN_APPROVAL"
+}

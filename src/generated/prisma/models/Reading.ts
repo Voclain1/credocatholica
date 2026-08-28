@@ -36,13 +36,14 @@ export type ReadingSumAggregateOutputType = {
 
 export type ReadingMinAggregateOutputType = {
   id: string | null
-  liturgicalDayId: string | null
-  celebrationId: string | null
+  readingSetId: string | null
   type: $Enums.ReadingType | null
   readingOrder: number | null
   citationRef: string | null
+  scriptureRef: string | null
   response: string | null
   text: string | null
+  textStatus: $Enums.TextResolutionStatus | null
   copyrightInfo: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -50,13 +51,14 @@ export type ReadingMinAggregateOutputType = {
 
 export type ReadingMaxAggregateOutputType = {
   id: string | null
-  liturgicalDayId: string | null
-  celebrationId: string | null
+  readingSetId: string | null
   type: $Enums.ReadingType | null
   readingOrder: number | null
   citationRef: string | null
+  scriptureRef: string | null
   response: string | null
   text: string | null
+  textStatus: $Enums.TextResolutionStatus | null
   copyrightInfo: string | null
   createdAt: Date | null
   updatedAt: Date | null
@@ -64,13 +66,14 @@ export type ReadingMaxAggregateOutputType = {
 
 export type ReadingCountAggregateOutputType = {
   id: number
-  liturgicalDayId: number
-  celebrationId: number
+  readingSetId: number
   type: number
   readingOrder: number
   citationRef: number
+  scriptureRef: number
   response: number
   text: number
+  textStatus: number
   copyrightInfo: number
   createdAt: number
   updatedAt: number
@@ -88,13 +91,14 @@ export type ReadingSumAggregateInputType = {
 
 export type ReadingMinAggregateInputType = {
   id?: true
-  liturgicalDayId?: true
-  celebrationId?: true
+  readingSetId?: true
   type?: true
   readingOrder?: true
   citationRef?: true
+  scriptureRef?: true
   response?: true
   text?: true
+  textStatus?: true
   copyrightInfo?: true
   createdAt?: true
   updatedAt?: true
@@ -102,13 +106,14 @@ export type ReadingMinAggregateInputType = {
 
 export type ReadingMaxAggregateInputType = {
   id?: true
-  liturgicalDayId?: true
-  celebrationId?: true
+  readingSetId?: true
   type?: true
   readingOrder?: true
   citationRef?: true
+  scriptureRef?: true
   response?: true
   text?: true
+  textStatus?: true
   copyrightInfo?: true
   createdAt?: true
   updatedAt?: true
@@ -116,13 +121,14 @@ export type ReadingMaxAggregateInputType = {
 
 export type ReadingCountAggregateInputType = {
   id?: true
-  liturgicalDayId?: true
-  celebrationId?: true
+  readingSetId?: true
   type?: true
   readingOrder?: true
   citationRef?: true
+  scriptureRef?: true
   response?: true
   text?: true
+  textStatus?: true
   copyrightInfo?: true
   createdAt?: true
   updatedAt?: true
@@ -217,13 +223,14 @@ export type ReadingGroupByArgs<ExtArgs extends runtime.Types.Extensions.Internal
 
 export type ReadingGroupByOutputType = {
   id: string
-  liturgicalDayId: string | null
-  celebrationId: string | null
+  readingSetId: string
   type: $Enums.ReadingType
   readingOrder: number
   citationRef: string
+  scriptureRef: string | null
   response: string | null
   text: string
+  textStatus: $Enums.TextResolutionStatus
   copyrightInfo: string
   createdAt: Date
   updatedAt: Date
@@ -254,36 +261,36 @@ export type ReadingWhereInput = {
   OR?: Prisma.ReadingWhereInput[]
   NOT?: Prisma.ReadingWhereInput | Prisma.ReadingWhereInput[]
   id?: Prisma.StringFilter<"Reading"> | string
-  liturgicalDayId?: Prisma.StringNullableFilter<"Reading"> | string | null
-  celebrationId?: Prisma.StringNullableFilter<"Reading"> | string | null
+  readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
+  scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
   response?: Prisma.StringNullableFilter<"Reading"> | string | null
   text?: Prisma.StringFilter<"Reading"> | string
+  textStatus?: Prisma.EnumTextResolutionStatusFilter<"Reading"> | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFilter<"Reading"> | string
   createdAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
-  liturgicalDay?: Prisma.XOR<Prisma.LiturgicalDayNullableScalarRelationFilter, Prisma.LiturgicalDayWhereInput> | null
-  celebration?: Prisma.XOR<Prisma.CelebrationNullableScalarRelationFilter, Prisma.CelebrationWhereInput> | null
+  readingSet?: Prisma.XOR<Prisma.ReadingSetScalarRelationFilter, Prisma.ReadingSetWhereInput>
   reflections?: Prisma.ReflectionListRelationFilter
   migrationRecords?: Prisma.MigrationRecordListRelationFilter
 }
 
 export type ReadingOrderByWithRelationInput = {
   id?: Prisma.SortOrder
-  liturgicalDayId?: Prisma.SortOrderInput | Prisma.SortOrder
-  celebrationId?: Prisma.SortOrderInput | Prisma.SortOrder
+  readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
+  scriptureRef?: Prisma.SortOrderInput | Prisma.SortOrder
   response?: Prisma.SortOrderInput | Prisma.SortOrder
   text?: Prisma.SortOrder
+  textStatus?: Prisma.SortOrder
   copyrightInfo?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
-  liturgicalDay?: Prisma.LiturgicalDayOrderByWithRelationInput
-  celebration?: Prisma.CelebrationOrderByWithRelationInput
+  readingSet?: Prisma.ReadingSetOrderByWithRelationInput
   reflections?: Prisma.ReflectionOrderByRelationAggregateInput
   migrationRecords?: Prisma.MigrationRecordOrderByRelationAggregateInput
 }
@@ -293,31 +300,32 @@ export type ReadingWhereUniqueInput = Prisma.AtLeast<{
   AND?: Prisma.ReadingWhereInput | Prisma.ReadingWhereInput[]
   OR?: Prisma.ReadingWhereInput[]
   NOT?: Prisma.ReadingWhereInput | Prisma.ReadingWhereInput[]
-  liturgicalDayId?: Prisma.StringNullableFilter<"Reading"> | string | null
-  celebrationId?: Prisma.StringNullableFilter<"Reading"> | string | null
+  readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
+  scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
   response?: Prisma.StringNullableFilter<"Reading"> | string | null
   text?: Prisma.StringFilter<"Reading"> | string
+  textStatus?: Prisma.EnumTextResolutionStatusFilter<"Reading"> | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFilter<"Reading"> | string
   createdAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
-  liturgicalDay?: Prisma.XOR<Prisma.LiturgicalDayNullableScalarRelationFilter, Prisma.LiturgicalDayWhereInput> | null
-  celebration?: Prisma.XOR<Prisma.CelebrationNullableScalarRelationFilter, Prisma.CelebrationWhereInput> | null
+  readingSet?: Prisma.XOR<Prisma.ReadingSetScalarRelationFilter, Prisma.ReadingSetWhereInput>
   reflections?: Prisma.ReflectionListRelationFilter
   migrationRecords?: Prisma.MigrationRecordListRelationFilter
 }, "id">
 
 export type ReadingOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
-  liturgicalDayId?: Prisma.SortOrderInput | Prisma.SortOrder
-  celebrationId?: Prisma.SortOrderInput | Prisma.SortOrder
+  readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
+  scriptureRef?: Prisma.SortOrderInput | Prisma.SortOrder
   response?: Prisma.SortOrderInput | Prisma.SortOrder
   text?: Prisma.SortOrder
+  textStatus?: Prisma.SortOrder
   copyrightInfo?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -333,13 +341,14 @@ export type ReadingScalarWhereWithAggregatesInput = {
   OR?: Prisma.ReadingScalarWhereWithAggregatesInput[]
   NOT?: Prisma.ReadingScalarWhereWithAggregatesInput | Prisma.ReadingScalarWhereWithAggregatesInput[]
   id?: Prisma.StringWithAggregatesFilter<"Reading"> | string
-  liturgicalDayId?: Prisma.StringNullableWithAggregatesFilter<"Reading"> | string | null
-  celebrationId?: Prisma.StringNullableWithAggregatesFilter<"Reading"> | string | null
+  readingSetId?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeWithAggregatesFilter<"Reading"> | $Enums.ReadingType
   readingOrder?: Prisma.IntWithAggregatesFilter<"Reading"> | number
   citationRef?: Prisma.StringWithAggregatesFilter<"Reading"> | string
+  scriptureRef?: Prisma.StringNullableWithAggregatesFilter<"Reading"> | string | null
   response?: Prisma.StringNullableWithAggregatesFilter<"Reading"> | string | null
   text?: Prisma.StringWithAggregatesFilter<"Reading"> | string
+  textStatus?: Prisma.EnumTextResolutionStatusWithAggregatesFilter<"Reading"> | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"Reading"> | Date | string
   updatedAt?: Prisma.DateTimeWithAggregatesFilter<"Reading"> | Date | string
@@ -350,26 +359,28 @@ export type ReadingCreateInput = {
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  liturgicalDay?: Prisma.LiturgicalDayCreateNestedOneWithoutReadingsInput
-  celebration?: Prisma.CelebrationCreateNestedOneWithoutReadingsInput
+  readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutReadingInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutReadingInput
 }
 
 export type ReadingUncheckedCreateInput = {
   id?: string
-  liturgicalDayId?: string | null
-  celebrationId?: string | null
+  readingSetId: string
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -382,26 +393,28 @@ export type ReadingUpdateInput = {
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  liturgicalDay?: Prisma.LiturgicalDayUpdateOneWithoutReadingsNestedInput
-  celebration?: Prisma.CelebrationUpdateOneWithoutReadingsNestedInput
+  readingSet?: Prisma.ReadingSetUpdateOneRequiredWithoutReadingsNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutReadingNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutReadingNestedInput
 }
 
 export type ReadingUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -411,13 +424,14 @@ export type ReadingUncheckedUpdateInput = {
 
 export type ReadingCreateManyInput = {
   id?: string
-  liturgicalDayId?: string | null
-  celebrationId?: string | null
+  readingSetId: string
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -428,8 +442,10 @@ export type ReadingUpdateManyMutationInput = {
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -437,13 +453,14 @@ export type ReadingUpdateManyMutationInput = {
 
 export type ReadingUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -461,13 +478,14 @@ export type ReadingOrderByRelationAggregateInput = {
 
 export type ReadingCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  liturgicalDayId?: Prisma.SortOrder
-  celebrationId?: Prisma.SortOrder
+  readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
+  scriptureRef?: Prisma.SortOrder
   response?: Prisma.SortOrder
   text?: Prisma.SortOrder
+  textStatus?: Prisma.SortOrder
   copyrightInfo?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -479,13 +497,14 @@ export type ReadingAvgOrderByAggregateInput = {
 
 export type ReadingMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  liturgicalDayId?: Prisma.SortOrder
-  celebrationId?: Prisma.SortOrder
+  readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
+  scriptureRef?: Prisma.SortOrder
   response?: Prisma.SortOrder
   text?: Prisma.SortOrder
+  textStatus?: Prisma.SortOrder
   copyrightInfo?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -493,13 +512,14 @@ export type ReadingMaxOrderByAggregateInput = {
 
 export type ReadingMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
-  liturgicalDayId?: Prisma.SortOrder
-  celebrationId?: Prisma.SortOrder
+  readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
+  scriptureRef?: Prisma.SortOrder
   response?: Prisma.SortOrder
   text?: Prisma.SortOrder
+  textStatus?: Prisma.SortOrder
   copyrightInfo?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
   updatedAt?: Prisma.SortOrder
@@ -514,92 +534,54 @@ export type ReadingNullableScalarRelationFilter = {
   isNot?: Prisma.ReadingWhereInput | null
 }
 
-export type ReadingCreateNestedManyWithoutLiturgicalDayInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput> | Prisma.ReadingCreateWithoutLiturgicalDayInput[] | Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput | Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput[]
-  createMany?: Prisma.ReadingCreateManyLiturgicalDayInputEnvelope
+export type ReadingCreateNestedManyWithoutReadingSetInput = {
+  create?: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput> | Prisma.ReadingCreateWithoutReadingSetInput[] | Prisma.ReadingUncheckedCreateWithoutReadingSetInput[]
+  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutReadingSetInput | Prisma.ReadingCreateOrConnectWithoutReadingSetInput[]
+  createMany?: Prisma.ReadingCreateManyReadingSetInputEnvelope
   connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
 }
 
-export type ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput> | Prisma.ReadingCreateWithoutLiturgicalDayInput[] | Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput | Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput[]
-  createMany?: Prisma.ReadingCreateManyLiturgicalDayInputEnvelope
+export type ReadingUncheckedCreateNestedManyWithoutReadingSetInput = {
+  create?: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput> | Prisma.ReadingCreateWithoutReadingSetInput[] | Prisma.ReadingUncheckedCreateWithoutReadingSetInput[]
+  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutReadingSetInput | Prisma.ReadingCreateOrConnectWithoutReadingSetInput[]
+  createMany?: Prisma.ReadingCreateManyReadingSetInputEnvelope
   connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
 }
 
-export type ReadingUpdateManyWithoutLiturgicalDayNestedInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput> | Prisma.ReadingCreateWithoutLiturgicalDayInput[] | Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput | Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput[]
-  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutLiturgicalDayInput | Prisma.ReadingUpsertWithWhereUniqueWithoutLiturgicalDayInput[]
-  createMany?: Prisma.ReadingCreateManyLiturgicalDayInputEnvelope
+export type ReadingUpdateManyWithoutReadingSetNestedInput = {
+  create?: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput> | Prisma.ReadingCreateWithoutReadingSetInput[] | Prisma.ReadingUncheckedCreateWithoutReadingSetInput[]
+  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutReadingSetInput | Prisma.ReadingCreateOrConnectWithoutReadingSetInput[]
+  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutReadingSetInput | Prisma.ReadingUpsertWithWhereUniqueWithoutReadingSetInput[]
+  createMany?: Prisma.ReadingCreateManyReadingSetInputEnvelope
   set?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   disconnect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   delete?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutLiturgicalDayInput | Prisma.ReadingUpdateWithWhereUniqueWithoutLiturgicalDayInput[]
-  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutLiturgicalDayInput | Prisma.ReadingUpdateManyWithWhereWithoutLiturgicalDayInput[]
+  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutReadingSetInput | Prisma.ReadingUpdateWithWhereUniqueWithoutReadingSetInput[]
+  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutReadingSetInput | Prisma.ReadingUpdateManyWithWhereWithoutReadingSetInput[]
   deleteMany?: Prisma.ReadingScalarWhereInput | Prisma.ReadingScalarWhereInput[]
 }
 
-export type ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput> | Prisma.ReadingCreateWithoutLiturgicalDayInput[] | Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput | Prisma.ReadingCreateOrConnectWithoutLiturgicalDayInput[]
-  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutLiturgicalDayInput | Prisma.ReadingUpsertWithWhereUniqueWithoutLiturgicalDayInput[]
-  createMany?: Prisma.ReadingCreateManyLiturgicalDayInputEnvelope
+export type ReadingUncheckedUpdateManyWithoutReadingSetNestedInput = {
+  create?: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput> | Prisma.ReadingCreateWithoutReadingSetInput[] | Prisma.ReadingUncheckedCreateWithoutReadingSetInput[]
+  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutReadingSetInput | Prisma.ReadingCreateOrConnectWithoutReadingSetInput[]
+  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutReadingSetInput | Prisma.ReadingUpsertWithWhereUniqueWithoutReadingSetInput[]
+  createMany?: Prisma.ReadingCreateManyReadingSetInputEnvelope
   set?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   disconnect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   delete?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
   connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutLiturgicalDayInput | Prisma.ReadingUpdateWithWhereUniqueWithoutLiturgicalDayInput[]
-  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutLiturgicalDayInput | Prisma.ReadingUpdateManyWithWhereWithoutLiturgicalDayInput[]
-  deleteMany?: Prisma.ReadingScalarWhereInput | Prisma.ReadingScalarWhereInput[]
-}
-
-export type ReadingCreateNestedManyWithoutCelebrationInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput> | Prisma.ReadingCreateWithoutCelebrationInput[] | Prisma.ReadingUncheckedCreateWithoutCelebrationInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutCelebrationInput | Prisma.ReadingCreateOrConnectWithoutCelebrationInput[]
-  createMany?: Prisma.ReadingCreateManyCelebrationInputEnvelope
-  connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-}
-
-export type ReadingUncheckedCreateNestedManyWithoutCelebrationInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput> | Prisma.ReadingCreateWithoutCelebrationInput[] | Prisma.ReadingUncheckedCreateWithoutCelebrationInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutCelebrationInput | Prisma.ReadingCreateOrConnectWithoutCelebrationInput[]
-  createMany?: Prisma.ReadingCreateManyCelebrationInputEnvelope
-  connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-}
-
-export type ReadingUpdateManyWithoutCelebrationNestedInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput> | Prisma.ReadingCreateWithoutCelebrationInput[] | Prisma.ReadingUncheckedCreateWithoutCelebrationInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutCelebrationInput | Prisma.ReadingCreateOrConnectWithoutCelebrationInput[]
-  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutCelebrationInput | Prisma.ReadingUpsertWithWhereUniqueWithoutCelebrationInput[]
-  createMany?: Prisma.ReadingCreateManyCelebrationInputEnvelope
-  set?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  disconnect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  delete?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutCelebrationInput | Prisma.ReadingUpdateWithWhereUniqueWithoutCelebrationInput[]
-  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutCelebrationInput | Prisma.ReadingUpdateManyWithWhereWithoutCelebrationInput[]
-  deleteMany?: Prisma.ReadingScalarWhereInput | Prisma.ReadingScalarWhereInput[]
-}
-
-export type ReadingUncheckedUpdateManyWithoutCelebrationNestedInput = {
-  create?: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput> | Prisma.ReadingCreateWithoutCelebrationInput[] | Prisma.ReadingUncheckedCreateWithoutCelebrationInput[]
-  connectOrCreate?: Prisma.ReadingCreateOrConnectWithoutCelebrationInput | Prisma.ReadingCreateOrConnectWithoutCelebrationInput[]
-  upsert?: Prisma.ReadingUpsertWithWhereUniqueWithoutCelebrationInput | Prisma.ReadingUpsertWithWhereUniqueWithoutCelebrationInput[]
-  createMany?: Prisma.ReadingCreateManyCelebrationInputEnvelope
-  set?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  disconnect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  delete?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  connect?: Prisma.ReadingWhereUniqueInput | Prisma.ReadingWhereUniqueInput[]
-  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutCelebrationInput | Prisma.ReadingUpdateWithWhereUniqueWithoutCelebrationInput[]
-  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutCelebrationInput | Prisma.ReadingUpdateManyWithWhereWithoutCelebrationInput[]
+  update?: Prisma.ReadingUpdateWithWhereUniqueWithoutReadingSetInput | Prisma.ReadingUpdateWithWhereUniqueWithoutReadingSetInput[]
+  updateMany?: Prisma.ReadingUpdateManyWithWhereWithoutReadingSetInput | Prisma.ReadingUpdateManyWithWhereWithoutReadingSetInput[]
   deleteMany?: Prisma.ReadingScalarWhereInput | Prisma.ReadingScalarWhereInput[]
 }
 
 export type EnumReadingTypeFieldUpdateOperationsInput = {
   set?: $Enums.ReadingType
+}
+
+export type EnumTextResolutionStatusFieldUpdateOperationsInput = {
+  set?: $Enums.TextResolutionStatus
 }
 
 export type ReadingCreateNestedOneWithoutReflectionsInput = {
@@ -634,29 +616,31 @@ export type ReadingUpdateOneWithoutMigrationRecordsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.ReadingUpdateToOneWithWhereWithoutMigrationRecordsInput, Prisma.ReadingUpdateWithoutMigrationRecordsInput>, Prisma.ReadingUncheckedUpdateWithoutMigrationRecordsInput>
 }
 
-export type ReadingCreateWithoutLiturgicalDayInput = {
+export type ReadingCreateWithoutReadingSetInput = {
   id?: string
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  celebration?: Prisma.CelebrationCreateNestedOneWithoutReadingsInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutReadingInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutReadingInput
 }
 
-export type ReadingUncheckedCreateWithoutLiturgicalDayInput = {
+export type ReadingUncheckedCreateWithoutReadingSetInput = {
   id?: string
-  celebrationId?: string | null
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -664,30 +648,30 @@ export type ReadingUncheckedCreateWithoutLiturgicalDayInput = {
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutReadingInput
 }
 
-export type ReadingCreateOrConnectWithoutLiturgicalDayInput = {
+export type ReadingCreateOrConnectWithoutReadingSetInput = {
   where: Prisma.ReadingWhereUniqueInput
-  create: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput>
+  create: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput>
 }
 
-export type ReadingCreateManyLiturgicalDayInputEnvelope = {
-  data: Prisma.ReadingCreateManyLiturgicalDayInput | Prisma.ReadingCreateManyLiturgicalDayInput[]
+export type ReadingCreateManyReadingSetInputEnvelope = {
+  data: Prisma.ReadingCreateManyReadingSetInput | Prisma.ReadingCreateManyReadingSetInput[]
   skipDuplicates?: boolean
 }
 
-export type ReadingUpsertWithWhereUniqueWithoutLiturgicalDayInput = {
+export type ReadingUpsertWithWhereUniqueWithoutReadingSetInput = {
   where: Prisma.ReadingWhereUniqueInput
-  update: Prisma.XOR<Prisma.ReadingUpdateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedUpdateWithoutLiturgicalDayInput>
-  create: Prisma.XOR<Prisma.ReadingCreateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedCreateWithoutLiturgicalDayInput>
+  update: Prisma.XOR<Prisma.ReadingUpdateWithoutReadingSetInput, Prisma.ReadingUncheckedUpdateWithoutReadingSetInput>
+  create: Prisma.XOR<Prisma.ReadingCreateWithoutReadingSetInput, Prisma.ReadingUncheckedCreateWithoutReadingSetInput>
 }
 
-export type ReadingUpdateWithWhereUniqueWithoutLiturgicalDayInput = {
+export type ReadingUpdateWithWhereUniqueWithoutReadingSetInput = {
   where: Prisma.ReadingWhereUniqueInput
-  data: Prisma.XOR<Prisma.ReadingUpdateWithoutLiturgicalDayInput, Prisma.ReadingUncheckedUpdateWithoutLiturgicalDayInput>
+  data: Prisma.XOR<Prisma.ReadingUpdateWithoutReadingSetInput, Prisma.ReadingUncheckedUpdateWithoutReadingSetInput>
 }
 
-export type ReadingUpdateManyWithWhereWithoutLiturgicalDayInput = {
+export type ReadingUpdateManyWithWhereWithoutReadingSetInput = {
   where: Prisma.ReadingScalarWhereInput
-  data: Prisma.XOR<Prisma.ReadingUpdateManyMutationInput, Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayInput>
+  data: Prisma.XOR<Prisma.ReadingUpdateManyMutationInput, Prisma.ReadingUncheckedUpdateManyWithoutReadingSetInput>
 }
 
 export type ReadingScalarWhereInput = {
@@ -695,72 +679,17 @@ export type ReadingScalarWhereInput = {
   OR?: Prisma.ReadingScalarWhereInput[]
   NOT?: Prisma.ReadingScalarWhereInput | Prisma.ReadingScalarWhereInput[]
   id?: Prisma.StringFilter<"Reading"> | string
-  liturgicalDayId?: Prisma.StringNullableFilter<"Reading"> | string | null
-  celebrationId?: Prisma.StringNullableFilter<"Reading"> | string | null
+  readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
+  scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
   response?: Prisma.StringNullableFilter<"Reading"> | string | null
   text?: Prisma.StringFilter<"Reading"> | string
+  textStatus?: Prisma.EnumTextResolutionStatusFilter<"Reading"> | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFilter<"Reading"> | string
   createdAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
   updatedAt?: Prisma.DateTimeFilter<"Reading"> | Date | string
-}
-
-export type ReadingCreateWithoutCelebrationInput = {
-  id?: string
-  type: $Enums.ReadingType
-  readingOrder?: number
-  citationRef: string
-  response?: string | null
-  text: string
-  copyrightInfo?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  liturgicalDay?: Prisma.LiturgicalDayCreateNestedOneWithoutReadingsInput
-  reflections?: Prisma.ReflectionCreateNestedManyWithoutReadingInput
-  migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutReadingInput
-}
-
-export type ReadingUncheckedCreateWithoutCelebrationInput = {
-  id?: string
-  liturgicalDayId?: string | null
-  type: $Enums.ReadingType
-  readingOrder?: number
-  citationRef: string
-  response?: string | null
-  text: string
-  copyrightInfo?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-  reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutReadingInput
-  migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutReadingInput
-}
-
-export type ReadingCreateOrConnectWithoutCelebrationInput = {
-  where: Prisma.ReadingWhereUniqueInput
-  create: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput>
-}
-
-export type ReadingCreateManyCelebrationInputEnvelope = {
-  data: Prisma.ReadingCreateManyCelebrationInput | Prisma.ReadingCreateManyCelebrationInput[]
-  skipDuplicates?: boolean
-}
-
-export type ReadingUpsertWithWhereUniqueWithoutCelebrationInput = {
-  where: Prisma.ReadingWhereUniqueInput
-  update: Prisma.XOR<Prisma.ReadingUpdateWithoutCelebrationInput, Prisma.ReadingUncheckedUpdateWithoutCelebrationInput>
-  create: Prisma.XOR<Prisma.ReadingCreateWithoutCelebrationInput, Prisma.ReadingUncheckedCreateWithoutCelebrationInput>
-}
-
-export type ReadingUpdateWithWhereUniqueWithoutCelebrationInput = {
-  where: Prisma.ReadingWhereUniqueInput
-  data: Prisma.XOR<Prisma.ReadingUpdateWithoutCelebrationInput, Prisma.ReadingUncheckedUpdateWithoutCelebrationInput>
-}
-
-export type ReadingUpdateManyWithWhereWithoutCelebrationInput = {
-  where: Prisma.ReadingScalarWhereInput
-  data: Prisma.XOR<Prisma.ReadingUpdateManyMutationInput, Prisma.ReadingUncheckedUpdateManyWithoutCelebrationInput>
 }
 
 export type ReadingCreateWithoutReflectionsInput = {
@@ -768,25 +697,27 @@ export type ReadingCreateWithoutReflectionsInput = {
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  liturgicalDay?: Prisma.LiturgicalDayCreateNestedOneWithoutReadingsInput
-  celebration?: Prisma.CelebrationCreateNestedOneWithoutReadingsInput
+  readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutReadingInput
 }
 
 export type ReadingUncheckedCreateWithoutReflectionsInput = {
   id?: string
-  liturgicalDayId?: string | null
-  celebrationId?: string | null
+  readingSetId: string
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -814,25 +745,27 @@ export type ReadingUpdateWithoutReflectionsInput = {
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  liturgicalDay?: Prisma.LiturgicalDayUpdateOneWithoutReadingsNestedInput
-  celebration?: Prisma.CelebrationUpdateOneWithoutReadingsNestedInput
+  readingSet?: Prisma.ReadingSetUpdateOneRequiredWithoutReadingsNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutReadingNestedInput
 }
 
 export type ReadingUncheckedUpdateWithoutReflectionsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -844,25 +777,27 @@ export type ReadingCreateWithoutMigrationRecordsInput = {
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
-  liturgicalDay?: Prisma.LiturgicalDayCreateNestedOneWithoutReadingsInput
-  celebration?: Prisma.CelebrationCreateNestedOneWithoutReadingsInput
+  readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutReadingInput
 }
 
 export type ReadingUncheckedCreateWithoutMigrationRecordsInput = {
   id?: string
-  liturgicalDayId?: string | null
-  celebrationId?: string | null
+  readingSetId: string
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
@@ -890,67 +825,72 @@ export type ReadingUpdateWithoutMigrationRecordsInput = {
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  liturgicalDay?: Prisma.LiturgicalDayUpdateOneWithoutReadingsNestedInput
-  celebration?: Prisma.CelebrationUpdateOneWithoutReadingsNestedInput
+  readingSet?: Prisma.ReadingSetUpdateOneRequiredWithoutReadingsNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutReadingNestedInput
 }
 
 export type ReadingUncheckedUpdateWithoutMigrationRecordsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
+  readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutReadingNestedInput
 }
 
-export type ReadingCreateManyLiturgicalDayInput = {
+export type ReadingCreateManyReadingSetInput = {
   id?: string
-  celebrationId?: string | null
   type: $Enums.ReadingType
   readingOrder?: number
   citationRef: string
+  scriptureRef?: string | null
   response?: string | null
   text: string
+  textStatus?: $Enums.TextResolutionStatus
   copyrightInfo?: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
 
-export type ReadingUpdateWithoutLiturgicalDayInput = {
+export type ReadingUpdateWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  celebration?: Prisma.CelebrationUpdateOneWithoutReadingsNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutReadingNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutReadingNestedInput
 }
 
-export type ReadingUncheckedUpdateWithoutLiturgicalDayInput = {
+export type ReadingUncheckedUpdateWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -958,70 +898,15 @@ export type ReadingUncheckedUpdateWithoutLiturgicalDayInput = {
   migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutReadingNestedInput
 }
 
-export type ReadingUncheckedUpdateManyWithoutLiturgicalDayInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  celebrationId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
-  readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
-  citationRef?: Prisma.StringFieldUpdateOperationsInput | string
-  response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  text?: Prisma.StringFieldUpdateOperationsInput | string
-  copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-}
-
-export type ReadingCreateManyCelebrationInput = {
-  id?: string
-  liturgicalDayId?: string | null
-  type: $Enums.ReadingType
-  readingOrder?: number
-  citationRef: string
-  response?: string | null
-  text: string
-  copyrightInfo?: string
-  createdAt?: Date | string
-  updatedAt?: Date | string
-}
-
-export type ReadingUpdateWithoutCelebrationInput = {
+export type ReadingUncheckedUpdateManyWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
+  scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   text?: Prisma.StringFieldUpdateOperationsInput | string
-  copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  liturgicalDay?: Prisma.LiturgicalDayUpdateOneWithoutReadingsNestedInput
-  reflections?: Prisma.ReflectionUpdateManyWithoutReadingNestedInput
-  migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutReadingNestedInput
-}
-
-export type ReadingUncheckedUpdateWithoutCelebrationInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
-  readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
-  citationRef?: Prisma.StringFieldUpdateOperationsInput | string
-  response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  text?: Prisma.StringFieldUpdateOperationsInput | string
-  copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
-  createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutReadingNestedInput
-  migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutReadingNestedInput
-}
-
-export type ReadingUncheckedUpdateManyWithoutCelebrationInput = {
-  id?: Prisma.StringFieldUpdateOperationsInput | string
-  liturgicalDayId?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
-  readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
-  citationRef?: Prisma.StringFieldUpdateOperationsInput | string
-  response?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
-  text?: Prisma.StringFieldUpdateOperationsInput | string
+  textStatus?: Prisma.EnumTextResolutionStatusFieldUpdateOperationsInput | $Enums.TextResolutionStatus
   copyrightInfo?: Prisma.StringFieldUpdateOperationsInput | string
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -1069,18 +954,18 @@ export type ReadingCountOutputTypeCountMigrationRecordsArgs<ExtArgs extends runt
 
 export type ReadingSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  liturgicalDayId?: boolean
-  celebrationId?: boolean
+  readingSetId?: boolean
   type?: boolean
   readingOrder?: boolean
   citationRef?: boolean
+  scriptureRef?: boolean
   response?: boolean
   text?: boolean
+  textStatus?: boolean
   copyrightInfo?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
   reflections?: boolean | Prisma.Reading$reflectionsArgs<ExtArgs>
   migrationRecords?: boolean | Prisma.Reading$migrationRecordsArgs<ExtArgs>
   _count?: boolean | Prisma.ReadingCountOutputTypeDefaultArgs<ExtArgs>
@@ -1088,84 +973,82 @@ export type ReadingSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
 
 export type ReadingSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  liturgicalDayId?: boolean
-  celebrationId?: boolean
+  readingSetId?: boolean
   type?: boolean
   readingOrder?: boolean
   citationRef?: boolean
+  scriptureRef?: boolean
   response?: boolean
   text?: boolean
+  textStatus?: boolean
   copyrightInfo?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["reading"]>
 
 export type ReadingSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetSelect<{
   id?: boolean
-  liturgicalDayId?: boolean
-  celebrationId?: boolean
+  readingSetId?: boolean
   type?: boolean
   readingOrder?: boolean
   citationRef?: boolean
+  scriptureRef?: boolean
   response?: boolean
   text?: boolean
+  textStatus?: boolean
   copyrightInfo?: boolean
   createdAt?: boolean
   updatedAt?: boolean
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["reading"]>
 
 export type ReadingSelectScalar = {
   id?: boolean
-  liturgicalDayId?: boolean
-  celebrationId?: boolean
+  readingSetId?: boolean
   type?: boolean
   readingOrder?: boolean
   citationRef?: boolean
+  scriptureRef?: boolean
   response?: boolean
   text?: boolean
+  textStatus?: boolean
   copyrightInfo?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type ReadingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "liturgicalDayId" | "celebrationId" | "type" | "readingOrder" | "citationRef" | "response" | "text" | "copyrightInfo" | "createdAt" | "updatedAt", ExtArgs["result"]["reading"]>
+export type ReadingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "readingSetId" | "type" | "readingOrder" | "citationRef" | "scriptureRef" | "response" | "text" | "textStatus" | "copyrightInfo" | "createdAt" | "updatedAt", ExtArgs["result"]["reading"]>
 export type ReadingInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
   reflections?: boolean | Prisma.Reading$reflectionsArgs<ExtArgs>
   migrationRecords?: boolean | Prisma.Reading$migrationRecordsArgs<ExtArgs>
   _count?: boolean | Prisma.ReadingCountOutputTypeDefaultArgs<ExtArgs>
 }
 export type ReadingIncludeCreateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
 }
 export type ReadingIncludeUpdateManyAndReturn<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  liturgicalDay?: boolean | Prisma.Reading$liturgicalDayArgs<ExtArgs>
-  celebration?: boolean | Prisma.Reading$celebrationArgs<ExtArgs>
+  readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
 }
 
 export type $ReadingPayload<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   name: "Reading"
   objects: {
-    liturgicalDay: Prisma.$LiturgicalDayPayload<ExtArgs> | null
-    celebration: Prisma.$CelebrationPayload<ExtArgs> | null
+    readingSet: Prisma.$ReadingSetPayload<ExtArgs>
     reflections: Prisma.$ReflectionPayload<ExtArgs>[]
     migrationRecords: Prisma.$MigrationRecordPayload<ExtArgs>[]
   }
   scalars: runtime.Types.Extensions.GetPayloadResult<{
     id: string
-    liturgicalDayId: string | null
-    celebrationId: string | null
+    readingSetId: string
     type: $Enums.ReadingType
     readingOrder: number
     citationRef: string
+    scriptureRef: string | null
     response: string | null
     text: string
+    textStatus: $Enums.TextResolutionStatus
     copyrightInfo: string
     createdAt: Date
     updatedAt: Date
@@ -1563,8 +1446,7 @@ readonly fields: ReadingFieldRefs;
  */
 export interface Prisma__ReadingClient<T, Null = never, ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
   readonly [Symbol.toStringTag]: "PrismaPromise"
-  liturgicalDay<T extends Prisma.Reading$liturgicalDayArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Reading$liturgicalDayArgs<ExtArgs>>): Prisma.Prisma__LiturgicalDayClient<runtime.Types.Result.GetResult<Prisma.$LiturgicalDayPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
-  celebration<T extends Prisma.Reading$celebrationArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Reading$celebrationArgs<ExtArgs>>): Prisma.Prisma__CelebrationClient<runtime.Types.Result.GetResult<Prisma.$CelebrationPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+  readingSet<T extends Prisma.ReadingSetDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.ReadingSetDefaultArgs<ExtArgs>>): Prisma.Prisma__ReadingSetClient<runtime.Types.Result.GetResult<Prisma.$ReadingSetPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   reflections<T extends Prisma.Reading$reflectionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Reading$reflectionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReflectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   migrationRecords<T extends Prisma.Reading$migrationRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.Reading$migrationRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MigrationRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -1597,13 +1479,14 @@ export interface Prisma__ReadingClient<T, Null = never, ExtArgs extends runtime.
  */
 export interface ReadingFieldRefs {
   readonly id: Prisma.FieldRef<"Reading", 'String'>
-  readonly liturgicalDayId: Prisma.FieldRef<"Reading", 'String'>
-  readonly celebrationId: Prisma.FieldRef<"Reading", 'String'>
+  readonly readingSetId: Prisma.FieldRef<"Reading", 'String'>
   readonly type: Prisma.FieldRef<"Reading", 'ReadingType'>
   readonly readingOrder: Prisma.FieldRef<"Reading", 'Int'>
   readonly citationRef: Prisma.FieldRef<"Reading", 'String'>
+  readonly scriptureRef: Prisma.FieldRef<"Reading", 'String'>
   readonly response: Prisma.FieldRef<"Reading", 'String'>
   readonly text: Prisma.FieldRef<"Reading", 'String'>
+  readonly textStatus: Prisma.FieldRef<"Reading", 'TextResolutionStatus'>
   readonly copyrightInfo: Prisma.FieldRef<"Reading", 'String'>
   readonly createdAt: Prisma.FieldRef<"Reading", 'DateTime'>
   readonly updatedAt: Prisma.FieldRef<"Reading", 'DateTime'>
@@ -2005,44 +1888,6 @@ export type ReadingDeleteManyArgs<ExtArgs extends runtime.Types.Extensions.Inter
    * Limit how many Readings to delete.
    */
   limit?: number
-}
-
-/**
- * Reading.liturgicalDay
- */
-export type Reading$liturgicalDayArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the LiturgicalDay
-   */
-  select?: Prisma.LiturgicalDaySelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the LiturgicalDay
-   */
-  omit?: Prisma.LiturgicalDayOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.LiturgicalDayInclude<ExtArgs> | null
-  where?: Prisma.LiturgicalDayWhereInput
-}
-
-/**
- * Reading.celebration
- */
-export type Reading$celebrationArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  /**
-   * Select specific fields to fetch from the Celebration
-   */
-  select?: Prisma.CelebrationSelect<ExtArgs> | null
-  /**
-   * Omit specific fields from the Celebration
-   */
-  omit?: Prisma.CelebrationOmit<ExtArgs> | null
-  /**
-   * Choose, which related nodes to fetch as well
-   */
-  include?: Prisma.CelebrationInclude<ExtArgs> | null
-  where?: Prisma.CelebrationWhereInput
 }
 
 /**

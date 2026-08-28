@@ -95,21 +95,45 @@ A single `LiturgicalDay` can have multiple associated `Celebration` entries to a
   - `isCommemoration`: Boolean (True when a celebration is observed as a commemoration on a day of higher precedence)
   - `isTransferred`: Boolean (True if transferred from its canonical date due to Sunday/Solemnity precedence)
 
-### 3.3 Reading
+### 3.3 ReadingSet & Reading Architecture (M0.8A Refinement)
 
-Represents an individual Scripture reading or Psalm text assigned to a `LiturgicalDay` or `Celebration`.
+The liturgical domain structures readings into explicit **`ReadingSet`** containers to model multiple legitimate reading options per day (e.g. weekday vs proper vs optional common sets) without forcing false choices or duplicating unshared readings.
+
+#### 3.3.1 ReadingSet
+
+Represents a contextual set of readings assigned to a `LiturgicalDay` or `Celebration`.
 
 - **`id`**: String (CUID / UUID)
-- **`liturgicalDayId`**: Foreign Key -> `LiturgicalDay` (Optional)
-- **`celebrationId`**: Foreign Key -> `Celebration` (Optional)
+- **`liturgicalDayId`**: Foreign Key -> `LiturgicalDay` (Cascade Delete)
+- **`celebrationId`**: Foreign Key -> `Celebration` (Optional, SetNull)
+- **`context`**: Enum `ReadingSetContext` (`WEEKDAY`, `SUNDAY`, `PROPER_OF_SAINTS`, `PROPER_OF_SEASON`, `COMMON_OF_SAINTS`)
+- **`selectionStatus`**: Enum `ReadingSetSelectionStatus` (`SOLE_SET`, `ALTERNATIVE`, `OPTIONAL`)
+  - **`SOLE_SET`**: The single, uncontested canonical reading set assigned to the day/celebration (e.g., standard Sunday or weekday Mass).
+  - **`ALTERNATIVE`**: One of multiple legitimate, mutually substitutable reading set choices available for the liturgy (e.g., August 29 Beheading of St. John the Baptist where rubrics permit taking either the proper readings set or the weekday readings set). Neither option is falsely privileged over the other.
+  - **`OPTIONAL`**: A reading set tied to an explicitly optional observance or formulary context that may be taken or omitted at pastoral discretion (e.g., optional memorial or optional votive formulary set).
+- **`label`**: String (e.g., *"Proper Memorial Readings Option"*, *"Weekday Readings Option"*)
+- **`description`**: Text (Optional rubrical notes)
+- **`setOrder`**: Integer (Sequence index: 1, 2, 3...)
+- **`isCanonicalDefault`**: Boolean? (Nullable. `true` ONLY when an authoritative source explicitly establishes a default/preferred set; `null` when options are canonically equal)
+- **`sourceUrl`**: String (Exact verified source page URL, e.g. `https://bible.usccb.org/bible/readings/082926.cfm`)
+- **`lectionaryNumber`**: String (Optional, e.g., `"634"`, `"430"`)
+
+#### 3.3.2 Reading
+
+Represents an individual Scripture reading or Psalm text within a `ReadingSet`.
+
+- **`id`**: String (CUID / UUID)
+- **`readingSetId`**: Foreign Key -> `ReadingSet` (Cascade Delete)
 - **`type`**: Enum `ReadingType` (`FIRST_READING`, `RESPONSORIAL_PSALM`, `SECOND_READING`, `GOSPEL_ACCLAMATION`, `GOSPEL`, `OTHER`)
-- **`readingOrder`**: Integer (Sequence index: 1, 2, 3, 4)
-- **`citationRef`**: String (e.g., *"Isaiah 7:10-14"*, *"Psalm 24:1-2, 3-4ab, 5-6"*, *"Luke 1:26-38"*)
+- **`readingOrder`**: Integer (Sequence index: 1, 2, 3...)
+- **`citationRef`**: String (Exact lectionary reference syntax, e.g., *"Psalm 71:1-2, 3-4a, 5-6ab, 15ab and 17"*)
+- **`scriptureRef`**: String (Normalized Douay-Rheims reference, e.g., *"Psalm 70:1-2, 3-4, 5-6, 15, 17"*)
 - **`response`**: String (Optional responsorial psalm refrain or gospel acclamation refrain)
 - **`text`**: Text (Douay-Rheims canonical Scripture text)
-- **`copyrightInfo`**: String (Default: `"Public Domain — Douay-Rheims Translation"`)
+- **`textStatus`**: Enum `TextResolutionStatus` (`VERIFIED_EXACT`, `REQUIRES_MANUAL_SEGMENT_REVIEW`, `TEXT_UNAVAILABLE`)
+- **`copyrightInfo`**: String (Default: `"Public Domain — Douay-Rheims Version, Challoner Revision"`)
 
-*Note on ReadingType:* `ReadingType` strictly identifies structural reading roles. Formulary contexts (e.g., Vigil, Mass During the Day) belong to celebration/formulary metadata, and special Passion texts use structural `GOSPEL` role to prevent role model distortion.
+*Sub-Verse Resolution Policy:* If a lectionary reference contains sub-verse markers (e.g. `4a`, `6ab`, `10b`) and the Douay-Rheims source text does not encode sub-verse boundaries, `textStatus` is set to `REQUIRES_MANUAL_SEGMENT_REVIEW` until manually verified. Unverified text is never algorithmically truncated.
 
 ---
 

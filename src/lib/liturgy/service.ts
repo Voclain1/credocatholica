@@ -6,6 +6,9 @@ import {
   ReadingType,
   YearCycle,
   WeekdayCycle,
+  ReadingSetContext,
+  ReadingSetSelectionStatus,
+  TextResolutionStatus,
   EcclesialStatus,
   HistoricalConfidence,
 } from '@/generated/prisma/client';
@@ -47,9 +50,27 @@ export interface PresentationReading {
   type: ReadingType;
   readingOrder: number;
   citationRef: string;
+  scriptureRef?: string | null;
   response?: string | null;
   text: string;
+  textStatus: TextResolutionStatus;
   copyrightInfo: string;
+}
+
+/**
+ * Interface representing a contextual set of readings (e.g. Weekday, Proper, Alternative).
+ */
+export interface PresentationReadingSet {
+  id: string;
+  context: ReadingSetContext;
+  selectionStatus: ReadingSetSelectionStatus;
+  label: string;
+  description?: string | null;
+  setOrder: number;
+  isCanonicalDefault?: boolean | null;
+  sourceUrl: string;
+  lectionaryNumber?: string | null;
+  readings: PresentationReading[];
 }
 
 /**
@@ -85,7 +106,10 @@ export type TodayLiturgicalDayResult =
         principalCelebration?: PresentationCelebration | null;
         primaryCelebration?: PresentationCelebration | null;
         secondaryCelebrations: PresentationCelebration[];
+        readingSets: PresentationReadingSet[];
         readings: PresentationReading[];
+        hasMultipleSets: boolean;
+        hasUncontestedDefault: boolean;
         reflections: PresentationReflection[];
         timeZoneStrategy: string;
       };
@@ -144,9 +168,7 @@ export function resolveApplicationDate(targetDate?: Date): {
 }
 
 /**
- * Query function to retrieve today's complete canonical LiturgicalDay data.
- * Consumes existing database records only.
- * Does NOT perform JS date-math season inferences, precedence engine calculations, or content generation.
+ * Primary domain query service for the daily liturgical companion payload.
  */
 export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLiturgicalDayResult> {
   const { dateObj, isoDate, formattedDisplayDate, timeZoneStrategy } = resolveApplicationDate(targetDate);
@@ -171,9 +193,16 @@ export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLit
             precedenceOrder: 'asc',
           },
         },
-        readings: {
+        readingSets: {
+          include: {
+            readings: {
+              orderBy: {
+                readingOrder: 'asc',
+              },
+            },
+          },
           orderBy: {
-            readingOrder: 'asc',
+            setOrder: 'asc',
           },
         },
         reflections: true,
@@ -227,16 +256,38 @@ export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLit
       (c) => c.id !== principalCelebration?.id
     );
 
-    // Format readings: preserve exact text, citations, and responses
-    const formattedReadings: PresentationReading[] = day.readings.map((r) => ({
-      id: r.id,
-      type: r.type,
-      readingOrder: r.readingOrder,
-      citationRef: r.citationRef,
-      response: r.response,
-      text: r.text,
-      copyrightInfo: r.copyrightInfo,
+    // Format readingSets & readings
+    const formattedReadingSets: PresentationReadingSet[] = day.readingSets.map((rs) => ({
+      id: rs.id,
+      context: rs.context,
+      selectionStatus: rs.selectionStatus,
+      label: rs.label,
+      description: rs.description,
+      setOrder: rs.setOrder,
+      isCanonicalDefault: rs.isCanonicalDefault,
+      sourceUrl: rs.sourceUrl,
+      lectionaryNumber: rs.lectionaryNumber,
+      readings: rs.readings.map((r) => ({
+        id: r.id,
+        type: r.type,
+        readingOrder: r.readingOrder,
+        citationRef: r.citationRef,
+        scriptureRef: r.scriptureRef,
+        response: r.response,
+        text: r.text,
+        textStatus: r.textStatus,
+        copyrightInfo: r.copyrightInfo,
+      })),
     }));
+
+    // Selection logic: check for canonical default or multiple options
+    const canonicalDefaultSet = formattedReadingSets.find((rs) => rs.isCanonicalDefault === true);
+    const hasMultipleSets = formattedReadingSets.length > 1;
+    const hasUncontestedDefault = Boolean(canonicalDefaultSet) || formattedReadingSets.length === 1;
+
+    // Default reading sequence for flat presentation fallback
+    const selectedSet = canonicalDefaultSet || (formattedReadingSets.length > 0 ? formattedReadingSets[0] : null);
+    const formattedReadings: PresentationReading[] = selectedSet ? selectedSet.readings : [];
 
     // Format reflections
     const formattedReflections: PresentationReflection[] = day.reflections.map((ref) => ({
@@ -265,14 +316,16 @@ export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLit
         principalCelebration,
         primaryCelebration: principalCelebration,
         secondaryCelebrations,
+        readingSets: formattedReadingSets,
         readings: formattedReadings,
+        hasMultipleSets,
+        hasUncontestedDefault,
         reflections: formattedReflections,
         timeZoneStrategy,
       },
     };
   } catch (err) {
     const errorMsg = err instanceof Error ? err.message : 'Unknown database query error';
-    // Log error safely server-side without exposing DB details to client
     console.error(`[lib/liturgy] Error querying LiturgicalDay (${isoDate}): ${errorMsg}`);
     return {
       status: 'ERROR',

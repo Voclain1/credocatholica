@@ -55,6 +55,7 @@ export const ModelName = {
   LiturgicalDay: 'LiturgicalDay',
   Celebration: 'Celebration',
   LiturgicalDayCelebration: 'LiturgicalDayCelebration',
+  ReadingSet: 'ReadingSet',
   Reading: 'Reading',
   Saint: 'Saint',
   Patronage: 'Patronage',
@@ -156,15 +157,35 @@ export const LiturgicalDayCelebrationScalarFieldEnum = {
 export type LiturgicalDayCelebrationScalarFieldEnum = (typeof LiturgicalDayCelebrationScalarFieldEnum)[keyof typeof LiturgicalDayCelebrationScalarFieldEnum]
 
 
-export const ReadingScalarFieldEnum = {
+export const ReadingSetScalarFieldEnum = {
   id: 'id',
   liturgicalDayId: 'liturgicalDayId',
   celebrationId: 'celebrationId',
+  context: 'context',
+  selectionStatus: 'selectionStatus',
+  label: 'label',
+  description: 'description',
+  setOrder: 'setOrder',
+  isCanonicalDefault: 'isCanonicalDefault',
+  sourceUrl: 'sourceUrl',
+  lectionaryNumber: 'lectionaryNumber',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReadingSetScalarFieldEnum = (typeof ReadingSetScalarFieldEnum)[keyof typeof ReadingSetScalarFieldEnum]
+
+
+export const ReadingScalarFieldEnum = {
+  id: 'id',
+  readingSetId: 'readingSetId',
   type: 'type',
   readingOrder: 'readingOrder',
   citationRef: 'citationRef',
+  scriptureRef: 'scriptureRef',
   response: 'response',
   text: 'text',
+  textStatus: 'textStatus',
   copyrightInfo: 'copyrightInfo',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'

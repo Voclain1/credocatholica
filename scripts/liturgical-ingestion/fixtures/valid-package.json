@@ -10,8 +10,8 @@
       "start": "2026-08-28",
       "end": "2026-08-29"
     },
-    "scriptureTranslation": "Douay-Rheims",
-    "licensingBasis": "Public Domain — Douay-Rheims Bible / Synthetic Structural Fixtures",
+    "scriptureTranslation": "Douay-Rheims Version, Challoner Revision",
+    "licensingBasis": "Public Domain in the United States — Douay-Rheims Version, Challoner Revision",
     "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
   },
   "records": [
@@ -20,7 +20,7 @@
       "calendarCode": "UNIVERSAL",
       "seasonCode": "ORDINARY_TIME",
       "seasonWeek": 21,
-      "yearCycle": "YEAR_B",
+      "yearCycle": "YEAR_A",
       "weekdayCycle": "YEAR_2",
       "liturgicalColor": "WHITE",
       "gloriaRequired": false,
@@ -42,28 +42,44 @@
           "biographySummary": "Great Doctor of Grace and Bishop of Hippo."
         }
       ],
-      "readings": [
+      "readingSets": [
         {
-          "type": "FIRST_READING",
-          "readingOrder": 1,
-          "citationRef": "1 Corinthians 1:17-25",
-          "text": "For Christ sent me not to baptize, but to preach the gospel: not in wisdom of speech, lest the cross of Christ should be made void.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
-        },
-        {
-          "type": "RESPONSORIAL_PSALM",
-          "readingOrder": 2,
-          "citationRef": "Psalm 32:1-2, 4-5, 10-11",
-          "response": "The earth is full of the goodness of the Lord.",
-          "text": "Rejoice in the Lord, O ye just: praise becometh the upright.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
-        },
-        {
-          "type": "GOSPEL",
-          "readingOrder": 3,
-          "citationRef": "Matthew 25:1-13",
-          "text": "Then shall the kingdom of heaven be like to ten virgins, who taking their lamps went out to meet the bridegroom and the bride.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "SOLE_SET",
+          "label": "Proper Memorial Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "sourceUrl": "https://bible.usccb.org/bible/readings/082826.cfm",
+          "lectionaryNumber": "430",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 1:17-25",
+              "scriptureRef": "1 Corinthians 1:17-25",
+              "text": "For Christ sent me not to baptize, but to preach the gospel: not in wisdom of speech, lest the cross of Christ should be made void.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 33:1-2, 4-5, 10-11",
+              "scriptureRef": "Psalm 32:1-2, 4-5, 10-11",
+              "text": "Rejoice in the Lord, O ye just: praise becometh the upright.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Matthew 25:1-13",
+              "scriptureRef": "Matthew 25:1-13",
+              "text": "Then shall the kingdom of heaven be like to ten virgins, who taking their lamps went out to meet the bridegroom and the bride.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            }
+          ]
         }
       ]
     },
@@ -72,7 +88,7 @@
       "calendarCode": "UNIVERSAL",
       "seasonCode": "ORDINARY_TIME",
       "seasonWeek": 21,
-      "yearCycle": "YEAR_B",
+      "yearCycle": "YEAR_A",
       "weekdayCycle": "YEAR_2",
       "liturgicalColor": "RED",
       "gloriaRequired": false,
@@ -94,28 +110,82 @@
           "biographySummary": "Martyrdom of the Fore-runner and Prophet of the Lord."
         }
       ],
-      "readings": [
+      "readingSets": [
         {
-          "type": "FIRST_READING",
-          "readingOrder": 1,
-          "citationRef": "Jeremias 1:17-19",
-          "text": "Thou therefore gird up thy loins, and arise, and speak to them all that I command thee.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Readings Option",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://bible.usccb.org/bible/readings/082926.cfm",
+          "lectionaryNumber": "634",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Jeremias 1:17-19",
+              "scriptureRef": "Jeremias 1:17-19",
+              "text": "Thou therefore gird up thy loins, and arise, and speak to them all that I command thee.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 71:1-2, 3-4a, 5-6ab, 15ab and 17",
+              "scriptureRef": "Psalm 70:1-2, 3-4, 5-6, 15, 17",
+              "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me.",
+              "textStatus": "REQUIRES_MANUAL_SEGMENT_REVIEW",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Mark 6:17-29",
+              "scriptureRef": "Mark 6:17-29",
+              "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            }
+          ]
         },
         {
-          "type": "RESPONSORIAL_PSALM",
-          "readingOrder": 2,
-          "citationRef": "Psalm 70:1-6, 15, 17",
-          "response": "My mouth shall show forth thy justice.",
-          "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
-        },
-        {
-          "type": "GOSPEL",
-          "readingOrder": 3,
-          "citationRef": "Mark 6:17-29",
-          "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias.",
-          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+          "context": "WEEKDAY",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Weekday Readings Option",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://bible.usccb.org/bible/readings/082926.cfm",
+          "lectionaryNumber": "634",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 1:26-31",
+              "scriptureRef": "1 Corinthians 1:26-31",
+              "text": "For see your vocation, brethren, that there are not many wise according to the flesh, not many mighty, not many noble.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 33:12-13, 14-15, 20-21",
+              "scriptureRef": "Psalm 32:12-13, 14-15, 20-21",
+              "text": "Blessed is the nation whose God is the Lord: the people whom he hath chosen for his inheritance.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            },
+            {
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Mark 6:17-29",
+              "scriptureRef": "Mark 6:17-29",
+              "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias.",
+              "textStatus": "VERIFIED_EXACT",
+              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+            }
+          ]
         }
       ]
     }

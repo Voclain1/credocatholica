@@ -46,11 +46,11 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
     });
   }
 
-  if (pkg.metadata.scriptureTranslation !== 'Douay-Rheims') {
+  if (!pkg.metadata.scriptureTranslation || !pkg.metadata.scriptureTranslation.startsWith('Douay-Rheims')) {
     issues.push({
       severity: 'BLOCKER',
       code: 'UNAPPROVED_TRANSLATION',
-      message: `Scripture translation '${pkg.metadata.scriptureTranslation}' is not approved. Must be 'Douay-Rheims'.`,
+      message: `Scripture translation '${pkg.metadata.scriptureTranslation}' is not approved. Must be a approved Douay-Rheims translation.`,
     });
   }
 
@@ -179,18 +179,65 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
       }
     }
 
-    // 4. Reading Validation
-    if (day.readings && Array.isArray(day.readings)) {
-      const seenReadingOrders = new Set<number>();
+    // 4. Reading Sets & Reading Validation
+    const setsToValidate = day.readingSets && Array.isArray(day.readingSets) ? day.readingSets : [];
 
-      day.readings.forEach((reading, rIdx) => {
+    // Legacy fallback wrapper if readingSets is absent but readings is present
+    if (setsToValidate.length === 0 && day.readings && Array.isArray(day.readings)) {
+      setsToValidate.push({
+        context: 'WEEKDAY',
+        selectionStatus: 'SOLE_SET',
+        label: 'Default Readings',
+        sourceUrl: 'https://credocatholica.com/legacy-ingestion',
+        readings: day.readings,
+      });
+    }
+
+    let defaultSetCount = 0;
+
+    setsToValidate.forEach((rSet, sIdx) => {
+      if (!rSet.context) {
+        issues.push({
+          severity: 'BLOCKER',
+          code: 'MISSING_READING_SET_CONTEXT',
+          message: `ReadingSet #${sIdx + 1} on date '${day.date}' is missing context.`,
+          date: day.date,
+        });
+      }
+
+      if (rSet.isCanonicalDefault === true) {
+        defaultSetCount++;
+      }
+
+      if (!rSet.sourceUrl || rSet.sourceUrl.trim() === '') {
+        issues.push({
+          severity: 'BLOCKER',
+          code: 'MISSING_READING_SET_SOURCE_URL',
+          message: `ReadingSet '${rSet.label || sIdx + 1}' on date '${day.date}' is missing sourceUrl.`,
+          date: day.date,
+        });
+      }
+
+      const seenReadingOrders = new Set<number>();
+      const readings = rSet.readings && Array.isArray(rSet.readings) ? rSet.readings : [];
+
+      if (readings.length === 0) {
+        issues.push({
+          severity: 'WARNING',
+          code: 'EMPTY_READING_SET',
+          message: `ReadingSet '${rSet.label || sIdx + 1}' on date '${day.date}' contains 0 readings.`,
+          date: day.date,
+        });
+      }
+
+      readings.forEach((reading, rIdx) => {
         const rOrder = reading.readingOrder ?? (rIdx + 1);
 
         if (seenReadingOrders.has(rOrder)) {
           issues.push({
             severity: 'BLOCKER',
             code: 'DUPLICATE_READING_ORDER',
-            message: `Duplicate readingOrder ${rOrder} on date '${day.date}'.`,
+            message: `Duplicate readingOrder ${rOrder} in set '${rSet.label}' on date '${day.date}'.`,
             date: day.date,
           });
         } else {
@@ -201,7 +248,7 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
           issues.push({
             severity: 'BLOCKER',
             code: 'MISSING_CITATION_REF',
-            message: `Reading #${rOrder} on date '${day.date}' is missing a citation reference.`,
+            message: `Reading #${rOrder} in set '${rSet.label}' on date '${day.date}' is missing a citation reference.`,
             date: day.date,
           });
         }
@@ -214,7 +261,6 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
             date: day.date,
           });
         } else {
-          // Check text integrity: ensure HTML sanitization leaves clean non-empty text
           const sanitized = sanitizeScriptureText(reading.text);
           if (!sanitized) {
             issues.push({
@@ -226,6 +272,15 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
           }
         }
 
+        if (reading.textStatus === 'REQUIRES_MANUAL_SEGMENT_REVIEW') {
+          issues.push({
+            severity: 'WARNING',
+            code: 'REQUIRES_MANUAL_SEGMENT_REVIEW',
+            message: `Reading '${reading.citationRef}' on date '${day.date}' text requires manual sub-verse segment review.`,
+            date: day.date,
+          });
+        }
+
         // Responsorial Psalm Refrain check
         if (reading.type === 'RESPONSORIAL_PSALM' && (!reading.response || reading.response.trim() === '')) {
           issues.push({
@@ -235,6 +290,15 @@ export function validateIngestionPackage(pkg: SourceIngestionPackage): Validatio
             date: day.date,
           });
         }
+      });
+    });
+
+    if (defaultSetCount > 1) {
+      issues.push({
+        severity: 'BLOCKER',
+        code: 'MULTIPLE_CANONICAL_DEFAULTS',
+        message: `Date '${day.date}' specifies ${defaultSetCount} sets with isCanonicalDefault: true. At most 1 canonical default is allowed.`,
+        date: day.date,
       });
     }
   });

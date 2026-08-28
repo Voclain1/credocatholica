@@ -401,6 +401,7 @@ export const ModelName = {
   LiturgicalDay: 'LiturgicalDay',
   Celebration: 'Celebration',
   LiturgicalDayCelebration: 'LiturgicalDayCelebration',
+  ReadingSet: 'ReadingSet',
   Reading: 'Reading',
   Saint: 'Saint',
   Patronage: 'Patronage',
@@ -434,7 +435,7 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
     omit: GlobalOmitOptions
   }
   meta: {
-    modelProps: "liturgicalSeason" | "liturgicalDay" | "celebration" | "liturgicalDayCelebration" | "reading" | "saint" | "patronage" | "saintPatronage" | "vocation" | "saintVocation" | "prayer" | "saintPrayer" | "novena" | "saintNovena" | "novenaDay" | "catechismEntry" | "churchDocument" | "reflection" | "formationPathway" | "formationModule" | "formationLesson" | "migrationRecord"
+    modelProps: "liturgicalSeason" | "liturgicalDay" | "celebration" | "liturgicalDayCelebration" | "readingSet" | "reading" | "saint" | "patronage" | "saintPatronage" | "vocation" | "saintVocation" | "prayer" | "saintPrayer" | "novena" | "saintNovena" | "novenaDay" | "catechismEntry" | "churchDocument" | "reflection" | "formationPathway" | "formationModule" | "formationLesson" | "migrationRecord"
     txIsolationLevel: TransactionIsolationLevel
   }
   model: {
@@ -731,6 +732,80 @@ export type TypeMap<ExtArgs extends runtime.Types.Extensions.InternalArgs = runt
         count: {
           args: Prisma.LiturgicalDayCelebrationCountArgs<ExtArgs>
           result: runtime.Types.Utils.Optional<Prisma.LiturgicalDayCelebrationCountAggregateOutputType> | number
+        }
+      }
+    }
+    ReadingSet: {
+      payload: Prisma.$ReadingSetPayload<ExtArgs>
+      fields: Prisma.ReadingSetFieldRefs
+      operations: {
+        findUnique: {
+          args: Prisma.ReadingSetFindUniqueArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload> | null
+        }
+        findUniqueOrThrow: {
+          args: Prisma.ReadingSetFindUniqueOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        findFirst: {
+          args: Prisma.ReadingSetFindFirstArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload> | null
+        }
+        findFirstOrThrow: {
+          args: Prisma.ReadingSetFindFirstOrThrowArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        findMany: {
+          args: Prisma.ReadingSetFindManyArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>[]
+        }
+        create: {
+          args: Prisma.ReadingSetCreateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        createMany: {
+          args: Prisma.ReadingSetCreateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        createManyAndReturn: {
+          args: Prisma.ReadingSetCreateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>[]
+        }
+        delete: {
+          args: Prisma.ReadingSetDeleteArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        update: {
+          args: Prisma.ReadingSetUpdateArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        deleteMany: {
+          args: Prisma.ReadingSetDeleteManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateMany: {
+          args: Prisma.ReadingSetUpdateManyArgs<ExtArgs>
+          result: BatchPayload
+        }
+        updateManyAndReturn: {
+          args: Prisma.ReadingSetUpdateManyAndReturnArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>[]
+        }
+        upsert: {
+          args: Prisma.ReadingSetUpsertArgs<ExtArgs>
+          result: runtime.Types.Utils.PayloadToResult<Prisma.$ReadingSetPayload>
+        }
+        aggregate: {
+          args: Prisma.ReadingSetAggregateArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.AggregateReadingSet>
+        }
+        groupBy: {
+          args: Prisma.ReadingSetGroupByArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ReadingSetGroupByOutputType>[]
+        }
+        count: {
+          args: Prisma.ReadingSetCountArgs<ExtArgs>
+          result: runtime.Types.Utils.Optional<Prisma.ReadingSetCountAggregateOutputType> | number
         }
       }
     }
@@ -2170,15 +2245,35 @@ export const LiturgicalDayCelebrationScalarFieldEnum = {
 export type LiturgicalDayCelebrationScalarFieldEnum = (typeof LiturgicalDayCelebrationScalarFieldEnum)[keyof typeof LiturgicalDayCelebrationScalarFieldEnum]
 
 
-export const ReadingScalarFieldEnum = {
+export const ReadingSetScalarFieldEnum = {
   id: 'id',
   liturgicalDayId: 'liturgicalDayId',
   celebrationId: 'celebrationId',
+  context: 'context',
+  selectionStatus: 'selectionStatus',
+  label: 'label',
+  description: 'description',
+  setOrder: 'setOrder',
+  isCanonicalDefault: 'isCanonicalDefault',
+  sourceUrl: 'sourceUrl',
+  lectionaryNumber: 'lectionaryNumber',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+} as const
+
+export type ReadingSetScalarFieldEnum = (typeof ReadingSetScalarFieldEnum)[keyof typeof ReadingSetScalarFieldEnum]
+
+
+export const ReadingScalarFieldEnum = {
+  id: 'id',
+  readingSetId: 'readingSetId',
   type: 'type',
   readingOrder: 'readingOrder',
   citationRef: 'citationRef',
+  scriptureRef: 'scriptureRef',
   response: 'response',
   text: 'text',
+  textStatus: 'textStatus',
   copyrightInfo: 'copyrightInfo',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt'
@@ -2597,6 +2692,34 @@ export type ListEnumCelebrationRankFieldRefInput<$PrismaModel> = FieldRefInputTy
 
 
 /**
+ * Reference to a field of type 'ReadingSetContext'
+ */
+export type EnumReadingSetContextFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingSetContext'>
+    
+
+
+/**
+ * Reference to a field of type 'ReadingSetContext[]'
+ */
+export type ListEnumReadingSetContextFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingSetContext[]'>
+    
+
+
+/**
+ * Reference to a field of type 'ReadingSetSelectionStatus'
+ */
+export type EnumReadingSetSelectionStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingSetSelectionStatus'>
+    
+
+
+/**
+ * Reference to a field of type 'ReadingSetSelectionStatus[]'
+ */
+export type ListEnumReadingSetSelectionStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingSetSelectionStatus[]'>
+    
+
+
+/**
  * Reference to a field of type 'ReadingType'
  */
 export type EnumReadingTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingType'>
@@ -2607,6 +2730,20 @@ export type EnumReadingTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$Pris
  * Reference to a field of type 'ReadingType[]'
  */
 export type ListEnumReadingTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'ReadingType[]'>
+    
+
+
+/**
+ * Reference to a field of type 'TextResolutionStatus'
+ */
+export type EnumTextResolutionStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TextResolutionStatus'>
+    
+
+
+/**
+ * Reference to a field of type 'TextResolutionStatus[]'
+ */
+export type ListEnumTextResolutionStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'TextResolutionStatus[]'>
     
 
 
@@ -2862,6 +2999,7 @@ export type GlobalOmitConfig = {
   liturgicalDay?: Prisma.LiturgicalDayOmit
   celebration?: Prisma.CelebrationOmit
   liturgicalDayCelebration?: Prisma.LiturgicalDayCelebrationOmit
+  readingSet?: Prisma.ReadingSetOmit
   reading?: Prisma.ReadingOmit
   saint?: Prisma.SaintOmit
   patronage?: Prisma.PatronageOmit

@@ -399,7 +399,7 @@ Never delete the source WordPress data automatically.
 
 ---
 
-## 15. Database Changes
+## 15. Database Changes & Migration Policy
 
 Do not modify the canonical Prisma schema casually.
 
@@ -413,6 +413,13 @@ For every significant schema change:
 6. validate existing data implications.
 
 Never use `prisma db push` as a substitute for proper production migrations once the canonical schema is established.
+
+Schema prototyping may use appropriate local development workflows before a migration exists, but once a canonical migration file is created, persistent project database changes must be tracked through Prisma migration history.
+
+For this project:
+- committed schema evolution -> Prisma migrations;
+- `prisma db push` must not replace migration application on shared Neon development;
+- database migration history (`_prisma_migrations`) must remain in sync with committed migration files (`prisma/migrations`).
 
 ---
 

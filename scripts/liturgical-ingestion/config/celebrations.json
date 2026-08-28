@@ -1,1 +1,17 @@
-{}
+{
+  "st-augustine-bishop-and-doctor": {
+    "title": "St. Augustine, Bishop and Doctor of the Church",
+    "rank": "MEMORIAL",
+    "color": "WHITE"
+  },
+  "beheading-of-st-john-the-baptist": {
+    "title": "The Beheading of Saint John the Baptist",
+    "rank": "MEMORIAL",
+    "color": "RED"
+  },
+  "st-gregory-the-great-pope-and-doctor": {
+    "title": "St. Gregory the Great, Pope and Doctor of the Church",
+    "rank": "MEMORIAL",
+    "color": "WHITE"
+  }
+}

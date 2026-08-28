@@ -1,0 +1,32 @@
+{
+  "packageId": "universal-roman-2026-08-28-to-2026-09-03",
+  "calendarCode": "UNIVERSAL",
+  "dateRange": {
+    "start": "2026-08-28",
+    "end": "2026-09-03"
+  },
+  "sources": [
+    {
+      "role": "calendarMetadata",
+      "sourceName": "Vatican General Roman Calendar",
+      "authorityTier": "TIER_1",
+      "legalBasis": "Public domain factual calendar rubrics and feast ranks",
+      "accessDate": "2026-08-28"
+    },
+    {
+      "role": "scriptureTextSource",
+      "sourceName": "Douay-Rheims Bible (Challoner Revision, 1899 Edition)",
+      "authorityTier": "TIER_1",
+      "legalBasis": "Public Domain worldwide (CC0)",
+      "url": "https://www.drbo.org / Project Gutenberg EBook #1581",
+      "accessDate": "2026-08-28"
+    },
+    {
+      "role": "lectionaryReferenceSource",
+      "sourceName": "Universal Roman Lectionary Citations",
+      "authorityTier": "TIER_1",
+      "legalBasis": "Factual Scripture citation references (non-copyrightable facts)",
+      "accessDate": "2026-08-28"
+    }
+  ]
+}

@@ -290,7 +290,7 @@ export type LiturgicalDayWhereInput = {
   updatedAt?: Prisma.DateTimeFilter<"LiturgicalDay"> | Date | string
   season?: Prisma.XOR<Prisma.LiturgicalSeasonScalarRelationFilter, Prisma.LiturgicalSeasonWhereInput>
   celebrations?: Prisma.LiturgicalDayCelebrationListRelationFilter
-  readings?: Prisma.ReadingListRelationFilter
+  readingSets?: Prisma.ReadingSetListRelationFilter
   reflections?: Prisma.ReflectionListRelationFilter
   migrationRecords?: Prisma.MigrationRecordListRelationFilter
 }
@@ -312,7 +312,7 @@ export type LiturgicalDayOrderByWithRelationInput = {
   updatedAt?: Prisma.SortOrder
   season?: Prisma.LiturgicalSeasonOrderByWithRelationInput
   celebrations?: Prisma.LiturgicalDayCelebrationOrderByRelationAggregateInput
-  readings?: Prisma.ReadingOrderByRelationAggregateInput
+  readingSets?: Prisma.ReadingSetOrderByRelationAggregateInput
   reflections?: Prisma.ReflectionOrderByRelationAggregateInput
   migrationRecords?: Prisma.MigrationRecordOrderByRelationAggregateInput
 }
@@ -338,7 +338,7 @@ export type LiturgicalDayWhereUniqueInput = Prisma.AtLeast<{
   updatedAt?: Prisma.DateTimeFilter<"LiturgicalDay"> | Date | string
   season?: Prisma.XOR<Prisma.LiturgicalSeasonScalarRelationFilter, Prisma.LiturgicalSeasonWhereInput>
   celebrations?: Prisma.LiturgicalDayCelebrationListRelationFilter
-  readings?: Prisma.ReadingListRelationFilter
+  readingSets?: Prisma.ReadingSetListRelationFilter
   reflections?: Prisma.ReflectionListRelationFilter
   migrationRecords?: Prisma.MigrationRecordListRelationFilter
 }, "id" | "calendarCode_date">
@@ -401,7 +401,7 @@ export type LiturgicalDayCreateInput = {
   updatedAt?: Date | string
   season: Prisma.LiturgicalSeasonCreateNestedOneWithoutLiturgicalDaysInput
   celebrations?: Prisma.LiturgicalDayCelebrationCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -422,7 +422,7 @@ export type LiturgicalDayUncheckedCreateInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetUncheckedCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -443,7 +443,7 @@ export type LiturgicalDayUpdateInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   season?: Prisma.LiturgicalSeasonUpdateOneRequiredWithoutLiturgicalDaysNestedInput
   celebrations?: Prisma.LiturgicalDayCelebrationUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutLiturgicalDayNestedInput
 }
@@ -464,7 +464,7 @@ export type LiturgicalDayUncheckedUpdateInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutLiturgicalDayNestedInput
 }
@@ -683,20 +683,18 @@ export type LiturgicalDayUpdateOneRequiredWithoutCelebrationsNestedInput = {
   update?: Prisma.XOR<Prisma.XOR<Prisma.LiturgicalDayUpdateToOneWithWhereWithoutCelebrationsInput, Prisma.LiturgicalDayUpdateWithoutCelebrationsInput>, Prisma.LiturgicalDayUncheckedUpdateWithoutCelebrationsInput>
 }
 
-export type LiturgicalDayCreateNestedOneWithoutReadingsInput = {
-  create?: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingsInput>
-  connectOrCreate?: Prisma.LiturgicalDayCreateOrConnectWithoutReadingsInput
+export type LiturgicalDayCreateNestedOneWithoutReadingSetsInput = {
+  create?: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingSetsInput>
+  connectOrCreate?: Prisma.LiturgicalDayCreateOrConnectWithoutReadingSetsInput
   connect?: Prisma.LiturgicalDayWhereUniqueInput
 }
 
-export type LiturgicalDayUpdateOneWithoutReadingsNestedInput = {
-  create?: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingsInput>
-  connectOrCreate?: Prisma.LiturgicalDayCreateOrConnectWithoutReadingsInput
-  upsert?: Prisma.LiturgicalDayUpsertWithoutReadingsInput
-  disconnect?: Prisma.LiturgicalDayWhereInput | boolean
-  delete?: Prisma.LiturgicalDayWhereInput | boolean
+export type LiturgicalDayUpdateOneRequiredWithoutReadingSetsNestedInput = {
+  create?: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingSetsInput>
+  connectOrCreate?: Prisma.LiturgicalDayCreateOrConnectWithoutReadingSetsInput
+  upsert?: Prisma.LiturgicalDayUpsertWithoutReadingSetsInput
   connect?: Prisma.LiturgicalDayWhereUniqueInput
-  update?: Prisma.XOR<Prisma.XOR<Prisma.LiturgicalDayUpdateToOneWithWhereWithoutReadingsInput, Prisma.LiturgicalDayUpdateWithoutReadingsInput>, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingsInput>
+  update?: Prisma.XOR<Prisma.XOR<Prisma.LiturgicalDayUpdateToOneWithWhereWithoutReadingSetsInput, Prisma.LiturgicalDayUpdateWithoutReadingSetsInput>, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingSetsInput>
 }
 
 export type LiturgicalDayCreateNestedOneWithoutReflectionsInput = {
@@ -746,7 +744,7 @@ export type LiturgicalDayCreateWithoutSeasonInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -766,7 +764,7 @@ export type LiturgicalDayUncheckedCreateWithoutSeasonInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetUncheckedCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -832,7 +830,7 @@ export type LiturgicalDayCreateWithoutCelebrationsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   season: Prisma.LiturgicalSeasonCreateNestedOneWithoutLiturgicalDaysInput
-  readings?: Prisma.ReadingCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -852,7 +850,7 @@ export type LiturgicalDayUncheckedCreateWithoutCelebrationsInput = {
   publishedAt?: Date | string | null
   createdAt?: Date | string
   updatedAt?: Date | string
-  readings?: Prisma.ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetUncheckedCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
@@ -888,7 +886,7 @@ export type LiturgicalDayUpdateWithoutCelebrationsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   season?: Prisma.LiturgicalSeasonUpdateOneRequiredWithoutLiturgicalDaysNestedInput
-  readings?: Prisma.ReadingUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutLiturgicalDayNestedInput
 }
@@ -908,12 +906,12 @@ export type LiturgicalDayUncheckedUpdateWithoutCelebrationsInput = {
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
-  readings?: Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutLiturgicalDayNestedInput
 }
 
-export type LiturgicalDayCreateWithoutReadingsInput = {
+export type LiturgicalDayCreateWithoutReadingSetsInput = {
   id?: string
   date: Date | string
   calendarCode?: string
@@ -933,7 +931,7 @@ export type LiturgicalDayCreateWithoutReadingsInput = {
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutLiturgicalDayInput
 }
 
-export type LiturgicalDayUncheckedCreateWithoutReadingsInput = {
+export type LiturgicalDayUncheckedCreateWithoutReadingSetsInput = {
   id?: string
   date: Date | string
   calendarCode?: string
@@ -953,23 +951,23 @@ export type LiturgicalDayUncheckedCreateWithoutReadingsInput = {
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
 
-export type LiturgicalDayCreateOrConnectWithoutReadingsInput = {
+export type LiturgicalDayCreateOrConnectWithoutReadingSetsInput = {
   where: Prisma.LiturgicalDayWhereUniqueInput
-  create: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingsInput>
+  create: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingSetsInput>
 }
 
-export type LiturgicalDayUpsertWithoutReadingsInput = {
-  update: Prisma.XOR<Prisma.LiturgicalDayUpdateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingsInput>
-  create: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingsInput>
+export type LiturgicalDayUpsertWithoutReadingSetsInput = {
+  update: Prisma.XOR<Prisma.LiturgicalDayUpdateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingSetsInput>
+  create: Prisma.XOR<Prisma.LiturgicalDayCreateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedCreateWithoutReadingSetsInput>
   where?: Prisma.LiturgicalDayWhereInput
 }
 
-export type LiturgicalDayUpdateToOneWithWhereWithoutReadingsInput = {
+export type LiturgicalDayUpdateToOneWithWhereWithoutReadingSetsInput = {
   where?: Prisma.LiturgicalDayWhereInput
-  data: Prisma.XOR<Prisma.LiturgicalDayUpdateWithoutReadingsInput, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingsInput>
+  data: Prisma.XOR<Prisma.LiturgicalDayUpdateWithoutReadingSetsInput, Prisma.LiturgicalDayUncheckedUpdateWithoutReadingSetsInput>
 }
 
-export type LiturgicalDayUpdateWithoutReadingsInput = {
+export type LiturgicalDayUpdateWithoutReadingSetsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   calendarCode?: Prisma.StringFieldUpdateOperationsInput | string
@@ -989,7 +987,7 @@ export type LiturgicalDayUpdateWithoutReadingsInput = {
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutLiturgicalDayNestedInput
 }
 
-export type LiturgicalDayUncheckedUpdateWithoutReadingsInput = {
+export type LiturgicalDayUncheckedUpdateWithoutReadingSetsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   date?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   calendarCode?: Prisma.StringFieldUpdateOperationsInput | string
@@ -1025,7 +1023,7 @@ export type LiturgicalDayCreateWithoutReflectionsInput = {
   updatedAt?: Date | string
   season: Prisma.LiturgicalSeasonCreateNestedOneWithoutLiturgicalDaysInput
   celebrations?: Prisma.LiturgicalDayCelebrationCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordCreateNestedManyWithoutLiturgicalDayInput
 }
 
@@ -1045,7 +1043,7 @@ export type LiturgicalDayUncheckedCreateWithoutReflectionsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetUncheckedCreateNestedManyWithoutLiturgicalDayInput
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
 
@@ -1081,7 +1079,7 @@ export type LiturgicalDayUpdateWithoutReflectionsInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   season?: Prisma.LiturgicalSeasonUpdateOneRequiredWithoutLiturgicalDaysNestedInput
   celebrations?: Prisma.LiturgicalDayCelebrationUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutLiturgicalDayNestedInput
 }
 
@@ -1101,7 +1099,7 @@ export type LiturgicalDayUncheckedUpdateWithoutReflectionsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutLiturgicalDayNestedInput
 }
 
@@ -1121,7 +1119,7 @@ export type LiturgicalDayCreateWithoutMigrationRecordsInput = {
   updatedAt?: Date | string
   season: Prisma.LiturgicalSeasonCreateNestedOneWithoutLiturgicalDaysInput
   celebrations?: Prisma.LiturgicalDayCelebrationCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionCreateNestedManyWithoutLiturgicalDayInput
 }
 
@@ -1141,7 +1139,7 @@ export type LiturgicalDayUncheckedCreateWithoutMigrationRecordsInput = {
   createdAt?: Date | string
   updatedAt?: Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedCreateNestedManyWithoutLiturgicalDayInput
-  readings?: Prisma.ReadingUncheckedCreateNestedManyWithoutLiturgicalDayInput
+  readingSets?: Prisma.ReadingSetUncheckedCreateNestedManyWithoutLiturgicalDayInput
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutLiturgicalDayInput
 }
 
@@ -1177,7 +1175,7 @@ export type LiturgicalDayUpdateWithoutMigrationRecordsInput = {
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   season?: Prisma.LiturgicalSeasonUpdateOneRequiredWithoutLiturgicalDaysNestedInput
   celebrations?: Prisma.LiturgicalDayCelebrationUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutLiturgicalDayNestedInput
 }
 
@@ -1197,7 +1195,7 @@ export type LiturgicalDayUncheckedUpdateWithoutMigrationRecordsInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutLiturgicalDayNestedInput
 }
 
@@ -1232,7 +1230,7 @@ export type LiturgicalDayUpdateWithoutSeasonInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUpdateManyWithoutLiturgicalDayNestedInput
 }
@@ -1252,7 +1250,7 @@ export type LiturgicalDayUncheckedUpdateWithoutSeasonInput = {
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   updatedAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
   celebrations?: Prisma.LiturgicalDayCelebrationUncheckedUpdateManyWithoutLiturgicalDayNestedInput
-  readings?: Prisma.ReadingUncheckedUpdateManyWithoutLiturgicalDayNestedInput
+  readingSets?: Prisma.ReadingSetUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   reflections?: Prisma.ReflectionUncheckedUpdateManyWithoutLiturgicalDayNestedInput
   migrationRecords?: Prisma.MigrationRecordUncheckedUpdateManyWithoutLiturgicalDayNestedInput
 }
@@ -1280,14 +1278,14 @@ export type LiturgicalDayUncheckedUpdateManyWithoutSeasonInput = {
 
 export type LiturgicalDayCountOutputType = {
   celebrations: number
-  readings: number
+  readingSets: number
   reflections: number
   migrationRecords: number
 }
 
 export type LiturgicalDayCountOutputTypeSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   celebrations?: boolean | LiturgicalDayCountOutputTypeCountCelebrationsArgs
-  readings?: boolean | LiturgicalDayCountOutputTypeCountReadingsArgs
+  readingSets?: boolean | LiturgicalDayCountOutputTypeCountReadingSetsArgs
   reflections?: boolean | LiturgicalDayCountOutputTypeCountReflectionsArgs
   migrationRecords?: boolean | LiturgicalDayCountOutputTypeCountMigrationRecordsArgs
 }
@@ -1312,8 +1310,8 @@ export type LiturgicalDayCountOutputTypeCountCelebrationsArgs<ExtArgs extends ru
 /**
  * LiturgicalDayCountOutputType without action
  */
-export type LiturgicalDayCountOutputTypeCountReadingsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
-  where?: Prisma.ReadingWhereInput
+export type LiturgicalDayCountOutputTypeCountReadingSetsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+  where?: Prisma.ReadingSetWhereInput
 }
 
 /**
@@ -1348,7 +1346,7 @@ export type LiturgicalDaySelect<ExtArgs extends runtime.Types.Extensions.Interna
   updatedAt?: boolean
   season?: boolean | Prisma.LiturgicalSeasonDefaultArgs<ExtArgs>
   celebrations?: boolean | Prisma.LiturgicalDay$celebrationsArgs<ExtArgs>
-  readings?: boolean | Prisma.LiturgicalDay$readingsArgs<ExtArgs>
+  readingSets?: boolean | Prisma.LiturgicalDay$readingSetsArgs<ExtArgs>
   reflections?: boolean | Prisma.LiturgicalDay$reflectionsArgs<ExtArgs>
   migrationRecords?: boolean | Prisma.LiturgicalDay$migrationRecordsArgs<ExtArgs>
   _count?: boolean | Prisma.LiturgicalDayCountOutputTypeDefaultArgs<ExtArgs>
@@ -1411,7 +1409,7 @@ export type LiturgicalDayOmit<ExtArgs extends runtime.Types.Extensions.InternalA
 export type LiturgicalDayInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   season?: boolean | Prisma.LiturgicalSeasonDefaultArgs<ExtArgs>
   celebrations?: boolean | Prisma.LiturgicalDay$celebrationsArgs<ExtArgs>
-  readings?: boolean | Prisma.LiturgicalDay$readingsArgs<ExtArgs>
+  readingSets?: boolean | Prisma.LiturgicalDay$readingSetsArgs<ExtArgs>
   reflections?: boolean | Prisma.LiturgicalDay$reflectionsArgs<ExtArgs>
   migrationRecords?: boolean | Prisma.LiturgicalDay$migrationRecordsArgs<ExtArgs>
   _count?: boolean | Prisma.LiturgicalDayCountOutputTypeDefaultArgs<ExtArgs>
@@ -1428,7 +1426,7 @@ export type $LiturgicalDayPayload<ExtArgs extends runtime.Types.Extensions.Inter
   objects: {
     season: Prisma.$LiturgicalSeasonPayload<ExtArgs>
     celebrations: Prisma.$LiturgicalDayCelebrationPayload<ExtArgs>[]
-    readings: Prisma.$ReadingPayload<ExtArgs>[]
+    readingSets: Prisma.$ReadingSetPayload<ExtArgs>[]
     reflections: Prisma.$ReflectionPayload<ExtArgs>[]
     migrationRecords: Prisma.$MigrationRecordPayload<ExtArgs>[]
   }
@@ -1843,7 +1841,7 @@ export interface Prisma__LiturgicalDayClient<T, Null = never, ExtArgs extends ru
   readonly [Symbol.toStringTag]: "PrismaPromise"
   season<T extends Prisma.LiturgicalSeasonDefaultArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalSeasonDefaultArgs<ExtArgs>>): Prisma.Prisma__LiturgicalSeasonClient<runtime.Types.Result.GetResult<Prisma.$LiturgicalSeasonPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
   celebrations<T extends Prisma.LiturgicalDay$celebrationsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalDay$celebrationsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$LiturgicalDayCelebrationPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
-  readings<T extends Prisma.LiturgicalDay$readingsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalDay$readingsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReadingPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+  readingSets<T extends Prisma.LiturgicalDay$readingSetsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalDay$readingSetsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReadingSetPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   reflections<T extends Prisma.LiturgicalDay$reflectionsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalDay$reflectionsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$ReflectionPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   migrationRecords<T extends Prisma.LiturgicalDay$migrationRecordsArgs<ExtArgs> = {}>(args?: Prisma.Subset<T, Prisma.LiturgicalDay$migrationRecordsArgs<ExtArgs>>): Prisma.PrismaPromise<runtime.Types.Result.GetResult<Prisma.$MigrationRecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
   /**
@@ -2314,27 +2312,27 @@ export type LiturgicalDay$celebrationsArgs<ExtArgs extends runtime.Types.Extensi
 }
 
 /**
- * LiturgicalDay.readings
+ * LiturgicalDay.readingSets
  */
-export type LiturgicalDay$readingsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
+export type LiturgicalDay$readingSetsArgs<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   /**
-   * Select specific fields to fetch from the Reading
+   * Select specific fields to fetch from the ReadingSet
    */
-  select?: Prisma.ReadingSelect<ExtArgs> | null
+  select?: Prisma.ReadingSetSelect<ExtArgs> | null
   /**
-   * Omit specific fields from the Reading
+   * Omit specific fields from the ReadingSet
    */
-  omit?: Prisma.ReadingOmit<ExtArgs> | null
+  omit?: Prisma.ReadingSetOmit<ExtArgs> | null
   /**
    * Choose, which related nodes to fetch as well
    */
-  include?: Prisma.ReadingInclude<ExtArgs> | null
-  where?: Prisma.ReadingWhereInput
-  orderBy?: Prisma.ReadingOrderByWithRelationInput | Prisma.ReadingOrderByWithRelationInput[]
-  cursor?: Prisma.ReadingWhereUniqueInput
+  include?: Prisma.ReadingSetInclude<ExtArgs> | null
+  where?: Prisma.ReadingSetWhereInput
+  orderBy?: Prisma.ReadingSetOrderByWithRelationInput | Prisma.ReadingSetOrderByWithRelationInput[]
+  cursor?: Prisma.ReadingSetWhereUniqueInput
   take?: number
   skip?: number
-  distinct?: Prisma.ReadingScalarFieldEnum | Prisma.ReadingScalarFieldEnum[]
+  distinct?: Prisma.ReadingSetScalarFieldEnum | Prisma.ReadingSetScalarFieldEnum[]
 }
 
 /**

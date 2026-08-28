@@ -62,6 +62,35 @@ export const HistoricalConfidence = {
 export type HistoricalConfidence = (typeof HistoricalConfidence)[keyof typeof HistoricalConfidence]
 
 
+export const ReadingSetContext = {
+  WEEKDAY: 'WEEKDAY',
+  SUNDAY: 'SUNDAY',
+  PROPER_OF_SAINTS: 'PROPER_OF_SAINTS',
+  PROPER_OF_SEASON: 'PROPER_OF_SEASON',
+  COMMON_OF_SAINTS: 'COMMON_OF_SAINTS'
+} as const
+
+export type ReadingSetContext = (typeof ReadingSetContext)[keyof typeof ReadingSetContext]
+
+
+export const ReadingSetSelectionStatus = {
+  SOLE_SET: 'SOLE_SET',
+  ALTERNATIVE: 'ALTERNATIVE',
+  OPTIONAL: 'OPTIONAL'
+} as const
+
+export type ReadingSetSelectionStatus = (typeof ReadingSetSelectionStatus)[keyof typeof ReadingSetSelectionStatus]
+
+
+export const TextResolutionStatus = {
+  VERIFIED_EXACT: 'VERIFIED_EXACT',
+  REQUIRES_MANUAL_SEGMENT_REVIEW: 'REQUIRES_MANUAL_SEGMENT_REVIEW',
+  TEXT_UNAVAILABLE: 'TEXT_UNAVAILABLE'
+} as const
+
+export type TextResolutionStatus = (typeof TextResolutionStatus)[keyof typeof TextResolutionStatus]
+
+
 export const PrayerType = {
   BASIC: 'BASIC',
   MARIAN: 'MARIAN',

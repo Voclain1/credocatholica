@@ -62,6 +62,11 @@ export type Celebration = Prisma.CelebrationModel
  */
 export type LiturgicalDayCelebration = Prisma.LiturgicalDayCelebrationModel
 /**
+ * Model ReadingSet
+ * 
+ */
+export type ReadingSet = Prisma.ReadingSetModel
+/**
  * Model Reading
  * 
  */

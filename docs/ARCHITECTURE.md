@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.7: Liturgical Ingestion & Approval Pipeline**
+**Phase M0.8A: Reading Sets & Exact Passage Segments Semantic Refinements**
 
-Current status: Human-reviewed liturgical data ingestion & approval pipeline (`scripts/liturgical-ingestion/`), SHA-256 package hash verification, human approval manifest binding (`scripts/liturgical-ingestion/approvals/`), Douay-Rheims Scripture text integrity checks, strict multi-stage validation (`validator.ts`), JSON & Markdown reconciliation reports (`reconciliation.ts`), dry-run default CLI runner (`run.ts`), apply safety gates (`applier.ts`), synthetic structural fixtures (`fixtures/`), unit test suite (`liturgy:ingest:test`), and runbook documentation (`docs/LITURGICAL-INGESTION.md`, `docs/LITURGICAL-APPROVAL.md`) fully implemented and verified. Real canonical database content remains uncorrupted with 5 reference seasons and 0 fake content rows.
+Current status: Explicit separation of reading source context (`ReadingSetContext`: `WEEKDAY`, `SUNDAY`, `PROPER_OF_SAINTS`, `PROPER_OF_SEASON`, `COMMON_OF_SAINTS`) from selection status (`ReadingSetSelectionStatus`: `SOLE_SET`, `ALTERNATIVE`, `OPTIONAL`); removal of unsupported default privilege (`isCanonicalDefault: Boolean?`, `null` for equal August 29 options); removal of `optionGroup` string tags in favor of complete self-contained `ReadingSet` instances; `TextResolutionStatus` enum (`VERIFIED_EXACT`, `REQUIRES_MANUAL_SEGMENT_REVIEW`, `TEXT_UNAVAILABLE`); fail-closed Psalm versification resolver (`scripture-resolver.ts`); exact verified per-set `sourceUrl`; Prisma migration (`20260828203500_reading_sets_semantic_refinement`); updated ingestion contract & validator; updated real package (`universal-roman-2026-08-28-to-2026-09-03.json` v2.1.0); `/today` service query helper exposing `hasMultipleSets` and `hasUncontestedDefault`; and 16/16 passing ingestion unit tests fully implemented. Real canonical database content remains 100% unmutated (5 LiturgicalSeason rows, 0 content rows). Real database apply was NOT executed and remains paused for human architectural review.
 
 ---
 

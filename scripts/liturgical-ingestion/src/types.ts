@@ -4,6 +4,9 @@ import {
   ReadingType,
   YearCycle,
   WeekdayCycle,
+  ReadingSetContext,
+  ReadingSetSelectionStatus,
+  TextResolutionStatus,
 } from '../../../src/generated/prisma/client.js';
 
 export interface SourcePackageMetadata {
@@ -42,9 +45,23 @@ export interface SourceReadingRecord {
   type: ReadingType | string;
   readingOrder: number;
   citationRef: string;
+  scriptureRef?: string;
   response?: string;
   text: string;
+  textStatus?: TextResolutionStatus | string;
   copyrightInfo?: string;
+}
+
+export interface SourceReadingSetRecord {
+  context: ReadingSetContext | string;
+  selectionStatus?: ReadingSetSelectionStatus | string;
+  label: string;
+  description?: string;
+  setOrder?: number;
+  isCanonicalDefault?: boolean | null;
+  sourceUrl: string;
+  lectionaryNumber?: string;
+  readings: SourceReadingRecord[];
 }
 
 export interface SourceDayRecord {
@@ -59,7 +76,8 @@ export interface SourceDayRecord {
   creedRequired: boolean;
   notes?: string;
   celebrations: SourceCelebrationRecord[];
-  readings: SourceReadingRecord[];
+  readingSets?: SourceReadingSetRecord[];
+  readings?: SourceReadingRecord[];
 }
 
 export interface SourceIngestionPackage {
@@ -90,6 +108,15 @@ export interface PlannedOperation {
   reason: string;
 }
 
+export interface ApprovalManifest {
+  packageId: string;
+  packageHash: string;
+  approvedAt: string;
+  reviewer: string;
+  status: 'APPROVED_FOR_INGESTION' | 'REJECTED';
+  notes?: string;
+}
+
 export interface ReconciliationReport {
   packageId: string;
   packageHash: string;
@@ -98,7 +125,10 @@ export interface ReconciliationReport {
   counts: {
     daysTotal: number;
     celebrationsTotal: number;
+    readingSetsTotal: number;
     readingsTotal: number;
+    issuesBlockers: number;
+    issuesWarnings: number;
   };
   quality: {
     structurallyValid: boolean;
@@ -123,18 +153,4 @@ export interface ReconciliationReport {
     insertedReadings: number;
     failedDays: number;
   };
-}
-
-export interface ApprovalManifest {
-  packageHash: string;
-  packageName: string;
-  dateRange: {
-    start: string;
-    end: string;
-  };
-  status: 'APPROVED_FOR_INGESTION' | 'REJECTED';
-  reviewer: string; // Human reviewer identifier (label/initials)
-  approvedAt: string;
-  reportId?: string;
-  notes?: string;
 }

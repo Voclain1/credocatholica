@@ -82,9 +82,9 @@ export async function applyIngestionPackage(
             },
           });
 
-          // Clean up old joined celebrations and readings for idempotency
+          // Clean up old joined celebrations and readingSets for idempotency
           await tx.liturgicalDayCelebration.deleteMany({ where: { liturgicalDayId: dayId } });
-          await tx.reading.deleteMany({ where: { liturgicalDayId: dayId } });
+          await tx.readingSet.deleteMany({ where: { liturgicalDayId: dayId } });
         } else {
           insertedDays++;
           const newDay = await tx.liturgicalDay.create({
@@ -146,22 +146,44 @@ export async function applyIngestionPackage(
           }
         }
 
-        // Ingest Readings
-        if (dayRecord.readings && dayRecord.readings.length > 0) {
-          for (const readingRecord of dayRecord.readings) {
-            const cleanText = sanitizeScriptureText(readingRecord.text);
-            await tx.reading.create({
-              data: {
-                liturgicalDayId: dayId,
-                type: readingRecord.type as ReadingType,
-                readingOrder: readingRecord.readingOrder,
-                citationRef: readingRecord.citationRef,
-                response: readingRecord.response ?? null,
-                text: cleanText,
-                copyrightInfo: readingRecord.copyrightInfo || 'Public Domain (Douay-Rheims Bible)',
-              },
-            });
-            insertedReadings++;
+        // Ingest ReadingSets & Readings
+        const readingSetsToApply = dayRecord.readingSets && dayRecord.readingSets.length > 0
+          ? dayRecord.readingSets
+          : [];
+
+        for (const setRecord of readingSetsToApply) {
+          const createdSet = await tx.readingSet.create({
+            data: {
+              liturgicalDayId: dayId,
+              context: setRecord.context as any,
+              selectionStatus: (setRecord.selectionStatus as any) || 'SOLE_SET',
+              label: setRecord.label,
+              description: setRecord.description ?? null,
+              setOrder: setRecord.setOrder ?? 1,
+              isCanonicalDefault: setRecord.isCanonicalDefault ?? null,
+              sourceUrl: setRecord.sourceUrl,
+              lectionaryNumber: setRecord.lectionaryNumber ?? null,
+            },
+          });
+
+          if (setRecord.readings && setRecord.readings.length > 0) {
+            for (const readingRecord of setRecord.readings) {
+              const cleanText = sanitizeScriptureText(readingRecord.text);
+              await tx.reading.create({
+                data: {
+                  readingSetId: createdSet.id,
+                  type: readingRecord.type as ReadingType,
+                  readingOrder: readingRecord.readingOrder,
+                  citationRef: readingRecord.citationRef,
+                  scriptureRef: readingRecord.scriptureRef ?? null,
+                  response: readingRecord.response ?? null,
+                  text: cleanText,
+                  textStatus: (readingRecord.textStatus as any) || 'VERIFIED_EXACT',
+                  copyrightInfo: readingRecord.copyrightInfo || 'Public Domain — Douay-Rheims Version, Challoner Revision',
+                },
+              });
+              insertedReadings++;
+            }
           }
         }
       });

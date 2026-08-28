@@ -38,10 +38,19 @@ export function generateReconciliationReport(
 
   // Count totals
   let celebrationsTotal = 0;
+  let readingSetsTotal = 0;
   let readingsTotal = 0;
   pkg.records.forEach((r) => {
     celebrationsTotal += r.celebrations ? r.celebrations.length : 0;
-    readingsTotal += r.readings ? r.readings.length : 0;
+    if (r.readingSets && r.readingSets.length > 0) {
+      readingSetsTotal += r.readingSets.length;
+      r.readingSets.forEach((rs) => {
+        readingsTotal += rs.readings ? rs.readings.length : 0;
+      });
+    } else if ((r as any).readings && (r as any).readings.length > 0) {
+      readingSetsTotal += 1;
+      readingsTotal += (r as any).readings.length;
+    }
   });
 
   // Verify human approval artifact
@@ -67,7 +76,10 @@ export function generateReconciliationReport(
     counts: {
       daysTotal: pkg.records.length,
       celebrationsTotal,
+      readingSetsTotal,
       readingsTotal,
+      issuesBlockers: blockers.length,
+      issuesWarnings: warnings.length,
     },
     quality: {
       structurallyValid,
