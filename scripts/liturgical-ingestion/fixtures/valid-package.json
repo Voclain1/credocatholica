@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "packageName": "valid-package",
+    "sourceName": "Synthetic Liturgical Structural Test Fixture Source",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceUrl": "https://credocatholica.com/fixtures/valid",
+    "sourceVersion": "1.0.0",
+    "extractionTimestamp": "2026-08-28T19:00:00Z",
+    "periodCovered": {
+      "start": "2026-08-28",
+      "end": "2026-08-29"
+    },
+    "scriptureTranslation": "Douay-Rheims",
+    "licensingBasis": "Public Domain — Douay-Rheims Bible / Synthetic Structural Fixtures",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
+  },
+  "records": [
+    {
+      "date": "2026-08-28",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 21,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "WHITE",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Memorial of Saint Augustine, Bishop and Doctor of the Church.",
+      "celebrations": [
+        {
+          "title": "St. Augustine, Bishop and Doctor of the Church",
+          "slug": "st-augustine-bishop-and-doctor",
+          "rank": "MEMORIAL",
+          "color": "WHITE",
+          "isMovable": false,
+          "fixedMonth": 8,
+          "fixedDay": 28,
+          "precedenceOrder": 1,
+          "isOptional": false,
+          "isCommemoration": false,
+          "isTransferred": false,
+          "biographySummary": "Great Doctor of Grace and Bishop of Hippo."
+        }
+      ],
+      "readings": [
+        {
+          "type": "FIRST_READING",
+          "readingOrder": 1,
+          "citationRef": "1 Corinthians 1:17-25",
+          "text": "For Christ sent me not to baptize, but to preach the gospel: not in wisdom of speech, lest the cross of Christ should be made void.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        },
+        {
+          "type": "RESPONSORIAL_PSALM",
+          "readingOrder": 2,
+          "citationRef": "Psalm 32:1-2, 4-5, 10-11",
+          "response": "The earth is full of the goodness of the Lord.",
+          "text": "Rejoice in the Lord, O ye just: praise becometh the upright.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        },
+        {
+          "type": "GOSPEL",
+          "readingOrder": 3,
+          "citationRef": "Matthew 25:1-13",
+          "text": "Then shall the kingdom of heaven be like to ten virgins, who taking their lamps went out to meet the bridegroom and the bride.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 21,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "RED",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "The Beheading of Saint John the Baptist.",
+      "celebrations": [
+        {
+          "title": "The Beheading of Saint John the Baptist",
+          "slug": "beheading-of-st-john-the-baptist",
+          "rank": "MEMORIAL",
+          "color": "RED",
+          "isMovable": false,
+          "fixedMonth": 8,
+          "fixedDay": 29,
+          "precedenceOrder": 1,
+          "isOptional": false,
+          "isCommemoration": false,
+          "isTransferred": false,
+          "biographySummary": "Martyrdom of the Fore-runner and Prophet of the Lord."
+        }
+      ],
+      "readings": [
+        {
+          "type": "FIRST_READING",
+          "readingOrder": 1,
+          "citationRef": "Jeremias 1:17-19",
+          "text": "Thou therefore gird up thy loins, and arise, and speak to them all that I command thee.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        },
+        {
+          "type": "RESPONSORIAL_PSALM",
+          "readingOrder": 2,
+          "citationRef": "Psalm 70:1-6, 15, 17",
+          "response": "My mouth shall show forth thy justice.",
+          "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        },
+        {
+          "type": "GOSPEL",
+          "readingOrder": 3,
+          "citationRef": "Mark 6:17-29",
+          "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias.",
+          "copyrightInfo": "Public Domain (Douay-Rheims Bible)"
+        }
+      ]
+    }
+  ]
+}

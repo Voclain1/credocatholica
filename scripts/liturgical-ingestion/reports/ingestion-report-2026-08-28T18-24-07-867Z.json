@@ -1,0 +1,52 @@
+{
+  "packageId": "valid-package",
+  "packageHash": "2b599caccdb555c323858ecac930f54cb4ad8e3eb12979f6b29fe7d4b0cacb6d",
+  "generatedAt": "2026-08-28T18:24:07.865Z",
+  "metadata": {
+    "packageName": "valid-package",
+    "sourceName": "Synthetic Liturgical Structural Test Fixture Source",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceUrl": "https://credocatholica.com/fixtures/valid",
+    "sourceVersion": "1.0.0",
+    "extractionTimestamp": "2026-08-28T19:00:00Z",
+    "periodCovered": {
+      "start": "2026-08-28",
+      "end": "2026-08-29"
+    },
+    "scriptureTranslation": "Douay-Rheims",
+    "licensingBasis": "Public Domain — Douay-Rheims Bible / Synthetic Structural Fixtures",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
+  },
+  "counts": {
+    "daysTotal": 2,
+    "celebrationsTotal": 2,
+    "readingsTotal": 6
+  },
+  "quality": {
+    "structurallyValid": true,
+    "blockersCount": 0,
+    "warningsCount": 0,
+    "issues": []
+  },
+  "operations": [
+    {
+      "date": "2026-08-28",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    },
+    {
+      "date": "2026-08-29",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    }
+  ],
+  "approval": {
+    "required": true,
+    "artifactFound": true,
+    "hashMatches": true,
+    "status": "APPROVED_FOR_INGESTION",
+    "reviewer": "J.M. (Human Doctrinal Reviewer)",
+    "approvedAt": "2026-08-28T19:00:00Z"
+  },
+  "verdict": "APPROVED_FOR_APPLY"
+}

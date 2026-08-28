@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "packageName": "invalid-package",
+    "sourceName": "Invalid Synthetic Test Fixture",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceVersion": "1.0.0",
+    "extractionTimestamp": "2026-08-28T19:00:00Z",
+    "periodCovered": {
+      "start": "2026-08-30",
+      "end": "2026-08-30"
+    },
+    "scriptureTranslation": "UNAPPROVED_NIV",
+    "licensingBasis": "Unspecified",
+    "reviewerStatus": "UNREVIEWED"
+  },
+  "records": [
+    {
+      "date": "2026-08-30",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "UNKNOWN_SUMMER_SEASON",
+      "seasonWeek": 21,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "TURQUOISE",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "celebrations": [
+        {
+          "title": "Invalid Celebration",
+          "rank": "INVALID_RANK",
+          "color": "TURQUOISE"
+        }
+      ],
+      "readings": [
+        {
+          "type": "FIRST_READING",
+          "readingOrder": 1,
+          "citationRef": "Example 1:1",
+          "text": "Valid text string"
+        },
+        {
+          "type": "SECOND_READING",
+          "readingOrder": 1,
+          "citationRef": "Example 1:2",
+          "text": ""
+        }
+      ]
+    }
+  ]
+}

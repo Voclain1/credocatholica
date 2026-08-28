@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.6: The Daily Liturgical Companion (`/today`)**
+**Phase M0.7: Liturgical Ingestion & Approval Pipeline**
 
-Current status: Canonical daily liturgical companion route (`/today`), presentation component library (`src/components/liturgy/`), extended domain liturgy query service (`src/lib/liturgy/service.ts`), isolated date-resolution helper (`resolveApplicationDate`), ordered Mass reading renderer, responsorial psalm refrain handler, principal vs secondary celebration presentation logic, print-friendly CSS foundation, unit test suite (`test:liturgy`), and architectural documentation (`docs/LITURGICAL-PRESENTATION.md`) fully implemented and verified. All existing components, homepage CTAs, and sitemaps cleanly integrated.
+Current status: Human-reviewed liturgical data ingestion & approval pipeline (`scripts/liturgical-ingestion/`), SHA-256 package hash verification, human approval manifest binding (`scripts/liturgical-ingestion/approvals/`), Douay-Rheims Scripture text integrity checks, strict multi-stage validation (`validator.ts`), JSON & Markdown reconciliation reports (`reconciliation.ts`), dry-run default CLI runner (`run.ts`), apply safety gates (`applier.ts`), synthetic structural fixtures (`fixtures/`), unit test suite (`liturgy:ingest:test`), and runbook documentation (`docs/LITURGICAL-INGESTION.md`, `docs/LITURGICAL-APPROVAL.md`) fully implemented and verified. Real canonical database content remains uncorrupted with 5 reference seasons and 0 fake content rows.
 
 ---
 

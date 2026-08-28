@@ -15,7 +15,11 @@
     "migration:wp:fixtures": "tsx scripts/wordpress-migration/run.ts --dry-run --fixtures",
     "migration:wp:apply": "tsx scripts/wordpress-migration/run.ts --apply",
     "migration:wp:test": "tsx --test scripts/wordpress-migration/test/migration.test.ts",
-    "test:liturgy": "tsx --test src/lib/liturgy/test/liturgy.test.ts"
+    "test:liturgy": "tsx --test src/lib/liturgy/test/liturgy.test.ts",
+    "liturgy:ingest": "tsx scripts/liturgical-ingestion/run.ts",
+    "liturgy:ingest:fixtures": "tsx scripts/liturgical-ingestion/run.ts --fixtures",
+    "liturgy:ingest:test": "tsx --test scripts/liturgical-ingestion/test/ingestion.test.ts",
+    "liturgy:ingest:apply": "tsx scripts/liturgical-ingestion/run.ts --apply"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

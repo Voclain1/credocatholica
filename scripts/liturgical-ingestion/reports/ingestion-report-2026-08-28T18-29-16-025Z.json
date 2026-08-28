@@ -1,0 +1,85 @@
+{
+  "packageId": "invalid-package",
+  "packageHash": "72df5300fd9e317d51dc8450bf7e19ab76e1db7cf1bdacea53e59710ebfbb5e3",
+  "generatedAt": "2026-08-28T18:29:16.023Z",
+  "metadata": {
+    "packageName": "invalid-package",
+    "sourceName": "Invalid Synthetic Test Fixture",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceVersion": "1.0.0",
+    "extractionTimestamp": "2026-08-28T19:00:00Z",
+    "periodCovered": {
+      "start": "2026-08-30",
+      "end": "2026-08-30"
+    },
+    "scriptureTranslation": "UNAPPROVED_NIV",
+    "licensingBasis": "Unspecified",
+    "reviewerStatus": "UNREVIEWED"
+  },
+  "counts": {
+    "daysTotal": 1,
+    "celebrationsTotal": 1,
+    "readingsTotal": 2
+  },
+  "quality": {
+    "structurallyValid": false,
+    "blockersCount": 7,
+    "warningsCount": 0,
+    "issues": [
+      {
+        "severity": "BLOCKER",
+        "code": "UNAPPROVED_TRANSLATION",
+        "message": "Scripture translation 'UNAPPROVED_NIV' is not approved. Must be 'Douay-Rheims'."
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "UNKNOWN_SEASON",
+        "message": "Season 'UNKNOWN_SUMMER_SEASON' is unknown or not mapped to a canonical season code.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "UNKNOWN_COLOR",
+        "message": "Liturgical color 'TURQUOISE' is unknown or not mapped to a canonical color.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "UNKNOWN_RANK",
+        "message": "Celebration 'Invalid Celebration' has unknown rank 'INVALID_RANK'.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "UNKNOWN_COLOR",
+        "message": "Celebration 'Invalid Celebration' has unknown color 'TURQUOISE'.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "DUPLICATE_READING_ORDER",
+        "message": "Duplicate readingOrder 1 on date '2026-08-30'.",
+        "date": "2026-08-30"
+      },
+      {
+        "severity": "BLOCKER",
+        "code": "MISSING_READING_TEXT",
+        "message": "Reading 'Example 1:2' on date '2026-08-30' is missing text content.",
+        "date": "2026-08-30"
+      }
+    ]
+  },
+  "operations": [
+    {
+      "date": "2026-08-30",
+      "action": "WOULD_INSERT",
+      "reason": "New canonical LiturgicalDay record; would insert."
+    }
+  ],
+  "approval": {
+    "required": true,
+    "artifactFound": false,
+    "hashMatches": false
+  },
+  "verdict": "NOT_READY"
+}
