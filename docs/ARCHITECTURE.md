@@ -2,9 +2,9 @@
 
 ## 1. Current Migration Phase
 
-**Phase M0.4: WordPress Migration Tooling & Pipeline**
+**Phase M0.5: Public Shell, Design System, Homepage, SEO & Reference Seed Infrastructure**
 
-Current status: Migration pipeline framework, export specification (`docs/WORDPRESS-EXPORT-SPEC.md`), operational runbook (`docs/MIGRATION-RUNBOOK.md`), synthetic fixtures, HTML sanitizer, domain transformers, validation engine, reconciliation reporting, and unit test suite fully implemented and verified. Dry-run pipeline tested offline with zero errors. Production data import awaits generation of live export package.
+Current status: Public shell layout, responsive SiteHeader & SiteFooter, accessible MobileNavigation, sacred minimalist design system tokens (`src/app/globals.css`, `docs/DESIGN-SYSTEM.md`), `Cormorant Garamond` & `Inter` typography, canonical homepage, SEO & metadata baseline (`robots.ts`, `sitemap.ts`), domain liturgy read service (`src/lib/liturgy/service.ts`), and idempotent reference seed infrastructure (`prisma/seed.ts`, `docs/SEEDING.md`) fully implemented and verified. Prisma 7 schema validated and seed tested against Neon development database with 100% idempotency.
 
 ---
 
@@ -43,9 +43,13 @@ Current status: Migration pipeline framework, export specification (`docs/WORDPR
 
 ---
 
-## 4. Dependency Boundaries
+## 5. Homepage Rendering Strategy
 
-1. **Domain Isolation:** React components in `src/app/` or `src/components/` must consume services in `src/lib/` and must never call Prisma directly inside UI render functions.
-2. **Liturgical Calculations:** Liturgical logic must be deterministic and testable, residing strictly within `src/lib/liturgy/`.
-3. **Data Access:** All database interaction must flow through typed Prisma services in `src/lib/`.
-4. **Third-Party Packages:** Minimize external dependencies; rely on standard Next.js, React, Node.js, and Prisma capabilities.
+The CredoCatholica homepage (`src/app/page.tsx`) uses dynamic server-side rendering (`export const dynamic = 'force-dynamic'`).
+
+### Architectural Rationale
+- **Dynamic Liturgical Calendar Data:** The homepage embeds "Today's Liturgy" (Pillar I), which depends on current calendar dates and daily database records (`LiturgicalDay`, `Celebration`, `Reading`).
+- **Why Build-Static Rendering is Prohibited:** Prerendering `/` at `next build` time would freeze the date and database snapshot permanently into static HTML, preventing new daily liturgical content from appearing when dates change without deploying a new application build.
+- **On-Demand Server Rendering:** With `force-dynamic`, the homepage is evaluated on demand by React Server Components per HTTP request. Future verified `LiturgicalDay` data published in the database immediately becomes visible to users without client-side fetching hooks, complex caching layers, or cron job dependencies.
+- **Graceful Error & Empty State Boundary:** The `getTodayLiturgicalSummary()` domain service isolates all database read logic. If zero `LiturgicalDay` rows exist or if a database query fails, a safe discriminated result (`EMPTY` or `ERROR`) is returned, rendering a dignified empty state without exposing raw Prisma exceptions to the browser.
+

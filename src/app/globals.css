@@ -1,108 +1,197 @@
-:root {
-  --color-deep-blue: #1a2744;
-  --color-sacred-cream: #f5f0e8;
-  --color-burgundy: #6b1f2a;
-  --color-muted-gold: #9a7c3f;
-  --color-surface-card: #ffffff;
-  --color-text-primary: #1a2744;
-  --color-text-secondary: #4a5568;
-  --color-border: #e2e8f0;
+/* ==========================================
+   CREDOCATHOLICA DESIGN SYSTEM TOKENS
+   ========================================== */
 
+:root {
+  /* Brand Identity Tokens */
+  --color-primary: #1a2744;          /* Deep Blue */
+  --color-background: #f5f0e8;       /* Sacred Cream */
+  --color-surface: #ffffff;          /* Surface Pure White */
+  --color-surface-elevated: #fdfbf7; /* Surface Sacred Off-White */
+  --color-accent: #6b1f2a;           /* Burgundy */
+  --color-sacred-gold: #9a7c3f;      /* Muted Gold */
+  --color-border: #e2dacd;           /* Soft Border Cream */
+  --color-border-gold: #c4a768;      /* Accent Gold Border */
+  --color-text: #1a2744;             /* Deep Blue Navy Text */
+  --color-text-muted: #5a6578;       /* Muted Slate Text */
+  --color-text-inverse: #f5f0e8;     /* Light Sacred Text */
+
+  /* Liturgical Color Tokens (Restrained Accents) */
+  --color-liturgical-green: #2d6a4f;
+  --color-liturgical-violet: #5a3e85;
+  --color-liturgical-white: #d8e2dc;
+  --color-liturgical-red: #9e2a2b;
+  --color-liturgical-rose: #b56576;
+  --color-liturgical-black: #2b2d42;
+
+  /* Typography Variables (Bound via next/font in layout.tsx) */
   --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Spacing Grid */
+  --space-xs: 0.25rem;  /* 4px */
+  --space-sm: 0.5rem;   /* 8px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2.5rem;   /* 40px */
+  --space-2xl: 4rem;    /* 64px */
+
+  /* Layout Constraints */
+  --container-max-width: 72rem; /* 1152px */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
 }
 
-* {
+/* Base Reset & Typography Setup */
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background-color: var(--color-sacred-cream);
-  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: var(--font-sans);
   line-height: 1.6;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px solid var(--color-sacred-gold);
+  outline-offset: 3px;
+}
+
+/* Skip-to-content Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Typography Utility Classes */
+h1, h2, h3, h4, h5, h6, .font-serif {
   font-family: var(--font-serif);
   font-weight: 600;
-  color: var(--color-deep-blue);
+  line-height: 1.2;
+  color: var(--color-primary);
 }
 
+/* Layout Utilities */
 .container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-.header {
-  border-bottom: 2px solid var(--color-muted-gold);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
+.section-padding {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
 }
 
-.badge {
-  display: inline-block;
-  background-color: var(--color-burgundy);
-  color: var(--color-sacred-cream);
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-}
-
-.card {
-  background: var(--color-surface-card);
-  border: 1px solid var(--color-border);
-  border-left: 4px solid var(--color-muted-gold);
-  border-radius: 6px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
-
-.card h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-}
-
-.card p {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.status-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.status-item {
-  background: var(--color-sacred-cream);
-  padding: 0.75rem 1rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-}
-
-.status-item span {
-  display: block;
+/* Controlled Liturgical Color Badges (Correction 12) */
+.badge-liturgical {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--color-deep-blue);
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
 }
 
-footer {
-  margin-top: 3rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--color-border);
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-  text-align: center;
+.badge-liturgical-green {
+  background-color: rgba(45, 106, 79, 0.12);
+  color: #1b4332;
+  border-color: rgba(45, 106, 79, 0.25);
 }
+
+.badge-liturgical-violet {
+  background-color: rgba(90, 62, 133, 0.12);
+  color: #3c2463;
+  border-color: rgba(90, 62, 133, 0.25);
+}
+
+.badge-liturgical-white {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-border-gold);
+}
+
+.badge-liturgical-red {
+  background-color: rgba(158, 42, 43, 0.12);
+  color: #6b1011;
+  border-color: rgba(158, 42, 43, 0.25);
+}
+
+.badge-liturgical-rose {
+  background-color: rgba(181, 101, 118, 0.12);
+  color: #7a3241;
+  border-color: rgba(181, 101, 118, 0.25);
+}
+
+.badge-liturgical-black {
+  background-color: rgba(43, 45, 66, 0.12);
+  color: #171825;
+  border-color: rgba(43, 45, 66, 0.25);
+}
+
+/* Responsive Utilities & Minimal UI Helpers */
+.hero-section {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  background-color: var(--color-surface-elevated);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4.5vw + 0.75rem, 3.25rem);
+  font-weight: 600;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+  .hero-section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+

@@ -12,8 +12,8 @@ This repository is the Next.js successor application to the legacy WordPress pla
 
 ## Migration Status
 
-- **Current Phase:** M0.1 (Engineering Baseline & Repository Initialization)
-- **Status:** Active baseline ready. Next.js 16.3.3 App Router, TypeScript strict mode, Prisma 7 configuration, and domain directory architecture established.
+- **Current Phase:** M0.5 (Public Shell, Design System, Homepage, SEO Baseline & Seed Tooling)
+- **Status:** Active baseline ready. Next.js 16.3.3 App Router, sacred minimalist design system, `Cormorant Garamond` & `Inter` typography, canonical homepage, responsive layout shell, environment-aware SEO metadata, domain liturgy service, and Prisma 7 idempotent reference seed infrastructure established.
 
 ---
 

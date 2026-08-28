@@ -10,20 +10,24 @@
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "postinstall": "prisma generate",
+    "db:seed": "prisma db seed",
     "migration:wp": "tsx scripts/wordpress-migration/run.ts --dry-run",
     "migration:wp:fixtures": "tsx scripts/wordpress-migration/run.ts --dry-run --fixtures",
     "migration:wp:apply": "tsx scripts/wordpress-migration/run.ts --apply",
     "migration:wp:test": "tsx --test scripts/wordpress-migration/test/migration.test.ts"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.10.0",
     "@prisma/client": "^7.10.0",
     "next": "16.3.3",
+    "pg": "^8.23.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@prisma/config": "^7.10.0",
     "@types/node": "^22.13.4",
+    "@types/pg": "^8.23.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
     "@types/sanitize-html": "^2.16.1",
