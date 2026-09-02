@@ -37,3 +37,5 @@ scripts/liturgical-ingestion/reports/ingestion-report-*.md
 .DS_Store
 Thumbs.db
 *.pem
+
+.vercel
