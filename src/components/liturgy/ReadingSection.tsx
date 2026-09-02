@@ -1,26 +1,25 @@
 import React from 'react';
 import { PresentationReading } from '@/lib/liturgy/service';
-import { ReadingType } from '@/generated/prisma/client';
 
 interface ReadingSectionProps {
   reading: PresentationReading;
 }
 
 export function ReadingSection({ reading }: ReadingSectionProps) {
-  const isGospel = reading.type === ReadingType.GOSPEL;
-  const isGospelAcclamation = reading.type === ReadingType.GOSPEL_ACCLAMATION;
+  const isGospel = reading.type === 'GOSPEL';
+  const isGospelAcclamation = reading.type === 'GOSPEL_ACCLAMATION';
 
-  const formatTypeTitle = (type: ReadingType): string => {
+  const formatTypeTitle = (type: string): string => {
     switch (type) {
-      case ReadingType.FIRST_READING:
+      case 'FIRST_READING':
         return 'First Reading';
-      case ReadingType.SECOND_READING:
+      case 'SECOND_READING':
         return 'Second Reading';
-      case ReadingType.GOSPEL_ACCLAMATION:
+      case 'GOSPEL_ACCLAMATION':
         return 'Gospel Acclamation';
-      case ReadingType.GOSPEL:
+      case 'GOSPEL':
         return 'The Holy Gospel';
-      case ReadingType.OTHER:
+      case 'OTHER':
         return 'Reading';
       default:
         return 'Scripture Reading';

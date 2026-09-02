@@ -179,15 +179,49 @@ export default async function SaintDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Biography */}
+      {/* Biography & Hagiography */}
       <section style={{ marginBottom: '3rem' }}>
         <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>
           Biography & Hagiography
         </h2>
-        <div style={{ fontSize: '1.0625rem', lineHeight: 1.7, color: 'var(--color-text)' }}>
+        <div style={{ fontSize: '1.0625rem', lineHeight: 1.8, color: 'var(--color-text)', whiteSpace: 'pre-line' }}>
           {saint.biography}
         </div>
       </section>
+
+      {/* Related Liturgical Celebrations */}
+      {saint.celebrations.length > 0 && (
+        <section style={{ marginBottom: '3rem' }}>
+          <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.75rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>
+            Liturgical Celebrations
+          </h2>
+          <div style={{ display: 'grid', gap: '0.75rem' }}>
+            {saint.celebrations.map((c) => (
+              <div
+                key={c.id}
+                style={{
+                  padding: '1rem 1.25rem',
+                  backgroundColor: 'var(--color-surface)',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius-md)',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                }}
+              >
+                <div>
+                  <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.125rem', margin: 0, color: 'var(--color-primary)' }}>
+                    {c.title}
+                  </h3>
+                  <span style={{ fontSize: '0.8125rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                    {c.rank.replace(/_/g, ' ')}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Patronages & Vocations */}
       {(saint.patronages.length > 0 || saint.vocations.length > 0) && (
@@ -248,7 +282,7 @@ export default async function SaintDetailPage({ params }: Props) {
                   </Link>
                 </h3>
                 <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', margin: '0 0 0.75rem', lineHeight: 1.5 }}>
-                  {sp.prayer.bodyText.slice(0, 150)}...
+                  {sp.prayer.bodyText}
                 </p>
                 <Link
                   href={`/prayers/${sp.prayer.slug}`}
@@ -298,6 +332,23 @@ export default async function SaintDetailPage({ params }: Props) {
           </div>
         </section>
       )}
+
+      {/* Provenance & Editorial Standards */}
+      <footer
+        style={{
+          marginTop: '4rem',
+          paddingTop: '1.5rem',
+          borderTop: '1px solid var(--color-border)',
+          fontSize: '0.8125rem',
+          color: 'var(--color-text-muted)',
+          lineHeight: 1.6,
+        }}
+      >
+        <strong style={{ color: 'var(--color-primary)' }}>Canonical Provenance & Editorial Standards:</strong>
+        <p style={{ margin: '0.25rem 0 0' }}>
+          This hagiographical entry has been reviewed according to CredoCatholica doctrinal and historical accuracy standards. Compiled from public domain ecclesiastical sources including the Roman Martyrology, Catholic Encyclopedia, and authoritative hagiographical records.
+        </p>
+      </footer>
     </article>
   );
 }
