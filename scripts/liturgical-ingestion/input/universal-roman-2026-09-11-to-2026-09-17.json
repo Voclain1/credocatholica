@@ -1,0 +1,689 @@
+{
+  "metadata": {
+    "packageName": "universal-roman-2026-09-11-to-2026-09-17",
+    "sourceName": "Universal Roman Calendar & Douay-Rheims Reading Package",
+    "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
+    "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-09-11-to-2026-09-17",
+    "sourceVersion": "1.0.0",
+    "extractionTimestamp": "2026-08-29T18:49:30Z",
+    "periodCovered": {
+      "start": "2026-09-11",
+      "end": "2026-09-17"
+    },
+    "scriptureTranslation": "Douay-Rheims Version, Challoner Revision",
+    "licensingBasis": "Public Domain in the United States (Douay-Rheims Challoner Revision / Vatican General Roman Calendar Baseline)",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
+  },
+  "records": [
+    {
+      "date": "2026-09-11",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 23,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Friday of the 23rd Week in Ordinary Time.",
+      "celebrations": [],
+      "readingSets": [
+        {
+          "sourceKey": "set-0911-weekday-441",
+          "context": "WEEKDAY",
+          "selectionStatus": "SOLE_SET",
+          "label": "Weekday Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "lectionaryNumber": "441",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091126.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0911-weekday-first-1cor9",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 9:16-19, 22b-27",
+              "scriptureRef": "1 Corinthians 9:16-19, 22-27",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "For if I preach the gospel, it is no glory to me: for a necessity lieth upon me: for woe is unto me if I preach not the gospel. For if I do this thing willingly, I have a reward: but if against my will, a dispensation is committed unto me. What is my reward then? That preaching the gospel, I may deliver the gospel without charge, that I abuse not my power in the gospel. For whereas I was free as to all, I made myself the servant of all, that I might gain the more. I became all things to all men, that I might save all. And I do all things for the gospel's sake: that I may be made partaker thereof. Know you not that they that run in the race, all run indeed, but one receiveth the prize? So run that you may obtain. And every one that striveth for the mastery, abstaineth himself from all things: and they indeed that they may receive a corruptible crown; but we an incorruptible one. I therefore so run, not as at an uncertainty: I so fight, not as one beating the air: But I chastise my body, and bring it into subjection: lest perhaps, when I have preached to others, I myself should become a castaway.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0911-weekday-psalm-84",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 84:3, 4, 5-6, 12",
+              "scriptureRef": "Psalm 83:3, 4, 5-6, 13",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "My soul longeth and fainteth for the courts of the Lord. My heart and my flesh have rejoiced in the living God. For the sparrow hath found herself a house, and the turtle a nest for herself where she may lay her young ones: Thy altars, O Lord of hosts, my king and my God. Blessed are they that dwell in thy house, O Lord: they shall praise thee for ever and ever. Blessed is the man whose help is from thee: in his heart he hath disposed to go by steps. For God loveth mercy and truth: the Lord will give grace and glory. He will not deprive of good things them that walk in innocence: O Lord of hosts, blessed is the man that trusteth in thee.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0911-weekday-gospel-luke6",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 6:39-42",
+              "scriptureRef": "Luke 6:39-42",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And he spoke also to them a similitude: Can the blind lead the blind? do they not both fall into the ditch? The disciple is not above the master: but every one shall be perfect, if he be as his master. And why seest thou the mote in thy brother's eye, but advertest not the beam that is in thy own eye? Or how canst thou say to thy brother: Brother, let me pull the mote out of thy eye, when thou thyself beholdest not the beam in thine own eye? Hypocrite, cast first the beam out of thine own eye; and then shalt thou see clearly to take out the mote from thy brother's eye.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 23,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Saturday of the 23rd Week in Ordinary Time. Optional Memorial of The Most Holy Name of Mary.",
+      "celebrations": [
+        {
+          "title": "The Most Holy Name of Mary",
+          "slug": "the-most-holy-name-of-mary",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 12,
+          "precedenceOrder": 1,
+          "isOptional": true,
+          "isCommemoration": false,
+          "isTransferred": false
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0912-weekday-442",
+          "context": "WEEKDAY",
+          "selectionStatus": "SOLE_SET",
+          "label": "Weekday Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "lectionaryNumber": "442",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091226.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0912-weekday-first-1cor10",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 10:14-22",
+              "scriptureRef": "1 Corinthians 10:14-22",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Wherefore, my dearly beloved, fly from the service of idols. I speak as to wise men: judge ye yourselves what I say. The chalice of benediction, which we bless, is it not the communion of the blood of Christ? And the bread, which we break, is it not the partaking of the body of the Lord? For we, being many, are one bread, one body, all that partake of one bread. Behold Israel according to the flesh: are not they that eat of the sacrifices partakers of the altar? What then? Do I say, that what is offered in sacrifice to idols, is any thing? Or, that the idol is any thing? But the things which the heathens sacrifice, they sacrifice to devils, and not to God. And I would not that you should be made partakers with devils. You cannot drink the chalice of the Lord, and the chalice of devils: you cannot be partakers of the table of the Lord, and of the table of devils. Do we provoke the Lord to jealousy? Are we stronger than he? All things are lawful for me, but all things are not expedient.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0912-weekday-psalm-116",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 116:12-13, 17-18",
+              "scriptureRef": "Psalm 115:12-13, 17-18",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "What shall I render to the Lord, for all the things that he hath rendered to me? I will take the chalice of salvation; and I will call upon the name of the Lord. I will offer to thee the sacrifice of praise, and I will call upon the name of the Lord. I will pay my vows to the Lord in the sight of all his people:",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0912-weekday-gospel-luke6",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 6:43-49",
+              "scriptureRef": "Luke 6:43-49",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "For there is no good tree that bringeth forth evil fruit; nor an evil tree that bringeth forth good fruit. For every tree is known by its fruit. For men do not gather figs from thorns, nor from a bramble bush do they gather the grape. A good man out of the good treasure of his heart bringeth forth that which is good: and an evil man out of the evil treasure bringeth forth that which is evil. For out of the abundance of the heart the mouth speaketh. And why call you me Lord, Lord; and do not the things which I say? Every one that cometh to me, and heareth my words, and doth them, I will shew you to whom he is like. He is like to a man building a house, who digged deep, and laid the foundation upon a rock. And when a flood came, the stream beat vehemently upon that house, and it could not shake it; for it was founded on a rock. But he that heareth, and doth, is like a man that built his house upon the earth without a foundation; against which the stream beat vehemently, and immediately it fell, and the ruin of that house was great.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 24,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": true,
+      "creedRequired": true,
+      "notes": "Twenty-fourth Sunday in Ordinary Time.",
+      "celebrations": [],
+      "readingSets": [
+        {
+          "sourceKey": "set-0913-sunday-130",
+          "context": "SUNDAY",
+          "selectionStatus": "SOLE_SET",
+          "label": "Sunday Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "lectionaryNumber": "130",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091326.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0913-sunday-first-ecclus27",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Sirach 27:30—28:7",
+              "scriptureRef": "Ecclesiasticus 27:33—28:9",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Anger and fury are both of them abominable, and the sinful man shall be subject to them. He that seeketh to revenge himself, shall find vengeance from the Lord, and he will surely keep his sins in remembrance. Forgive thy neighbour if he hath hurt thee: and then shall thy sins be forgiven thee when thou prayest. Man to man reserveth anger, and doth he seek remedy of God? He hath no mercy on man like himself, and doth he entreat for his own sins? He being himself flesh, nourisheth anger, and doth he ask pardon of God? who shall obtain pardon for his sins? Remember thy last things, and let enmity cease: For corruption and death are at hand, and abide in the commandments. Remember the fear of God, and be not angry with thy neighbour. Remember the covenant of the Highest, and overlook the ignorance of thy neighbour. Refrain from strife, and thou shalt diminish thy sins:",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0913-sunday-psalm-103",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 103:1-2, 3-4, 9-10, 11-12",
+              "scriptureRef": "Psalm 102:1-2, 3-4, 9-10, 11-12",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Bless the Lord, O my soul: and let all that is within me bless his holy name. Bless the Lord, O my soul, and never forget all his benefits. Who forgiveth all thy iniquities who healeth all thy diseases. Who redeemeth thy life from destruction: who crowneth thee with mercy and compassion. He will not always be angry: nor will he threaten for ever. He hath not dealt with us according to our sins: nor rewarded us according to our iniquities. For according to the height of the heaven above the earth: he hath strengthened his mercy towards them that fear him. As far as the east is from the west, so far hath he removed our iniquities from us.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0913-sunday-second-rom14",
+              "type": "SECOND_READING",
+              "readingOrder": 3,
+              "citationRef": "Romans 14:7-9",
+              "scriptureRef": "Romans 14:7-9",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "For none of us liveth to himself; and no man dieth to himself. For whether we live, we live unto the Lord; or whether we die, we die unto the Lord. Therefore, whether we live, or whether we die, we are the Lord's. For to this end Christ died and rose again; that he might be Lord both of the dead and of the living.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0913-sunday-gospel-matt18",
+              "type": "GOSPEL",
+              "readingOrder": 4,
+              "citationRef": "Matthew 18:21-35",
+              "scriptureRef": "Matthew 18:21-35",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Then came Peter unto him and said: Lord, how often shall my brother offend against me, and I forgive him? till seven times? Jesus saith to him: I say not to thee, till seven times; but till seventy times seven times. Therefore is the kingdom of heaven likened to a king, who would take an account of his servants. And when he had begun to take the account, one was brought to him, that owed him ten thousand talents. And as he had not wherewith to pay it, his lord commanded that he should be sold, and his wife and children and all that he had, and payment to be made. But that servant falling down, besought him, saying: Have patience with me, and I will pay thee all. And the lord of that servant being moved with pity, let him go and forgave him the debt. But when that servant was gone out, he found one of his fellowservants that owed him an hundred pence: and laying hold of him, he took him by the throat, saying: Pay what thou owest. And his fellowservant falling down, besought him, saying: Have patience with me, and I will pay thee all. And he would not: but went and cast him into prison, till he paid the debt. Now his fellowservants seeing what was done, were very much grieved, and they came and told their lord all that was done. Then his lord called him; and said to him: Thou wicked servant, I forgave thee all the debt, because thou besoughtest me: Shouldst not thou then also have had compassion on thy fellowservant, even as I had compassion on thee? And his lord being angry, delivered him to the torturers, until he paid all the debt. So also shall my heavenly Father do to you, if you forgive not every one his brother from your hearts.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 24,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "RED",
+      "gloriaRequired": true,
+      "creedRequired": false,
+      "notes": "The Exaltation of the Holy Cross (Feast).",
+      "celebrations": [
+        {
+          "title": "The Exaltation of the Holy Cross",
+          "slug": "the-exaltation-of-the-holy-cross",
+          "rank": "FEAST",
+          "color": "RED",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 14,
+          "precedenceOrder": 1,
+          "isOptional": false,
+          "isCommemoration": false,
+          "isTransferred": false
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0914-proper-638",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "SOLE_SET",
+          "label": "Proper Feast Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "lectionaryNumber": "638",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091426.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0914-proper-first-numbers21",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Numbers 21:4b-9",
+              "scriptureRef": "Numbers 21:4-9",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "and the people began to be weary of their journey and labour: And speaking against God and Moses, they said: Why didst thou bring us out of Egypt, to die in the wilderness? There is no bread, nor have we any waters: our soul now loatheth this very light food. Wherefore the Lord sent among the people fiery serpents, which bit them and killed many of them. Upon which they came to Moses, and said: We have sinned, because we have spoken against the Lord and thee: pray that he may take away these serpents from us. And Moses prayed for the people. And the Lord said to him: Make a brazen serpent, and set it up for a sign: whosoever being struck shall look on it, shall live. Moses therefore made a brazen serpent, and set it up for a sign: which when they that were bitten looked upon, they were healed.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0914-proper-psalm-78",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 78:1bc-2, 34-35, 36-37, 38",
+              "scriptureRef": "Psalm 77:1-2, 34-35, 36-37, 38",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "incline your ears unto the words of my mouth. I will open my mouth in parables: I will utter propositions from the beginning. When he slew them, then they sought him: and they returned, and came eagerly to him in the morning. And they remembered that God was their helper: and the high God their redeemer. And they loved him with their mouth: and with their tongue they lied unto him. But their heart was not right with him: nor were they counted faithful in his covenant. But he is merciful, and he will forgive their sins: and will not destroy them. And many a time did he turn away his anger: and did not kindle all his wrath.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0914-proper-second-phil2",
+              "type": "SECOND_READING",
+              "readingOrder": 3,
+              "citationRef": "Philippians 2:6-11",
+              "scriptureRef": "Philippians 2:6-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Who being in the form of God, thought it not robbery to be equal with God: But emptied himself, taking the form of a servant, being made in the likeness of men, and in habit found as a man. He humbled himself, becoming obedient unto death, even to the death of the cross. For which cause God also hath exalted him, and hath given him a name which is above all names: That in the name of Jesus every knee should bow, of those that are in heaven, on earth, and under the earth: And that every tongue should confess that the Lord Jesus Christ is in the glory of God the Father.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0914-proper-gospel-john3",
+              "type": "GOSPEL",
+              "readingOrder": 4,
+              "citationRef": "John 3:13-17",
+              "scriptureRef": "John 3:13-17",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And no man hath ascended into heaven, but he that descended from heaven, the Son of man who is in heaven. And as Moses lifted up the serpent in the desert, so must the Son of man be lifted up: That whosoever believeth in him, may not perish, but may have life everlasting. For God so loved the world, as to give his only begotten Son; that whosoever believeth in him, may not perish, but may have noble life. For God sent not his Son into the world, to judge the world, but that the world may be saved by him.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 24,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "WHITE",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Our Lady of Sorrows (Memorial).",
+      "celebrations": [
+        {
+          "title": "Our Lady of Sorrows",
+          "slug": "our-lady-of-sorrows",
+          "rank": "MEMORIAL",
+          "color": "WHITE",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 15,
+          "precedenceOrder": 1,
+          "isOptional": false,
+          "isCommemoration": false,
+          "isTransferred": false
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0915-proper-639-weekday-john",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Readings (Weekday First Reading & Gospel of John)",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "639",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091526.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0915-weekday-first-1cor12",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 12:12-14, 27-31a",
+              "scriptureRef": "1 Corinthians 12:12-14, 27-31",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "For as the body is one, and hath many members; and all the members of the body, whereas they are many, yet are one body: so also is Christ. For in one Spirit were we all baptized into one body, whether Jews or Gentiles, whether bond or free; and in one Spirit we have all been made to drink. For the body also is not one member, but many. Now you are the body of Christ, and members of member. And God indeed hath set some in the church; first apostles, secondly prophets, thirdly doctors; after that miracles, then the graces of healings, helps, governments, kinds of tongues, interpretations of speeches. Are all apostles? Are all prophets? Are all doctors? Are all workers of miracles? Have all the grace of healing? Do all speak with tongues? Do all interpret? But be zealous for the better gifts.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-weekday-psalm-100",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 100:1b-2, 3, 4, 5",
+              "scriptureRef": "Psalm 99:1-2, 3, 4, 5",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Sing joyfully to God, all the earth: serve ye the Lord with gladness. Come in before his presence with exceeding great joy. Know ye that the Lord he is God: he made us, and not we ourselves. We are his people and the sheep of his pasture. Go ye into his gates with praise, into his courts with hymns: give glory to him. Praise ye his name: for the Lord is sweet, his mercy endureth for ever, and his truth to all generations.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-gospel-john19",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "John 19:25-27",
+              "scriptureRef": "John 19:25-27",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Now there stood by the cross of Jesus, his mother, and his mother's sister, Mary of Cleophas, and Mary Magdalen. When Jesus therefore had seen his mother and the disciple standing whom he loved, he saith to his mother: Woman, behold thy son. After that, he saith to the disciple: Behold thy mother. And from that hour the disciple took her to his own.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0915-proper-639-weekday-luke",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Readings (Weekday First Reading & Gospel of Luke)",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "639",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091526.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0915-weekday-first-1cor12",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 12:12-14, 27-31a",
+              "scriptureRef": "1 Corinthians 12:12-14, 27-31",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "For as the body is one, and hath many members; and all the members of the body, whereas they are many, yet are one body: so also is Christ. For in one Spirit were we all baptized into one body, whether Jews or Gentiles, whether bond or free; and in one Spirit we have all been made to drink. For the body also is not one member, but many. Now you are the body of Christ, and members of member. And God indeed hath set some in the church; first apostles, secondly prophets, thirdly doctors; after that miracles, then the graces of healings, helps, governments, kinds of tongues, interpretations of speeches. Are all apostles? Are all prophets? Are all doctors? Are all workers of miracles? Have all the grace of healing? Do all speak with tongues? Do all interpret? But be zealous for the better gifts.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-weekday-psalm-100",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 100:1b-2, 3, 4, 5",
+              "scriptureRef": "Psalm 99:1-2, 3, 4, 5",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Sing joyfully to God, all the earth: serve ye the Lord with gladness. Come in before his presence with exceeding great joy. Know ye that the Lord he is God: he made us, and not we ourselves. We are his people and the sheep of his pasture. Go ye into his gates with praise, into his courts with hymns: give glory to him. Praise ye his name: for the Lord is sweet, his mercy endureth for ever, and his truth to all generations.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-gospel-luke2",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 2:33-35",
+              "scriptureRef": "Luke 2:33-35",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And his father and mother were wondering at those things which were spoken concerning him. And Simeon blessed them, and said to Mary his mother: Behold this child is set for the fall, and for the resurrection of many in Israel, and for a sign which shall be contradicted. And thy own soul a sword shall pierce, that, out of many hearts, thoughts may be revealed.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0915-proper-639-hebrews-john",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Readings (Proper First Reading & Gospel of John)",
+          "setOrder": 3,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "639",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091526.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0915-proper-first-hebrews5",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Hebrews 5:7-9",
+              "scriptureRef": "Hebrews 5:7-9",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Who in the days of his flesh, with a strong cry and tears, offering up prayers and supplications to him that was able to save him from death, was heard for his reverence. And whereas indeed he was the Son of God, he learned obedience by the things which he suffered: And being consummated, he became, to all that obey him, the cause of eternal salvation.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-psalm-31",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 31:2 and 3b, 3cd-4, 5-6, 15-16, 20",
+              "scriptureRef": "Psalm 30:2-3, 4, 5-6, 16-17, 21",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "In thee, O Lord, have I hoped, let me never be confounded: deliver me in thy justice. Bow down thy ear to me: make haste to deliver me. Be thou unto me a God, a protector, and a house of refuge, to save me. For thou art my strength and my refuge; and for thy name's sake thou wilt lead me, and nourish me. Thou wilt bring me out of this snare, which they have hidden for me: for thou art my protector. Into thy hands I commend my spirit: thou hast redeemed me, O Lord, the God of truth. But I have trusted in thee, O Lord: I said: Thou art my God. My lots are in thy hands. Deliver me from the hands of my enemies; and from them that persecute me. O how great is the multitude of thy sweetness, O Lord, which thou hast hidden for them that fear thee!",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-gospel-john19",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "John 19:25-27",
+              "scriptureRef": "John 19:25-27",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Now there stood by the cross of Jesus, his mother, and his mother's sister, Mary of Cleophas, and Mary Magdalen. When Jesus therefore had seen his mother and the disciple standing whom he loved, he saith to his mother: Woman, behold thy son. After that, he saith to the disciple: Behold thy mother. And from that hour the disciple took her to his own.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0915-proper-639-hebrews-luke",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Readings (Proper First Reading & Gospel of Luke)",
+          "setOrder": 4,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "639",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091526.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0915-proper-first-hebrews5",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Hebrews 5:7-9",
+              "scriptureRef": "Hebrews 5:7-9",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Who in the days of his flesh, with a strong cry and tears, offering up prayers and supplications to him that was able to save him from death, was heard for his reverence. And whereas indeed he was the Son of God, he learned obedience by the things which he suffered: And being consummated, he became, to all that obey him, the cause of eternal salvation.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-psalm-31",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 31:2 and 3b, 3cd-4, 5-6, 15-16, 20",
+              "scriptureRef": "Psalm 30:2-3, 4, 5-6, 16-17, 21",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "In thee, O Lord, have I hoped, let me never be confounded: deliver me in thy justice. Bow down thy ear to me: make haste to deliver me. Be thou unto me a God, a protector, and a house of refuge, to save me. For thou art my strength and my refuge; and for thy name's sake thou wilt lead me, and nourish me. Thou wilt bring me out of this snare, which they have hidden for me: for thou art my protector. Into thy hands I commend my spirit: thou hast redeemed me, O Lord, the God of truth. But I have trusted in thee, O Lord: I said: Thou art my God. My lots are in thy hands. Deliver me from the hands of my enemies; and from them that persecute me. O how great is the multitude of thy sweetness, O Lord, which thou hast hidden for them that fear thee!",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0915-proper-gospel-luke2",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 2:33-35",
+              "scriptureRef": "Luke 2:33-35",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And his father and mother were wondering at those things which were spoken concerning him. And Simeon blessed them, and said to Mary his mother: Behold this child is set for the fall, and for the resurrection of many in Israel, and for a sign which shall be contradicted. And thy own soul a sword shall pierce, that, out of many hearts, thoughts may be revealed.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 24,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "RED",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs (Memorial).",
+      "celebrations": [
+        {
+          "title": "Saints Cornelius, Pope, and Cyprian, Bishop, Martyrs",
+          "slug": "saints-cornelius-pope-and-cyprian-bishop-martyrs",
+          "rank": "MEMORIAL",
+          "color": "RED",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 16,
+          "precedenceOrder": 1,
+          "isOptional": false,
+          "isCommemoration": false,
+          "isTransferred": false
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0916-weekday-445",
+          "context": "WEEKDAY",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Weekday Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "445",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091626.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0916-weekday-first-1cor12",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 12:31—13:13",
+              "scriptureRef": "1 Corinthians 12:31—13:13",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "But be zealous for the better gifts. And I shew unto you yet a more excellent way. If I speak with the tongues of men, and of angels, and have not charity, I am become as sounding brass, or a tinkling cymbal. And if I should have prophecy and should know all mysteries, and all knowledge, and if I should have all faith, so that I could remove mountains, and have not charity, I am nothing. And if I should distribute all my goods to feed the poor, and if I should deliver my body to be burned, and have not charity, it profiteth me nothing. Charity is patient, is kind: charity envieth not, dealeth not perversely; is not puffed up; Is not ambitious, seeketh not her own, is not provoked to anger, thinketh no evil; Rejoiceth not in iniquity, but rejoiceth with the truth; Beareth all things, believeth all things, hopeth all things, endureth all things. Charity never falleth away: whether prophecies shall be made void, or tongues shall cease, or knowledge shall be destroyed. For we know in part, and we prophesy in part. But when that which is perfect is come, that which is in part shall be done away. When I was a child, I spoke as a child, I understood as a child, I thought as a child. But when I became a man, I put away the things of a child. We see now through a glass in a dark manner; but then face to face. Now I know in part; but then I shall know even as I am known. And now there remain faith, hope, and charity, these three: but the greatest of these is charity.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0916-weekday-psalm-33",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 33:2-3, 4-5, 12 and 22",
+              "scriptureRef": "Psalm 32:2-3, 4-5, 12, 22",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Give praise to the Lord on the harp; sing to him with the psaltery, the instrument of ten strings. Sing to him a new canticle, sing well unto him with a loud noise. For the word of the Lord is right, and all his works are done with faithfulness. He loveth mercy and judgment; the earth is full of the mercy of the Lord. Blessed is the nation whose God is the Lord: the people whom he hath chosen for his inheritance. Let thy mercy, O Lord, be upon us, as we have hoped in thee.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0916-weekday-gospel-luke7",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 7:31-35",
+              "scriptureRef": "Luke 7:31-35",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And the Lord said: Whereunto then shall I liken the men of this generation? and to what are they like? They are like to children sitting in the marketplace, and speaking one to another, and saying: We have piped to you, and you have not danced: we have mourned, and you have not wept. For John the Baptist came neither eating bread nor drinking wine; and you say: He hath a devil. The Son of man is come eating and drinking; and you say: Behold a man that is a glutton and a drinker of wine, a friend of publicans and sinners. And wisdom is justified by all her children.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0916-proper-640",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Memorial Mass Readings",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "640",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091626.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0916-proper-first-2cor4",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "2 Corinthians 4:7-15",
+              "scriptureRef": "2 Corinthians 4:7-15",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "But we have this treasure in earthen vessels, that the excellency may be of the power of God, and not of us. In all things we suffer tribulation, but are not distressed; we are straitened, but are not destitute; We suffer persecution, but are not forsaken; we are cast down, but we perish not: Always bearing about in our body the mortification of Jesus, that the life also of Jesus may be made manifest in our bodies. For we who live are always delivered unto death for Jesus' sake; that the life also of Jesus may be made manifest in our mortal flesh. So then death worketh in us, but life in you. But having the same spirit of faith, as it is written: I believed, for which cause I have spoken; we also believe, for which cause we also speak: Knowing that he who raised up Jesus, will raise up us also with Jesus, and set us with you. For all things are for your sakes; that the grace aboundeth through many may abound in thanksgiving unto the glory of God.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0916-proper-psalm-126",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 126:1bc-2ab, 2cd-3, 4-5, 6",
+              "scriptureRef": "Psalm 125:1-2, 2-3, 4-5, 6",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "When the Lord brought back the captivity of Sion, we became like men comforted. Then was our mouth filled with gladness, and our tongue with joy. Then shall they say among the Gentiles: The Lord hath done great things for them. The Lord hath done great things for us: we are become joyful. Turn again our captivity, O Lord, as a stream in the south. They that sow in tears shall reap in joy. Going they went and wept, casting their seeds. But coming they shall come with joyfulness, carrying their sheaves.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0916-proper-gospel-john17",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "John 17:11b-19",
+              "scriptureRef": "John 17:11-19",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Holy Father, keep them in thy name whom thou hast given me; that they may be one, as we also are. While I was with them, I kept them in thy name. Those whom thou gavest me have I kept; and none of them is lost, but the son of perdition, that the scripture may be fulfilled. And now I come to thee; and these things I speak in the world, that they may have my joy filled in themselves. I have given them thy word; and the world hath hated them, because they are not of the world, as I also am not of the world. I pray not that thou shouldst take them out of the world, but that thou shouldst keep them from evil. They are not of the world, as I also am not of the world. Sanctify them in truth. Thy word is truth. As thou hast sent me into the world, I also have sent them into the world. And for them do I sanctify myself, that they also may be sanctified in truth.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 24,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Thursday of the 24th Week in Ordinary Time. Optional Memorials of St. Robert Bellarmine and St. Hildegard of Bingen.",
+      "celebrations": [
+        {
+          "title": "St. Robert Bellarmine, Bishop and Doctor of the Church",
+          "slug": "saint-robert-bellarmine-bishop-and-doctor-of-the-church",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 17,
+          "precedenceOrder": 1,
+          "isOptional": true,
+          "isCommemoration": false,
+          "isTransferred": false
+        },
+        {
+          "title": "St. Hildegard of Bingen, Virgin and Doctor of the Church",
+          "slug": "saint-hildegard-of-bingen-virgin-and-doctor-of-the-church",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "isMovable": false,
+          "fixedMonth": 9,
+          "fixedDay": 17,
+          "precedenceOrder": 2,
+          "isOptional": true,
+          "isCommemoration": false,
+          "isTransferred": false
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0917-weekday-446",
+          "context": "WEEKDAY",
+          "selectionStatus": "SOLE_SET",
+          "label": "Weekday Mass Readings",
+          "setOrder": 1,
+          "isCanonicalDefault": true,
+          "lectionaryNumber": "446",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/091726.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0917-weekday-first-1cor15",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 15:1-11",
+              "scriptureRef": "1 Corinthians 15:1-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Now I make known unto you, brethren, the gospel which I preached to you, which also you have received, and wherein you stand; By which also you are saved, if you hold fast after what manner I preached unto you, unless you have believed in vain. For I delivered unto you first of all that which I also received: how that Christ died for our sins, according to the scriptures: And that he was buried, and that he rose again the third day, according to the scriptures: And that he was seen by Cephas; and after that by the eleven. Then was he seen by more than five hundred brethren at once: of whom many remain until this present, and some are fallen asleep. After that, he was seen by James; then by all the apostles. And last of all, he was seen also by me, as by one born out of due time. For I am the least of the apostles, who am not worthy to be called an apostle, because I persecuted the church of God. But by the grace of God, I am what I am; and his grace in me hath not been void, but I have laboured more abundantly than all they: yet not I, but the grace of God with me. Whether then it were I or they, so we preach, and so you have believed.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0917-weekday-psalm-118",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 118:1b-2, 16ab-17, 28",
+              "scriptureRef": "Psalm 117:1-2, 16-17, 28",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Give praise to the Lord, for he is good: for his mercy endureth for ever. Let Israel now say that he is good: that his mercy endureth for ever. The right hand of the Lord hath wrought strength: the right hand of the Lord hath exalted me: the right hand of the Lord hath wrought strength. I shall not die, but live: and shall declare the works of the Lord. Thou art my God, and I will praise thee: thou art my God, and I will exalt thee. I will praise thee, because thou hast heard me, and art become my salvation.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0917-weekday-gospel-luke7",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 7:36-50",
+              "scriptureRef": "Luke 7:36-50",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And one of the Pharisees desired him that he would eat with him. And he went into the house of the Pharisee, and sat down to meat. And behold a woman that was in the city, a sinner, when she knew that he sat at meat in the Pharisee's house, brought an alabaster box of ointment; And standing behind at his feet, she began to wash his feet, with tears, and wiped them with the hairs of her head, and kissed his feet, and anointed them with the ointment. And the Pharisee, who had invited him, seeing it, spoke within himself, saying: This man, if he were a prophet, would know surely who and what manner of woman this is that toucheth him: for she is a sinner. And Jesus answering, said to him: Simon, I have somewhat to say to thee. But he saith: Master, say it. A certain creditor had two debtors, the one owed five hundred pence, and the other fifty. And whereas they had not wherewith to pay, he forgave them both. Which therefore of the two loveth him most? Simon answering, said: I suppose that he, to whom he forgave most. And he said to them: Thou hast judged rightly. And turning to the woman, he said unto Simon: Dost thou see this woman? I entered into thy house, thou gavest me no water for my feet; but she with tears hath washed my feet, and with her hair hath wiped them. Thou gavest me no kiss; but she, since she came in, hath not ceased to kiss my feet. My head with oil thou didst not anoint; but she with ointment hath anointed my feet. Wherefore I say to thee: Many sins are forgiven her, because she hath loved much. But to whom less is forgiven, he loveth less. And he said to her: Thy sins are forgiven thee. And they that sat at meat together began to say within themselves: Who is this that forgiveth sins also? And he said to the woman: Thy faith hath made thee safe, go in peace.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

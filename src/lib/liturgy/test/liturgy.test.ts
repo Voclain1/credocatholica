@@ -39,3 +39,44 @@ test('Liturgy Presentation — Celebration Precedence Categorization', () => {
   assert.equal(secondary.length, 1);
   assert.equal(secondary[0].title, 'St. Augustine');
 });
+
+test('Liturgy Service — getLiturgicalDayByDate Database Payload Query', async () => {
+  const { getLiturgicalDayByDate } = await import('../service.js');
+
+  // Test 1: Simple Weekday (2026-08-31)
+  const weekdayResult = await getLiturgicalDayByDate(new Date('2026-08-31T00:00:00Z'));
+  assert.equal(weekdayResult.status, 'FOUND');
+  if (weekdayResult.status === 'FOUND') {
+    assert.equal(weekdayResult.data.season.code, 'ORDINARY_TIME');
+    assert.equal(weekdayResult.data.principalCelebration, null);
+    assert.equal(weekdayResult.data.secondaryCelebrations.length, 0);
+    assert.equal(weekdayResult.data.readingSets.length, 1);
+    assert.equal(weekdayResult.data.hasMultipleSets, false);
+    assert.equal(weekdayResult.data.hasUncontestedDefault, true);
+  }
+
+  // Test 2: August 29 Memorial with Two Reading Alternatives
+  const aug29Result = await getLiturgicalDayByDate(new Date('2026-08-29T00:00:00Z'));
+  assert.equal(aug29Result.status, 'FOUND');
+  if (aug29Result.status === 'FOUND') {
+    assert.notEqual(aug29Result.data.principalCelebration, null);
+    assert.equal(aug29Result.data.principalCelebration?.title, 'The Beheading of Saint John the Baptist');
+    assert.equal(aug29Result.data.principalCelebration?.rank, CelebrationRank.MEMORIAL);
+    assert.equal(aug29Result.data.readingSets.length, 2);
+    assert.equal(aug29Result.data.hasMultipleSets, true);
+    assert.equal(aug29Result.data.hasUncontestedDefault, false);
+  }
+
+  // Test 3: August 30 Sunday (No Solemnity Row, Season ORDINARY_TIME)
+  const sundayResult = await getLiturgicalDayByDate(new Date('2026-08-30T00:00:00Z'));
+  assert.equal(sundayResult.status, 'FOUND');
+  if (sundayResult.status === 'FOUND') {
+    assert.equal(sundayResult.data.season.code, 'ORDINARY_TIME');
+    assert.equal(sundayResult.data.yearCycle, 'YEAR_A');
+    assert.equal(sundayResult.data.principalCelebration, null);
+    assert.equal(sundayResult.data.secondaryCelebrations.length, 0);
+    assert.equal(sundayResult.data.readingSets.length, 1);
+    assert.equal(sundayResult.data.readingSets[0].context, 'SUNDAY');
+  }
+});
+

@@ -38,6 +38,7 @@ export type ReadingMinAggregateOutputType = {
   id: string | null
   readingSetId: string | null
   type: $Enums.ReadingType | null
+  sourceKey: string | null
   readingOrder: number | null
   citationRef: string | null
   scriptureRef: string | null
@@ -53,6 +54,7 @@ export type ReadingMaxAggregateOutputType = {
   id: string | null
   readingSetId: string | null
   type: $Enums.ReadingType | null
+  sourceKey: string | null
   readingOrder: number | null
   citationRef: string | null
   scriptureRef: string | null
@@ -68,6 +70,7 @@ export type ReadingCountAggregateOutputType = {
   id: number
   readingSetId: number
   type: number
+  sourceKey: number
   readingOrder: number
   citationRef: number
   scriptureRef: number
@@ -93,6 +96,7 @@ export type ReadingMinAggregateInputType = {
   id?: true
   readingSetId?: true
   type?: true
+  sourceKey?: true
   readingOrder?: true
   citationRef?: true
   scriptureRef?: true
@@ -108,6 +112,7 @@ export type ReadingMaxAggregateInputType = {
   id?: true
   readingSetId?: true
   type?: true
+  sourceKey?: true
   readingOrder?: true
   citationRef?: true
   scriptureRef?: true
@@ -123,6 +128,7 @@ export type ReadingCountAggregateInputType = {
   id?: true
   readingSetId?: true
   type?: true
+  sourceKey?: true
   readingOrder?: true
   citationRef?: true
   scriptureRef?: true
@@ -225,6 +231,7 @@ export type ReadingGroupByOutputType = {
   id: string
   readingSetId: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder: number
   citationRef: string
   scriptureRef: string | null
@@ -263,6 +270,7 @@ export type ReadingWhereInput = {
   id?: Prisma.StringFilter<"Reading"> | string
   readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
+  sourceKey?: Prisma.StringFilter<"Reading"> | string
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
   scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
@@ -281,6 +289,7 @@ export type ReadingOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  sourceKey?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
   scriptureRef?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -297,11 +306,13 @@ export type ReadingOrderByWithRelationInput = {
 
 export type ReadingWhereUniqueInput = Prisma.AtLeast<{
   id?: string
+  readingSetId_sourceKey?: Prisma.ReadingReadingSetIdSourceKeyCompoundUniqueInput
   AND?: Prisma.ReadingWhereInput | Prisma.ReadingWhereInput[]
   OR?: Prisma.ReadingWhereInput[]
   NOT?: Prisma.ReadingWhereInput | Prisma.ReadingWhereInput[]
   readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
+  sourceKey?: Prisma.StringFilter<"Reading"> | string
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
   scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
@@ -314,12 +325,13 @@ export type ReadingWhereUniqueInput = Prisma.AtLeast<{
   readingSet?: Prisma.XOR<Prisma.ReadingSetScalarRelationFilter, Prisma.ReadingSetWhereInput>
   reflections?: Prisma.ReflectionListRelationFilter
   migrationRecords?: Prisma.MigrationRecordListRelationFilter
-}, "id">
+}, "id" | "readingSetId_sourceKey">
 
 export type ReadingOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  sourceKey?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
   scriptureRef?: Prisma.SortOrderInput | Prisma.SortOrder
@@ -343,6 +355,7 @@ export type ReadingScalarWhereWithAggregatesInput = {
   id?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   readingSetId?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeWithAggregatesFilter<"Reading"> | $Enums.ReadingType
+  sourceKey?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   readingOrder?: Prisma.IntWithAggregatesFilter<"Reading"> | number
   citationRef?: Prisma.StringWithAggregatesFilter<"Reading"> | string
   scriptureRef?: Prisma.StringNullableWithAggregatesFilter<"Reading"> | string | null
@@ -357,13 +370,14 @@ export type ReadingScalarWhereWithAggregatesInput = {
 export type ReadingCreateInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
@@ -375,13 +389,14 @@ export type ReadingUncheckedCreateInput = {
   id?: string
   readingSetId: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutReadingInput
@@ -391,6 +406,7 @@ export type ReadingUncheckedCreateInput = {
 export type ReadingUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -409,6 +425,7 @@ export type ReadingUncheckedUpdateInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -426,13 +443,14 @@ export type ReadingCreateManyInput = {
   id?: string
   readingSetId: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -440,6 +458,7 @@ export type ReadingCreateManyInput = {
 export type ReadingUpdateManyMutationInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -455,6 +474,7 @@ export type ReadingUncheckedUpdateManyInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -476,10 +496,16 @@ export type ReadingOrderByRelationAggregateInput = {
   _count?: Prisma.SortOrder
 }
 
+export type ReadingReadingSetIdSourceKeyCompoundUniqueInput = {
+  readingSetId: string
+  sourceKey: string
+}
+
 export type ReadingCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  sourceKey?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
   scriptureRef?: Prisma.SortOrder
@@ -499,6 +525,7 @@ export type ReadingMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  sourceKey?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
   scriptureRef?: Prisma.SortOrder
@@ -514,6 +541,7 @@ export type ReadingMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   readingSetId?: Prisma.SortOrder
   type?: Prisma.SortOrder
+  sourceKey?: Prisma.SortOrder
   readingOrder?: Prisma.SortOrder
   citationRef?: Prisma.SortOrder
   scriptureRef?: Prisma.SortOrder
@@ -619,13 +647,14 @@ export type ReadingUpdateOneWithoutMigrationRecordsNestedInput = {
 export type ReadingCreateWithoutReadingSetInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   reflections?: Prisma.ReflectionCreateNestedManyWithoutReadingInput
@@ -635,13 +664,14 @@ export type ReadingCreateWithoutReadingSetInput = {
 export type ReadingUncheckedCreateWithoutReadingSetInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutReadingInput
@@ -681,6 +711,7 @@ export type ReadingScalarWhereInput = {
   id?: Prisma.StringFilter<"Reading"> | string
   readingSetId?: Prisma.StringFilter<"Reading"> | string
   type?: Prisma.EnumReadingTypeFilter<"Reading"> | $Enums.ReadingType
+  sourceKey?: Prisma.StringFilter<"Reading"> | string
   readingOrder?: Prisma.IntFilter<"Reading"> | number
   citationRef?: Prisma.StringFilter<"Reading"> | string
   scriptureRef?: Prisma.StringNullableFilter<"Reading"> | string | null
@@ -695,13 +726,14 @@ export type ReadingScalarWhereInput = {
 export type ReadingCreateWithoutReflectionsInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
@@ -712,13 +744,14 @@ export type ReadingUncheckedCreateWithoutReflectionsInput = {
   id?: string
   readingSetId: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   migrationRecords?: Prisma.MigrationRecordUncheckedCreateNestedManyWithoutReadingInput
@@ -743,6 +776,7 @@ export type ReadingUpdateToOneWithWhereWithoutReflectionsInput = {
 export type ReadingUpdateWithoutReflectionsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -760,6 +794,7 @@ export type ReadingUncheckedUpdateWithoutReflectionsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -775,13 +810,14 @@ export type ReadingUncheckedUpdateWithoutReflectionsInput = {
 export type ReadingCreateWithoutMigrationRecordsInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   readingSet: Prisma.ReadingSetCreateNestedOneWithoutReadingsInput
@@ -792,13 +828,14 @@ export type ReadingUncheckedCreateWithoutMigrationRecordsInput = {
   id?: string
   readingSetId: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
   reflections?: Prisma.ReflectionUncheckedCreateNestedManyWithoutReadingInput
@@ -823,6 +860,7 @@ export type ReadingUpdateToOneWithWhereWithoutMigrationRecordsInput = {
 export type ReadingUpdateWithoutMigrationRecordsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -840,6 +878,7 @@ export type ReadingUncheckedUpdateWithoutMigrationRecordsInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   readingSetId?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -855,13 +894,14 @@ export type ReadingUncheckedUpdateWithoutMigrationRecordsInput = {
 export type ReadingCreateManyReadingSetInput = {
   id?: string
   type: $Enums.ReadingType
+  sourceKey: string
   readingOrder?: number
   citationRef: string
   scriptureRef?: string | null
   response?: string | null
   text: string
   textStatus?: $Enums.TextResolutionStatus
-  copyrightInfo?: string
+  copyrightInfo: string
   createdAt?: Date | string
   updatedAt?: Date | string
 }
@@ -869,6 +909,7 @@ export type ReadingCreateManyReadingSetInput = {
 export type ReadingUpdateWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -885,6 +926,7 @@ export type ReadingUpdateWithoutReadingSetInput = {
 export type ReadingUncheckedUpdateWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -901,6 +943,7 @@ export type ReadingUncheckedUpdateWithoutReadingSetInput = {
 export type ReadingUncheckedUpdateManyWithoutReadingSetInput = {
   id?: Prisma.StringFieldUpdateOperationsInput | string
   type?: Prisma.EnumReadingTypeFieldUpdateOperationsInput | $Enums.ReadingType
+  sourceKey?: Prisma.StringFieldUpdateOperationsInput | string
   readingOrder?: Prisma.IntFieldUpdateOperationsInput | number
   citationRef?: Prisma.StringFieldUpdateOperationsInput | string
   scriptureRef?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
@@ -956,6 +999,7 @@ export type ReadingSelect<ExtArgs extends runtime.Types.Extensions.InternalArgs 
   id?: boolean
   readingSetId?: boolean
   type?: boolean
+  sourceKey?: boolean
   readingOrder?: boolean
   citationRef?: boolean
   scriptureRef?: boolean
@@ -975,6 +1019,7 @@ export type ReadingSelectCreateManyAndReturn<ExtArgs extends runtime.Types.Exten
   id?: boolean
   readingSetId?: boolean
   type?: boolean
+  sourceKey?: boolean
   readingOrder?: boolean
   citationRef?: boolean
   scriptureRef?: boolean
@@ -991,6 +1036,7 @@ export type ReadingSelectUpdateManyAndReturn<ExtArgs extends runtime.Types.Exten
   id?: boolean
   readingSetId?: boolean
   type?: boolean
+  sourceKey?: boolean
   readingOrder?: boolean
   citationRef?: boolean
   scriptureRef?: boolean
@@ -1007,6 +1053,7 @@ export type ReadingSelectScalar = {
   id?: boolean
   readingSetId?: boolean
   type?: boolean
+  sourceKey?: boolean
   readingOrder?: boolean
   citationRef?: boolean
   scriptureRef?: boolean
@@ -1018,7 +1065,7 @@ export type ReadingSelectScalar = {
   updatedAt?: boolean
 }
 
-export type ReadingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "readingSetId" | "type" | "readingOrder" | "citationRef" | "scriptureRef" | "response" | "text" | "textStatus" | "copyrightInfo" | "createdAt" | "updatedAt", ExtArgs["result"]["reading"]>
+export type ReadingOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "readingSetId" | "type" | "sourceKey" | "readingOrder" | "citationRef" | "scriptureRef" | "response" | "text" | "textStatus" | "copyrightInfo" | "createdAt" | "updatedAt", ExtArgs["result"]["reading"]>
 export type ReadingInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   readingSet?: boolean | Prisma.ReadingSetDefaultArgs<ExtArgs>
   reflections?: boolean | Prisma.Reading$reflectionsArgs<ExtArgs>
@@ -1043,6 +1090,7 @@ export type $ReadingPayload<ExtArgs extends runtime.Types.Extensions.InternalArg
     id: string
     readingSetId: string
     type: $Enums.ReadingType
+    sourceKey: string
     readingOrder: number
     citationRef: string
     scriptureRef: string | null
@@ -1481,6 +1529,7 @@ export interface ReadingFieldRefs {
   readonly id: Prisma.FieldRef<"Reading", 'String'>
   readonly readingSetId: Prisma.FieldRef<"Reading", 'String'>
   readonly type: Prisma.FieldRef<"Reading", 'ReadingType'>
+  readonly sourceKey: Prisma.FieldRef<"Reading", 'String'>
   readonly readingOrder: Prisma.FieldRef<"Reading", 'Int'>
   readonly citationRef: Prisma.FieldRef<"Reading", 'String'>
   readonly scriptureRef: Prisma.FieldRef<"Reading", 'String'>

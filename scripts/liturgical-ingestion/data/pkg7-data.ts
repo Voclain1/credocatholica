@@ -1,0 +1,412 @@
+import { PackageInput } from '../build-package-helper.js';
+
+export const pkg7Data: PackageInput = {
+  packageName: 'universal-roman-2026-11-06-to-2026-11-19',
+  periodCovered: { start: '2026-11-06', end: '2026-11-19' },
+  records: [
+    {
+      date: '2026-11-06',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 31,
+      liturgicalColor: 'GREEN',
+      notes: 'Friday of 31st Week OT.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1106-weekday-489',
+          context: 'WEEKDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '489',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1106-weekday-first-phil3-4', readingOrder: 1, citationRef: 'Philippians 3:17--4:1', scriptureRef: 'Philippians 3:17-21; Philippians 4:1', text: 'Be followers of me, brethren, and observe them who walk so as you have our model. For many walk, of whom I have told you often (and now tell you weeping), that they are enemies of the cross of Christ: Whose end is destruction; whose God is their belly; and whose glory is in their shame, who mind earthly things. But our conversation is in heaven; from whence also we look for the Saviour, our Lord Jesus Christ, Who will reform the body of our lowness, made like to the body of his glory, according to the operation whereby also he is able to subdue all things unto himself. Therefore, my dearly beloved brethren, and most desired, my joy and my crown: so stand fast in the Lord, my dearly beloved.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1106-weekday-psalm-122', readingOrder: 2, citationRef: 'Psalm 122:1-2, 3-4ab, 4cd-5', scriptureRef: 'Psalm 121:1-2, 3-4, 4-5', text: 'I rejoiced at the things that were said to me: We shall go into the house of the Lord. Our feet were standing in thy courts, O Jerusalem. Jerusalem, which is built as a city, which is compact together. For thither did the tribes go up, the tribes of the Lord: the testimony of Israel, to praise the name of the Lord. Because their seats have sat in judgment, seats upon the house of David.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1106-weekday-gospel-luke16', readingOrder: 3, citationRef: 'Luke 16:1-8', scriptureRef: 'Luke 16:1-8', text: 'And he said also to his disciples: There was a certain rich man who had a steward: and the same was accused unto him, that he had wasted his goods. And he called him, and said to him: How is it that I hear this of thee? give an account of thy stewardship: for now thou canst be steward no longer. And the steward said within himself: What shall I do, because my lord taketh away from me the stewardship? To dig I am not able; to beg I am ashamed. I know what I will do, that when I shall be removed from the stewardship, they may receive me into their houses. Therefore calling together every one of his lord\'s debtors, he said to the first: How much owest thou my lord? He said: An hundred barrels of oil. And he said to him: Take thy bill and sit down quickly, and write fifty. Then he said to another: And how much owest thou? Who said: An hundred quarters of wheat. He said to him: Take thy bill, and write eighty. And the lord commended the unjust steward, forasmuch as he had done wisely: for the children of this world are wiser in their generation than the children of light.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-07',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 31,
+      liturgicalColor: 'GREEN',
+      notes: 'Saturday of 31st Week OT.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1107-weekday-490',
+          context: 'WEEKDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '490',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1107-weekday-first-phil4', readingOrder: 1, citationRef: 'Philippians 4:10-19', scriptureRef: 'Philippians 4:10-19', text: 'Now I rejoice in the Lord exceedingly, that now at length your thought for me hath flourished again, as you did also think; but you were occupied. I speak not as it were for want. For I have learned, in whatsoever state I am, to be content therewith. I know both how to be brought low, and I know how to abound (every where, and in all things I am instructed): both to be full, and to be hungry; both to abound, and to suffer need. I can do all things in him who strengtheneth me. Nevertheless you have done well in communicating with my tribulation. And you also know, O Philippians, that in the beginning of the gospel, when I departed from Macedonia, no church communicated with me as concerning giving and receiving, but you only: For even in Thessalonica, you sent once and again unto my use. Not that I seek the gift; but I seek the fruit that may abound to your account. But I have all things in abundance: I am filled, having received from Epaphroditus the things you sent, an odour of sweetness, an acceptable sacrifice, pleasing to God. And may my God supply all your want, according to his riches in glory in Christ Jesus.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1107-weekday-psalm-112', readingOrder: 2, citationRef: 'Psalm 112:1b-2, 5-6, 8a, 9', scriptureRef: 'Psalm 111:1-2, 5-6, 8, 9', text: 'Blessed is the man that feareth the Lord: he shall delight exceedingly in his commandments. His seed shall be mighty upon earth: the generation of the righteous shall be blessed. Acceptable is the man that sheweth mercy and lendeth: he shall order his words with judgment: For he shall not be moved for ever. His heart is strengthened, he shall not be moved until he look over his enemies. He hath distributed, he hath given to the poor: his justice remaineth for ever and ever: his horn shall be exalted in glory.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1107-weekday-gospel-luke16', readingOrder: 3, citationRef: 'Luke 16:9-15', scriptureRef: 'Luke 16:9-15', text: 'And I say to you: Make unto you friends of the mammon of iniquity; that when you shall fail, they may receive you into everlasting dwellings. He that is faithful in that which is least, is faithful also in that which is greater: and he that is unjust in that which is little, is unjust also in that which is greater. If then you have not been faithful in the unjust mammon, who will trust you with that which is the true? And if you have not been faithful in that which is another\'s, who will give you that which is your own? No servant can serve two masters: for either he will hate the one, and love the other; or he will hold to the one, and despise the other. You cannot serve God and mammon. Now the Pharisees, who were covetous, heard all these things: and they derided him. And he said to them: You are they who justify yourselves before men, but God knoweth your hearts; for that which is high to men, is an abomination before God.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-08',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'GREEN',
+      notes: '32nd Sunday in Ordinary Time.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1108-sunday-154',
+          context: 'SUNDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '154',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1108-sunday-first-1kings17', readingOrder: 1, citationRef: '1 Kings 17:10-16', scriptureRef: '3 Kings 17:10-16', text: 'He arose, and went to Sarephta. And when he was come to the gate of the city, he saw the widow woman gathering sticks, and he called her, and said to her: Give me a little water in a vessel, that I may drink. And when she was going to fetch it, he called after her, saying: Bring me also, I beseech thee, a morsel of bread in thy hand. And she answered: As the Lord thy God liveth, I have no bread, but only a handful of meal in a pot, and a little oil in a cruse: behold I am gathering two sticks, that I may go in and dress it for me and my son, that we may eat it, and die. And Elias said to her: Fear not, but go, and do as thou hast said: but first make for me of the same meal a little hearth cake, and bring it to me: and afterwards thou shalt make for thyself and thy son. For thus saith the Lord the God of Israel: The pot of meal shall not waste, nor the cruse of oil be diminished, until the day wherein the Lord will give rain upon the face of the earth. She went and did according to the word of Elias: and he ate, and she, and her house: and from that day The pot of meal wasted not, and the cruse of oil was not diminished, according to the word of the Lord, which he spoke in the hand of Elias.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1108-sunday-psalm-146', readingOrder: 2, citationRef: 'Psalm 146:7, 8-9a, 9bc-10', scriptureRef: 'Psalm 145:7, 8-9, 9-10', text: 'Who keepeth truth for ever: who executeth judgment for them that suffer wrong: who giveth food to the hungry. The Lord looseth them that are fettered: the Lord enlighteneth the blind. The Lord lifteth up them that are cast down: the Lord loveth the just. The Lord keepeth the strangers, he will support the fatherless and the widow: and the ways of sinners he will destroy. The Lord shall reign for ever: thy God, O Sion, unto generation and generation.' },
+            { type: 'SECOND_READING', sourceKey: 'reading-1108-sunday-second-heb9', readingOrder: 3, citationRef: 'Hebrews 9:24-28', scriptureRef: 'Hebrews 9:24-28', text: 'For Jesus is not entered into the holies made with hands, the patterns of the true: but into heaven itself, that he may appear now in the presence of God for us. Nor yet that he should offer himself often, as the high priest entereth into the holies every year with the blood of others: For then he must often have suffered since the foundation of the world: but now once at the end of ages, he hath appeared for the destruction of sin, by the sacrifice of himself. And as it is appointed unto men once to die, and after this the judgment: So also Christ was offered once to exhaust the sins of many; the second time he shall appear without sin to them that expect him unto salvation.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1108-sunday-gospel-mark12', readingOrder: 4, citationRef: 'Mark 12:38-44', scriptureRef: 'Mark 12:38-44', text: 'And he said to them in his doctrine: Beware of the scribes, who love to walk in long robes, and to be saluted in the market place, And to sit in the first chairs in the synagogues, and to have the highest places at suppers: Who devour the houses of widows under the pretence of long prayer: these shall receive greater judgment. And Jesus sitting over against the treasury, beheld how the people cast money into the treasury, and many that were rich cast in much. And there came a certain poor widow, and she cast in two mites, which make a farthing. And calling his disciples together, he saith to them: Amen I say to you, this poor widow hath cast in more than all they who have cast into the treasury. For all they did cast in of their abundance; but she of her want cast in all that she had, even her whole living.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-09',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'WHITE',
+      principalCelebrationTitle: 'The Dedication of the Lateran Basilica',
+      celebrations: [
+        { title: 'The Dedication of the Lateran Basilica', slug: 'the-dedication-of-the-lateran-basilica', rank: 'FEAST', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1109-proper-dedication-lateran-671',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          description: 'Proper readings for The Dedication of the Lateran Basilica',
+          lectionaryNumber: '671',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1109-proper-first-1cor3', readingOrder: 1, citationRef: '1 Corinthians 3:9c-11, 16-17', scriptureRef: '1 Corinthians 3:9-11, 16-17', text: 'You are God\'s building. According to the grace of God that is given to me, as a wise architect, I have laid the foundation; and another buildeth thereon. But let every man take heed how he buildeth thereupon. For other foundation no man can lay, but that which is laid; which is Christ Jesus. Know you not, that you are the temple of God, and that the Spirit of God dwelleth in you? But if any man violate the temple of God, him shall God destroy. For the temple of God is holy, which you are.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1109-proper-psalm-46', readingOrder: 2, citationRef: 'Psalm 46:2-3, 5-6, 8-9', scriptureRef: 'Psalm 45:2-3, 5-6, 8-9', text: 'Our God is our refuge and strength: a helper in troubles, which have found us exceedingly. Therefore we will not fear, when the earth shall be troubled; and the mountains shall be removed into the heart of the sea. The stream of the river maketh the city of God joyful: the most High hath sanctified his own tabernacle. God is in the midst thereof, it shall not be moved: God will help it in the morning early. The Lord of armies is with us: the God of Jacob is our protector. Come and behold ye the works of the Lord: what wonders he hath done upon the earth.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1109-proper-gospel-john2', readingOrder: 3, citationRef: 'John 2:13-22', scriptureRef: 'John 2:13-22', text: 'And the pasch of the Jews was at hand, and Jesus went up to Jerusalem. And he found in the temple them that sold oxen and sheep and doves, and the changers of money sitting. And when he had made as it were a scourge of little cords, he drove them all out of the temple, the sheep also and the oxen, and the money of the changers he poured out, and the tables he overthrew. And to them that sold doves he said: Take these things hence, and make not the house of my Father a house of traffic. And his disciples remembered, that it was written: The zeal of thy house hath eaten me up. The Jews therefore answered, and said to him: What sign dost thou shew unto us, seeing thou dost these things? Jesus answered, and said to them: Destroy this temple, and in three days I will raise it up. The Jews then said: Forty and six years was this temple in building, and wilt thou raise it up in three days? But he spoke of the temple of his body. When therefore he was risen again from the dead, his disciples remembered that he had said this, and they believed the scripture, and the word that Jesus had said.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-10',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'WHITE',
+      principalCelebrationTitle: 'Saint Leo the Great, Pope and Doctor of the Church',
+      celebrations: [
+        { title: 'Saint Leo the Great, Pope and Doctor of the Church', slug: 'saint-leo-the-great-pope-and-doctor-of-the-church', rank: 'MEMORIAL', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1110-weekday-492',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '492',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1110-weekday-first-titus2', readingOrder: 1, citationRef: 'Titus 2:1-8, 11-14', scriptureRef: 'Titus 2:1-8, 11-14', text: 'But speak thou the things that become sound doctrine: That the aged men be sober, chaste, prudent, sound in faith, in love, in patience. The aged women in like manner, in holy attire, not false accusers, not given to much wine, teaching well: That they may teach the young women to be wise, to love their husbands, to love their children, To be discreet, chaste, sober, having a care of the house, gentle, obedient to their husbands, that the word of God be not blasphemed. Young men in like manner exhort that they be sober. In all things shew thyself an example of good works, in doctrine, in integrity, in gravity, The sound word that cannot be blamed: that he, who is on the contrary part, may be afraid, having no evil to say of us. For the grace of God our Saviour hath appeared to all men, Instructing us, that, denying ungodliness and worldly desires, we should live soberly, and justly, and godly in this world, Looking for the blessed hope and coming of the glory of the great God and our Saviour Jesus Christ, Who gave himself for us, that he might redeem us from all iniquity, and might cleanse to himself a people acceptable, a pursuer of good works.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1110-weekday-psalm-37', readingOrder: 2, citationRef: 'Psalm 37:3-4, 18 and 23, 27 and 29', scriptureRef: 'Psalm 36:3-4, 18, 23, 27, 29', text: 'Trust in the Lord, and do good, and dwell in the land, and thou shalt be fed with its riches. Delight in the Lord, and he will give thee the requests of thy heart. The Lord knoweth the days of the undefiled; and their inheritance shall be for ever. With the Lord the steps of a man shall be directed, and he shall like well his way. Decline from evil and do good, and dwell for ever and ever. But the just shall inherit the land, and shall dwell therein for evermore.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1110-weekday-gospel-luke17', readingOrder: 3, citationRef: 'Luke 17:7-10', scriptureRef: 'Luke 17:7-10', text: 'But which of you having a servant plowing or feeding cattle, will say to him when he is come from the field: Immediately go, sit down to meat: And will not rather say to him: Make ready my supper, and gird thyself, and serve me, whilst I eat and drink, and afterwards thou shalt eat and drink? Doth he thank that servant, because he did the things which he commanded him? I think not. So you also, when you shall have done all these things that are commanded you, say: We are unprofitable servants; we have done that which we ought to do.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1110-proper-st-leo-the-great-672',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Leo the Great',
+          lectionaryNumber: '672',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1110-proper-first-sirach39', readingOrder: 1, citationRef: 'Sirach 39:6-11', scriptureRef: 'Ecclesiasticus 39:8-14', text: 'He will open his mouth in prayer, and will make supplication for his sins. For if it shall please the great Lord, he will fill him with the spirit of understanding: And he will pour forth the words of his wisdom as rain, and in his prayer he will confess to the Lord. And he will direct his counsel, and his knowledge, and in his secrets shall he meditate. He shall shew forth the discipline he hath learned, and shall glory in the law of the covenant of the Lord. Many shall praise his wisdom, and it shall never be forgotten. The memory of him shall not depart away, and his name shall be in request from generation to generation. Nations shall declare his wisdom, and the church shall shew forth his praise.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1110-proper-psalm-37', readingOrder: 2, citationRef: 'Psalm 37:3-4, 5-6, 30-31', scriptureRef: 'Psalm 36:3-4, 5-6, 30-31', text: 'Trust in the Lord, and do good, and dwell in the land, and thou shalt be fed with its riches. Delight in the Lord, and he will give thee the requests of thy heart. Commit thy way to the Lord, and trust in him: and he will do it. And he will bring forth thy justice as the light, and thy judgment as the noonday. The mouth of the just shall meditate wisdom: and his tongue shall speak judgment. The law of his God is in his heart, and his steps shall not be supplanted.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1110-proper-gospel-matt16', readingOrder: 3, citationRef: 'Matthew 16:13-19', scriptureRef: 'Matthew 16:13-19', text: 'And Jesus came into the quarters of Cesarea Philippi: and he asked his disciples, saying: Whom do men say that the Son of man is? But they said: Some John the Baptist, and other some Elias, and others Jeremias, or one of the prophets. Jesus saith to them: But whom do you say that I am? Simon Peter answered and said: Thou art Christ, the Son of the living God. And Jesus answering, said to him: Blessed art thou, Simon Bar-Jona: because flesh and blood hath not revealed it to thee, but my Father who is in heaven. And I say to thee: That thou art Peter; and upon this rock I will build my church, and the gates of hell shall not prevail against it. And I will give to thee the keys of the kingdom of heaven. And whatsoever thou shalt bind upon earth, it shall be bound also in heaven: and whatsoever thou shalt loose on earth, it shall be loosed also in heaven.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-11',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'WHITE',
+      principalCelebrationTitle: 'Saint Martin of Tours, Bishop',
+      celebrations: [
+        { title: 'Saint Martin of Tours, Bishop', slug: 'saint-martin-of-tours-bishop', rank: 'MEMORIAL', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1111-weekday-493',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '493',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1111-weekday-first-titus3', readingOrder: 1, citationRef: 'Titus 3:1-7', scriptureRef: 'Titus 3:1-7', text: 'Admonish them to be subject to princes and powers, to obey at a word, to be ready to every good work. To speak evil of no man, not to be litigious, but gentle, shewing all mildness towards all men. For we ourselves also were some time unwise, incredulous, erring, slaves to divers desires and pleasures, living in malice and envy, hateful, and hating one another. But when the goodness and kindness of God our Saviour appeared: Not by the works of justice, which we have done, but according to his mercy, he saved us, by the laver of regeneration, and renovation of the Holy Ghost. Whom he hath poured forth upon us abundantly, through Jesus Christ our Saviour: That, being justified by his grace, we may be heirs, according to hope of life everlasting.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1111-weekday-psalm-23', readingOrder: 2, citationRef: 'Psalm 23:1b-3a, 3b-4, 5, 6', scriptureRef: 'Psalm 22:1-3, 3-4, 5, 6', text: 'The Lord ruleth me: and nothing shall be wanting to me. He hath set me in a place of pasture. He hath brought me up, on the water of refreshment: he hath converted my soul. He hath led me on the paths of justice, for his own name\'s sake. For though I should walk in the midst of the shadow of death, I will fear no evils, for thou art with me. Thy rod and thy staff, they have comforted me. Thou hast prepared a table before me against them that afflict me. Thou hast anointed my head with oil; and my chalice which inebriateth me, how goodly is it! And thy mercy shall follow me all the days of my life. And that I may dwell in the house of the Lord unto length of days.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1111-weekday-gospel-luke17', readingOrder: 3, citationRef: 'Luke 17:11-19', scriptureRef: 'Luke 17:11-19', text: 'And it came to pass, as he was going to Jerusalem, he passed through the midst of Samaria and Galilee. And as he entered into a certain town, there met him ten men that were lepers, who stood afar off; And lifted up their voice, saying: Jesus, master, have mercy on us. Whom when he saw, he said: Go, shew yourselves to the priests. And it came to pass, as they went, they were made clean. And one of them, when he saw that he was made clean, went back, with a loud voice glorifying God. And he fell on his face before his feet, giving thanks: and this was a Samaritan. And Jesus answering, said: Were not ten made clean? and where are the nine? There is no one found to return and give glory to God, but this stranger. And he said to him: Arise, go thy way; for thy faith hath made thee whole.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1111-proper-st-martin-of-tours-673',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Martin of Tours',
+          lectionaryNumber: '673',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1111-proper-first-isa61', readingOrder: 1, citationRef: 'Isaiah 61:1-3a', scriptureRef: 'Isaias 61:1-3', text: 'The spirit of the Lord is upon me, because the Lord hath anointed me: he hath sent me to preach to the meek, to heal the contrite of heart, and to preach a release to the captives, and deliverance to them that are shut up. To proclaim the acceptable year of the Lord, and the day of vengeance of our God: to comfort all that mourn: To appoint to the mourners of Sion, and to give them a crown for ashes, the oil of joy for mourning, a garment of praise for the spirit of grief.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1111-proper-psalm-89', readingOrder: 2, citationRef: 'Psalm 89:2-3, 4-5, 21-22, 25, 27', scriptureRef: 'Psalm 88:2-3, 4-5, 21-22, 25, 27', text: 'The mercies of the Lord I will sing for ever. I will shew forth thy truth with my mouth to generation and generation. For thou hast said: Mercy shall be built up for ever in the heavens: thy truth shall be prepared in them. I have made a covenant with my elect: I have sworn to David my servant: Thy seed will I settle for ever. And I will build up thy throne unto generation and generation. I have found David my servant: with my holy oil I have anointed him. For my hand shall help him: and my arm shall strengthen him. And my truth and my mercy shall be with him: and in my name shall his horn be exalted. He shall cry to me: Thou art my father: my God, and the support of my salvation.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1111-proper-gospel-matt25', readingOrder: 3, citationRef: 'Matthew 25:31-40', scriptureRef: 'Matthew 25:31-40', text: 'And when the Son of man shall come in his majesty, and all the angels with him, then shall he sit upon the seat of his majesty: And all nations shall be gathered together before him, and he shall separate them one from another, as the shepherd separateth the sheep from the goats: And he shall set the sheep on his right hand, but the goats on his left. Then shall the King say to them that shall be on his right hand: Come, ye blessed of my Father, possess you the kingdom prepared for you from the foundation of the world. For I was hungry, and you gave me to eat: I was thirsty, and you gave me to drink: I was a stranger, and you took me in: Naked, and you covered me: sick, and you visited me: I was in prison, and you came to me. Then shall the just answer him, saying: Lord, when saw we thee hungry, and fed thee; thirsty, and gave thee drink? And when saw we thee a stranger, and took thee in? or naked, and covered thee? Or when saw we thee sick or in prison, and came to thee? And the King answering, shall say to them: Amen I say to you, as long as you did it to one of these my least brethren, you did it to me.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-12',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'RED',
+      principalCelebrationTitle: 'Saint Josaphat, Bishop and Martyr',
+      celebrations: [
+        { title: 'Saint Josaphat, Bishop and Martyr', slug: 'saint-josaphat-bishop-and-martyr', rank: 'MEMORIAL', color: 'RED' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1112-weekday-494',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '494',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1112-weekday-first-philemon', readingOrder: 1, citationRef: 'Philemon 7-20', scriptureRef: 'Philemon 1:7-20', text: 'For I have had great joy and consolation in thy charity, because the bowels of the saints have been refreshed by thee, brother. Wherefore though I have much confidence in Christ Jesus, to command thee that which is to the purpose: For charity sake I rather beseech, whereas thou art such a one, as Paul an old man, and now also a prisoner of Jesus Christ. I beseech thee for my son, whom I have begotten in my bands, Onesimus, Who hath been heretofore unprofitable to thee, but now is profitable both to me and thee, Whom I have sent back to thee. And do thou receive him as my own bowels. Whom I would have retained with me, that in thy stead he might have ministered to me in the bands of the gospel: But without thy counsel I would do nothing that thy good deed might not be as it were of necessity, but voluntary. For perhaps he therefore departed for a season from thee, that thou mightest receive him again for ever: Not now as a servant, but instead of a servant, a most dear brother, especially to me, but how much more to thee, both in the flesh and in the Lord? If therefore thou count me a partner, receive him as myself. And if he hath wronged thee in any thing, or is in thy debt, put that to my account. I Paul have written it with my own hand: I will repay it: not to say to thee, that thou owest me thy own self also. Yea, brother. May I enjoy thee in the Lord! Refresh my bowels in the Lord.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1112-weekday-psalm-146', readingOrder: 2, citationRef: 'Psalm 146:7, 8-9a, 9bc-10', scriptureRef: 'Psalm 145:7, 8-9, 9-10', text: 'Who keepeth truth for ever: who executeth judgment for them that suffer wrong: who giveth food to the hungry. The Lord looseth them that are fettered: the Lord enlighteneth the blind. The Lord lifteth up them that are cast down: the Lord loveth the just. The Lord keepeth the strangers, he will support the fatherless and the widow: and the ways of sinners he will destroy. The Lord shall reign for ever: thy God, O Sion, unto generation and generation.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1112-weekday-gospel-luke17', readingOrder: 3, citationRef: 'Luke 17:20-25', scriptureRef: 'Luke 17:20-25', text: 'And being asked by the Pharisees, when the kingdom of God should come? he answered them, and said: The kingdom of God cometh not with observation: Neither shall they say: Behold here, or behold there. For lo, the kingdom of God is within you. And he said to his disciples: The days will come, when you shall desire to see one day of the Son of man; and you shall not see it. And they will say to you: See here, and see there. Go ye not after, nor follow them: For as the lightning that lighteneth from under heaven, shineth unto the parts that are under heaven, so shall the Son of man be in his day. But first he must suffer many things, and be rejected by this generation.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1112-proper-st-josaphat-674',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Josaphat',
+          lectionaryNumber: '674',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1112-proper-first-eph4', readingOrder: 1, citationRef: 'Ephesians 4:1-7, 11-13', scriptureRef: 'Ephesians 4:1-7, 11-13', text: 'I therefore, a prisoner in the Lord, beseech you that you walk worthy of the vocation in which you are called, With all humility and mildness, with patience, supporting one another in charity. Careful to keep the unity of the Spirit in the bond of peace. One body and one Spirit; as you are called in one hope of your calling. One Lord, one faith, one baptism. One God and Father of all, who is above all, and through all, and in us all. But to every one of us is given grace, according to the measure of the giving of Christ. And he gave some apostles, and some prophets, and other some evangelists, and other some pastors and doctors, For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ: Until we all meet into the unity of faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the age of the fulness of Christ.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1112-proper-psalm-112', readingOrder: 2, citationRef: 'Psalm 112:1-2, 3-4, 5-6, 7-8, 9', scriptureRef: 'Psalm 111:1-2, 3-4, 5-6, 7-8, 9', text: 'Praise the Lord, ye children: praise ye the name of the Lord. Blessed be the name of the Lord, from henceforth now and for ever. From the rising of the sun unto the going down of the same, the name of the Lord is worthy of praise. The Lord is high above all nations; and his glory above the heavens. Who is as the Lord our God, who dwelleth on high: and looketh down on the low things in heaven and in the earth? Raising up the needy from the earth, and lifting up the poor out of the dunghill: That he may place him with princes, with the princes of his people. Who maketh a barren woman to dwell in a house, the joyful mother of children.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1112-proper-gospel-john17', readingOrder: 3, citationRef: 'John 17:20-26', scriptureRef: 'John 17:20-26', text: 'And not for them only do I pray, but for them also who through their word shall believe in me: That they all may be one, as thou, Father, in me, and I in thee; that they also may be one in us; that the world may believe that thou hast sent me. And the glory which thou hast given me, I have given to them; that they may be one, as we also are one: I in them, and thou in me; that they may be made perfect in one: and the world may know that thou hast sent me, and hast loved them, as thou hast also loved me. Father, I will that where I am, they also whom thou hast given me may be with me; that they may see my glory which thou hast given me, because thou hast loved me before the creation of the world. Just Father, the world hath not known thee; but I have known thee: and these have known that thou hast sent me. And I have made known thy name to them, and will make it known; that the love wherewith thou hast loved me, may be in them, and I in them.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-13',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'GREEN',
+      notes: 'Friday of 32nd Week OT.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1113-weekday-495',
+          context: 'WEEKDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '495',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1113-weekday-first-2john', readingOrder: 1, citationRef: '2 John 4-9', scriptureRef: '2 John 1:4-9', text: 'I was exceeding glad, that I found of thy children walking in truth, as we have received a commandment from the Father. And now I beseech thee, lady, not as writing a new commandment to thee, but that which we have had from the beginning, that we love one another. And this is charity, that we walk according to his commandments. For this is the commandment, that, as you have heard from the beginning, you should walk in the same: For many seducers are gone out into the world, who confess not that Jesus Christ is come in the flesh: this is a seducer and an antichrist. Look to yourselves, that you lose not the things which you have wrought: but that you may receive a full reward. Whosoever revolteth, and continueth not in the doctrine of Christ, hath not God. He that continueth in the doctrine, the same hath both the Father and the Son.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1113-weekday-psalm-119', readingOrder: 2, citationRef: 'Psalm 119:1, 2, 10, 11, 17, 18', scriptureRef: 'Psalm 118:1, 2, 10, 11, 17, 18', text: 'Blessed are the undefiled in the way, who walk in the law of the Lord. Blessed are they that search his testimonies: that seek him with their whole heart. With my whole heart have I sought thee: let me not stray from thy commandments. Thy words have I hidden in my heart, that I may not sin against thee. Give bountifully to thy servant, enliven me: and I shall keep thy words. Open thou my eyes: and I will consider the wondrous things of thy law.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1113-weekday-gospel-luke17', readingOrder: 3, citationRef: 'Luke 17:26-37', scriptureRef: 'Luke 17:26-37', text: 'And as it came to pass in the days of Noe, so shall it be also in the days of the Son of man. They did eat and drink, they married wives, and were given in marriage, until the day that Noe entered into the ark: and the flood came and destroyed them all. Likewise as it came to pass in the days of Lot: They did eat and drink, they bought and sold, they planted and built. And in the day that Lot went out of Sodom, it rained fire and brimstone from heaven, and destroyed them all. Even thus shall it be in the day when the Son of man shall be revealed. In that hour, he that shall be on the housetop, and his goods in the house, let him not go down to take them away: and he that shall be in the field, in like manner, let him not return back. Remember Lot\'s wife. Whosoever shall seek to save his life, shall lose it: and whosoever shall lose it, shall preserve it. I say to you: in that night there shall be two men in one bed; the one shall be taken, and the other shall be left. Two women shall be grinding together; the one shall be taken, and the other shall be left. Two men shall be in the field; the one shall be taken, and the other shall be left. They answering, say to him: Where, Lord? Who said to them: Wheresoever the body shall be, thither will the eagles also be gathered together.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-14',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 32,
+      liturgicalColor: 'GREEN',
+      notes: 'Saturday of 32nd Week OT.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1114-weekday-496',
+          context: 'WEEKDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '496',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1114-weekday-first-3john', readingOrder: 1, citationRef: '3 John 5-8', scriptureRef: '3 John 1:5-8', text: 'Dearly beloved, thou dost faithfully whatever thou dost for the brethren, and that for strangers, Who have given testimony to thy charity in the sight of the church: whom thou shalt do well to bring on their way in a manner worthy of God. Because, for his name they went forth, taking nothing of the Gentiles. We therefore ought to receive such, that we may be fellow helpers of the truth.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1114-weekday-psalm-112', readingOrder: 2, citationRef: 'Psalm 112:1-2, 3-4, 5-6', scriptureRef: 'Psalm 111:1-2, 3-4, 5-6', text: 'Blessed is the man that feareth the Lord: he shall delight exceedingly in his commandments. His seed shall be mighty upon earth: the generation of the righteous shall be blessed. Glory and wealth shall be in his house: and his justice remaineth for ever and ever. To the righteous a light is risen up in darkness: he is merciful, and compassionate, and just. Acceptable is the man that sheweth mercy and lendeth: he shall order his words with judgment: For he shall not be moved for ever.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1114-weekday-gospel-luke18', readingOrder: 3, citationRef: 'Luke 18:1-8', scriptureRef: 'Luke 18:1-8', text: 'And he spoke also a parable to them, that we ought always to pray, and not to faint, Saying: There was a judge in a certain city, who feared not God, nor regarded man. And there was a certain widow in that city, and she came to him, saying: Avenge me of my adversary. And he would not for a long time. But afterwards he said within himself: Although I fear not God, nor regard man, Yet because this widow is troublesome to me, I will avenge her, lest continually coming she weary me. And the Lord said: Hear what the unjust judge saith. And will not God revenge his elect who cry to him day and night: and will he have patience in their regard? I say to you, that he will quickly revenge them. But yet the Son of man, when he cometh, shall he find, think you, faith on earth?' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-15',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 33,
+      liturgicalColor: 'GREEN',
+      notes: '33rd Sunday in Ordinary Time. St. Albert the Great displaced.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1115-sunday-157',
+          context: 'SUNDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '157',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1115-sunday-first-dan12', readingOrder: 1, citationRef: 'Daniel 12:1-3', scriptureRef: 'Daniel 12:1-3', text: 'But at that time shall Michael rise up, the great prince, who standeth for the children of thy people: and a time shall come such as never was from the time that nations began even until that time. And at that time shall thy people be saved, every one that shall be found written in the book. And many of those that sleep in the dust of the earth, shall awake: some unto life everlasting, and others unto reproach, to see it always. But they that are learned shall shine as the brightness of the firmament: and they that instruct many to justice, as stars for all eternity.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1115-sunday-psalm-16', readingOrder: 2, citationRef: 'Psalm 16:5, 8, 9-10, 11', scriptureRef: 'Psalm 15:5, 8, 9-10, 11', text: 'The Lord is the portion of my inheritance and of my cup: it is thou that wilt restore my inheritance to me. I set the Lord always in my sight: for he is at my right hand, that I be not moved. Therefore my heart hath been glad, and my tongue hath rejoiced: moreover my flesh also shall rest in hope. Because thou wilt not leave my soul in hell; nor wilt thou give thy Holy One to see corruption. Thou hast made known to me the ways of life, thou shalt fill me with joy with thy countenance: at thy right hand are delights even to the end.' },
+            { type: 'SECOND_READING', sourceKey: 'reading-1115-sunday-second-heb10', readingOrder: 3, citationRef: 'Hebrews 10:11-14, 18', scriptureRef: 'Hebrews 10:11-14, 18', text: 'And every priest indeed standeth daily ministering, and often offering the same sacrifices, which can never take away sins. But this man offering one sacrifice for sins, for ever sitteth on the right hand of God, From henceforth expecting, until his enemies be made his footstool. For by one oblation he hath perfected for ever them that are sanctified. Now where there is a remission of these, there is no more an oblation for sin.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1115-sunday-gospel-mark13', readingOrder: 4, citationRef: 'Mark 13:24-32', scriptureRef: 'Mark 13:24-32', text: 'But in those days, after that tribulation, the sun shall be darkened, and the moon shall not give her light. And the stars of heaven shall be falling down, and the powers that are in heaven, shall be moved. And then shall they see the Son of man coming in the clouds, with great power and glory. And then shall he send his angels, and shall gather together his elect from the four winds, from the uttermost part of the earth to the uttermost part of heaven. Now of the fig tree learn ye a parable. When the branch thereof is now tender, and the leaves are come forth, you know that summer is very near. So you also when you shall see these things come to pass, know ye that it is very nigh, even at the doors. Amen I say to you, that this generation shall not pass, until all these things be done. Heaven and earth shall pass away, but my word shall not pass away. But of that day or hour no man knoweth, neither the angels in heaven, nor the Son, but the Father.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-16',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 33,
+      liturgicalColor: 'GREEN',
+      notes: 'Monday of 33rd Week OT. Optional Memorials of St. Margaret of Scotland and St. Gertrude.',
+      celebrations: [
+        { title: 'Saint Margaret of Scotland', slug: 'saint-margaret-of-scotland', rank: 'OPTIONAL_MEMORIAL', color: 'WHITE' },
+        { title: 'Saint Gertrude, Virgin', slug: 'saint-gertrude-virgin', rank: 'OPTIONAL_MEMORIAL', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1116-weekday-497',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '497',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1116-weekday-first-rev1-2', readingOrder: 1, citationRef: 'Revelation 1:1-4; 2:1-5', scriptureRef: 'Apocalypse 1:1-4; Apocalypse 2:1-5', text: 'The Revelation of Jesus Christ, which God gave unto him, to make known to his servants the things which must shortly come to pass: and signified, sending by his angel to his servant John, Who hath given testimony to the word of God, and the testimony of Jesus Christ, what things soever he hath seen. Blessed is he that readeth and heareth the words of this prophecy; and keepeth those things which are written in it; for the time is at hand. John to the seven churches which are in Asia. Grace be unto you and peace from him that is, and that was, and that is to come, and from the seven spirits which are before his throne. Unto the angel of the church of Ephesus write: These things saith he, who holdeth the seven stars in his right hand, who walketh in the midst of the seven golden candlesticks: I know thy works, and thy labour, and thy patience, and how thou canst not bear them that are evil, and thou hast tried them who say they are apostles, and are not, and hast found them liars: And thou hast patience, and hast borne for my name, and hast not fainted. But I have somewhat against thee, because thou hast left thy first charity. Be mindful therefore from whence thou art fallen: and do penance, and do the first works. Or else I come to thee, and will move thy candlestick out of its place, except thou do penance.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1116-weekday-psalm-1', readingOrder: 2, citationRef: 'Psalm 1:1-2, 3, 4, 6', scriptureRef: 'Psalm 1:1-2, 3, 4, 6', text: 'Blessed is the man who hath not walked in the counsel of the ungodly, nor stood in the way of sinners, nor sat in the chair of pestilence. But his will is in the law of the Lord, and on his law he shall meditate day and night. And he shall be like a tree which is planted near the running waters, which shall bring forth its fruit, in due season. And his leaf shall not fall off: and all whatsoever he shall do shall prosper. Not so the wicked, not so: but like the dust, which the wind driveth from the face of the earth. For the Lord knoweth the way of the just: and the way of the ungodly shall perish.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1116-weekday-gospel-luke18', readingOrder: 3, citationRef: 'Luke 18:35-43', scriptureRef: 'Luke 18:35-43', text: 'Now it came to pass, when he drew nigh to Jericho, that a certain blind man sat by the way side, begging. And when he heard the multitude passing by, he asked what this meant. And they told him, that Jesus of Nazareth was passing by. And he cried out, saying: Jesus, son of David, have mercy on me. And they that went before, rebuked him, that he should hold his peace: but he cried out much more: Son of David, have mercy on me. And Jesus standing, commanded him to be brought unto him. And when he was come near, he asked him, Saying: What wilt thou that I do to thee? But he said: Lord, that I may see. And Jesus said to him: Receive thy sight: thy faith hath made thee whole. And immediately he saw, and followed him, glorifying God. And all the people, when they saw it, gave praise to God.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1116-proper-st-margaret-of-scotland-676',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Margaret of Scotland',
+          lectionaryNumber: '676',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1116-proper-margaret-first-isa58', readingOrder: 1, citationRef: 'Isaiah 58:6-11', scriptureRef: 'Isaias 58:6-11', text: 'Is not this rather the fast that I have chosen? loose the bands of wickedness, undo the bundles that oppress, let them that are broken go free, and break every burden. Deal thy bread to the hungry, and bring the needy and the harbourless into thy house: when thou shalt see one naked, cover him, and despise not thy own flesh. Then shall thy light break forth as the morning, and thy health shall speedily arise, and thy justice shall go before thy face, and the glory of the Lord shall gather thee up. Then shalt thou call, and the Lord shall hear: thou shalt cry, and he shall say: Here I am. If thou wilt take away the chain out of the midst of thee, and cease to stretch out the finger, and to speak that which profiteth not. When thou shalt pour out thy soul to the hungry, and shalt satisfy the afflicted soul, then shall thy light rise up in darkness, and thy darkness shall be as the noonday. And the Lord will give thee rest continually, and will fill thy soul with brightness, and deliver thy bones, and thou shalt be like a watered garden, and like a fountain of water whose waters shall not fail.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1116-proper-margaret-psalm-112', readingOrder: 2, citationRef: 'Psalm 112:1-2, 3-4, 5-6, 7-8, 9', scriptureRef: 'Psalm 111:1-2, 3-4, 5-6, 7-8, 9', text: 'Blessed is the man that feareth the Lord: he shall delight exceedingly in his commandments. His seed shall be mighty upon earth: the generation of the righteous shall be blessed. Glory and wealth shall be in his house: and his justice remaineth for ever and ever. To the righteous a light is risen up in darkness: he is merciful, and compassionate, and just. Acceptable is the man that sheweth mercy and lendeth: he shall order his words with judgment: For he shall not be moved for ever.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1116-proper-margaret-gospel-matt25', readingOrder: 3, citationRef: 'Matthew 25:31-40', scriptureRef: 'Matthew 25:31-40', text: 'And when the Son of man shall come in his majesty, and all the angels with him, then shall he sit upon the seat of his majesty: And all nations shall be gathered together before him, and he shall separate them one from another, as the shepherd separateth the sheep from the goats: And he shall set the sheep on his right hand, but the goats on his left. Then shall the King say to them that shall be on his right hand: Come, ye blessed of my Father, possess you the kingdom prepared for you from the foundation of the world. For I was hungry, and you gave me to eat: I was thirsty, and you gave me to drink: I was a stranger, and you took me in: Naked, and you covered me: sick, and you visited me: I was in prison, and you came to me. Then shall the just answer him, saying: Lord, when saw we thee hungry, and fed thee; thirsty, and gave thee drink? And when saw we thee a stranger, and took thee in? or naked, and covered thee? Or when saw we thee sick or in prison, and came to thee? And the King answering, shall say to them: Amen I say to you, as long as you did it to one of these my least brethren, you did it to me.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1116-proper-st-gertrude-677',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Gertrude, Virgin',
+          lectionaryNumber: '677',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1116-proper-gertrude-first-eph3', readingOrder: 1, citationRef: 'Ephesians 3:14-19', scriptureRef: 'Ephesians 3:14-19', text: 'For this cause I bow my knees to the Father of our Lord Jesus Christ, Of whom all paternity in heaven and earth is named, That he would grant you, according to the riches of his glory, to be strengthened by his Spirit with might unto the inward man, That Christ may dwell by faith in your hearts; that being rooted and founded in charity, You may be able to comprehend with all the saints, what is the breadth, and length, and height, and depth: To know also the charity of Christ, which surpasseth all knowledge, that you may be filled unto all the fulness of God.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1116-proper-gertrude-psalm-23', readingOrder: 2, citationRef: 'Psalm 23:1b-3a, 3b-4, 5, 6', scriptureRef: 'Psalm 22:1-3, 3-4, 5, 6', text: 'The Lord ruleth me: and nothing shall be wanting to me. He hath set me in a place of pasture. He hath brought me up, on the water of refreshment: he hath converted my soul. He hath led me on the paths of justice, for his own name\'s sake. For though I should walk in the midst of the shadow of death, I will fear no evils, for thou art with me. Thy rod and thy staff, they have comforted me. Thou hast prepared a table before me against them that afflict me. Thou hast anointed my head with oil; and my chalice which inebriateth me, how goodly is it! And thy mercy shall follow me all the days of my life. And that I may dwell in the house of the Lord unto length of days.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1116-proper-gertrude-gospel-john15', readingOrder: 3, citationRef: 'John 15:1-8', scriptureRef: 'John 15:1-8', text: 'I am the true vine; and my Father is the husbandman. Every branch in me, that beareth not fruit, he will take away: and every one that beareth fruit, he will purge it, that it may bring forth more fruit. Now you are clean by reason of the word, which I have spoken to you. Abide in me, and I in you. As the branch cannot bear fruit of itself, unless it abide in the vine, so neither can you, unless you abide in me. I am the vine; you the branches: he that abideth in me, and I in him, the same beareth much fruit: for without me you can do nothing. If any one abide not in me, he shall be cast forth as a branch, and shall wither, and they shall gather him up, and cast him into the fire, and he burneth. If you abide in me, and my words abide in you, you shall ask whatever you will, and it shall be done unto you. In this is my Father glorified; that you bring forth very much fruit, and become my disciples.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-17',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 33,
+      liturgicalColor: 'WHITE',
+      principalCelebrationTitle: 'Saint Elizabeth of Hungary, Religious',
+      celebrations: [
+        { title: 'Saint Elizabeth of Hungary, Religious', slug: 'saint-elizabeth-of-hungary-religious', rank: 'MEMORIAL', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1117-weekday-498',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '498',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1117-weekday-first-rev4', readingOrder: 1, citationRef: 'Revelation 4:1-11', scriptureRef: 'Apocalypse 4:1-11', text: 'After these things I looked, and behold a door was opened in heaven, and the first voice which I heard, as it were, of a trumpet speaking with me, said: Come up hither, and I will shew thee the things which must be done hereafter. And immediately I was in the spirit: and behold there was a throne set in heaven, and upon the throne one sitting. And he that sat was to the sight like the jasper and the sardine stone; and there was a rainbow round about the throne, in sight like unto an emerald. And round about the throne were four and twenty seats; and upon the seats, four and twenty ancients sitting, clothed in white garments, and on their heads were crowns of gold. And from the throne proceeded lightnings, and voices, and thunders; and there were seven lamps burning before the throne, which are the seven spirits of God. And in the sight of the throne was, as it were, a sea of glass like to crystal; and in the midst of the throne, and round about the throne, were four living creatures, full of eyes before and behind. And the first living creature was like a lion: and the second living creature like a calf: and the third living creature having the face, as it were, of a man: and the fourth living creature was like an eagle flying. And the four living creatures had each of them six wings; and round about and within they are full of eyes. And they rested not day and night, saying: Holy, holy, holy, Lord God Almighty, who was, and who is, and who is to come. And when those living creatures gave glory, and honour, and benediction to him that sitteth on the throne, who liveth for ever and ever, The four and twenty ancients fell down before him that sitteth on the throne, and adored him that liveth for ever and ever, and cast their crowns before the throne, saying: Thou art worthy, O Lord our God, to receive glory, and honour, and power: because thou hast created all things, and for thy will they were, and have been created.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1117-weekday-psalm-150', readingOrder: 2, citationRef: 'Psalm 150:1b-2, 3-4, 5-6', scriptureRef: 'Psalm 149:1-2, 3-4, 5-6', text: 'Praise ye the Lord in his holy places: praise ye him in the firmament of his power. Praise ye him for his mighty acts: praise ye him according to the multitude of his greatness. Praise him with sound of trumpet: praise him with psaltery and harp. Praise him with timbrel and choir: praise him with strings and organs. Praise him on high sounding cymbals: praise him on cymbals of joy: let every spirit praise the Lord.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1117-weekday-gospel-luke19', readingOrder: 3, citationRef: 'Luke 19:11-28', scriptureRef: 'Luke 19:11-28', text: 'As they heard these things, he added and spoke a parable, because he was nigh to Jerusalem, and because they thought that the kingdom of God should immediately be manifested. He said therefore: A certain nobleman went into a far country to receive for himself a kingdom, and to return. And calling his ten servants, he gave them ten pounds, and said to them: Trade till I come. But his citizens hated him: and they sent an embassage after him, saying: We will not have this man to reign over us. And it came to pass, that he returned, having received the kingdom: and he commanded his servants to be called, to whom he had given the money, that he might know how much every man had gained by trading. And the first came, saying: Lord, thy pound hath gained ten pounds. And he said to him: Well done, thou good servant; because thou hast been faithful in a little, thou shalt have power over ten cities. And the second came, saying: Lord, thy pound hath gained five pounds. And he said to him: Be thou also over five cities. And another came, saying: Lord, behold here is thy pound, which I have kept laid up in a napkin; For I feared thee, because thou art an austere man: thou takest up what thou layedst not down, and thou reapest that which thou didst not sow. He saith to him: Out of thy own mouth I judge thee, thou wicked servant. Thou knewest that I was an austere man, taking up what I laid not down, and reaping that which I did not sow: And why then didst thou not give my money into the bank, that at my coming I might have required it with usury? And he said to them that stood by: Take the pound away from him, and give it to him that hath ten pounds. And they said to him: Lord, he hath ten pounds. But I say to you, that to every one that hath shall be given, and he shall abound: and from him that hath not, even that which he hath shall be taken from him. But as for those my enemies, who would not have me reign over them, bring them hither, and kill them before me. And having said these things, he went before, going up to Jerusalem.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1117-proper-st-elizabeth-of-hungary-678',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Saint Elizabeth of Hungary',
+          lectionaryNumber: '678',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1117-proper-first-1john3', readingOrder: 1, citationRef: '1 John 3:14-18', scriptureRef: '1 John 3:14-18', text: 'We know that we have passed from death to life, because we love the brethren. He that loveth not, abideth in death. Whosoever hateth his brother is a murderer. And you know that no murderer hath eternal life abiding in himself. In this we have known the charity of God, because he hath laid down his life for us: and we ought to lay down our lives for the brethren. He that hath the substance of this world, and shall see his brother in need, and shall shut up his bowels from him: how dwelleth the charity of God in him? My little children, let us not love in word, nor in tongue, but in deed, and in truth.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1117-proper-psalm-34', readingOrder: 2, citationRef: 'Psalm 34:2-3, 4-5, 6-7, 8-9, 10-11', scriptureRef: 'Psalm 33:2-3, 4-5, 6-7, 8-9, 10-11', text: 'I will bless the Lord at all times: his praise shall be always in my mouth. In the Lord shall my soul be praised: let the meek hear and rejoice. O magnify the Lord with me; and let us extol his name together. I sought the Lord, and he heard me; and he delivered me from all my troubles. Come ye to him and be enlightened: and your faces shall not be confounded. This poor man cried, and the Lord heard him: and with his fear. The angel of the Lord shall encamp round about them that fear him: and shall deliver them. O taste, and see that the Lord is sweet: blessed is the man that hopeth in him. Fear the Lord, all ye his saints: for there is no want to them that fear him. The rich have wanted, and have suffered hunger: but they that seek the Lord shall not be deprived of any good.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1117-proper-gospel-luke6', readingOrder: 3, citationRef: 'Luke 6:27-38', scriptureRef: 'Luke 6:27-38', text: 'But I say to you that hear: Love your enemies, do good to them that hate you. Bless them that curse you, and pray for them that calumniate you. And to him that striketh thee on the one cheek, offer also the other. And him that taketh away from thee thy cloak, forbid not to take thy coat also. Give to every one that asketh thee, and of him that taketh away thy goods, ask them not again. And as you would that men should do to you, do you also to them in like manner. And if you love them that love you, what thanks have you? for sinners also love those that love them. And if you do good to them that do good to you, what thanks have you? for sinners also do this. And if you lend to them of whom you hope to receive, what thanks have you? for sinners also lend to sinners, for to receive as much. But love ye your enemies: do good, and lend, hoping for nothing thereby: and your reward shall be great, and you shall be the sons of the Highest, for he is kind to the unthankful, and to the evil. Be ye therefore merciful, as your Father also is merciful. Judge not, and you shall not be judged. Condemn not, and you shall not be condemned. Forgive, and you shall be forgiven. Give, and it shall be given to you: good measure and pressed down and shaken together and running over shall they give into your bosom. For with the same measure that you shall mete withal, it shall be measured to you again.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-18',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 33,
+      liturgicalColor: 'GREEN',
+      notes: 'Wednesday of 33rd Week OT. Optional Memorial of Dedication of Basilicas of Sts Peter and Paul.',
+      celebrations: [
+        { title: 'The Dedication of the Basilicas of Saints Peter and Paul, Apostles', slug: 'the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', rank: 'OPTIONAL_MEMORIAL', color: 'WHITE' }
+      ],
+      readingSets: [
+        {
+          sourceKey: 'set-1118-weekday-499',
+          context: 'WEEKDAY',
+          selectionStatus: 'ALTERNATIVE',
+          lectionaryNumber: '499',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1118-weekday-first-rev5', readingOrder: 1, citationRef: 'Revelation 5:1-10', scriptureRef: 'Apocalypse 5:1-10', text: 'And I saw in the right hand of him that sat on the throne, a book written within and without, sealed with seven seals. And I saw a strong angel, proclaiming with a loud voice: Who is worthy to open the book, and to loose the seals thereof? And no man was able, neither in heaven, nor in earth, nor under the earth, to open the book, nor to look on it. And I wept much, because no man was found worthy to open the book, nor to see it. And one of the ancients said to me: Weep not; behold the lion of the tribe of Juda, the root of David, hath prevailed to open the book, and to loose the seven seals thereof. And I saw: and behold in the midst of the throne and of the four living creatures, and in the midst of the ancients, a Lamb standing as it were slain, having seven horns and seven eyes: which are the seven Spirits of God, sent forth into all the earth. And he came and took the book out of the right hand of him that sat on the throne. And when he had opened the book, the four living creatures, and the four and twenty ancients fell down before the Lamb, having every one of them harps, and golden vials full of odours, which are the prayers of saints: And they sung a new canticle, saying: Thou art worthy, O Lord, to take the book, and to open the seals thereof; because thou wast slain, and hast redeemed us to God, in thy blood, out of every tribe, and tongue, and people, and nation; And hast made us to our God a kingdom and priests, and we shall reign on the earth.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1118-weekday-psalm-149', readingOrder: 2, citationRef: 'Psalm 149:1b-2, 3-4, 5-6a and 9b', scriptureRef: 'Psalm 148:1-2, 3-4, 5-6', text: 'Sing ye to the Lord a new canticle: let his praise be in the church of the saints. Let Israel rejoice in him that made him: and let the children of Sion be joyful in their king. Let them praise his name in choir: let them sing to him with the timbrel and the psalter. For the Lord is well pleased with his people: and he will exalt the meek unto salvation. The saints shall rejoice in glory: they shall be joyful in their beds. The high praises of God shall be in their mouth: This glory is to all his saints. Alleluia.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1118-weekday-gospel-luke19', readingOrder: 3, citationRef: 'Luke 19:41-44', scriptureRef: 'Luke 19:41-44', text: 'And when he drew near, seeing the city, he wept over it, saying: If thou also hadst known, and that in this thy day, the things that are to thy peace; but now they are hidden from thy eyes. For the days shall come upon thee, and thy enemies shall cast a trench about thee, and compass thee round, and straiten thee on every side, And beat thee flat to the ground, and thy children who are in thee; and they shall not leave in thee a stone upon a stone: because thou hast not known the time of thy visitation.' }
+          ]
+        },
+        {
+          sourceKey: 'set-1118-proper-peter-paul-679',
+          context: 'PROPER_OF_SAINTS',
+          selectionStatus: 'ALTERNATIVE',
+          description: 'Proper readings for Dedication of Basilicas of Sts Peter and Paul',
+          lectionaryNumber: '679',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1118-proper-first-acts28', readingOrder: 1, citationRef: 'Acts 28:11-16, 30-31', scriptureRef: 'Acts 28:11-16, 30-31', text: 'And after three months, we sailed in a ship of Alexandria, that had wintered in the island, whose sign was the Castors. And when we were come to Syracuse, we tarried there three days. From thence, compassing by the shore, we came to Rhegium: and after one day, the south wind blowing, we came the second day to Puteoli; Where, finding brethren, we were desired to tarry with them seven days: and so we went to Rome. And from thence, when the brethren had heard of us, they came to meet us as far as Appii Forum, and the Three Taverns: whom when Paul saw, he gave thanks to God, and took courage. And when we were come to Rome, Paul was suffered to dwell by himself, with a soldier that kept him. And he remained two whole years in his own hired lodging: and he received all that came in unto him, Preaching the kingdom of God, and teaching the things which concern the Lord Jesus Christ, with all confidence, without prohibition.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1118-proper-psalm-98', readingOrder: 2, citationRef: 'Psalm 98:1, 2-3ab, 3cd-4, 5-6', scriptureRef: 'Psalm 97:1, 2-3, 3-4, 5-6', text: 'Sing ye to the Lord a new canticle: because he hath done wonderful things. His right hand hath wrought for him salvation: and his arm is holy. The Lord hath made known his salvation: he hath revealed his justice in the sight of the Gentiles. He hath remembered his mercy his truth to the house of Israel. All the ends of the earth have seen the salvation of our God. Sing joyfully to God, all the earth; make a noise, rejoice, and sing. Sing to the Lord with the harp, with the harp and the voice of a psalm: With long trumpets and sound of cornet. Make a joyful noise before the Lord our King.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1118-proper-gospel-matt14', readingOrder: 3, citationRef: 'Matthew 14:22-33', scriptureRef: 'Matthew 14:22-33', text: 'And forthwith Jesus obliged his disciples to go up into the boat, and to go before him over the water, till he dismissed the people. And having dismissed the multitude, he went into a mountain alone to pray. And when it was evening, he was there alone. But the boat in the midst of the sea was tossed with the waves: for the wind was contrary. And in the fourth watch of the night, he came to them walking upon the sea. And they seeing him walking upon the sea, were troubled, saying: It is an apparition. And they cried out for fear. And immediately Jesus spoke to them, saying: Be of good heart: it is I, fear ye not. And Peter making answer, said: Lord, if it be thou, bid me come to thee upon the waters. And he said: Come. And Peter going down out of the boat, walked upon the water to come to Jesus. But seeing the wind strong, he was afraid: and when he began to sink, he cried out, saying: Lord, save me. And immediately Jesus stretching forth his hand, took hold of him, and said to him: O thou of little faith, why didst thou doubt? And when they were come up into the boat, the wind ceased. And they that were in the boat came and adored him, saying: Indeed thou art the Son of God.' }
+          ]
+        }
+      ]
+    },
+    {
+      date: '2026-11-19',
+      seasonCode: 'ORDINARY_TIME',
+      seasonWeek: 33,
+      liturgicalColor: 'GREEN',
+      notes: 'Thursday of 33rd Week OT.',
+      celebrations: [],
+      readingSets: [
+        {
+          sourceKey: 'set-1119-weekday-500',
+          context: 'WEEKDAY',
+          selectionStatus: 'SOLE_SET',
+          isCanonicalDefault: true,
+          lectionaryNumber: '500',
+          readings: [
+            { type: 'FIRST_READING', sourceKey: 'reading-1119-weekday-first-rev5', readingOrder: 1, citationRef: 'Revelation 5:1-10', scriptureRef: 'Apocalypse 5:1-10', text: 'And I saw in the right hand of him that sat on the throne, a book written within and without, sealed with seven seals. And I saw a strong angel, proclaiming with a loud voice: Who is worthy to open the book, and to loose the seals thereof? And no man was able, neither in heaven, nor in earth, nor under the earth, to open the book, nor to look on it. And I wept much, because no man was found worthy to open the book, nor to see it. And one of the ancients said to me: Weep not; behold the lion of the tribe of Juda, the root of David, hath prevailed to open the book, and to loose the seven seals thereof. And I saw: and behold in the midst of the throne and of the four living creatures, and in the midst of the ancients, a Lamb standing as it were slain, having seven horns and seven eyes: which are the seven Spirits of God, sent forth into all the earth. And he came and took the book out of the right hand of him that sat on the throne. And when he had opened the book, the four living creatures, and the four and twenty ancients fell down before the Lamb, having every one of them harps, and golden vials full of odours, which are the prayers of saints: And they sung a new canticle, saying: Thou art worthy, O Lord, to take the book, and to open the seals thereof; because thou wast slain, and hast redeemed us to God, in thy blood, out of every tribe, and tongue, and people, and nation; And hast made us to our God a kingdom and priests, and we shall reign on the earth.' },
+            { type: 'RESPONSORIAL_PSALM', sourceKey: 'reading-1119-weekday-psalm-149', readingOrder: 2, citationRef: 'Psalm 149:1b-2, 3-4, 5-6a and 9b', scriptureRef: 'Psalm 148:1-2, 3-4, 5-6', text: 'Sing ye to the Lord a new canticle: let his praise be in the church of the saints. Let Israel rejoice in him that made him: and let the children of Sion be joyful in their king. Let them praise his name in choir: let them sing to him with the timbrel and the psalter. For the Lord is well pleased with his people: and he will exalt the meek unto salvation. The saints shall rejoice in glory: they shall be joyful in their beds. The high praises of God shall be in their mouth: This glory is to all his saints. Alleluia.' },
+            { type: 'GOSPEL', sourceKey: 'reading-1119-weekday-gospel-luke19', readingOrder: 3, citationRef: 'Luke 19:41-44', scriptureRef: 'Luke 19:41-44', text: 'And when he drew near, seeing the city, he wept over it, saying: If thou also hadst known, and that in this thy day, the things that are to thy peace; but now they are hidden from thy eyes. For the days shall come upon thee, and thy enemies shall cast a trench about thee, and compass thee round, and straiten thee on every side, And beat thee flat to the ground, and thy children who are in thee; and they shall not leave in thee a stone upon a stone: because thou hast not known the time of thy visitation.' }
+          ]
+        }
+      ]
+    }
+  ]
+};

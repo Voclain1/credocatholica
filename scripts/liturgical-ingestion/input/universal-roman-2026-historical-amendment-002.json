@@ -1,0 +1,281 @@
+{
+  "metadata": {
+    "packageName": "universal-roman-2026-historical-amendment-002",
+    "sourceName": "General Roman Calendar Historical Amendment 002 (Corrective Removal of Accidental Amendment 001 Readings)",
+    "sourceType": "CALENDAR_AMENDMENT",
+    "packageType": "HISTORICAL_AMENDMENT",
+    "isHistoricalAmendment": true,
+    "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-historical-amendment-002",
+    "sourceVersion": "2.6.0-AMENDMENT",
+    "extractionTimestamp": "2026-08-31T22:56:00.000Z",
+    "periodCovered": {
+      "start": "2026-10-09",
+      "end": "2026-10-09"
+    },
+    "scriptureTranslation": "Douay-Rheims Version (Challoner Revision)",
+    "licensingBasis": "Public Domain (Gutenberg eBook #1581)",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED",
+    "deletions": [
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-denis-first-2cor6",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-denis-654",
+        "reason": "Corrective removal of duplicate alternate key reading-1009-denis-first-2cor6 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-denis-first-2cor6 to restore Package 5 original key reading-1009-proper-denis-first-2cor6"
+      },
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-denis-psalm-126",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-denis-654",
+        "reason": "Corrective removal of duplicate alternate key reading-1009-denis-psalm-126 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-denis-psalm-126 to restore Package 5 original key reading-1009-proper-denis-psalm-126"
+      },
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-denis-gospel-matt10",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-denis-654",
+        "reason": "Corrective removal of materially incorrect pericope Matthew 10:28-33 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-denis-gospel-matt10 (Matthew 10:28-33) to preserve Package 5 canonical Gospel Matthew 5:13-16 under key reading-1009-proper-denis-gospel-matt5"
+      },
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-leonardi-first-2cor4",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-john-leonardi-655",
+        "reason": "Corrective removal of duplicate alternate key reading-1009-leonardi-first-2cor4 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-leonardi-first-2cor4 to restore Package 5 original key reading-1009-proper-leonardi-first-2cor4"
+      },
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-leonardi-psalm-96",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-john-leonardi-655",
+        "reason": "Corrective removal of duplicate alternate key reading-1009-leonardi-psalm-96 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-leonardi-psalm-96 to restore Package 5 original key reading-1009-proper-leonardi-psalm-96"
+      },
+      {
+        "entityType": "READING",
+        "sourceKey": "reading-1009-leonardi-gospel-luke9",
+        "targetDayDate": "2026-10-09",
+        "targetSetSourceKey": "set-1009-proper-st-john-leonardi-655",
+        "reason": "Corrective removal of duplicate alternate key reading-1009-leonardi-gospel-luke9 introduced by Historical Amendment 001",
+        "reviewerNote": "Reviewed deletion of reading-1009-leonardi-gospel-luke9 to restore Package 5 original key reading-1009-proper-leonardi-gospel-luke9"
+      }
+    ]
+  },
+  "records": [
+    {
+      "date": "2026-10-09",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 27,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Friday of the 27th Week in Ordinary Time. Optional Memorial of Saint Denis, Bishop, and Companions, Martyrs; Saint John Leonardi, Priest; Saint John Henry Newman, Priest. Corrective historical amendment 002.",
+      "celebrations": [
+        {
+          "sourceKey": "celeb-1009-st-denis-and-companions",
+          "title": "Saint Denis, Bishop, and Companions, Martyrs",
+          "slug": "saint-denis-bishop-and-companions-martyrs",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "RED",
+          "precedenceOrder": 1,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint Denis and Companions."
+        },
+        {
+          "sourceKey": "celeb-1009-st-john-leonardi",
+          "title": "Saint John Leonardi, Priest",
+          "slug": "saint-john-leonardi-priest",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "precedenceOrder": 2,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint John Leonardi."
+        },
+        {
+          "sourceKey": "celeb-1009-st-john-henry-newman",
+          "title": "Saint John Henry Newman, Priest",
+          "slug": "saint-john-henry-newman-priest",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "precedenceOrder": 3,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint John Henry Newman, Priest."
+        }
+      ],
+      "readingSets": [
+        {
+          "context": "WEEKDAY",
+          "sourceKey": "set-1009-weekday-465",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Weekday Mass (Lectionary 465)",
+          "description": "Friday of the 27th Week in Ordinary Time",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-465-weekday",
+          "lectionaryNumber": "465",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "sourceKey": "reading-1009-weekday-first-gal3",
+              "readingOrder": 1,
+              "citationRef": "Galatians 3:7-14",
+              "scriptureRef": "Galatians 3:7-14",
+              "text": "Know ye therefore, that they who are of faith, the same are the children of Abraham. And the scripture, foreseeing that God would justify the Gentiles by faith, preached beforehand to Abraham: In thee shall all nations be blessed. So then they who are of faith shall be blessed with faithful Abraham. For as many as are of the works of the law are under a curse. For it is written: Cursed is every one that abideth not in all things which are written in the book of the law, to do them. But that in the law no man is justified with God, it is manifest: because the just man liveth by faith. And the law is not of faith: but He that doth those things shall live in them. Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written: Cursed is every one that hangeth on a tree: That the blessing of Abraham might come on the Gentiles through Christ Jesus: that we may receive the promise of the Spirit by faith.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "sourceKey": "reading-1009-weekday-psalm-111",
+              "readingOrder": 2,
+              "citationRef": "Psalm 111:1b-2, 3-4, 5-6",
+              "scriptureRef": "Psalm 110:1-2, 3-4, 5-6",
+              "response": "The Lord will remember his covenant for ever.",
+              "text": "R. The Lord will remember his covenant for ever.\n\nI will praise thee, O Lord, with my whole heart: in the council of the just, and in the congregation.\nGreat are the works of the Lord: sought out according to all his wills.\n\nR. The Lord will remember his covenant for ever.\n\nHis work is praise and magnificence: and his justice continueth for ever and ever.\nHe hath made a remembrance of his wonderful works, being a merciful and gracious Lord.\n\nR. The Lord will remember his covenant for ever.\n\nHe hath given food to them that fear him.\nHe will be mindful for ever of his covenant: he will shew forth to his people the power of his works.\n\nR. The Lord will remember his covenant for ever.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "GOSPEL",
+              "sourceKey": "reading-1009-weekday-gospel-luke11",
+              "readingOrder": 3,
+              "citationRef": "Luke 11:15-26",
+              "scriptureRef": "Luke 11:15-26",
+              "text": "At that time: Some of the crowd said: He casteth out devils by Beelzebub, the prince of devils. And others tempting, asked of him a sign from heaven. But he seeing their thoughts, said to them: Every kingdom divided against itself shall be brought to desolation, and house upon house shall fall. And if Satan also be divided against himself, how shall his kingdom stand? because you say, that through Beelzebub I cast out devils. Now if I by Beelzebub cast out devils, by whom do your children cast them out? Therefore they shall be your judges. But if I by the finger of God cast out devils; doubtless the kingdom of God is come upon you. When a strong man armed keepeth his court, those things are in peace which he possesseth. But if a stronger than he come upon him, and overcome him; he will take away all his armour wherein he trusted, and will distribute his spoils. He that is not with me, is against me; and he that gathereth not with me, scattereth. When the unclean spirit is gone out of a man, he walketh through places without water, seeking rest; and not finding, he saith: I will return into my house whence I came out. And when he is come, he findeth it swept and garnished. Then he goeth and taketh with him seven other spirits more wicked than himself, and entering in they dwell there. And the last state of that man becomes worse than the first.",
+              "textStatus": "VERIFIED_EXACT"
+            }
+          ]
+        },
+        {
+          "context": "PROPER_OF_SAINTS",
+          "sourceKey": "set-1009-proper-st-denis-654",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Mass of St. Denis and Companions (Lectionary 654)",
+          "description": "Optional Memorial of Saint Denis, Bishop, and Companions, Martyrs",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-654-proper-denis",
+          "lectionaryNumber": "654",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "sourceKey": "reading-1009-proper-denis-first-2cor6",
+              "readingOrder": 1,
+              "citationRef": "2 Corinthians 6:4-10",
+              "scriptureRef": "2 Corinthians 6:4-10",
+              "text": "But in all things let us exhibit ourselves as the ministers of God, in much patience, in tribulations, in necessities, in distresses, In stripes, in prisons, in seditions, in labours, in watchings, in fastings, In chastity, in knowledge, in longsuffering, in sweetness, in the Holy Ghost, in charity unfeigned, In the word of truth, in the power of God; by the armour of justice on the right hand and on the left; By honour and dishonour, by evil report and good report; as deceivers, and yet true; as unknown, and yet known; As dying, and behold we live; as chastised, and not killed; As sorrowful, yet always rejoicing; as needy, yet enriching many; as having nothing, and possessing all things.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "sourceKey": "reading-1009-proper-denis-psalm-126",
+              "readingOrder": 2,
+              "citationRef": "Psalm 126:1b-2ab, 2cd-3, 4-5, 6",
+              "scriptureRef": "Psalm 125:1-2, 2-3, 4-5, 6",
+              "response": "Those who sow in tears shall reap in joy.",
+              "text": "When the Lord brought back the captivity of Sion, we became like men comforted. Then was our mouth filled with gladness, and our tongue with joy. Then shall they say among the Gentiles: The Lord hath done great things for them. The Lord hath done great things for us: we are become joyful. Turn again our captivity, O Lord, as a stream in the south. They that sow in tears shall reap in joy. Going they went and wept, casting their seeds. But coming they shall come with joyfulness, carrying their sheaves.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "GOSPEL",
+              "sourceKey": "reading-1009-proper-denis-gospel-matt5",
+              "readingOrder": 3,
+              "citationRef": "Matthew 5:13-16",
+              "scriptureRef": "Matthew 5:13-16",
+              "text": "You are the salt of the earth. But if the salt lose its savour, wherewith shall it be salted? It is good for nothing any more but to be cast out, and to be trodden on by men. You are the light of the world. A city seated on a mountain cannot be hid. Neither do men light a candle and put it under a bushel, but upon a candlestick, that it may shine to all that are in the house. So let your light shine before men, that they may see your good works, and glorify your Father who is in heaven.",
+              "textStatus": "VERIFIED_EXACT"
+            }
+          ]
+        },
+        {
+          "context": "PROPER_OF_SAINTS",
+          "sourceKey": "set-1009-proper-st-john-leonardi-655",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Mass of St. John Leonardi (Lectionary 655)",
+          "description": "Optional Memorial of Saint John Leonardi, Priest",
+          "setOrder": 3,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-655-proper-leonardi",
+          "lectionaryNumber": "655",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "sourceKey": "reading-1009-proper-leonardi-first-2cor4",
+              "readingOrder": 1,
+              "citationRef": "2 Corinthians 4:1-2, 5-7",
+              "scriptureRef": "2 Corinthians 4:1-2, 5-7",
+              "text": "Brethren: Seeing we have this ministration, according as we have obtained mercy, we faint not; but we renounce the hidden things of dishonesty, not walking in craftiness, nor adulterating the word of God; but by manifestation of the truth commending ourselves to every man's conscience, in the sight of God. For we preach not ourselves, but Jesus Christ our Lord; and ourselves your servants through Jesus. For God, who commanded the light to shine out of darkness, hath shined in our hearts, to give the light of the knowledge of the glory of God, in the face of Christ Jesus. But we have this treasure in earthen vessels, that the excellency may be of the power of God, and not of us.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "sourceKey": "reading-1009-proper-leonardi-psalm-96",
+              "readingOrder": 2,
+              "citationRef": "Psalm 96:1-2a, 2b-3, 7-8a, 10",
+              "scriptureRef": "Psalm 95:1-2, 2-3, 7-8, 10",
+              "response": "Proclaim God's marvelous deeds to all the nations.",
+              "text": "R. Proclaim God's marvelous deeds to all the nations.\n\nSing ye to the Lord a new canticle: sing to the Lord, all the earth.\nSing ye to the Lord and bless his name: announce his salvation from day to day.\n\nR. Proclaim God's marvelous deeds to all the nations.\n\nDeclare his glory among the Gentiles: his wonders among all people.\n\nR. Proclaim God's marvelous deeds to all the nations.\n\nBring to the Lord, O ye kindreds of the Gentiles, bring to the Lord glory and honour:\nbring to the Lord glory unto his name.\n\nR. Proclaim God's marvelous deeds to all the nations.\n\nSay ye among the Gentiles, the Lord hath reigned.\nFor he hath corrected the world, which shall not be moved: he will judge the people with justice.\n\nR. Proclaim God's marvelous deeds to all the nations.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "GOSPEL",
+              "sourceKey": "reading-1009-proper-leonardi-gospel-luke9",
+              "readingOrder": 3,
+              "citationRef": "Luke 9:57-62",
+              "scriptureRef": "Luke 9:57-62",
+              "text": "At that time: As Jesus and his disciples walked in the way, a certain man said to him: I will follow thee whithersoever thou goest. Jesus said to him: The foxes have holes, and the birds of the air nests; but the Son of man hath not where to lay his head. And he said to another: Follow me. And he said: Lord, suffer me first to go, and bury my father. And Jesus said to him: Let the dead bury their dead: but go thou, and preach the kingdom of God. And another said: I will follow thee, Lord; but let me first take my leave of them that are at my house. Jesus said to him: No man putting his hand to the plough, and looking back, is fit for the kingdom of God.",
+              "textStatus": "VERIFIED_EXACT"
+            }
+          ]
+        },
+        {
+          "context": "PROPER_OF_SAINTS",
+          "sourceKey": "set-1009-proper-st-john-henry-newman-655bis",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper Mass of St. John Henry Newman (Lectionary 655bis)",
+          "description": "Optional Memorial of Saint John Henry Newman, Priest",
+          "setOrder": 4,
+          "isCanonicalDefault": null,
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-655bis-proper-newman",
+          "lectionaryNumber": "655bis",
+          "readings": [
+            {
+              "type": "FIRST_READING",
+              "sourceKey": "reading-1009-newman-first-sirach39",
+              "readingOrder": 1,
+              "citationRef": "Sirach 39:1-10",
+              "scriptureRef": "Ecclesiasticus 39:1-14",
+              "text": "The wise man will seek out the wisdom of all the ancients, and will be occupied in the prophets. He will keep the sayings of renowned men, and will enter withal into the subtleties of parables. He will search out the hidden meanings of proverbs, and will be conversant in the secrets of parables. He shall serve among great men, and appear before the governor. He shall pass into strange countries: for he shall try good and evil among men. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High. He will open his mouth in prayer, and will make supplication for his sins. For if it shall please the great Lord, he will fill him with the spirit of understanding: And he will pour forth the words of his wisdom as showers, and in his prayer he will confess the Lord. And he shall direct his counsel, and his knowledge, and in his secrets shall he meditate. He shall shew forth the discipline he hath learned, and shall glory in the law of the covenant of the Lord. Many shall praise his wisdom, and it shall never be forgotten. The memory of him shall not depart away, and his name shall be in request from generation to generation. Nations shall declare his wisdom, and the church shall shew forth his praise.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "RESPONSORIAL_PSALM",
+              "sourceKey": "reading-1009-newman-psalm-40",
+              "readingOrder": 2,
+              "citationRef": "Psalm 40:2 and 4ab, 7-8a, 8b-9, 10, 11",
+              "scriptureRef": "Psalm 39:2, 4, 7-8, 8-9, 10, 11",
+              "response": "Here am I, Lord; I come to do your will.",
+              "text": "R. Here am I, Lord; I come to do your will.\n\nWith expectation I have waited for the Lord, and he was attentive to me.\nAnd he put a new canticle into my mouth, a song to our God.\n\nR. Here am I, Lord; I come to do your will.\n\nSacrifice and oblation thou didst not desire: but thou hast fitted ears to me.\nBurnt offering and sin offering thou didst not require: then said I: Behold I come.\n\nR. Here am I, Lord; I come to do your will.\n\nIn the head of the book it is written of me that I should do thy will: O my God, I have desired it, and thy law in the midst of my heart.\n\nR. Here am I, Lord; I come to do your will.\n\nI have declared thy justice in a great church: lo, I will not restrain my lips: O Lord, thou knowest it.\n\nR. Here am I, Lord; I come to do your will.\n\nI have not hid thy justice within my heart: I have declared thy truth and thy salvation. I have not concealed thy mercy and thy truth from a great council.\n\nR. Here am I, Lord; I come to do your will.",
+              "textStatus": "VERIFIED_EXACT"
+            },
+            {
+              "type": "GOSPEL",
+              "sourceKey": "reading-1009-newman-gospel-matt13",
+              "readingOrder": 3,
+              "citationRef": "Matthew 13:47-52",
+              "scriptureRef": "Matthew 13:47-52",
+              "text": "At that time: Jesus said to the crowds: Again the kingdom of heaven is like to a net cast into the sea, and gathering together of all kinds of fishes. Which, when it was filled, they drew out, and sitting by the shore, chose out the good into vessels, but the bad they cast forth. So shall it be at the end of the world. The angels shall go out, and shall separate the wicked from among the just. And shall cast them into the furnace of fire: there shall be weeping and gnashing of teeth. Have ye understood all these things? They say to him: Yes. He said unto them: Therefore every scribe instructed in the kingdom of heaven, is like to a man who is a householder, who bringeth forth out of his treasure new things and old.",
+              "textStatus": "VERIFIED_EXACT"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

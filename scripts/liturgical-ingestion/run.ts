@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
 import { SourceIngestionPackage } from './src/types.js';
 import { validateIngestionPackage } from './src/validator.js';
 import { generateReconciliationReport, writeReportFiles } from './src/reconciliation.js';
@@ -76,7 +78,15 @@ async function main() {
       console.log(`  Inserted Days: ${result?.insertedDays}`);
       console.log(`  Updated Days: ${result?.updatedDays}`);
       console.log(`  Inserted Celebrations: ${result?.insertedCelebrations}`);
+      console.log(`  Updated Celebrations: ${result?.updatedCelebrations}`);
+      console.log(`  Inserted ReadingSets: ${result?.insertedReadingSets}`);
+      console.log(`  Updated ReadingSets: ${result?.updatedReadingSets}`);
       console.log(`  Inserted Readings: ${result?.insertedReadings}`);
+      console.log(`  Updated Readings: ${result?.updatedReadings}`);
+      console.log(`  Omitted Retained Sets: ${result?.omittedRetainedSets}`);
+      console.log(`  Omitted Retained Readings: ${result?.omittedRetainedReadings}`);
+      console.log(`  Explicitly Deleted Sets: ${result?.explicitlyDeletedSets}`);
+      console.log(`  Explicitly Deleted Readings: ${result?.explicitlyDeletedReadings}`);
       console.log(`  Failed Days: ${result?.failedDays}`);
     } catch (err) {
       console.error(`\nAPPLY FAILED AND ROLLED BACK: ${(err as Error).message}`);

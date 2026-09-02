@@ -168,6 +168,13 @@ export function resolveApplicationDate(targetDate?: Date): {
 }
 
 /**
+ * Queries the liturgical companion payload for a specific target date.
+ */
+export async function getLiturgicalDayByDate(targetDate: Date): Promise<TodayLiturgicalDayResult> {
+  return getTodayLiturgicalDay(targetDate);
+}
+
+/**
  * Primary domain query service for the daily liturgical companion payload.
  */
 export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLiturgicalDayResult> {
@@ -247,10 +254,9 @@ export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLit
       };
     });
 
-    // Sort: Principal celebration is precedenceOrder === 1, secondary are precedenceOrder > 1
+    // Sort: Principal celebration is an obligatory celebration (precedenceOrder === 1 and not optional)
     const principalCelebration =
-      formattedCelebrations.find((c) => c.precedenceOrder === 1) ||
-      (formattedCelebrations.length > 0 ? formattedCelebrations[0] : null);
+      formattedCelebrations.find((c) => c.precedenceOrder === 1 && !c.isOptional) || null;
 
     const secondaryCelebrations = formattedCelebrations.filter(
       (c) => c.id !== principalCelebration?.id

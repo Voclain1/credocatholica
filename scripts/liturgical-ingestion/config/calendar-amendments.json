@@ -1,0 +1,37 @@
+[
+  {
+    "id": "amendment-teresa-calcutta-0905",
+    "effectiveYear": 2025,
+    "month": 9,
+    "day": 5,
+    "datePattern": "09-05",
+    "title": "Saint Teresa of Calcutta, Virgin",
+    "rank": "OPTIONAL_MEMORIAL",
+    "color": "WHITE",
+    "vaticanLectionaryNumber": "635a",
+    "usccbLectionaryNumber": "635A",
+    "storedLectionaryNumber": "635a",
+    "decreeSource": "Dicastery for Divine Worship and the Discipline of the Sacraments",
+    "firstReading": "Isaiah 58:6-11",
+    "psalm": "Psalm 34:2-3, 4-5, 6-7, 8-9, 10-11",
+    "gospelLong": "Matthew 25:31-46",
+    "gospelShort": "Matthew 25:31-40"
+  },
+  {
+    "id": "amendment-john-henry-newman-1009",
+    "effectiveYear": 2026,
+    "month": 10,
+    "day": 9,
+    "datePattern": "10-09",
+    "title": "Saint John Henry Newman, Priest and Doctor of the Church",
+    "rank": "OPTIONAL_MEMORIAL",
+    "color": "WHITE",
+    "vaticanLectionaryNumber": "655bis",
+    "usccbLectionaryNumber": "655A",
+    "storedLectionaryNumber": "655bis",
+    "decreeSource": "Dicastery for Divine Worship and the Discipline of the Sacraments (2026)",
+    "firstReading": "Sirach 39:1-10",
+    "psalm": "Psalm 40:2 and 4ab, 7-8a, 8b-9, 10, 11",
+    "gospel": "Matthew 13:47-52"
+  }
+]

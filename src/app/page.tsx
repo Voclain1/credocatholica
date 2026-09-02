@@ -1,24 +1,38 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { EditorialLink } from '@/components/ui/EditorialLink';
-import { EmptyState } from '@/components/ui/EmptyState';
 import { LiturgicalBadge } from '@/components/ui/LiturgicalBadge';
 import { getTodayLiturgicalSummary } from '@/lib/liturgy/service';
+import { prisma } from '@/lib/prisma';
 
-// Force dynamic server-side rendering for homepage to fetch today's date & database state dynamically
 export const dynamic = 'force-dynamic';
 
+export const metadata: Metadata = {
+  title: 'CredoCatholica — Global Catholic Companion & Reference Library',
+  description:
+    'CredoCatholica is a structured Catholic digital platform providing daily liturgical companionship, a permanent Catholic reference library, and structured formation pathways.',
+};
+
 export default async function HomePage() {
-  // Fetch today's liturgical day safely via domain service (Server Component boundary)
   const todaySummary = await getTodayLiturgicalSummary();
 
+  const [saintsCount, prayersCount, novenasCount, catechismCount, pathwaysCount] = await Promise.all([
+    prisma.saint.count({ where: { publicationStatus: 'PUBLISHED' } }),
+    prisma.prayer.count({ where: { publicationStatus: 'PUBLISHED' } }),
+    prisma.novena.count({ where: { publicationStatus: 'PUBLISHED' } }),
+    prisma.catechismEntry.count({ where: { publicationStatus: 'PUBLISHED' } }),
+    prisma.formationPathway.count({ where: { publicationStatus: 'PUBLISHED' } }),
+  ]);
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-      {/* SECTION A: HERO / INTRODUCTION */}
-      <section className="hero-section">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem', paddingBottom: '4rem' }}>
+      {/* HERO SECTION */}
+      <section className="hero-section" style={{ paddingTop: '3.5rem', paddingBottom: '3.5rem', backgroundColor: 'var(--color-surface)', borderBottom: '1px solid var(--color-border)' }}>
         <Container>
-          <div style={{ maxWidth: '44rem', margin: '0 auto', textAlign: 'center' }}>
+          <div style={{ maxWidth: '46rem', margin: '0 auto', textAlign: 'center' }}>
             <span
               style={{
                 display: 'inline-block',
@@ -30,9 +44,9 @@ export default async function HomePage() {
                 marginBottom: '1rem',
               }}
             >
-              Catholic Platform & Reference Library
+              Catholic Companion & Digital Reference Platform
             </span>
-            <h1 className="hero-headline">
+            <h1 className="hero-headline" style={{ fontFamily: 'var(--font-serif)', fontSize: '3rem', color: 'var(--color-primary)', margin: '0 0 1.25rem' }}>
               Faith Received. Truth Preserved. Life Formed.
             </h1>
             <p
@@ -43,23 +57,58 @@ export default async function HomePage() {
                 marginBottom: '2rem',
               }}
             >
-              CredoCatholica is a structured Catholic digital companion providing daily liturgical texts, a permanent reference library, and structured formation pathways.
+              CredoCatholica provides daily liturgical companionship, a permanent Catholic reference library, traditional prayers, 9-day novenas, and structured formation pathways.
             </p>
+
+            {/* Search Bar Form */}
+            <form action="/search" method="GET" style={{ display: 'flex', gap: '0.5rem', maxWidth: '32rem', margin: '0 auto 2rem' }}>
+              <input
+                type="text"
+                name="q"
+                placeholder="Search saints, prayers, novenas, Catechism, documents..."
+                required
+                minLength={2}
+                style={{
+                  flex: 1,
+                  padding: '0.75rem 1rem',
+                  borderRadius: 'var(--radius-sm)',
+                  border: '1px solid var(--color-border)',
+                  backgroundColor: 'var(--color-background)',
+                  fontSize: '1rem',
+                  color: 'var(--color-primary)',
+                }}
+              />
+              <button
+                type="submit"
+                style={{
+                  padding: '0.75rem 1.5rem',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: 'var(--color-primary)',
+                  color: '#ffffff',
+                  fontWeight: 600,
+                  border: 'none',
+                  cursor: 'pointer',
+                  fontSize: '0.9375rem',
+                }}
+              >
+                Search
+              </button>
+            </form>
 
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
               <EditorialLink href="/today" variant="primary">
-                Today&apos;s Liturgy
+                Today&apos;s Liturgy →
               </EditorialLink>
               <EditorialLink href="/#library" variant="secondary">
-                Explore the Library
+                Explore Reference Library
               </EditorialLink>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* SECTION B: TODAY'S LITURGY */}
-      <section id="today" className="section-padding">
+      {/* TODAY'S LITURGY PREVIEW */}
+      <section id="today">
         <Container>
           <SectionHeading
             eyebrow="Pillar I — Daily Companion"
@@ -75,7 +124,7 @@ export default async function HomePage() {
                 border: '1px solid var(--color-border)',
                 borderRadius: 'var(--radius-md)',
                 padding: '2rem',
-                maxWidth: '42rem',
+                maxWidth: '44rem',
                 margin: '0 auto',
                 boxShadow: '0 2px 8px rgba(0, 0, 0, 0.03)',
               }}
@@ -98,456 +147,159 @@ export default async function HomePage() {
                     style={{
                       fontFamily: 'var(--font-serif)',
                       fontSize: '1.5rem',
+                      fontWeight: 600,
                       color: 'var(--color-primary)',
-                      marginTop: '0.25rem',
+                      margin: '0.25rem 0 0',
                     }}
                   >
-                    {todaySummary.data.primaryCelebration?.title || todaySummary.data.season.name}
+                    {todaySummary.data.principalCelebration?.title || todaySummary.data.season.name}
                   </h3>
                 </div>
+
                 <LiturgicalBadge
-                  color={todaySummary.data.primaryCelebration?.color || todaySummary.data.liturgicalColor}
-                  label={todaySummary.data.season.name}
+                  color={todaySummary.data.liturgicalColor}
+                  label={todaySummary.data.liturgicalColor}
                 />
               </div>
 
-              {todaySummary.data.notes && (
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6 }}>
-                  {todaySummary.data.notes}
-                </p>
-              )}
+              <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1.5rem' }}>
+                Season: <strong>{todaySummary.data.season.name}</strong> • Readings Count: <strong>{todaySummary.data.readings.length}</strong>
+              </p>
+
+              <div style={{ textAlign: 'center' }}>
+                <EditorialLink href="/today" variant="primary">
+                  Open Today&apos;s Mass Readings →
+                </EditorialLink>
+              </div>
             </div>
-          ) : todaySummary.status === 'ERROR' ? (
-            <EmptyState
-              title="Liturgical Service Temporarily Unavailable"
-              message="The daily liturgical query service encountered a temporary error. Please try again shortly."
-            />
           ) : (
-            <EmptyState
-              title="Daily Liturgical Content Being Prepared"
-              message="Liturgical calendar calculations and verified reading texts are being prepared for publication."
-            />
+            <div style={{ textAlign: 'center', padding: '2rem' }}>
+              <EditorialLink href="/today" variant="primary">
+                Open Daily Liturgical Companion →
+              </EditorialLink>
+            </div>
           )}
         </Container>
       </section>
 
-      {/* SECTION C: CATHOLIC REFERENCE LIBRARY */}
-      <section
-        id="library"
-        className="section-padding"
-        style={{
-          backgroundColor: 'var(--color-surface-elevated)',
-          borderTop: '1px solid var(--color-border)',
-          borderBottom: '1px solid var(--color-border)',
-        }}
-      >
+      {/* CATHOLIC REFERENCE LIBRARY GRID */}
+      <section id="library">
         <Container>
           <SectionHeading
-            eyebrow="Pillar II — Reference Library"
-            title="Permanent Catholic Library"
-            subtitle="Authoritative Catholic reference materials cataloged and cross-referenced relationally."
+            eyebrow="Pillar II — Reference Treasury"
+            title="Catholic Reference Library"
+            subtitle="Explore canonical Saints, traditional Catholic prayers, 9-day novenas, Catechism entries, and conciliar documents."
             centered
           />
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '1.5rem',
-              marginTop: '2rem',
-            }}
-          >
-            {/* Library Card 1: Saints */}
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>
+            {/* Saints Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.375rem',
-                    color: 'var(--color-primary)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  Saints & Martyrs
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  {saintsCount} Profiles Ingested
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Catholic Saints & Hagiography
                 </h3>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Canonical biographies, feast days, patronages, religious orders, and historical source confidence levels.
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Biographies, feast days, patronages, and vocations of holy men and women.
                 </p>
               </div>
-              <EditorialLink href="/#library" variant="subtle">
-                Saints Domain &rarr;
-              </EditorialLink>
-            </div>
+              <Link href="/saints" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Browse Saints Library →
+              </Link>
+            </article>
 
-            {/* Library Card 2: Prayers */}
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+            {/* Prayers Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.375rem',
-                    color: 'var(--color-primary)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  Prayers & Devotions
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  {prayersCount} Traditional Formulas
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Catholic Prayers Treasury
                 </h3>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Official Latin and English prayer formulas, Marian devotions, litanies, creeds, and seasonal prayers.
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Traditional Catholic prayers, Marian antiphons, and creeds with Latin texts.
                 </p>
               </div>
-              <EditorialLink href="/#library" variant="subtle">
-                Prayers Domain &rarr;
-              </EditorialLink>
-            </div>
+              <Link href="/prayers" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Browse Prayers Treasury →
+              </Link>
+            </article>
 
-            {/* Library Card 3: Novenas */}
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+            {/* Novenas Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.375rem',
-                    color: 'var(--color-primary)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  Novenas
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  {novenasCount} 9-Day Devotions
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Catholic Novenas Library
                 </h3>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Structured nine-day devotional series with daily intentions, meditations, and associated saint intercessions.
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Traditional nine-day novenas with daily intentions, reflections, and full day navigation.
                 </p>
               </div>
-              <EditorialLink href="/#library" variant="subtle">
-                Novenas Domain &rarr;
-              </EditorialLink>
-            </div>
+              <Link href="/novenas" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Browse Novenas Library →
+              </Link>
+            </article>
 
-            {/* Library Card 4: Catechism */}
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+            {/* Catechism Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.375rem',
-                    color: 'var(--color-primary)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  Catechism (CCC)
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  {catechismCount} Paragraph References
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Catechism of the Catholic Church
                 </h3>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Paragraph-accurate cross-references across the four pillars of Catholic doctrine and moral teaching.
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Reference entries structured across the Four Pillars of Catholic Doctrine.
                 </p>
               </div>
-              <EditorialLink href="/#library" variant="subtle">
-                Catechism Domain &rarr;
-              </EditorialLink>
-            </div>
+              <Link href="/catechism" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Browse Catechism Index →
+              </Link>
+            </article>
 
-            {/* Library Card 5: Church Documents */}
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '1.75rem',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-              }}
-            >
+            {/* Church Documents Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-serif)',
-                    fontSize: '1.375rem',
-                    color: 'var(--color-primary)',
-                    marginBottom: '0.5rem',
-                  }}
-                >
-                  Church Documents
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  Conciliar & Papal Magisterium
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Church Documents & Constitutions
                 </h3>
-                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.5, marginBottom: '1.25rem' }}>
-                  Papal encyclicals, apostolic exhortations, conciliar constitutions, decrees, and declarations.
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Vatican II Constitutions, Papal Encyclicals, and Apostolic Exhortations.
                 </p>
               </div>
-              <EditorialLink href="/#library" variant="subtle">
-                Documents Domain &rarr;
-              </EditorialLink>
-            </div>
-          </div>
-        </Container>
-      </section>
+              <Link href="/church-documents" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Browse Church Documents →
+              </Link>
+            </article>
 
-      {/* SECTION D: FORMATION PATHWAYS */}
-      <section id="formation" className="section-padding">
-        <Container>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '3rem',
-              alignItems: 'center',
-            }}
-          >
-            <div>
-              <span
-                style={{
-                  display: 'block',
-                  fontSize: '0.8125rem',
-                  fontWeight: 600,
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  color: 'var(--color-sacred-gold)',
-                  marginBottom: '0.5rem',
-                }}
-              >
-                Pillar III — Formation
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: '2.25rem',
-                  fontWeight: 600,
-                  color: 'var(--color-primary)',
-                  marginBottom: '1rem',
-                }}
-              >
-                Structured Formation Pathways
-              </h2>
-              <p
-                style={{
-                  fontSize: '1.0625rem',
-                  color: 'var(--color-text-muted)',
-                  lineHeight: 1.6,
-                  marginBottom: '1.5rem',
-                }}
-              >
-                Systematic, module-based Catholic instruction designed to guide believers through theology, sacraments, prayer, and moral life in Christ.
-              </p>
-              <EditorialLink href="/#formation" variant="secondary">
-                View Pathways &rarr;
-              </EditorialLink>
-            </div>
-
-            <div
-              style={{
-                backgroundColor: 'var(--color-surface)',
-                border: '1px solid var(--color-border)',
-                borderRadius: 'var(--radius-md)',
-                padding: '2rem',
-                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.02)',
-              }}
-            >
-              <h3
-                style={{
-                  fontFamily: 'var(--font-serif)',
-                  fontSize: '1.25rem',
-                  color: 'var(--color-primary)',
-                  marginBottom: '1rem',
-                  paddingBottom: '0.75rem',
-                  borderBottom: '1px solid var(--color-border)',
-                }}
-              >
-                Pathway Architecture
-              </h3>
-              <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.875rem' }}>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
-                  <span style={{ color: 'var(--color-sacred-gold)', fontWeight: 700 }}>01</span>
-                  <span style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)' }}>
-                    <strong>Ordered Sequences:</strong> Structured pathways comprising sequential modules and lessons.
-                  </span>
-                </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
-                  <span style={{ color: 'var(--color-sacred-gold)', fontWeight: 700 }}>02</span>
-                  <span style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)' }}>
-                    <strong>Magisterial Grounding:</strong> Cross-referenced directly to Catechism paragraphs and Council documents.
-                  </span>
-                </li>
-                <li style={{ display: 'flex', gap: '0.75rem' }}>
-                  <span style={{ color: 'var(--color-sacred-gold)', fontWeight: 700 }}>03</span>
-                  <span style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)' }}>
-                    <strong>Spiritual Depth:</strong> Integrating doctrinal knowledge with personal prayer and spiritual reflection.
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* SECTION E: EDITORIAL TRUST & ACCURACY */}
-      <section
-        id="editorial-standards"
-        className="section-padding"
-        style={{
-          backgroundColor: 'var(--color-primary)',
-          color: 'var(--color-background)',
-        }}
-      >
-        <Container>
-          <div style={{ maxWidth: '44rem', margin: '0 auto', textAlign: 'center' }}>
-            <span
-              style={{
-                display: 'inline-block',
-                fontSize: '0.8125rem',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.1em',
-                color: 'var(--color-sacred-gold)',
-                marginBottom: '0.75rem',
-              }}
-            >
-              Fidelitas in Doctrina
-            </span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontSize: '2.25rem',
-                fontWeight: 600,
-                color: 'var(--color-background)',
-                marginBottom: '1rem',
-              }}
-            >
-              Strict Editorial Integrity & Sourcing
-            </h2>
-            <p
-              style={{
-                fontSize: '1.0625rem',
-                color: 'rgba(245, 240, 232, 0.85)',
-                lineHeight: 1.6,
-                marginBottom: '2rem',
-              }}
-            >
-              CredoCatholica strictly enforces Catholic doctrinal accuracy. Canonical Scripture is sourced from the public domain Douay-Rheims Bible, official prayers are preserved verbatim, and historical saint records maintain explicit source confidence classifications.
-            </p>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-                gap: '1.5rem',
-                textAlign: 'left',
-                paddingTop: '1.5rem',
-                borderTop: '1px solid rgba(245, 240, 232, 0.15)',
-              }}
-            >
+            {/* Formation Card */}
+            <article style={{ backgroundColor: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', padding: '1.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h4 style={{ color: 'var(--color-sacred-gold)', fontSize: '1rem', marginBottom: '0.25rem' }}>
-                  Canonical Accuracy
-                </h4>
-                <p style={{ fontSize: '0.875rem', color: 'rgba(245, 240, 232, 0.7)' }}>
-                  Zero paraphrasing of canonical Scripture or official prayer text.
+                <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase' }}>
+                  {pathwaysCount} Structured Pathways
+                </span>
+                <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', margin: '0.5rem 0 0.75rem' }}>
+                  Structured Formation Pathways
+                </h3>
+                <p style={{ fontSize: '0.9375rem', color: 'var(--color-text-muted)', lineHeight: 1.6, marginBottom: '1rem' }}>
+                  Guided study pathways through Catholic theology, the Holy Mass, and prayer.
                 </p>
               </div>
-              <div>
-                <h4 style={{ color: 'var(--color-sacred-gold)', fontSize: '1rem', marginBottom: '0.25rem' }}>
-                  Historical Provenance
-                </h4>
-                <p style={{ fontSize: '0.875rem', color: 'rgba(245, 240, 232, 0.7)' }}>
-                  Clear distinction between documented history, traditional sources, and pious tradition.
-                </p>
-              </div>
-              <div>
-                <h4 style={{ color: 'var(--color-sacred-gold)', fontSize: '1rem', marginBottom: '0.25rem' }}>
-                  Doctrinal Review
-                </h4>
-                <p style={{ fontSize: '0.875rem', color: 'rgba(245, 240, 232, 0.7)' }}>
-                  Editorial review workflow tracking source verification and doctrinal alignment.
-                </p>
-              </div>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* SECTION F: FINAL DISCOVERY AREA */}
-      <section className="section-padding">
-        <Container>
-          <div
-            style={{
-              padding: '3rem 2rem',
-              backgroundColor: 'var(--color-surface-elevated)',
-              border: '1px solid var(--color-border)',
-              borderRadius: 'var(--radius-md)',
-              textAlign: 'center',
-              maxWidth: '48rem',
-              margin: '0 auto',
-            }}
-          >
-            <h2
-              style={{
-                fontFamily: 'var(--font-serif)',
-                fontSize: '2rem',
-                fontWeight: 600,
-                color: 'var(--color-primary)',
-                marginBottom: '0.75rem',
-              }}
-            >
-              Begin Exploring CredoCatholica
-            </h2>
-            <p
-              style={{
-                fontSize: '1rem',
-                color: 'var(--color-text-muted)',
-                marginBottom: '1.75rem',
-                lineHeight: 1.5,
-              }}
-            >
-              Discover daily liturgical readings, explore saint biographies, and deepen your Catholic faith.
-            </p>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center' }}>
-              <EditorialLink href="/today" variant="primary">
-                Daily Liturgy
-              </EditorialLink>
-              <EditorialLink href="/#library" variant="secondary">
-                Reference Library
-              </EditorialLink>
-              <EditorialLink href="/#formation" variant="secondary">
-                Formation Pathways
-              </EditorialLink>
-            </div>
+              <Link href="/learn" style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                Explore Formation Pathways →
+              </Link>
+            </article>
           </div>
         </Container>
       </section>

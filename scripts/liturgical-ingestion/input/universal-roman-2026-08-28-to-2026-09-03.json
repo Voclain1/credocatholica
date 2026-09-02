@@ -4,7 +4,7 @@
     "sourceName": "Universal Roman Calendar & Douay-Rheims Reading Package",
     "sourceType": "CANONICAL_SCRIPTURE_AND_LITURGY",
     "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-08-28-to-2026-09-03",
-    "sourceVersion": "2.2.0",
+    "sourceVersion": "2.5.0",
     "extractionTimestamp": "2026-08-28T20:45:00Z",
     "periodCovered": {
       "start": "2026-08-28",
@@ -59,7 +59,8 @@
               "scriptureRef": "1 Corinthians 1:17-25",
               "text": "For Christ sent me not to baptize, but to preach the gospel: not in wisdom of speech, lest the cross of Christ should be made void. For the word of the cross, to them indeed that perish, is foolishness; but to them that are saved, that is, to us, it is the power of God. For it is written: I will destroy the wisdom of the wise, and the prudence of the prudent I will reject.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0828-proper-first-1cor1"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -68,7 +69,8 @@
               "scriptureRef": "Psalm 32:1-2, 4-5, 10-11",
               "text": "Rejoice in the Lord, O ye just: praise becometh the upright. Give praise to the Lord on the harp: sing to him with the psaltery, the instrument of ten strings. For the word of the Lord is right, and all his works are done with faithfulness. He loveth justice and judgment: the earth is full of the mercy of the Lord.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0828-proper-psalm-33"
             },
             {
               "type": "GOSPEL",
@@ -77,9 +79,11 @@
               "scriptureRef": "Matthew 25:1-13",
               "text": "Then shall the kingdom of heaven be like to ten virgins, who taking their lamps went out to meet the bridegroom and the bride. And five of them were foolish, and five wise. But the five foolish, taking their lamps, took no oil with them: But the wise took oil in their vessels with the lamps.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0828-proper-gospel-matt25"
             }
-          ]
+          ],
+          "sourceKey": "set-0828-proper-430"
         }
       ]
     },
@@ -127,7 +131,8 @@
               "scriptureRef": "Jeremias 1:17-19",
               "text": "Thou therefore gird up thy loins, and arise, and speak to them all that I command thee. Be not afraid at their presence: for I will make thee not to fear their countenance. For behold I have made thee this day a fortified city, and a pillar of iron, and a wall of brass, over all the land.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-proper-first-jer1"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -136,7 +141,8 @@
               "scriptureRef": "Psalm 70:1-2, 3-4, 5-6, 15, 17",
               "text": "In thee, O Lord, I have hoped, let me never be put to confusion: deliver me in thy justice, and rescue me. Incline thy ear unto me, and save me. Be thou unto me a God, a protector, and a place of strength: that thou mayst make me safe. Deliver me, O my God, out of the hand of the sinner. For thou art my patience, O Lord: my hope, O Lord, from my youth. By thee have I been confirmed from the womb: from my mother's womb thou art my protector. My mouth shall show forth thy justice; thy salvation all the day long. Thou hast taught me, O God, from my youth: and till now I will declare thy wonderful works.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-proper-psalm-71"
             },
             {
               "type": "GOSPEL",
@@ -145,9 +151,11 @@
               "scriptureRef": "Mark 6:17-29",
               "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias the wife of Philip his brother, because he had married her. For John said to Herod: It is not lawful for thee to have thy brother's wife.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-proper-gospel-mark6"
             }
-          ]
+          ],
+          "sourceKey": "set-0829-proper-634"
         },
         {
           "context": "WEEKDAY",
@@ -156,7 +164,7 @@
           "setOrder": 2,
           "isCanonicalDefault": null,
           "sourceUrl": "https://bible.usccb.org/bible/readings/082926.cfm",
-          "lectionaryNumber": "634",
+          "lectionaryNumber": "430",
           "readings": [
             {
               "type": "FIRST_READING",
@@ -165,7 +173,8 @@
               "scriptureRef": "1 Corinthians 1:26-31",
               "text": "For see your vocation, brethren, that there are not many wise according to the flesh, not many mighty, not many noble.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-weekday-first-1cor1"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -174,7 +183,8 @@
               "scriptureRef": "Psalm 32:12-13, 14-15, 20-21",
               "text": "Blessed is the nation whose God is the Lord: the people whom he hath chosen for his inheritance.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-weekday-psalm-33"
             },
             {
               "type": "GOSPEL",
@@ -183,9 +193,11 @@
               "scriptureRef": "Mark 6:17-29",
               "text": "For Herod himself had sent and apprehended John, and bound him in prison for the sake of Herodias the wife of Philip his brother, because he had married her.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0829-weekday-gospel-mark6"
             }
-          ]
+          ],
+          "sourceKey": "set-0829-weekday-430"
         }
       ]
     },
@@ -218,7 +230,8 @@
               "scriptureRef": "Jeremias 20:7-9",
               "text": "Thou hast deceived me, O Lord, and I am deceived: thou hast been stronger than I, and thou hast prevailed. I am become a laughing-stock all the day, all scoff at me. For many days I have spoken, crying out iniquity, and crying out devastation: and the word of the Lord is made a reproach to me, and a derision all the day. Then I said: I will not make mention of him, nor speak any more in his name: and there came in my heart as a burning fire, shut up in my bones, and I was wearied, not being able to bear it.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0830-sunday-first-jer20"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -227,7 +240,8 @@
               "scriptureRef": "Psalm 62:2, 3-4, 5-6, 8-9",
               "text": "O God, my God, to thee do I watch at break of day. For thee my soul hath thirsted; for thee my flesh, O how many ways! In a desert land, and where there is no way, and no water: so in the sanctuary have I appeared before thee, to see thy power and thy glory. For thy mercy is better than lives: thee my lips shall praise. Thus will I bless thee all my life long: and in thy name I will lift up my hands.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0830-sunday-psalm-63"
             },
             {
               "type": "SECOND_READING",
@@ -236,7 +250,8 @@
               "scriptureRef": "Romans 12:1-2",
               "text": "I beseech you therefore, brethren, by the mercy of God, that you present your bodies a living sacrifice, holy, pleasing unto God, your reasonable service. And be not conformed to this world; but be reformed in the newness of your mind, that you may prove what is the good, and the acceptable, and the perfect will of God.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0830-sunday-second-rom12"
             },
             {
               "type": "GOSPEL",
@@ -245,9 +260,11 @@
               "scriptureRef": "Matthew 16:21-27",
               "text": "From that time Jesus began to show to his disciples, that he must go to Jerusalem, and suffer many things from the ancients and scribes and chief priests, and be put to death, and the third day rise again. And Peter taking him, began to rebuke him, saying: Lord, be it far from thee, this shall not be unto thee. Who turning, said to Peter: Go behind me, Satan, thou art a scandal unto me: because thou savourest not the things that are of God, but the things that are of men.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0830-sunday-gospel-matt16"
             }
-          ]
+          ],
+          "sourceKey": "set-0830-sunday-124"
         }
       ]
     },
@@ -280,7 +297,8 @@
               "scriptureRef": "1 Corinthians 2:1-5",
               "text": "And I, brethren, when I came to you, came not in loftiness of speech or of wisdom, declaring unto you the testimony of Christ. For I judged not myself to know anything among you, but Jesus Christ, and him crucified.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0831-weekday-first-1cor2"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -289,7 +307,8 @@
               "scriptureRef": "Psalm 118:97, 98, 99, 100, 101, 102",
               "text": "O how have I loved thy law, O Lord! it is my meditation all the day. Through thy commandment thou hast made me wiser than my enemies: for it is ever with me.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0831-weekday-psalm-119"
             },
             {
               "type": "GOSPEL",
@@ -298,9 +317,11 @@
               "scriptureRef": "Luke 4:16-30",
               "text": "And he came to Nazareth, where he was brought up: and he went into the synagogue, according to his custom, on the sabbath day; and he rose up to read. And the book of Isaias the prophet was delivered unto him.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0831-weekday-gospel-luke4"
             }
-          ]
+          ],
+          "sourceKey": "set-0831-weekday-431"
         }
       ]
     },
@@ -333,7 +354,8 @@
               "scriptureRef": "1 Corinthians 2:10-16",
               "text": "For the Spirit searcheth all things, yea, the deep things of God. For what man knoweth the things of a man, but the spirit of a man that is in him? So the things also that are of God no man knoweth, but the Spirit of God. Now we have received not the spirit of this world, but the Spirit that is of God: that we may know the things that are given us from God. Which things also we speak, not in the learned words of human wisdom, but in the doctrine of the Spirit, comparing spiritual things with spiritual. But the sensual man perceiveth not these things that are of the Spirit of God: for it is foolishness to him, and he cannot understand, because it is spiritually examined. But the spiritual man judgeth all things: and he himself is judged of no man. For who hath known the mind of the Lord, that he may instruct him? But we have the mind of Christ.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0901-weekday-first-1cor2"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -342,7 +364,8 @@
               "scriptureRef": "Psalm 144:8-9, 10-11, 12-13, 14",
               "text": "The Lord is gracious and merciful: patient, and plenteous in mercy. The Lord is sweet to all: and his tender mercies are over all his works. Let all thy works, O Lord, praise thee: and let thy saints bless thee. They shall speak of the glory of thy kingdom: and shall tell of thy power. To make his might known to the sons of men: and the glory of the magnificence of his kingdom. Thy kingdom is a kingdom of all ages: and thy dominion endureth throughout all generations. The Lord is faithful in all his words: and holy in all his works. The Lord lifteth up all that fall: and setteth up all that are cast down.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0901-weekday-psalm-145"
             },
             {
               "type": "GOSPEL",
@@ -351,9 +374,11 @@
               "scriptureRef": "Luke 4:31-37",
               "text": "And he went down to Capharnaum, a city of Galilee; and there he taught them on the sabbath days. And they were astonished at his doctrine: for his speech was with power.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0901-weekday-gospel-luke4"
             }
-          ]
+          ],
+          "sourceKey": "set-0901-weekday-432"
         }
       ]
     },
@@ -386,7 +411,8 @@
               "scriptureRef": "1 Corinthians 3:1-9",
               "text": "And I, brethren, could not speak to you as unto spiritual, but as unto carnal. As unto little ones in Christ, I gave you milk to drink, not meat: for you were not able as yet.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0902-weekday-first-1cor3"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -395,7 +421,8 @@
               "scriptureRef": "Psalm 32:12-13, 14-15, 20-21",
               "text": "Blessed is the nation whose God is the Lord: the people whom he hath chosen for his inheritance. The Lord hath looked from heaven: he hath beheld all the sons of men.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0902-weekday-psalm-33"
             },
             {
               "type": "GOSPEL",
@@ -404,9 +431,11 @@
               "scriptureRef": "Luke 4:38-44",
               "text": "And Jesus rising up out of the synagogue, went into Simon's house. And Simon's wife's mother was taken with a great fever; and they besought him for her.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0902-weekday-gospel-luke4"
             }
-          ]
+          ],
+          "sourceKey": "set-0902-weekday-433"
         }
       ]
     },
@@ -454,7 +483,8 @@
               "scriptureRef": "1 Corinthians 3:18-23",
               "text": "Let no man deceive himself. If any man among you seem to be wise in this world, let him become a fool, that he may be wise. For the wisdom of this world is foolishness with God.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0903-proper-first-1cor3"
             },
             {
               "type": "RESPONSORIAL_PSALM",
@@ -463,7 +493,8 @@
               "scriptureRef": "Psalm 23:1-2, 3-4, 5-6",
               "text": "The world, and all they that dwell therein. For he hath founded it upon the seas: and hath prepared it upon the rivers. Who shall ascend into the mountain of the Lord: or who shall stand in his holy place? The innocent in hands, and clean of heart. He shall receive a blessing from the Lord: and mercy from God his Saviour. This is the generation of them that seek him, of them that seek the face of the God of Jacob.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0903-proper-psalm-24"
             },
             {
               "type": "GOSPEL",
@@ -472,9 +503,11 @@
               "scriptureRef": "Luke 5:1-11",
               "text": "And it came to pass, that when the multitudes pressed upon him to hear the word of God, he stood by the lake of Genesareth, and saw two ships standing by the lake: but the fishermen were gone out of them, and were washing their nets.",
               "textStatus": "VERIFIED_EXACT",
-              "copyrightInfo": "Public Domain — Douay-Rheims Version, Challoner Revision"
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law.",
+              "sourceKey": "reading-0903-proper-gospel-luke5"
             }
-          ]
+          ],
+          "sourceKey": "set-0903-proper-434"
         }
       ]
     }

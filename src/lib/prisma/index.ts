@@ -1,6 +1,11 @@
 import pg from 'pg';
 import { PrismaPg } from '@prisma/adapter-pg';
 import { PrismaClient } from '@/generated/prisma/client';
+import { config } from 'dotenv';
+
+if (!process.env.DATABASE_URL) {
+  config({ path: '.env.local' });
+}
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;

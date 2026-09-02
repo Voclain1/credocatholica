@@ -208,6 +208,7 @@ model ReadingSet {
   celebrationId      String?
   celebration        Celebration?              @relation(fields: [celebrationId], references: [id], onDelete: SetNull)
   context            ReadingSetContext
+  sourceKey          String
   selectionStatus    ReadingSetSelectionStatus @default(SOLE_SET)
   label              String
   description        String?                   @db.Text
@@ -220,6 +221,7 @@ model ReadingSet {
 
   readings Reading[]
 
+  @@unique([liturgicalDayId, sourceKey])
   @@index([liturgicalDayId, setOrder])
   @@index([celebrationId])
 }
@@ -229,19 +231,21 @@ model Reading {
   readingSetId  String
   readingSet    ReadingSet           @relation(fields: [readingSetId], references: [id], onDelete: Cascade)
   type          ReadingType
+  sourceKey     String
   readingOrder  Int                  @default(1)
   citationRef   String
   scriptureRef  String?
   response      String?              @db.Text
   text          String               @db.Text
   textStatus    TextResolutionStatus @default(VERIFIED_EXACT)
-  copyrightInfo String               @default("Public Domain — Douay-Rheims Version, Challoner Revision")
+  copyrightInfo String
   createdAt     DateTime             @default(now())
   updatedAt     DateTime             @updatedAt
 
   reflections      Reflection[]
   migrationRecords MigrationRecord[]
 
+  @@unique([readingSetId, sourceKey])
   @@index([readingSetId, readingOrder])
 }
 

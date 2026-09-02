@@ -1,4 +1,4 @@
-import React from 'react';
+import Link from 'next/link';
 import { RelatedSaintSummary } from '@/lib/liturgy/service';
 
 interface RelatedSaintsProps {
@@ -43,9 +43,12 @@ export function RelatedSaints({ saint }: RelatedSaintsProps) {
         ✦
       </span>
       <div>
-        <span style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-primary)', display: 'block' }}>
-          {saint.name}
-        </span>
+        <Link
+          href={`/saints/${saint.slug}`}
+          style={{ fontSize: '0.875rem', fontWeight: 600, color: 'var(--color-primary)', display: 'block', textDecoration: 'underline' }}
+        >
+          {saint.name} →
+        </Link>
         <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)' }}>
           {formatEcclesialStatus(saint.ecclesialStatus)} {saint.titleTeaser ? `• ${saint.titleTeaser}` : ''}
         </span>

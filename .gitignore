@@ -23,13 +23,15 @@ pnpm-debug.log*
 # Prisma generated client / engine artifacts (if local)
 # prisma/generated/
 
-# Migration runtime reports & input packages
+# Migration & Liturgical Ingestion runtime reports & input packages
 scripts/wordpress-migration/reports/*.md
 scripts/wordpress-migration/reports/*.json
 !scripts/wordpress-migration/reports/.gitkeep
 scripts/wordpress-migration/input/*.json
 scripts/wordpress-migration/input/*.zip
 !scripts/wordpress-migration/input/.gitkeep
+scripts/liturgical-ingestion/reports/ingestion-report-*.json
+scripts/liturgical-ingestion/reports/ingestion-report-*.md
 
 # OS metadata
 .DS_Store

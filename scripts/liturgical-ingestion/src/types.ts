@@ -23,6 +23,8 @@ export interface SourcePackageMetadata {
   scriptureTranslation: string;
   licensingBasis: string;
   reviewerStatus: string;
+  packageType?: 'STANDARD_EXPANSION' | 'HISTORICAL_AMENDMENT' | string;
+  isHistoricalAmendment?: boolean;
 }
 
 export interface SourceCelebrationRecord {
@@ -43,6 +45,7 @@ export interface SourceCelebrationRecord {
 
 export interface SourceReadingRecord {
   type: ReadingType | string;
+  sourceKey?: string;
   readingOrder: number;
   citationRef: string;
   scriptureRef?: string;
@@ -54,6 +57,7 @@ export interface SourceReadingRecord {
 
 export interface SourceReadingSetRecord {
   context: ReadingSetContext | string;
+  sourceKey?: string;
   selectionStatus?: ReadingSetSelectionStatus | string;
   label: string;
   description?: string;
@@ -62,6 +66,29 @@ export interface SourceReadingSetRecord {
   sourceUrl: string;
   lectionaryNumber?: string;
   readings: SourceReadingRecord[];
+}
+
+export function getReadingSetSourceKey(set: SourceReadingSetRecord): string {
+  if (set.sourceKey && set.sourceKey.trim().length > 0) {
+    return set.sourceKey.trim();
+  }
+  return String(set.context);
+}
+
+export function getReadingSourceKey(reading: SourceReadingRecord): string {
+  if (reading.sourceKey && reading.sourceKey.trim().length > 0) {
+    return reading.sourceKey.trim();
+  }
+  return String(reading.type);
+}
+
+export interface ExplicitDeletionInstruction {
+  entityType: 'READING_SET' | 'READING';
+  sourceKey: string;
+  targetDayDate?: string;
+  targetSetSourceKey?: string;
+  reason: string;
+  reviewerNote?: string;
 }
 
 export interface SourceDayRecord {
@@ -78,10 +105,11 @@ export interface SourceDayRecord {
   celebrations: SourceCelebrationRecord[];
   readingSets?: SourceReadingSetRecord[];
   readings?: SourceReadingRecord[];
+  deletions?: ExplicitDeletionInstruction[];
 }
 
 export interface SourceIngestionPackage {
-  metadata: SourcePackageMetadata;
+  metadata: SourcePackageMetadata & { deletions?: ExplicitDeletionInstruction[] };
   records: SourceDayRecord[];
 }
 
@@ -150,7 +178,15 @@ export interface ReconciliationReport {
     insertedDays: number;
     updatedDays: number;
     insertedCelebrations: number;
+    updatedCelebrations: number;
+    insertedReadingSets: number;
+    updatedReadingSets: number;
     insertedReadings: number;
+    updatedReadings: number;
+    omittedRetainedSets: number;
+    omittedRetainedReadings: number;
+    explicitlyDeletedSets: number;
+    explicitlyDeletedReadings: number;
     failedDays: number;
   };
 }

@@ -19,7 +19,9 @@
     "liturgy:ingest": "tsx scripts/liturgical-ingestion/run.ts",
     "liturgy:ingest:fixtures": "tsx scripts/liturgical-ingestion/run.ts --fixtures",
     "liturgy:ingest:test": "tsx --test scripts/liturgical-ingestion/test/ingestion.test.ts",
-    "liturgy:ingest:apply": "tsx scripts/liturgical-ingestion/run.ts --apply"
+    "liturgy:ingest:apply": "tsx scripts/liturgical-ingestion/run.ts --apply",
+    "m1:ingest:test": "tsx --test scripts/m1-ingestion/test/m1-ingestion.test.ts",
+    "platform:test": "tsx --test scripts/m1-ingestion/test/full-platform.test.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

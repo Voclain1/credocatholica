@@ -1,0 +1,390 @@
+{
+  "metadata": {
+    "packageName": "universal-roman-2026-historical-amendment-001",
+    "sourceName": "General Roman Calendar Historical Amendment 001",
+    "sourceType": "CALENDAR_AMENDMENT",
+    "packageType": "HISTORICAL_AMENDMENT",
+    "isHistoricalAmendment": true,
+    "sourceUrl": "https://credocatholica.com/sources/universal-roman-2026-historical-amendment-001",
+    "sourceVersion": "2.5.0-AMENDMENT",
+    "extractionTimestamp": "2026-08-31T21:42:00.000Z",
+    "periodCovered": {
+      "start": "2026-09-05",
+      "end": "2026-10-09"
+    },
+    "scriptureTranslation": "Douay-Rheims Version (Challoner Revision)",
+    "licensingBasis": "Public Domain (Gutenberg eBook #1581)",
+    "reviewerStatus": "HUMAN_DOCTRINAL_REVIEWED"
+  },
+  "records": [
+    {
+      "date": "2026-09-05",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 22,
+      "yearCycle": "YEAR_B",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Saturday of the 22nd Week in Ordinary Time. Optional Memorial of Saint Teresa of Calcutta, Virgin. Historical amendment 001.",
+      "celebrations": [
+        {
+          "sourceKey": "celeb-0905-st-teresa-of-calcutta",
+          "title": "Saint Teresa of Calcutta, Virgin",
+          "slug": "saint-teresa-of-calcutta-virgin",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "precedenceOrder": 1,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint Teresa of Calcutta, Virgin (Decree of Dicastery for Divine Worship)."
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-0905-weekday-435",
+          "context": "WEEKDAY",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Weekday Mass Readings for Saturday of the 22nd Week in Ordinary Time (Lectionary 435)",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "435",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/090526.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-0905-weekday-first-1cor4",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "1 Corinthians 4:6b-15",
+              "scriptureRef": "1 Corinthians 4:6-15",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "That in us you may learn, that one be not puffed up against the other for another, above that which is written. For who distinguisheth thee? Or what hast thou that thou hast not received? And if thou hast received it, why dost thou glory, as if thou hadst not received it? You are now full; you are now become rich; you reign without us: and I would to God you did reign, that we also might reign with you. For I think that God hath set forth us apostles, the last, as it were men appointed to death: because we are made a spectacle to the world, and to angels, and to men. We are fools for Christ's sake, but you are wise in Christ; we are weak, but you are strong; you are honourable, but we without honour. Even unto this hour we both hunger and thirst, and are naked, and are buffeted, and have no fixed abode. And we labour, working with our own hands: we are reviled, and we bless; we are persecuted, and we suffer it. We are blasphemed, and we entreat; we are made as the refuse of this world, the offscouring of all even until now. I write not these things to confound you; but I admonish you as my dearest children. For if you have ten thousand instructors in Christ, yet not many fathers. For in Christ Jesus, by the gospel, I have begotten you.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-weekday-psalm-145",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 145:17-18, 19-20, 21",
+              "scriptureRef": "Psalm 144:17-18, 19-20, 21",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "The Lord is just in all his ways: and holy in all his works. The Lord is nigh unto all them that call upon him: to all that call upon him in truth. He will do the will of them that fear him: and he will hear their prayer, and save them. The Lord keepeth all them that love him; but all the wicked he will destroy. My mouth shall speak the praise of the Lord: and let all flesh bless his holy name for ever; yea, for ever and ever.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-weekday-gospel-luke6",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 6:1-5",
+              "scriptureRef": "Luke 6:1-5",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And it came to pass on the second first sabbath, that as he went through the corn fields, his disciples plucked the ears, and did eat, rubbing them in their hands. And some of the Pharisees said to them: Why do you that which is not lawful on the sabbath days? And Jesus answering them, said: Have you not read so much as this, what David did, when himself was hungry, and they that were with him: How he went into the house of God, and took and ate the loaves of proposition, and gave to them that were with him, which it is not lawful to eat but only for the priests? And he said to them: The Son of man is Lord also of the sabbath.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0905-proper-st-teresa-calcutta-635a-long",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper readings for Saint Teresa of Calcutta, Virgin (Lectionary 635a - Long Gospel Form)",
+          "description": "Proper readings for Saint Teresa of Calcutta, Virgin (Lectionary 635a - Long Gospel Form)",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "635a",
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-635a",
+          "readings": [
+            {
+              "sourceKey": "reading-0905-teresa-first-isa58",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Isaiah 58:6-11",
+              "scriptureRef": "Isaias 58:6-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Is not this rather the fast that I have chosen? loose the bands of wickedness, undo the bundles that oppress, let them that are broken go free, and break every burden. Deal thy bread to the hungry, and bring the needy and the harbourless into thy house: when thou shalt see one naked, cover him, and despise not thy own flesh. Then shall thy light break forth as the morning, and thy health shall speedily arise, and thy justice shall go before thy face, and the glory of the Lord shall gather thee up. Then shalt thou call, and the Lord shall hear: thou shalt cry, and he shall say: Here I am. If thou wilt take away the chain out of the midst of thee, and cease to stretch out the finger, and to speak that which profiteth not. When thou shalt pour out thy soul to the hungry, and shalt satisfy the afflicted soul, then shall thy light rise up in darkness, and thy darkness shall be as the noonday. And the Lord will give thee rest continually, and will fill thy soul with brightness, and deliver thy bones, and thou shalt be like a watered garden, and like a fountain of water whose waters shall not fail.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-teresa-psalm-34",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 34:2-3, 4-5, 6-7, 8-9, 10-11",
+              "scriptureRef": "Psalm 33:2-3, 4-5, 6-7, 8-9, 10-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "I will bless the Lord at all times: his praise shall be always in my mouth. In the Lord shall my soul be praised: let the meek hear and rejoice. O magnify the Lord with me; and let us extol his name together. I sought the Lord, and he heard me; and he delivered me from all my troubles. Come ye to him and be enlightened: and your faces shall not be confounded. This poor man cried, and the Lord heard him: and with his fear. The angel of the Lord shall encamp round about them that fear him: and shall deliver them. O taste, and see that the Lord is sweet: blessed is the man that hopeth in him. Fear the Lord, all ye his saints: for there is no want to them that fear him. The rich have wanted, and have suffered hunger: but they that seek the Lord shall not be deprived of any good.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-teresa-gospel-matt25-long",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Matthew 25:31-46",
+              "scriptureRef": "Matthew 25:31-46",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And when the Son of man shall come in his majesty, and all the angels with him, then shall he sit upon the seat of his majesty: And all nations shall be gathered together before him, and he shall separate them one from another, as the shepherd separateth the sheep from the goats: And he shall set the sheep on his right hand, but the goats on his left. Then shall the King say to them that shall be on his right hand: Come, ye blessed of my Father, possess you the kingdom prepared for you from the foundation of the world. For I was hungry, and you gave me to eat: I was thirsty, and you gave me to drink: I was a stranger, and you took me in: Naked, and you covered me: sick, and you visited me: I was in prison, and you came to me. Then shall the just answer him, saying: Lord, when saw we thee hungry, and fed thee; thirsty, and gave thee drink? And when saw we thee a stranger, and took thee in? or naked, and covered thee? Or when saw we thee sick or in prison, and came to thee? And the King answering, shall say to them: Amen I say to you, as long as you did it to one of these my least brethren, you did it to me. Then he shall say also to them that shall be on his left hand: Depart from me, you cursed, into everlasting fire, which was prepared for the devil and his angels. For I was hungry, and you gave me not to eat: I was thirsty, and you gave me not to drink. I was a stranger, and you took me not in: naked, and you covered me not: sick and in prison, and you did not visit me. Then they also shall answer him, saying: Lord, when did we see thee hungry, or thirsty, or a stranger, or naked, or sick, or in prison, and did not minister to thee? Then he shall answer them, saying: Amen I say to you, as long as you did it not to one of these least, neither did you it to me. And these shall go into everlasting punishment: but the just, into life everlasting.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-0905-proper-st-teresa-calcutta-635a-short",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper readings for Saint Teresa of Calcutta, Virgin (Lectionary 635a - Short Gospel Form)",
+          "description": "Proper readings for Saint Teresa of Calcutta, Virgin (Lectionary 635a - Short Gospel Form)",
+          "setOrder": 3,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "635a",
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-635a",
+          "readings": [
+            {
+              "sourceKey": "reading-0905-teresa-first-isa58",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Isaiah 58:6-11",
+              "scriptureRef": "Isaias 58:6-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Is not this rather the fast that I have chosen? loose the bands of wickedness, undo the bundles that oppress, let them that are broken go free, and break every burden. Deal thy bread to the hungry, and bring the needy and the harbourless into thy house: when thou shalt see one naked, cover him, and despise not thy own flesh. Then shall thy light break forth as the morning, and thy health shall speedily arise, and thy justice shall go before thy face, and the glory of the Lord shall gather thee up. Then shalt thou call, and the Lord shall hear: thou shalt cry, and he shall say: Here I am. If thou wilt take away the chain out of the midst of thee, and cease to stretch out the finger, and to speak that which profiteth not. When thou shalt pour out thy soul to the hungry, and shalt satisfy the afflicted soul, then shall thy light rise up in darkness, and thy darkness shall be as the noonday. And the Lord will give thee rest continually, and will fill thy soul with brightness, and deliver thy bones, and thou shalt be like a watered garden, and like a fountain of water whose waters shall not fail.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-teresa-psalm-34",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 34:2-3, 4-5, 6-7, 8-9, 10-11",
+              "scriptureRef": "Psalm 33:2-3, 4-5, 6-7, 8-9, 10-11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "I will bless the Lord at all times: his praise shall be always in my mouth. In the Lord shall my soul be praised: let the meek hear and rejoice. O magnify the Lord with me; and let us extol his name together. I sought the Lord, and he heard me; and he delivered me from all my troubles. Come ye to him and be enlightened: and your faces shall not be confounded. This poor man cried, and the Lord heard him: and with his fear. The angel of the Lord shall encamp round about them that fear him: and shall deliver them. O taste, and see that the Lord is sweet: blessed is the man that hopeth in him. Fear the Lord, all ye his saints: for there is no want to them that fear him. The rich have wanted, and have suffered hunger: but they that seek the Lord shall not be deprived of any good.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-0905-teresa-gospel-matt25-short",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Matthew 25:31-40",
+              "scriptureRef": "Matthew 25:31-40",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And when the Son of man shall come in his majesty, and all the angels with him, then shall he sit upon the seat of his majesty: And all nations shall be gathered together before him, and he shall separate them one from another, as the shepherd separateth the sheep from the goats: And he shall set the sheep on his right hand, but the goats on his left. Then shall the King say to them that shall be on his right hand: Come, ye blessed of my Father, possess you the kingdom prepared for you from the foundation of the world. For I was hungry, and you gave me to eat: I was thirsty, and you gave me to drink: I was a stranger, and you took me in: Naked, and you covered me: sick, and you visited me: I was in prison, and you came to me. Then shall the just answer him, saying: Lord, when saw we thee hungry, and fed thee; thirsty, and gave thee drink? And when saw we thee a stranger, and took thee in? or naked, and covered thee? Or when saw we thee sick or in prison, and came to thee? And the King answering, shall say to them: Amen I say to you, as long as you did it to one of these my least brethren, you did it to me.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "calendarCode": "UNIVERSAL",
+      "seasonCode": "ORDINARY_TIME",
+      "seasonWeek": 27,
+      "yearCycle": "YEAR_A",
+      "weekdayCycle": "YEAR_2",
+      "liturgicalColor": "GREEN",
+      "gloriaRequired": false,
+      "creedRequired": false,
+      "notes": "Friday of the 27th Week in Ordinary Time. Optional Memorials of Saint Denis and Companions (Red), Saint John Leonardi (White), and Saint John Henry Newman (White). Historical amendment 001.",
+      "celebrations": [
+        {
+          "sourceKey": "celeb-1009-st-denis",
+          "title": "Saint Denis, Bishop, and Companions, Martyrs",
+          "slug": "saint-denis-bishop-and-companions-martyrs",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "RED",
+          "precedenceOrder": 1,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint Denis and Companions."
+        },
+        {
+          "sourceKey": "celeb-1009-st-john-leonardi",
+          "title": "Saint John Leonardi, Priest",
+          "slug": "saint-john-leonardi-priest",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "precedenceOrder": 2,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint John Leonardi."
+        },
+        {
+          "sourceKey": "celeb-1009-st-john-henry-newman",
+          "title": "Saint John Henry Newman, Priest and Doctor of the Church",
+          "slug": "saint-john-henry-newman-priest-and-doctor-of-the-church",
+          "rank": "OPTIONAL_MEMORIAL",
+          "color": "WHITE",
+          "precedenceOrder": 3,
+          "isOptional": true,
+          "notes": "Optional Memorial of Saint John Henry Newman (Decree of Dicastery for Divine Worship)."
+        }
+      ],
+      "readingSets": [
+        {
+          "sourceKey": "set-1009-weekday-465",
+          "context": "WEEKDAY",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Temporal Weekday Mass Readings for Friday of the 27th Week in Ordinary Time (Lectionary 465)",
+          "setOrder": 1,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "465",
+          "sourceUrl": "https://bible.usccb.org/bible/readings/100926.cfm",
+          "readings": [
+            {
+              "sourceKey": "reading-1009-weekday-first-gal3",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Galatians 3:7-14",
+              "scriptureRef": "Galatians 3:7-14",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Know ye therefore, that they who are of faith, the same are the children of Abraham. And the scripture, foreseeing that God would justify the Gentiles by faith, told unto Abraham before: In thee shall all nations be blessed. Therefore they that are of faith, shall be blessed with faithful Abraham. For as many as are of the works of the law, are under a curse. For it is written: Cursed is every one that abideth not in all things, which are written in the book of the law, to do them. But that in the law no man is justified with God, it is manifest: because the just man liveth by faith. And the law is not of faith: but, He that doth those things, shall live in them. Christ hath redeemed us from the curse of the law, being made a curse for us: for it is written: Cursed is every one that hangeth on a tree: That the blessing of Abraham might come on the Gentiles through Christ Jesus: that we may receive the promise of the Spirit by faith.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-weekday-psalm-111",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 111:1b-2, 3-4, 5-6",
+              "scriptureRef": "Psalm 110:1-2, 3-4, 5-6",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "I will praise thee, O Lord, with my whole heart; in the council of the just, and in the congregation. Great are the works of the Lord: sought out according to all his wills. His work is praise and magnificence: and his justice continueth for ever and ever. He hath made a remembrance of his wonderful works, being a merciful and gracious Lord: he hath given food to them that fear him. He will be mindful for ever of his covenant: he will shew forth to his people the power of his works.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-weekday-gospel-luke11",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 11:15-26",
+              "scriptureRef": "Luke 11:15-26",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "But some of them said: He casteth out devils by Beelzebub, the prince of devils. And others tempting, asked of him a sign from heaven. But he seeing their thoughts, said to them: Every kingdom divided against itself shall be brought to desolation, and house upon house shall fall. And if Satan also be divided against himself, how shall his kingdom stand? because you say, that through Beelzebub I cast out devils. Now if I cast out devils by Beelzebub, by whom do your children cast them out? Therefore they shall be your judges. But if I by the finger of God cast out devils; doubtless the kingdom of God is come upon you. When a strong man armed keepeth his court, those things are in peace which he possesseth. But if a stronger than he come upon him, and overcome him, he will take away all his armour wherein he trusted, and will distribute his spoils. He that is not with me, is against me; and he that gathereth not with me, scattereth. When the unclean spirit is gone out of a man, he walketh through places without water, seeking rest; and not finding, he saith: I will return into my house whence I came out. And when he is come, he findeth it swept and garnished. Then he goeth and taketh with him seven other spirits more wicked than himself, and entering in they dwell there. And the last state of that man becomes worse than the first.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-1009-proper-st-denis-654",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper readings for Saint Denis and Companions (Lectionary 654)",
+          "setOrder": 2,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "654",
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-654",
+          "readings": [
+            {
+              "sourceKey": "reading-1009-denis-first-2cor6",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "2 Corinthians 6:4-10",
+              "scriptureRef": "2 Corinthians 6:4-10",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "But in all things let us exhibit ourselves as the ministers of God, in much patience, in tribulations, in necessities, in distresses, In stripes, in prisons, in seditions, in labours, in watchings, in fastings, In chastity, in knowledge, in longsuffering, in sweetness, in the Holy Ghost, in charity unfeigned, In the word of truth, in the power of God; by the armour of justice on the right hand and on the left; By honour and dishonour, by evil report and good report; as deceivers, and yet true; as unknown, and yet known; As dying, and behold we live; as chastised, and not killed; As sorrowful, yet always rejoicing; as needy, yet enriching many; as having nothing, and possessing all things.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-denis-psalm-126",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 126:1-2ab, 2cd-3, 4-5, 6",
+              "scriptureRef": "Psalm 125:1-2, 2-3, 4-5, 6",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "When the Lord brought back the captivity of Sion, we became like men comforted. Then was our mouth filled with gladness, and our tongue with joy. Then shall they say among the Gentiles: The Lord hath done great things for them. The Lord hath done great things for us: we are become joyful. Turn again our captivity, O Lord, as a stream in the south. They that sow in tears shall reap in joy. Going they went and wept, casting their seeds. But coming they shall come with joyfulness, carrying their sheaves.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-denis-gospel-matt10",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Matthew 10:28-33",
+              "scriptureRef": "Matthew 10:28-33",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And fear ye not them that kill the body, and are not able to kill the soul: but rather fear him that can destroy both soul and body in hell. Are not two sparrows sold for a farthing? and not one of them shall fall on the ground without your Father. But the very hairs of your head are all numbered. Fear not therefore: better are you than many sparrows. Every one therefore that shall confess me before men, I will also confess him before my Father who is in heaven. But he that shall deny me before men, I will also deny him before my Father who is in heaven.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-1009-proper-st-john-leonardi-655",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper readings for Saint John Leonardi (Lectionary 655)",
+          "setOrder": 3,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "655",
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-655",
+          "readings": [
+            {
+              "sourceKey": "reading-1009-leonardi-first-2cor4",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "2 Corinthians 4:1-2, 5-7",
+              "scriptureRef": "2 Corinthians 4:1-2, 5-7",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Therefore, having this ministration, according as we have obtained mercy, we faint not; But we renounce the hidden things of dishonesty, not walking in craftiness, nor adulterating the word of God; but by manifestation of the truth commending ourselves to every man's conscience, in the sight of God. For we preach not ourselves, but Jesus Christ our Lord; and ourselves your servants through Jesus. For God, who commanded the light to shine out of darkness, hath shined in our hearts, to give the light of the knowledge of the glory of God, in the face of Christ Jesus. But we have this treasure in earthen vessels, that the excellency may be of the power of God, and not of us.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-leonardi-psalm-96",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 96:1-2a, 2b-3, 7-8a, 10",
+              "scriptureRef": "Psalm 95:1-2, 2-3, 7-8, 10",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Sing ye to the Lord a new canticle: sing to the Lord all the earth. Sing ye to the Lord and bless his name: shew forth his salvation from day to day. Declare his glory among the Gentiles: his wonders among all people. Bring to the Lord, O ye kindreds of the Gentiles, bring to the Lord glory and honour: bring to the Lord glory to his name. Say ye among the Gentiles, the Lord hath reigned.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-leonardi-gospel-luke9",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Luke 9:57-62",
+              "scriptureRef": "Luke 9:57-62",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "And it came to pass, as they walked in the way, that a certain man said to him: I will follow thee whithersoever thou goest. Jesus said to him: The foxes have holes, and the birds of the air nests; but the Son of man hath not where to lay his head. But he said to another: Follow me. And he said: Lord, suffer me first to go, and bury my father. And Jesus said to him: Let the dead bury their dead: but go thou, and preach the kingdom of God. And another said: I will follow thee, Lord; but let me first take my leave of them that are at my house. Jesus said to him: No man putting his hand to the plough, and looking back, is fit for the kingdom of God.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        },
+        {
+          "sourceKey": "set-1009-proper-st-john-henry-newman-655bis",
+          "context": "PROPER_OF_SAINTS",
+          "selectionStatus": "ALTERNATIVE",
+          "label": "Proper readings for Saint John Henry Newman, Priest and Doctor of the Church (Lectionary 655bis)",
+          "description": "Proper readings for Saint John Henry Newman, Priest and Doctor of the Church (Lectionary 655bis)",
+          "setOrder": 4,
+          "isCanonicalDefault": null,
+          "lectionaryNumber": "655bis",
+          "sourceUrl": "https://credocatholica.com/sources/lectionary-655bis",
+          "readings": [
+            {
+              "sourceKey": "reading-1009-newman-first-sirach39",
+              "type": "FIRST_READING",
+              "readingOrder": 1,
+              "citationRef": "Sirach 39:1-10",
+              "scriptureRef": "Ecclesiasticus 39:1-14",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "The wisdom of all the ancients the wise man will seek out, and will be occupied in the prophets. He will keep the sayings of renowned men, and will enter withal into the subtilties of parables. He will search out the hidden meanings of proverbs, and will be conversant in the secrets of parables. He shall serve among great men, and appear before the governor. He shall pass into strange countries: for he shall try good and evil among men. He will give his heart to resort early to the Lord that made him, and he will pray in the sight of the most High. He will open his mouth in prayer, and will make supplication for his sins. For if it shall please the great Lord, he will fill him with the spirit of understanding: And he will pour forth the words of his wisdom as rain, and in his prayer he will confess to the Lord. And he will direct his counsel, and his knowledge, and in his secrets shall he meditate. He shall shew forth the discipline he hath learned, and shall glory in the law of the covenant of the Lord. Many shall praise his wisdom, and it shall never be forgotten. The memory of him shall not depart away, and his name shall be in request from generation to generation. Nations shall declare his wisdom, and the church shall shew forth his praise.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-newman-psalm-40",
+              "type": "RESPONSORIAL_PSALM",
+              "readingOrder": 2,
+              "citationRef": "Psalm 40:2 and 4ab, 7-8a, 8b-9, 10, 11",
+              "scriptureRef": "Psalm 39:2, 4, 7-8, 8-9, 10, 11",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "With expectation I have waited for the Lord, and he was attentive to me. And he heard my prayers: and he put a new canticle into my mouth, a song to our God. Sacrifice and oblation thou didst not desire: but thou hast pierced ears for me. Holocaust for sin thou didst not require: then said I: Behold I come. In the head of the book it is written of me that I should do thy will: O my God, I have desired it, and thy law in the midst of my heart. I have declared thy justice in a great church, lo, I will not restrain my lips: O Lord, thou knowest it. I have not hid thy justice within my heart: I have declared thy truth and thy salvation. I have not concealed thy mercy and thy truth from a great council.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            },
+            {
+              "sourceKey": "reading-1009-newman-gospel-matt13",
+              "type": "GOSPEL",
+              "readingOrder": 3,
+              "citationRef": "Matthew 13:47-52",
+              "scriptureRef": "Matthew 13:47-52",
+              "textStatus": "VERIFIED_EXACT",
+              "text": "Again the kingdom of heaven is like to a net cast into the sea, and gathering together of all kind of fishes. Which, when it was filled, they drew out, and sitting by the shore, they chose out the good into vessels, but the bad they cast forth. So shall it be at the end of the world. The angels shall go out, and shall separate the wicked from among the just. And shall cast them into the furnace of fire: there shall be weeping and gnashing of teeth. Have ye understood all these things? They say to him: Yes. He said unto them: Therefore every scribe instructed in the kingdom of heaven, is like to a man that is a householder, who bringeth forth out of his treasure new things and old.",
+              "copyrightInfo": "Douay-Rheims Version, Challoner Revision. Source text: Project Gutenberg eBook #1581. Project Gutenberg identifies this text as public domain in the USA; reuse outside the USA is subject to applicable local law."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

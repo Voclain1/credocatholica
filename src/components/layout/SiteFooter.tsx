@@ -19,7 +19,7 @@ export function SiteFooter() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gap: '2.5rem',
             paddingBottom: '2.5rem',
             borderBottom: '1px solid rgba(245, 240, 232, 0.15)',
@@ -50,7 +50,7 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {/* Area 2: Platform Navigation */}
+          {/* Area 2: Daily Companion & Devotions */}
           <div>
             <h3
               style={{
@@ -63,52 +63,33 @@ export function SiteFooter() {
                 marginBottom: '1rem',
               }}
             >
-              Platform Navigation
+              Liturgy & Devotions
             </h3>
-            <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
               <li>
-                <Link
-                  href="/today"
-                  style={{
-                    fontSize: '0.875rem',
-                    color: 'var(--color-background)',
-                    textDecoration: 'none',
-                    opacity: 0.9,
-                  }}
-                >
+                <Link href="/today" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
                   Today&apos;s Liturgy
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/#library"
-                  style={{
-                    fontSize: '0.875rem',
-                    color: 'var(--color-background)',
-                    textDecoration: 'none',
-                    opacity: 0.9,
-                  }}
-                >
-                  Catholic Reference Library
+                <Link href="/saints" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Saints & Hagiography
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/#formation"
-                  style={{
-                    fontSize: '0.875rem',
-                    color: 'var(--color-background)',
-                    textDecoration: 'none',
-                    opacity: 0.9,
-                  }}
-                >
-                  Structured Formation Pathways
+                <Link href="/prayers" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Catholic Prayers Treasury
+                </Link>
+              </li>
+              <li>
+                <Link href="/novenas" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  9-Day Novenas Library
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Area 3: Editorial Standards & Accuracy */}
+          {/* Area 3: Magisterium & Formation */}
           <div>
             <h3
               style={{
@@ -121,29 +102,69 @@ export function SiteFooter() {
                 marginBottom: '1rem',
               }}
             >
-              Editorial Integrity
+              Magisterium & Learning
             </h3>
-            <p
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+              <li>
+                <Link href="/catechism" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Catechism of the Catholic Church
+                </Link>
+              </li>
+              <li>
+                <Link href="/church-documents" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Church Documents & Constitutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/learn" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Structured Formation Pathways
+                </Link>
+              </li>
+              <li>
+                <Link href="/search" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  Universal Search
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Area 4: Platform & Editorial */}
+          <div>
+            <h3
               style={{
-                fontSize: '0.875rem',
-                color: 'rgba(245, 240, 232, 0.75)',
-                lineHeight: 1.6,
-                marginBottom: '0.75rem',
-              }}
-            >
-              Canonical texts preserved using public domain Douay-Rheims Scripture and verified Catholic magisterial sources.
-            </p>
-            <Link
-              href="/#editorial-standards"
-              style={{
-                fontSize: '0.875rem',
+                fontFamily: 'var(--font-sans)',
+                fontSize: '0.8125rem',
+                fontWeight: 600,
+                textTransform: 'uppercase',
+                letterSpacing: '0.08em',
                 color: 'var(--color-sacred-gold)',
-                textDecoration: 'none',
-                fontWeight: 500,
+                marginBottom: '1rem',
               }}
             >
-              View Editorial Standards &rarr;
-            </Link>
+              About & Governance
+            </h3>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.625rem' }}>
+              <li>
+                <Link href="/about" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.9 }}>
+                  About CredoCatholica
+                </Link>
+              </li>
+              <li>
+                <Link href="/editorial-standards" style={{ fontSize: '0.875rem', color: 'var(--color-sacred-gold)', textDecoration: 'none', fontWeight: 500 }}>
+                  Editorial & Doctrinal Governance →
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.7 }}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" style={{ fontSize: '0.875rem', color: 'var(--color-background)', textDecoration: 'none', opacity: 0.7 }}>
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

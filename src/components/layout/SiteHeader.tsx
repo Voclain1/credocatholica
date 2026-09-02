@@ -4,9 +4,13 @@ import { MobileNavigation } from './MobileNavigation';
 
 const NAV_ITEMS = [
   { label: 'Today', href: '/today' },
-  { label: 'Library', href: '/#library' },
-  { label: 'Formation', href: '/#formation' },
-  { label: 'Editorial Standards', href: '/#editorial-standards' },
+  { label: 'Saints', href: '/saints' },
+  { label: 'Prayers', href: '/prayers' },
+  { label: 'Novenas', href: '/novenas' },
+  { label: 'Catechism', href: '/catechism' },
+  { label: 'Documents', href: '/church-documents' },
+  { label: 'Learn', href: '/learn' },
+  { label: 'Search', href: '/search' },
 ];
 
 export function SiteHeader() {
@@ -29,7 +33,7 @@ export function SiteHeader() {
           height: '4.5rem',
         }}
       >
-        {/* Brand Identity / Wordmark (Correction 14: Single textual identity "CredoCatholica") */}
+        {/* Brand Identity / Wordmark */}
         <Link
           href="/"
           style={{
@@ -53,8 +57,10 @@ export function SiteHeader() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '1.75rem',
+              gap: '1.25rem',
               listStyle: 'none',
+              margin: 0,
+              padding: 0,
             }}
           >
             {NAV_ITEMS.map((item) => (
@@ -63,7 +69,7 @@ export function SiteHeader() {
                   href={item.href}
                   style={{
                     fontFamily: 'var(--font-sans)',
-                    fontSize: '0.9375rem',
+                    fontSize: '0.875rem',
                     fontWeight: 500,
                     color: 'var(--color-primary)',
                     textDecoration: 'none',
@@ -90,7 +96,7 @@ export function SiteHeader() {
         .mobile-nav-trigger {
           display: none;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
           .desktop-nav {
             display: none !important;
           }
