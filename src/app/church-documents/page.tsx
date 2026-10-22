@@ -35,6 +35,8 @@ export default async function ChurchDocumentsIndexPage({
     { key: 'COUNCIL_CONSTITUTION', label: 'Conciliar Constitutions' },
     { key: 'ENCYCLICAL', label: 'Encyclicals' },
     { key: 'APOSTOLIC_EXHORTATION', label: 'Apostolic Exhortations' },
+    { key: 'APOSTOLIC_LETTER', label: 'Apostolic Letters' },
+    { key: 'APOSTOLIC_CONSTITUTION', label: 'Apostolic Constitutions' },
     { key: 'BULL', label: 'Papal Bulls' },
     { key: 'MOTU_PROPRIO', label: 'Motu Proprio' },
     { key: 'CATECHISM', label: 'Catechetical Documents' },

@@ -36,7 +36,7 @@ export default function EditorialStandardsPage() {
             2. Biblical Translation
           </h2>
           <p>
-            The default Scripture translation for English readings on CredoCatholica is the historic public-domain Douay-Rheims Bible (Challoner Revision). Scripture texts are preserved in their exact punctuation, verse division, and traditional spelling.
+            The selected English Scripture translation is the Douay-Rheims Bible (Challoner Revision). Verification must compare each passage with the identified edition, preserving its wording, punctuation, verse division, and spelling. A translation label alone does not establish that this comparison has been completed.
           </p>
         </section>
 
@@ -45,7 +45,7 @@ export default function EditorialStandardsPage() {
             3. Provenance & Source Attribution
           </h2>
           <p>
-            Every Saint biography, prayer formula, novena, Catechism reference, and Church document record maintains documented source provenance, identifying its issuing authority, publication date, and copyright/rights status.
+            Each text requires an identified source, edition, and precise reference. Existing records are undergoing source verification. A published record, source name, or rights label does not by itself establish word-for-word fidelity or completed doctrinal review.
           </p>
         </section>
 

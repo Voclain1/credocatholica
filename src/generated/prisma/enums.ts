@@ -117,6 +117,8 @@ export type CatechismPillar = (typeof CatechismPillar)[keyof typeof CatechismPil
 
 export const DocumentType = {
   ENCYCLICAL: 'ENCYCLICAL',
+  APOSTOLIC_LETTER: 'APOSTOLIC_LETTER',
+  APOSTOLIC_CONSTITUTION: 'APOSTOLIC_CONSTITUTION',
   APOSTOLIC_EXHORTATION: 'APOSTOLIC_EXHORTATION',
   BULL: 'BULL',
   MOTU_PROPRIO: 'MOTU_PROPRIO',

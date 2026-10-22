@@ -7,6 +7,7 @@ import { validateIngestionPackage } from './src/validator.js';
 import { generateReconciliationReport, writeReportFiles } from './src/reconciliation.js';
 import { applyIngestionPackage } from './src/applier.js';
 import { computePackageHash } from './src/hash.js';
+import { assertExactReadingTexts } from '../content-audit/exact-reading-gate.js';
 
 async function main() {
   const args = process.argv.slice(2);
@@ -55,6 +56,13 @@ async function main() {
 
   // Step 1: Validate ingestion package
   const issues = validateIngestionPackage(pkg);
+  if (issues.every((issue) => issue.severity !== 'BLOCKER')) {
+    try {
+      assertExactReadingTexts(pkg);
+    } catch (error: unknown) {
+      issues.push({ severity: 'BLOCKER', code: 'EXACT_SOURCE_COMPARISON_FAILED', message: error instanceof Error ? error.message : 'Exact-text comparison failed.' });
+    }
+  }
   const blockers = issues.filter((i) => i.severity === 'BLOCKER');
   const warnings = issues.filter((i) => i.severity === 'WARNING');
 

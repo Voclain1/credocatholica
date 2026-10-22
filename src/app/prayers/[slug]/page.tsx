@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${prayer.title} — Catholic Prayer Text & Provenance`,
-    description: `Exact traditional text of ${prayer.title} on CredoCatholica, with Latin version and source provenance notes.`,
+    description: `${prayer.title} on CredoCatholica.`,
   };
 }
 
@@ -175,7 +175,7 @@ export default async function PrayerDetailPage({ params }: Props) {
           lineHeight: 1.5,
         }}
       >
-        <strong>Canonical Provenance:</strong> Public domain traditional Catholic prayer formula preserved according to authoritative Church tradition.
+        <strong>Source verification:</strong> This text has not yet been checked word for word against an identified published edition.
       </footer>
     </article>
   );

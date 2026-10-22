@@ -1,0 +1,9 @@
+{
+  "sourceUrl": "https://www.gutenberg.org/cache/epub/1581/pg1581.txt",
+  "edition": "Project Gutenberg eBook 1581, Challoner revision, updated 2023-09-23",
+  "retrievedAt": "2026-10-22T20:00:48.866473+00:00",
+  "sha256": "7d10da78d8ec97db53b4e2bd8719cc01e16106b44937a673ba34aa534a04c007",
+  "byteLength": 5880580,
+  "rights": "Public domain in the USA; Project Gutenberg license retained in snapshot.",
+  "extraction": "Read numbered verse paragraphs in canonical book order. Unwrap only physical line breaks and remove the chapter:verse label; retain all wording and punctuation. Partial-verse references are not resolved automatically."
+}

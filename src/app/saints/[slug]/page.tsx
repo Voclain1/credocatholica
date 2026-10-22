@@ -344,9 +344,9 @@ export default async function SaintDetailPage({ params }: Props) {
           lineHeight: 1.6,
         }}
       >
-        <strong style={{ color: 'var(--color-primary)' }}>Canonical Provenance & Editorial Standards:</strong>
+        <strong style={{ color: 'var(--color-primary)' }}>Sources & Editorial Standards:</strong>
         <p style={{ margin: '0.25rem 0 0' }}>
-          This hagiographical entry has been reviewed according to CredoCatholica doctrinal and historical accuracy standards. Compiled from public domain ecclesiastical sources including the Roman Martyrology, Catholic Encyclopedia, and authoritative hagiographical records.
+          This entry has not yet been verified word for word against an identified published source. Publication does not establish historical or doctrinal review.
         </p>
       </footer>
     </article>

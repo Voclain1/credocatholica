@@ -1,8 +1,15 @@
 import { prisma } from '../../../src/lib/prisma/index.js';
 import { M1_CATECHISM_ENTRIES, M1_CHURCH_DOCUMENTS } from './catechism-documents-data.js';
 import { M1_FORMATION_PATHWAYS } from './formation-data.js';
+import { assertNoPublishedSeedTargets } from './seed-safety.js';
 
 export async function applyReferenceIngestion() {
+  const publishedTargets = await Promise.all([
+    prisma.catechismEntry.findMany({ where: { slug: { in: M1_CATECHISM_ENTRIES.map((c) => c.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+    prisma.churchDocument.findMany({ where: { slug: { in: M1_CHURCH_DOCUMENTS.map((d) => d.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+    prisma.formationPathway.findMany({ where: { slug: { in: M1_FORMATION_PATHWAYS.map((p) => p.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+  ]);
+  assertNoPublishedSeedTargets(publishedTargets.flat());
   console.log('--- Ingesting Catechism Entries & Church Documents ---');
 
   let catechismCount = 0;
@@ -19,8 +26,8 @@ export async function applyReferenceIngestion() {
         magisterialWeight: cat.magisterialWeight,
         councilSource: cat.councilSource,
         bodyText: cat.bodyText,
-        publicationStatus: 'PUBLISHED',
-        publishedAt: new Date(),
+        sourceUrl: cat.sourceUrl,
+        publicationStatus: 'DRAFT',
       },
       update: {
         title: cat.title,
@@ -31,7 +38,8 @@ export async function applyReferenceIngestion() {
         magisterialWeight: cat.magisterialWeight,
         councilSource: cat.councilSource,
         bodyText: cat.bodyText,
-        publicationStatus: 'PUBLISHED',
+        sourceUrl: cat.sourceUrl,
+        publicationStatus: 'DRAFT',
       },
     });
     catechismCount++;
@@ -51,8 +59,7 @@ export async function applyReferenceIngestion() {
         officialUrl: doc.officialUrl,
         summary: doc.summary,
         bodyText: doc.bodyText,
-        publicationStatus: 'PUBLISHED',
-        publishedAt: new Date(),
+        publicationStatus: 'DRAFT',
       },
       update: {
         title: doc.title,
@@ -63,7 +70,7 @@ export async function applyReferenceIngestion() {
         officialUrl: doc.officialUrl,
         summary: doc.summary,
         bodyText: doc.bodyText,
-        publicationStatus: 'PUBLISHED',
+        publicationStatus: 'DRAFT',
       },
     });
     docCount++;
@@ -86,15 +93,14 @@ export async function applyReferenceIngestion() {
         summary: p.summary,
         description: p.description,
         estimatedHours: p.estimatedHours,
-        publicationStatus: 'PUBLISHED',
-        publishedAt: new Date(),
+        publicationStatus: 'DRAFT',
       },
       update: {
         title: p.title,
         summary: p.summary,
         description: p.description,
         estimatedHours: p.estimatedHours,
-        publicationStatus: 'PUBLISHED',
+        publicationStatus: 'DRAFT',
       },
     });
     pathwayCount++;

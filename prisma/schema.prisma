@@ -89,6 +89,8 @@ enum CatechismPillar {
 
 enum DocumentType {
   ENCYCLICAL
+  APOSTOLIC_LETTER
+  APOSTOLIC_CONSTITUTION
   APOSTOLIC_EXHORTATION
   BULL
   MOTU_PROPRIO
@@ -450,6 +452,7 @@ model CatechismEntry {
   magisterialWeight String?
   councilSource     String?
   bodyText          String            @db.Text
+  sourceUrl         String?
   publicationStatus PublicationStatus @default(DRAFT)
   publishedAt       DateTime?
   createdAt         DateTime          @default(now())

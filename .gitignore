@@ -39,3 +39,7 @@ Thumbs.db
 *.pem
 
 .vercel
+
+# Local content audit results and recovery snapshots (may contain unpublished text)
+scripts/content-audit/reports/
+scripts/content-audit/backups/

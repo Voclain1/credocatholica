@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma';
+import { cleanLiturgicalNotes } from '@/lib/content/liturgical-copy';
 import {
   LiturgicalSeason,
   CelebrationRank,
@@ -318,7 +319,7 @@ export async function getTodayLiturgicalDay(targetDate?: Date): Promise<TodayLit
         liturgicalColor: day.liturgicalColor,
         gloriaRequired: day.gloriaRequired,
         creedRequired: day.creedRequired,
-        notes: day.notes,
+        notes: cleanLiturgicalNotes(day.notes),
         principalCelebration,
         primaryCelebration: principalCelebration,
         secondaryCelebrations,
