@@ -3,6 +3,7 @@ import { M1_SAINTS, M1_PATRONAGES, M1_VOCATIONS, M1SaintRecord } from './saints-
 import { M1_PRAYERS, M1PrayerRecord } from './prayers-data.js';
 import { M1_NOVENAS, M1NovenaRecord } from './novenas-data.js';
 import { validateM1Dataset, M1ValidationResult } from './m1-validator.js';
+import { assertNoPublishedSeedTargets } from './seed-safety.js';
 
 export interface M1ApplyResult {
   validation: M1ValidationResult;
@@ -55,6 +56,15 @@ export async function applyM1Ingestion(
       linkedSaintVocations: 0,
     };
   }
+
+  // Complete this read-only preflight before changing shared classifications
+  // or any content. These legacy summaries have no exact-source evidence.
+  const publishedTargets = await Promise.all([
+    prisma.saint.findMany({ where: { slug: { in: saints.map((s) => s.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+    prisma.prayer.findMany({ where: { slug: { in: prayers.map((p) => p.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+    prisma.novena.findMany({ where: { slug: { in: novenas.map((n) => n.slug) }, publicationStatus: 'PUBLISHED' }, select: { slug: true } }),
+  ]);
+  assertNoPublishedSeedTargets(publishedTargets.flat());
 
   let insertedPatronages = 0;
   let updatedPatronages = 0;
@@ -137,8 +147,7 @@ export async function applyM1Ingestion(
       isMartyr: s.isMartyr ?? false,
       religiousOrder: s.religiousOrder ?? null,
       historicalConfidence: s.historicalConfidence,
-      publicationStatus: 'PUBLISHED' as const,
-      publishedAt: new Date(),
+      publicationStatus: 'DRAFT' as const,
     };
 
     let saintId: string;
@@ -211,8 +220,7 @@ export async function applyM1Ingestion(
       isOfficialFormula: p.isOfficialFormula ?? false,
       isIndulgenced: p.isIndulgenced ?? false,
       seasonalUse: p.seasonalUse ?? null,
-      publicationStatus: 'PUBLISHED' as const,
-      publishedAt: new Date(),
+      publicationStatus: 'DRAFT' as const,
     };
 
     let prayerId: string;
@@ -259,8 +267,7 @@ export async function applyM1Ingestion(
       closingPrayer: n.closingPrayer ?? null,
       historicalOrigin: n.historicalOrigin ?? null,
       saintId,
-      publicationStatus: n.rightsStatus === 'REQUIRES_RIGHTS_REVIEW' ? ('DRAFT' as const) : ('PUBLISHED' as const),
-      publishedAt: n.rightsStatus === 'REQUIRES_RIGHTS_REVIEW' ? null : new Date(),
+      publicationStatus: 'DRAFT' as const,
     };
 
     let novenaId: string;

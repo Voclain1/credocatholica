@@ -47,6 +47,7 @@ export type CatechismEntryMinAggregateOutputType = {
   magisterialWeight: string | null
   councilSource: string | null
   bodyText: string | null
+  sourceUrl: string | null
   publicationStatus: $Enums.PublicationStatus | null
   publishedAt: Date | null
   createdAt: Date | null
@@ -64,6 +65,7 @@ export type CatechismEntryMaxAggregateOutputType = {
   magisterialWeight: string | null
   councilSource: string | null
   bodyText: string | null
+  sourceUrl: string | null
   publicationStatus: $Enums.PublicationStatus | null
   publishedAt: Date | null
   createdAt: Date | null
@@ -81,6 +83,7 @@ export type CatechismEntryCountAggregateOutputType = {
   magisterialWeight: number
   councilSource: number
   bodyText: number
+  sourceUrl: number
   publicationStatus: number
   publishedAt: number
   createdAt: number
@@ -110,6 +113,7 @@ export type CatechismEntryMinAggregateInputType = {
   magisterialWeight?: true
   councilSource?: true
   bodyText?: true
+  sourceUrl?: true
   publicationStatus?: true
   publishedAt?: true
   createdAt?: true
@@ -127,6 +131,7 @@ export type CatechismEntryMaxAggregateInputType = {
   magisterialWeight?: true
   councilSource?: true
   bodyText?: true
+  sourceUrl?: true
   publicationStatus?: true
   publishedAt?: true
   createdAt?: true
@@ -144,6 +149,7 @@ export type CatechismEntryCountAggregateInputType = {
   magisterialWeight?: true
   councilSource?: true
   bodyText?: true
+  sourceUrl?: true
   publicationStatus?: true
   publishedAt?: true
   createdAt?: true
@@ -248,6 +254,7 @@ export type CatechismEntryGroupByOutputType = {
   magisterialWeight: string | null
   councilSource: string | null
   bodyText: string
+  sourceUrl: string | null
   publicationStatus: $Enums.PublicationStatus
   publishedAt: Date | null
   createdAt: Date
@@ -288,6 +295,7 @@ export type CatechismEntryWhereInput = {
   magisterialWeight?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   councilSource?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   bodyText?: Prisma.StringFilter<"CatechismEntry"> | string
+  sourceUrl?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFilter<"CatechismEntry"> | $Enums.PublicationStatus
   publishedAt?: Prisma.DateTimeNullableFilter<"CatechismEntry"> | Date | string | null
   createdAt?: Prisma.DateTimeFilter<"CatechismEntry"> | Date | string
@@ -307,6 +315,7 @@ export type CatechismEntryOrderByWithRelationInput = {
   magisterialWeight?: Prisma.SortOrderInput | Prisma.SortOrder
   councilSource?: Prisma.SortOrderInput | Prisma.SortOrder
   bodyText?: Prisma.SortOrder
+  sourceUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   publicationStatus?: Prisma.SortOrder
   publishedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -329,6 +338,7 @@ export type CatechismEntryWhereUniqueInput = Prisma.AtLeast<{
   magisterialWeight?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   councilSource?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   bodyText?: Prisma.StringFilter<"CatechismEntry"> | string
+  sourceUrl?: Prisma.StringNullableFilter<"CatechismEntry"> | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFilter<"CatechismEntry"> | $Enums.PublicationStatus
   publishedAt?: Prisma.DateTimeNullableFilter<"CatechismEntry"> | Date | string | null
   createdAt?: Prisma.DateTimeFilter<"CatechismEntry"> | Date | string
@@ -348,6 +358,7 @@ export type CatechismEntryOrderByWithAggregationInput = {
   magisterialWeight?: Prisma.SortOrderInput | Prisma.SortOrder
   councilSource?: Prisma.SortOrderInput | Prisma.SortOrder
   bodyText?: Prisma.SortOrder
+  sourceUrl?: Prisma.SortOrderInput | Prisma.SortOrder
   publicationStatus?: Prisma.SortOrder
   publishedAt?: Prisma.SortOrderInput | Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -373,6 +384,7 @@ export type CatechismEntryScalarWhereWithAggregatesInput = {
   magisterialWeight?: Prisma.StringNullableWithAggregatesFilter<"CatechismEntry"> | string | null
   councilSource?: Prisma.StringNullableWithAggregatesFilter<"CatechismEntry"> | string | null
   bodyText?: Prisma.StringWithAggregatesFilter<"CatechismEntry"> | string
+  sourceUrl?: Prisma.StringNullableWithAggregatesFilter<"CatechismEntry"> | string | null
   publicationStatus?: Prisma.EnumPublicationStatusWithAggregatesFilter<"CatechismEntry"> | $Enums.PublicationStatus
   publishedAt?: Prisma.DateTimeNullableWithAggregatesFilter<"CatechismEntry"> | Date | string | null
   createdAt?: Prisma.DateTimeWithAggregatesFilter<"CatechismEntry"> | Date | string
@@ -390,6 +402,7 @@ export type CatechismEntryCreateInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -409,6 +422,7 @@ export type CatechismEntryUncheckedCreateInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -428,6 +442,7 @@ export type CatechismEntryUpdateInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -447,6 +462,7 @@ export type CatechismEntryUncheckedUpdateInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -466,6 +482,7 @@ export type CatechismEntryCreateManyInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -483,6 +500,7 @@ export type CatechismEntryUpdateManyMutationInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -500,6 +518,7 @@ export type CatechismEntryUncheckedUpdateManyInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -517,6 +536,7 @@ export type CatechismEntryCountOrderByAggregateInput = {
   magisterialWeight?: Prisma.SortOrder
   councilSource?: Prisma.SortOrder
   bodyText?: Prisma.SortOrder
+  sourceUrl?: Prisma.SortOrder
   publicationStatus?: Prisma.SortOrder
   publishedAt?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -539,6 +559,7 @@ export type CatechismEntryMaxOrderByAggregateInput = {
   magisterialWeight?: Prisma.SortOrder
   councilSource?: Prisma.SortOrder
   bodyText?: Prisma.SortOrder
+  sourceUrl?: Prisma.SortOrder
   publicationStatus?: Prisma.SortOrder
   publishedAt?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -556,6 +577,7 @@ export type CatechismEntryMinOrderByAggregateInput = {
   magisterialWeight?: Prisma.SortOrder
   councilSource?: Prisma.SortOrder
   bodyText?: Prisma.SortOrder
+  sourceUrl?: Prisma.SortOrder
   publicationStatus?: Prisma.SortOrder
   publishedAt?: Prisma.SortOrder
   createdAt?: Prisma.SortOrder
@@ -619,6 +641,7 @@ export type CatechismEntryCreateWithoutFormationLessonsInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -637,6 +660,7 @@ export type CatechismEntryUncheckedCreateWithoutFormationLessonsInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -671,6 +695,7 @@ export type CatechismEntryUpdateWithoutFormationLessonsInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -689,6 +714,7 @@ export type CatechismEntryUncheckedUpdateWithoutFormationLessonsInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -707,6 +733,7 @@ export type CatechismEntryCreateWithoutMigrationRecordsInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -725,6 +752,7 @@ export type CatechismEntryUncheckedCreateWithoutMigrationRecordsInput = {
   magisterialWeight?: string | null
   councilSource?: string | null
   bodyText: string
+  sourceUrl?: string | null
   publicationStatus?: $Enums.PublicationStatus
   publishedAt?: Date | string | null
   createdAt?: Date | string
@@ -759,6 +787,7 @@ export type CatechismEntryUpdateWithoutMigrationRecordsInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -777,6 +806,7 @@ export type CatechismEntryUncheckedUpdateWithoutMigrationRecordsInput = {
   magisterialWeight?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   councilSource?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   bodyText?: Prisma.StringFieldUpdateOperationsInput | string
+  sourceUrl?: Prisma.NullableStringFieldUpdateOperationsInput | string | null
   publicationStatus?: Prisma.EnumPublicationStatusFieldUpdateOperationsInput | $Enums.PublicationStatus
   publishedAt?: Prisma.NullableDateTimeFieldUpdateOperationsInput | Date | string | null
   createdAt?: Prisma.DateTimeFieldUpdateOperationsInput | Date | string
@@ -835,6 +865,7 @@ export type CatechismEntrySelect<ExtArgs extends runtime.Types.Extensions.Intern
   magisterialWeight?: boolean
   councilSource?: boolean
   bodyText?: boolean
+  sourceUrl?: boolean
   publicationStatus?: boolean
   publishedAt?: boolean
   createdAt?: boolean
@@ -855,6 +886,7 @@ export type CatechismEntrySelectCreateManyAndReturn<ExtArgs extends runtime.Type
   magisterialWeight?: boolean
   councilSource?: boolean
   bodyText?: boolean
+  sourceUrl?: boolean
   publicationStatus?: boolean
   publishedAt?: boolean
   createdAt?: boolean
@@ -872,6 +904,7 @@ export type CatechismEntrySelectUpdateManyAndReturn<ExtArgs extends runtime.Type
   magisterialWeight?: boolean
   councilSource?: boolean
   bodyText?: boolean
+  sourceUrl?: boolean
   publicationStatus?: boolean
   publishedAt?: boolean
   createdAt?: boolean
@@ -889,13 +922,14 @@ export type CatechismEntrySelectScalar = {
   magisterialWeight?: boolean
   councilSource?: boolean
   bodyText?: boolean
+  sourceUrl?: boolean
   publicationStatus?: boolean
   publishedAt?: boolean
   createdAt?: boolean
   updatedAt?: boolean
 }
 
-export type CatechismEntryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "slug" | "paragraphStart" | "paragraphEnd" | "pillar" | "doctrinalLevel" | "magisterialWeight" | "councilSource" | "bodyText" | "publicationStatus" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["catechismEntry"]>
+export type CatechismEntryOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "title" | "slug" | "paragraphStart" | "paragraphEnd" | "pillar" | "doctrinalLevel" | "magisterialWeight" | "councilSource" | "bodyText" | "sourceUrl" | "publicationStatus" | "publishedAt" | "createdAt" | "updatedAt", ExtArgs["result"]["catechismEntry"]>
 export type CatechismEntryInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   formationLessons?: boolean | Prisma.CatechismEntry$formationLessonsArgs<ExtArgs>
   migrationRecords?: boolean | Prisma.CatechismEntry$migrationRecordsArgs<ExtArgs>
@@ -921,6 +955,7 @@ export type $CatechismEntryPayload<ExtArgs extends runtime.Types.Extensions.Inte
     magisterialWeight: string | null
     councilSource: string | null
     bodyText: string
+    sourceUrl: string | null
     publicationStatus: $Enums.PublicationStatus
     publishedAt: Date | null
     createdAt: Date
@@ -1360,6 +1395,7 @@ export interface CatechismEntryFieldRefs {
   readonly magisterialWeight: Prisma.FieldRef<"CatechismEntry", 'String'>
   readonly councilSource: Prisma.FieldRef<"CatechismEntry", 'String'>
   readonly bodyText: Prisma.FieldRef<"CatechismEntry", 'String'>
+  readonly sourceUrl: Prisma.FieldRef<"CatechismEntry", 'String'>
   readonly publicationStatus: Prisma.FieldRef<"CatechismEntry", 'PublicationStatus'>
   readonly publishedAt: Prisma.FieldRef<"CatechismEntry", 'DateTime'>
   readonly createdAt: Prisma.FieldRef<"CatechismEntry", 'DateTime'>

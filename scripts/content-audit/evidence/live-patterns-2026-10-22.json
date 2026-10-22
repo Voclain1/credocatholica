@@ -1,0 +1,1041 @@
+{
+  "note": "Observed live HTML pattern matches, not source verification or proof that every statement is false. The Universal Church matches include valid references and must be checked individually.",
+  "findings": [
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-thomas-more",
+      "retrievedAt": "2026-10-22T19:48:02.744535+00:00",
+      "responseSha256": "8512ba38fc556c254af5309fdbd49b4fc8feb46f24343b05a2f9491a177878b7",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-faustina-kowalska",
+      "retrievedAt": "2026-10-22T19:47:37.593520+00:00",
+      "responseSha256": "3ca82b56d8549000fb3d7dcc852175e9b77dd04f66435374ad8883638d34e975",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-bernadette",
+      "retrievedAt": "2026-10-22T19:47:49.799744+00:00",
+      "responseSha256": "23a9dd325049aed4bcfc6c63e4b1f55d443a9c316388afe3590e9d60c43c0a43",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-ignatius-of-antioch",
+      "retrievedAt": "2026-10-22T19:47:37.170124+00:00",
+      "responseSha256": "9b3efc4bebe5d07a6c342584542d582a46204fba5560a7e91cb223a685889614",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-lawrence",
+      "retrievedAt": "2026-10-22T19:47:49.869205+00:00",
+      "responseSha256": "650ced4b297140a040dbfbd718d859247f26e3a72c61030be95c4eab432d5987",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-benedict",
+      "retrievedAt": "2026-10-22T19:47:54.549983+00:00",
+      "responseSha256": "fc45b7b62e0fac82663d70be9fd502601018fb78040138cbdf451624fc5b52f7",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-henry-newman",
+      "retrievedAt": "2026-10-22T19:48:12.249738+00:00",
+      "responseSha256": "f57a9d875ae3ed87e131ce3c1fd357715d17c06fa831fe5d90ea1beb53aad412",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-evangelist",
+      "retrievedAt": "2026-10-22T19:47:34.343483+00:00",
+      "responseSha256": "ff682fd1e7bd7615bd380645b84d1cd8a2ba20619ae3724a6757c4830e00478a",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-vianney",
+      "retrievedAt": "2026-10-22T19:48:15.824261+00:00",
+      "responseSha256": "ebfde464f670d7ad438fb89bfde987d42365f9c452dd98525009508b27f47cb3",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-charles-lwanga",
+      "retrievedAt": "2026-10-22T19:48:02.780896+00:00",
+      "responseSha256": "d25d674deef91c80aaa14ba47ad563907dbbc62dc8783e49078358eaf9c2fd57",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-polycarp",
+      "retrievedAt": "2026-10-22T19:48:07.044254+00:00",
+      "responseSha256": "bd35dd9221c371112d9526a274f5befc80e94aa4f1a1eceb602c97e500cc79e4",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-francis-xavier",
+      "retrievedAt": "2026-10-22T19:47:54.149519+00:00",
+      "responseSha256": "091ac88e492485ff60c47f27e735d2edaa98c6230dc725b238bc5d27cfacc0b3",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-teresa-calcutta",
+      "retrievedAt": "2026-10-22T19:48:07.000354+00:00",
+      "responseSha256": "e80277ae35c705ba0c4225429124a5524d82efd51acddb001178eda357985d49",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-jane-de-chantal",
+      "retrievedAt": "2026-10-22T19:48:11.295351+00:00",
+      "responseSha256": "36cea5fa89bcc91830bd91cb62cfcd4ae482448eee3a8b34d2d9d81cb9c0684c",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-the-baptist",
+      "retrievedAt": "2026-10-22T19:47:37.493456+00:00",
+      "responseSha256": "a3663bb91f1a7334461370f02bc47686ad230ec15a9ffea3db4ec111f298ac36",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-monica",
+      "retrievedAt": "2026-10-22T19:47:54.175464+00:00",
+      "responseSha256": "82c05358dfb5700ea6313534d1a6cc1e32d4b0f18152f112f816cd952cfa879f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-damian-molokai",
+      "retrievedAt": "2026-10-22T19:48:11.304571+00:00",
+      "responseSha256": "eb2a39485625764a5c6a8f711ab1979d1f265aa7a9029c96e23ccd0418c64df8",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-gabriel-archangel",
+      "retrievedAt": "2026-10-22T19:47:58.229340+00:00",
+      "responseSha256": "0ba21d3ff26b3bbefb70ca56e4f1aebf875a8894e7aea6c45417073aa9acad36",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-anthony-desert",
+      "retrievedAt": "2026-10-22T19:48:15.570707+00:00",
+      "responseSha256": "3d9cf21e9017796b5cd776791e67b5e99399ca5fb8e8ef3dcbed146e50d344ba",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-philip-neri",
+      "retrievedAt": "2026-10-22T19:47:54.173182+00:00",
+      "responseSha256": "76ea9509f02d086923fb931073d800427a554d996b67646edbadec6290f40587",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-joan-of-arc",
+      "retrievedAt": "2026-10-22T19:47:41.478007+00:00",
+      "responseSha256": "da181e18158d212f880fd65f00aea1c1d4f750fce3a8ddad9c14dac23d41f2d7",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-edith-stein",
+      "retrievedAt": "2026-10-22T19:48:19.822530+00:00",
+      "responseSha256": "21bfdda0366f999bf56e903af6373efafc3abb1617683a413330c0238e9dab1f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-jean-de-brebeuf",
+      "retrievedAt": "2026-10-22T19:47:41.413797+00:00",
+      "responseSha256": "05027ccf55ade9e07ca854123ae82b581304d5e17ca297df28e687dfed36c09c",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-elizabeth-ann-seton",
+      "retrievedAt": "2026-10-22T19:48:02.467402+00:00",
+      "responseSha256": "523134689604c88da429df11472c76c9ea98877640cd867415cd763deeab2de9",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-patrick",
+      "retrievedAt": "2026-10-22T19:48:07.114602+00:00",
+      "responseSha256": "8041a18934e580558aedcb0ccacfb3f25a02675d9cec1a9a0ef37ef151e460f9",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-justin-martyr",
+      "retrievedAt": "2026-10-22T19:47:58.453500+00:00",
+      "responseSha256": "33852fddc855ef2bb2dd64bd9cf63bb76c7cf3724263fab6bbd247b3cb0e403d",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-isaac-jogues",
+      "retrievedAt": "2026-10-22T19:47:41.410109+00:00",
+      "responseSha256": "cf418c998f8e13bd9b96beab45110191842e2f04d7dfe80a27ed8382c1add7b5",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-michael-archangel",
+      "retrievedAt": "2026-10-22T19:48:06.967003+00:00",
+      "responseSha256": "cd55324e8353513361a4a95b169a09b2982483030f7eabea362a55810edbd1a0",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-januarius",
+      "retrievedAt": "2026-10-22T19:47:35.214940+00:00",
+      "responseSha256": "dd151badac182b2f5bf8a80ec48590ef6f50421c7b87f480b94a0f6d1f07f4ed",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-josephine-bakhita",
+      "retrievedAt": "2026-10-22T19:48:02.606874+00:00",
+      "responseSha256": "88d00379d4e53fcb494fdd4b376516055721e9c6451abff2a475ebbfff317748",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-raphael-archangel",
+      "retrievedAt": "2026-10-22T19:48:02.463180+00:00",
+      "responseSha256": "35dbd72579869a901ef53aac257987f401783d0b2cac81e4a031d44ce8507dd5",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-dominic",
+      "retrievedAt": "2026-10-22T19:47:49.824898+00:00",
+      "responseSha256": "7449ca66752f62de37c4edf1338afe4684413190020de39b545269ad738d9f38",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-brigid",
+      "retrievedAt": "2026-10-22T19:48:02.892369+00:00",
+      "responseSha256": "fce7491707633c584a03a780379427da399a2f08a0626957002a601f32064026",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-clare-of-assisi",
+      "retrievedAt": "2026-10-22T19:47:37.150488+00:00",
+      "responseSha256": "dd68d2e215f1f1e8d439506ea920990bd0c6d0dbf3ecb44c04dfd5db5a7808be",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-padre-pio",
+      "retrievedAt": "2026-10-22T19:47:37.440074+00:00",
+      "responseSha256": "40929e0636acc2e88dacc2971e683de0aef82368998d87f565d645c03181c3d2",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-pachomius",
+      "retrievedAt": "2026-10-22T19:48:07.394042+00:00",
+      "responseSha256": "31734a9ed032657834cb40c969aa20dab9fa924ab55ebee6cf900f7f9fbd7e68",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints",
+      "retrievedAt": "2026-10-22T19:47:31.058591+00:00",
+      "responseSha256": "3cfcb6ea27129db86bb5db241f6101f737481ec0d315921edbe1746572d5b5bc",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-ignatius-of-loyola",
+      "retrievedAt": "2026-10-22T19:47:37.315738+00:00",
+      "responseSha256": "270775cdb189f2e677e84f7779d009a2959bad171b619b61a17773b4fa6b1dff",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-scholastica",
+      "retrievedAt": "2026-10-22T19:47:49.794555+00:00",
+      "responseSha256": "b498ac67959b1fa87f52712debb6840e37fb995127bcabf4b7d28e1cf8bf1405",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-charles-de-foucauld",
+      "retrievedAt": "2026-10-22T19:48:11.288371+00:00",
+      "responseSha256": "66b56c00a0ed85a17fd4413bcbc3046db700f14d0048432c57c0d3124f4a0d3d",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-gregory-nazianzus",
+      "retrievedAt": "2026-10-22T19:47:58.249892+00:00",
+      "responseSha256": "269d10d398f279d92ae95ed115a1762a60e2bf3dc006ada0b75b26ce7bc75a8b",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-columba",
+      "retrievedAt": "2026-10-22T19:48:19.818797+00:00",
+      "responseSha256": "4978e4f353a254f9873fe20fa9f61fa297b3048c23fd6834b0f4e0fd49f028ee",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-margaret-mary",
+      "retrievedAt": "2026-10-22T19:48:07.286298+00:00",
+      "responseSha256": "7b8795b44ebdbe66269a4b9f03c6a8499866207a846945b5a8c6390a22a4674f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-pius-x",
+      "retrievedAt": "2026-10-22T19:47:50.253176+00:00",
+      "responseSha256": "6044ab71e4ed504de4aa6314fc19d366a67102412e8a18e3cab0ceb6f461881f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-maximilian-kolbe",
+      "retrievedAt": "2026-10-22T19:48:02.452736+00:00",
+      "responseSha256": "f0a68b0e96c31d46a104b4e53cda34b52e32b0e7574d01de4d8011de667b9792",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-leonardi",
+      "retrievedAt": "2026-10-22T19:47:37.166140+00:00",
+      "responseSha256": "213a272670a5c75d60a67121b205f8f3826c96d380c944942255ce3abc9f96a6",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-oscar-romero",
+      "retrievedAt": "2026-10-22T19:48:15.531779+00:00",
+      "responseSha256": "94cbcbc844f181c5123b77bcf96d3d1e5ec6ffa5000916b7964075b4ba5dd392",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-martin-de-porres",
+      "retrievedAt": "2026-10-22T19:47:49.752321+00:00",
+      "responseSha256": "837e9403987e208f2b821aab75a7c80cae28d4d7c2343ab8a670d901d21301b7",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-frances-cabrini",
+      "retrievedAt": "2026-10-22T19:48:07.281540+00:00",
+      "responseSha256": "b9e966ddda3991eef5f38f008821b2384c1d04ceb45ff1ab80a897e2d5b9217d",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-denis",
+      "retrievedAt": "2026-10-22T19:47:41.397061+00:00",
+      "responseSha256": "4aaf33ef4972997baf6004a0b30ba1e20c67a5a0be18424cc89b8c3695180f11",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-louis-de-montfort",
+      "retrievedAt": "2026-10-22T19:47:59.198721+00:00",
+      "responseSha256": "fe9570df3b46bb30320bf6f36d3bc6b54ca60e64de9fcd663cb505003b8bfd6f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-rita-of-cascia",
+      "retrievedAt": "2026-10-22T19:47:37.548824+00:00",
+      "responseSha256": "a0c06e9d969c88f479521be4a59e36fef5aa2ef70c903186f58e298f2652cf31",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-fisher",
+      "retrievedAt": "2026-10-22T19:48:11.312596+00:00",
+      "responseSha256": "ffb5c014a4c4ecb62be265657c7ae8951913fcf93861207a741fa7782f13e347",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-vincent-de-paul",
+      "retrievedAt": "2026-10-22T19:47:43.019580+00:00",
+      "responseSha256": "7a956f76afebaeb5c1ba4c28cd73152f96f10a310c6b1baf5f3c7ab96f93f088",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-gianna-molla",
+      "retrievedAt": "2026-10-22T19:48:11.317272+00:00",
+      "responseSha256": "736af6c252debff654ddda4356b7353904e5e82f7966e9143c864aea533cc904",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-boniface",
+      "retrievedAt": "2026-10-22T19:48:06.997618+00:00",
+      "responseSha256": "74d12e64cfc89dda3908aee7d8c453430c51bc855d6ec555df0b83f7011332bf",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-rose-of-lima",
+      "retrievedAt": "2026-10-22T19:48:02.906224+00:00",
+      "responseSha256": "c0a79ae02998db39d051a1ed8d4bd8c0ab60a5194d3202a928c894c5ff7fd20a",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-josemaria-escriva",
+      "retrievedAt": "2026-10-22T19:48:11.308337+00:00",
+      "responseSha256": "8e0486e6be979ea07706c61a193a7c9e693eb520deb3ff69d8963bf046b97fde",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-john-bosco",
+      "retrievedAt": "2026-10-22T19:47:58.251910+00:00",
+      "responseSha256": "2a6b8f0a6cb28513645249ab3e5a70020bf080aabfe486ad8ccd07f46d15dcf6",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-charles-borromeo",
+      "retrievedAt": "2026-10-22T19:47:54.145531+00:00",
+      "responseSha256": "486ab4b702877d8cd8fbcfa715f94a72039ef0d2910257416e7fbb86c6a5af10",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-peter-claver",
+      "retrievedAt": "2026-10-22T19:47:58.272125+00:00",
+      "responseSha256": "dc5a884ba4d66e1953e8cb84c5fce98b0967b3e2a6292c26af964247272510ce",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "saint-biography-template",
+      "url": "https://credocatholica.com/saints/saint-kateri-tekakwitha",
+      "retrievedAt": "2026-10-22T19:48:02.488751+00:00",
+      "responseSha256": "3cb219f737387b18d289b1eb4002d6cacbbc33f52bf0a1e81a78375448678f6f",
+      "excerpt": "shaped by specific social and religious dynamics"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-francis",
+      "retrievedAt": "2026-10-22T19:49:00.335041+00:00",
+      "responseSha256": "d5742892b6c10ea277f14efdfbef286b8155cf181712e996fdefd809dc75841e",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-joseph",
+      "retrievedAt": "2026-10-22T19:49:10.409509+00:00",
+      "responseSha256": "c72b7ee96c4726016938157e5cd20dad2a85ba1f07f879d44a7510222eefb148",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-catherine-siena",
+      "retrievedAt": "2026-10-22T19:49:00.806036+00:00",
+      "responseSha256": "f116a4e218ecee2bab657b406ad1d09efb152c001c920639595ed166d6386104",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-our-lady-perpetual-help",
+      "retrievedAt": "2026-10-22T19:49:10.362769+00:00",
+      "responseSha256": "763c8a2d9a532a1e5b84a409bc47f598cb189ca1786b2291abae508600aaa1ff",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-padre-pio",
+      "retrievedAt": "2026-10-22T19:49:04.411121+00:00",
+      "responseSha256": "6ec9111ded757b8fb01cde91e3d8752c1851a8be4c437b66e9dec6281a445e53",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-therese",
+      "retrievedAt": "2026-10-22T19:49:00.330624+00:00",
+      "responseSha256": "666b91b6de7d3d24e76a27a89696fb7e9be255aa94e96798bdfc5662bc1aaaa6",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-anthony",
+      "retrievedAt": "2026-10-22T19:49:00.802643+00:00",
+      "responseSha256": "ba6d914a9e2a9084b227799940ae7d9f1343b746aed89b3ea2033970994349b2",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-michael",
+      "retrievedAt": "2026-10-22T19:49:04.860476+00:00",
+      "responseSha256": "29deb601c4abb97f76fa6d114d37921abd0311b106bb5577e04c745d5945f3b0",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-anne",
+      "retrievedAt": "2026-10-22T19:49:04.828322+00:00",
+      "responseSha256": "694b82c54224275739c1bb6fa105975ad3d1649d33bb40bf54ecd5c8ec1f513b",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-john-paul-ii",
+      "retrievedAt": "2026-10-22T19:49:00.783481+00:00",
+      "responseSha256": "6dd7f8162b7bb7beda3980ca879c3fab96c0067f9610385643a6e4f0377a2278",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-maximilian-kolbe",
+      "retrievedAt": "2026-10-22T19:49:04.354081+00:00",
+      "responseSha256": "7549e4ce3f105af86d2d174811f5af40913cd7492b214f5bbb31634f6462a724",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-holy-spirit",
+      "retrievedAt": "2026-10-22T19:49:10.379555+00:00",
+      "responseSha256": "1c93d4f36744f52b9836cda528f9d2ab2fb6ab3548fbaa9f73073ee5654ec139",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-our-lady-guadalupe",
+      "retrievedAt": "2026-10-22T19:49:10.877220+00:00",
+      "responseSha256": "52d08a8bf9666b440819534f6c28246568611021f9a409fc0abc28c43530af08",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-teresa-calcutta",
+      "retrievedAt": "2026-10-22T19:49:04.855327+00:00",
+      "responseSha256": "8707249fb0319cb00f17fc267de361a6c1edc6dd2a7ab2740d32432417014d6c",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-immaculate-conception",
+      "retrievedAt": "2026-10-22T19:49:00.841833+00:00",
+      "responseSha256": "4e413b39c70e30e5165c899e861824cb4cd0e365e7bc0798e20bbbf2d973917e",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-faustina",
+      "retrievedAt": "2026-10-22T19:49:04.876574+00:00",
+      "responseSha256": "fdb2840a5c878bdad12e8f6d28f2ba11063e790535b1101eb6607a648fd540f1",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-gerard",
+      "retrievedAt": "2026-10-22T19:49:10.851455+00:00",
+      "responseSha256": "31882f6dd46da9ee6d7dd935f69d833e6de615850e5e15cb773fd9c022593cb0",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-benedict",
+      "retrievedAt": "2026-10-22T19:49:04.867977+00:00",
+      "responseSha256": "96b5e1c9bbd0626b0dd8d4c77496c62f83dd6f217360465b20bb233cd0a5a7a1",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-rita",
+      "retrievedAt": "2026-10-22T19:49:04.387674+00:00",
+      "responseSha256": "d2d356cc18a1d5a20d4eac8279c6e5c24043975d0f7445f006c5e5d59a0cfd40",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-our-lady-mount-carmel",
+      "retrievedAt": "2026-10-22T19:49:10.430866+00:00",
+      "responseSha256": "f121ec8978ee1a2378d8d5015deb6a6d226738aa763addb579f101bb40647d38",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-thomas-aquinas",
+      "retrievedAt": "2026-10-22T19:49:00.808444+00:00",
+      "responseSha256": "520bf925d8e10d22cdef8f99a2c6543cd145ad80df744d998d0c284567ccab39",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-peregrine",
+      "retrievedAt": "2026-10-22T19:49:10.428811+00:00",
+      "responseSha256": "d01e41c893dbd41b1865c429af718c8ba42d1666abe8223dff0be3a285c19d2d",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-ignatius-loyola",
+      "retrievedAt": "2026-10-22T19:49:04.409040+00:00",
+      "responseSha256": "730847373d0c49090f387df371b49b8d4387639434bc120976a21298f8d3c27a",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-philomena",
+      "retrievedAt": "2026-10-22T19:49:04.404670+00:00",
+      "responseSha256": "1a5fd00d55f6c652beadd3c4fbf31edd29ed47f39794704da8cc89ec20dfa008",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-sacred-heart",
+      "retrievedAt": "2026-10-22T19:49:00.811528+00:00",
+      "responseSha256": "04447176c0c700717339a9feb871da83a7d2ed9f5abda534d7467273d6170355",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-jude",
+      "retrievedAt": "2026-10-22T19:49:10.406202+00:00",
+      "responseSha256": "9cf91558ee226711d378f5d61a7cdaacfbbce02e2421bc538e1ec710efa7a559",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "novena-day-1-template",
+      "url": "https://credocatholica.com/novenas/novena-saint-monica",
+      "retrievedAt": "2026-10-22T19:49:00.333217+00:00",
+      "responseSha256": "1c4508f07fe4b2a5c87ae7f7ff0f9d53e41c6aae4530ae0eb35044e7b18e6e0b",
+      "excerpt": "Who hast commanded us to pray without ceasing"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-thomas-more",
+      "retrievedAt": "2026-10-22T19:48:02.744535+00:00",
+      "responseSha256": "8512ba38fc556c254af5309fdbd49b4fc8feb46f24343b05a2f9491a177878b7",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-faustina-kowalska",
+      "retrievedAt": "2026-10-22T19:47:37.593520+00:00",
+      "responseSha256": "3ca82b56d8549000fb3d7dcc852175e9b77dd04f66435374ad8883638d34e975",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-bernadette",
+      "retrievedAt": "2026-10-22T19:47:49.799744+00:00",
+      "responseSha256": "23a9dd325049aed4bcfc6c63e4b1f55d443a9c316388afe3590e9d60c43c0a43",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-philip",
+      "retrievedAt": "2026-10-22T19:47:45.620435+00:00",
+      "responseSha256": "6e264064e76138de6b1e1244c4d73ccc35612e52b3c1aa0f92ad90cacb9d27e6",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-benedict",
+      "retrievedAt": "2026-10-22T19:47:54.549983+00:00",
+      "responseSha256": "fc45b7b62e0fac82663d70be9fd502601018fb78040138cbdf451624fc5b52f7",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-ephrem",
+      "retrievedAt": "2026-10-22T19:48:15.519752+00:00",
+      "responseSha256": "793d137f87bc7b80100f76f678699e73da3e37f3276690465ae9d84212452210",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-john-henry-newman",
+      "retrievedAt": "2026-10-22T19:48:12.249738+00:00",
+      "responseSha256": "f57a9d875ae3ed87e131ce3c1fd357715d17c06fa831fe5d90ea1beb53aad412",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-john-damascus",
+      "retrievedAt": "2026-10-22T19:47:54.100461+00:00",
+      "responseSha256": "d3577c75f1fc00c18752158ef07829be730089ac344adb22b2fd54668e9be91a",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-james-greater",
+      "retrievedAt": "2026-10-22T19:47:34.341515+00:00",
+      "responseSha256": "87bcd4fc18ac0ea1c59f0b13b3cd8983590d0b1897d37a915e43cbdf010f472a",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-bartholomew",
+      "retrievedAt": "2026-10-22T19:48:02.553011+00:00",
+      "responseSha256": "3ed631372f5084c0a2df9b3fdf2d5756d16de87675b4c436e8d35b7a6aa9e653",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-john-vianney",
+      "retrievedAt": "2026-10-22T19:48:15.824261+00:00",
+      "responseSha256": "ebfde464f670d7ad438fb89bfde987d42365f9c452dd98525009508b27f47cb3",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-polycarp",
+      "retrievedAt": "2026-10-22T19:48:07.044254+00:00",
+      "responseSha256": "bd35dd9221c371112d9526a274f5befc80e94aa4f1a1eceb602c97e500cc79e4",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-jane-de-chantal",
+      "retrievedAt": "2026-10-22T19:48:11.295351+00:00",
+      "responseSha256": "36cea5fa89bcc91830bd91cb62cfcd4ae482448eee3a8b34d2d9d81cb9c0684c",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-joseph",
+      "retrievedAt": "2026-10-22T19:47:46.012928+00:00",
+      "responseSha256": "e9e64cbd9cbc9a2922b0d15e4a3d4cc24f68ab5558241b04315f0b23f0be04ac",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-damian-molokai",
+      "retrievedAt": "2026-10-22T19:48:11.304571+00:00",
+      "responseSha256": "eb2a39485625764a5c6a8f711ab1979d1f265aa7a9029c96e23ccd0418c64df8",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-gabriel-archangel",
+      "retrievedAt": "2026-10-22T19:47:58.229340+00:00",
+      "responseSha256": "0ba21d3ff26b3bbefb70ca56e4f1aebf875a8894e7aea6c45417073aa9acad36",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-anthony-desert",
+      "retrievedAt": "2026-10-22T19:48:15.570707+00:00",
+      "responseSha256": "3d9cf21e9017796b5cd776791e67b5e99399ca5fb8e8ef3dcbed146e50d344ba",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-philip-neri",
+      "retrievedAt": "2026-10-22T19:47:54.173182+00:00",
+      "responseSha256": "76ea9509f02d086923fb931073d800427a554d996b67646edbadec6290f40587",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-bonaventure",
+      "retrievedAt": "2026-10-22T19:47:45.517594+00:00",
+      "responseSha256": "822963ed2e09e7e78e18471a1a14259dfbe7912f6af9709acbaf081ba09fe9cc",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-edith-stein",
+      "retrievedAt": "2026-10-22T19:48:19.822530+00:00",
+      "responseSha256": "21bfdda0366f999bf56e903af6373efafc3abb1617683a413330c0238e9dab1f",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-jean-de-brebeuf",
+      "retrievedAt": "2026-10-22T19:47:41.413797+00:00",
+      "responseSha256": "05027ccf55ade9e07ca854123ae82b581304d5e17ca297df28e687dfed36c09c",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-anselm",
+      "retrievedAt": "2026-10-22T19:48:06.969104+00:00",
+      "responseSha256": "ad2800ab9201d0efbaff826894dd78ea2bb1d7fdbc8329bee5f3b2ce958320c1",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-isaac-jogues",
+      "retrievedAt": "2026-10-22T19:47:41.410109+00:00",
+      "responseSha256": "cf418c998f8e13bd9b96beab45110191842e2f04d7dfe80a27ed8382c1add7b5",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-michael-archangel",
+      "retrievedAt": "2026-10-22T19:48:06.967003+00:00",
+      "responseSha256": "cd55324e8353513361a4a95b169a09b2982483030f7eabea362a55810edbd1a0",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-james-less",
+      "retrievedAt": "2026-10-22T19:48:15.522940+00:00",
+      "responseSha256": "03851ce48394bf1fd3f3b029c2ee23864efc8ea30cb01595b44a7b180cadc613",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-josephine-bakhita",
+      "retrievedAt": "2026-10-22T19:48:02.606874+00:00",
+      "responseSha256": "88d00379d4e53fcb494fdd4b376516055721e9c6451abff2a475ebbfff317748",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-raphael-archangel",
+      "retrievedAt": "2026-10-22T19:48:02.463180+00:00",
+      "responseSha256": "35dbd72579869a901ef53aac257987f401783d0b2cac81e4a031d44ce8507dd5",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-cyril-alexandria",
+      "retrievedAt": "2026-10-22T19:48:11.292636+00:00",
+      "responseSha256": "23e01a1a669056f0592ea8914cd4d7923e25520935c5861d98d6b35a3f4c49bd",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-brigid",
+      "retrievedAt": "2026-10-22T19:48:02.892369+00:00",
+      "responseSha256": "fce7491707633c584a03a780379427da399a2f08a0626957002a601f32064026",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-clare-of-assisi",
+      "retrievedAt": "2026-10-22T19:47:37.150488+00:00",
+      "responseSha256": "dd68d2e215f1f1e8d439506ea920990bd0c6d0dbf3ecb44c04dfd5db5a7808be",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-alphonsus-liguori",
+      "retrievedAt": "2026-10-22T19:48:17.731044+00:00",
+      "responseSha256": "b9e3d3a6e3a30786413111eb75e65011a1ab32c0272f936c6c38ce7092eabc58",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-peter",
+      "retrievedAt": "2026-10-22T19:47:45.495573+00:00",
+      "responseSha256": "43915270f36538629b2b44e278965e319d583034a85711964fcbc3b084a395aa",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-pachomius",
+      "retrievedAt": "2026-10-22T19:48:07.394042+00:00",
+      "responseSha256": "31734a9ed032657834cb40c969aa20dab9fa924ab55ebee6cf900f7f9fbd7e68",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints",
+      "retrievedAt": "2026-10-22T19:47:31.058591+00:00",
+      "responseSha256": "3cfcb6ea27129db86bb5db241f6101f737481ec0d315921edbe1746572d5b5bc",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-scholastica",
+      "retrievedAt": "2026-10-22T19:47:49.794555+00:00",
+      "responseSha256": "b498ac67959b1fa87f52712debb6840e37fb995127bcabf4b7d28e1cf8bf1405",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-charles-de-foucauld",
+      "retrievedAt": "2026-10-22T19:48:11.288371+00:00",
+      "responseSha256": "66b56c00a0ed85a17fd4413bcbc3046db700f14d0048432c57c0d3124f4a0d3d",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-gregory-nazianzus",
+      "retrievedAt": "2026-10-22T19:47:58.249892+00:00",
+      "responseSha256": "269d10d398f279d92ae95ed115a1762a60e2bf3dc006ada0b75b26ce7bc75a8b",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-columba",
+      "retrievedAt": "2026-10-22T19:48:19.818797+00:00",
+      "responseSha256": "4978e4f353a254f9873fe20fa9f61fa297b3048c23fd6834b0f4e0fd49f028ee",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-margaret-mary",
+      "retrievedAt": "2026-10-22T19:48:07.286298+00:00",
+      "responseSha256": "7b8795b44ebdbe66269a4b9f03c6a8499866207a846945b5a8c6390a22a4674f",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-bernard-clairvaux",
+      "retrievedAt": "2026-10-22T19:47:41.415830+00:00",
+      "responseSha256": "06b096cf8c24dc62c60845206a303c79adf5e3c773b698e5132c371657cd587e",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-pius-x",
+      "retrievedAt": "2026-10-22T19:47:50.253176+00:00",
+      "responseSha256": "6044ab71e4ed504de4aa6314fc19d366a67102412e8a18e3cab0ceb6f461881f",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/blessed-virgin-mary",
+      "retrievedAt": "2026-10-22T19:47:45.547792+00:00",
+      "responseSha256": "6140cd1136b11c7ce977befb00823f9a1ddbeed4c8e04104efad7c6af5845c9c",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-oscar-romero",
+      "retrievedAt": "2026-10-22T19:48:15.531779+00:00",
+      "responseSha256": "94cbcbc844f181c5123b77bcf96d3d1e5ec6ffa5000916b7964075b4ba5dd392",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-robert-bellarmine",
+      "retrievedAt": "2026-10-22T19:47:41.461614+00:00",
+      "responseSha256": "e80e03ddc4566e837ada1268edb77258ce0b1e4d47eda113726233a2c38667c0",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-frances-cabrini",
+      "retrievedAt": "2026-10-22T19:48:07.281540+00:00",
+      "responseSha256": "b9e966ddda3991eef5f38f008821b2384c1d04ceb45ff1ab80a897e2d5b9217d",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-louis-de-montfort",
+      "retrievedAt": "2026-10-22T19:47:59.198721+00:00",
+      "responseSha256": "fe9570df3b46bb30320bf6f36d3bc6b54ca60e64de9fcd663cb505003b8bfd6f",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-francis-de-sales",
+      "retrievedAt": "2026-10-22T19:48:17.669502+00:00",
+      "responseSha256": "535ebd79942264bd9ef90a4e02af4c93b7b2ac7f478c378d56d79a8281a8df8f",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-john-fisher",
+      "retrievedAt": "2026-10-22T19:48:11.312596+00:00",
+      "responseSha256": "ffb5c014a4c4ecb62be265657c7ae8951913fcf93861207a741fa7782f13e347",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-simon",
+      "retrievedAt": "2026-10-22T19:47:49.904593+00:00",
+      "responseSha256": "f5f1b8b93270b99daad7e4e888fb91dd6c27d9f7f2869b3f8d42f0dea42001a1",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-vincent-de-paul",
+      "retrievedAt": "2026-10-22T19:47:43.019580+00:00",
+      "responseSha256": "7a956f76afebaeb5c1ba4c28cd73152f96f10a310c6b1baf5f3c7ab96f93f088",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-gianna-molla",
+      "retrievedAt": "2026-10-22T19:48:11.317272+00:00",
+      "responseSha256": "736af6c252debff654ddda4356b7353904e5e82f7966e9143c864aea533cc904",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-boniface",
+      "retrievedAt": "2026-10-22T19:48:06.997618+00:00",
+      "responseSha256": "74d12e64cfc89dda3908aee7d8c453430c51bc855d6ec555df0b83f7011332bf",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-leo-great",
+      "retrievedAt": "2026-10-22T19:48:15.543308+00:00",
+      "responseSha256": "0e6b35f15ddd09e879016a89732c50b8094d7be1107a9a80f389ea99915bd8ab",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-catherine-siena",
+      "retrievedAt": "2026-10-22T19:47:49.873763+00:00",
+      "responseSha256": "e90690c63dcd2b2ec1d2c97ca90125c0ab33e7051bbd12e07f6039541c650bcc",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-josemaria-escriva",
+      "retrievedAt": "2026-10-22T19:48:11.308337+00:00",
+      "responseSha256": "8e0486e6be979ea07706c61a193a7c9e693eb520deb3ff69d8963bf046b97fde",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-charles-borromeo",
+      "retrievedAt": "2026-10-22T19:47:54.145531+00:00",
+      "responseSha256": "486ab4b702877d8cd8fbcfa715f94a72039ef0d2910257416e7fbb86c6a5af10",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-hildegard-of-bingen",
+      "retrievedAt": "2026-10-22T19:47:41.352808+00:00",
+      "responseSha256": "ade0dba5836994e182982bc43e2758ba71a269f511cb3ec6874475715f3ca817",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-matthias",
+      "retrievedAt": "2026-10-22T19:47:54.142103+00:00",
+      "responseSha256": "809d3e7461c05081967eb063aee78ffde25df648bc3f559db2710e014d54d760",
+      "excerpt": "The Universal Church"
+    },
+    {
+      "finding": "universal-church-text",
+      "url": "https://credocatholica.com/saints/saint-peter-claver",
+      "retrievedAt": "2026-10-22T19:47:58.272125+00:00",
+      "responseSha256": "dc5a884ba4d66e1953e8cb84c5fce98b0967b3e2a6292c26af964247272510ce",
+      "excerpt": "The Universal Church"
+    }
+  ]
+}

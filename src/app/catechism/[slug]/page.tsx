@@ -176,7 +176,10 @@ export default async function CatechismDetailPage({ params }: Props) {
           color: 'var(--color-text-muted)',
         }}
       >
-        <strong>Official Vatican Source:</strong> Catechism of the Catholic Church, Vatican Publishing House (Libreria Editrice Vaticana).
+        <strong>Source verification pending.</strong> The stored text has not yet been verified as a complete verbatim transcription of the stated paragraphs.{' '}
+        <a href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener noreferrer">
+          Read the official Catechism on the Vatican website ↗
+        </a>
       </footer>
     </article>
   );

@@ -1,6 +1,10 @@
 import { MetadataRoute } from 'next';
 import { prisma } from '@/lib/prisma';
 
+// Reflect restored database content at request time, without requiring database
+// access while compiling a deployment.
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://credocatholica.com';
 

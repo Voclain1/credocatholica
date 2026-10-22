@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
+import { correctOfficialDocumentUrl } from '@/lib/content/document-sources';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -34,6 +35,7 @@ export default async function ChurchDocumentDetailPage({ params }: Props) {
   if (!doc || doc.publicationStatus !== 'PUBLISHED') {
     notFound();
   }
+  const officialUrl = correctOfficialDocumentUrl(doc.officialUrl);
 
   return (
     <article className="container" style={{ padding: '2.5rem 1rem 4rem', maxWidth: '48rem' }}>
@@ -95,7 +97,7 @@ export default async function ChurchDocumentDetailPage({ params }: Props) {
         }}
       >
         <h2 style={{ fontSize: '0.875rem', fontWeight: 700, color: 'var(--color-secondary)', textTransform: 'uppercase', marginBottom: '0.75rem' }}>
-          Official Summary & Scope
+          Editorial Summary
         </h2>
         <p style={{ fontSize: '1.0625rem', lineHeight: 1.6, color: 'var(--color-text)', margin: 0 }}>
           {doc.summary}
@@ -105,7 +107,7 @@ export default async function ChurchDocumentDetailPage({ params }: Props) {
       {/* Opening Excerpt */}
       <section style={{ marginBottom: '2.5rem' }}>
         <h2 style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>
-          Opening Proclamation (Incipit)
+          Stored Reference Text
         </h2>
         <div
           style={{
@@ -119,15 +121,15 @@ export default async function ChurchDocumentDetailPage({ params }: Props) {
             borderRadius: 'var(--radius-sm)',
           }}
         >
-          "{doc.bodyText}"
+          {doc.bodyText}
         </div>
       </section>
 
       {/* Official Vatican Link */}
-      {doc.officialUrl && (
+      {officialUrl && (
         <section style={{ marginBottom: '2.5rem' }}>
           <a
-            href={doc.officialUrl}
+            href={officialUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{

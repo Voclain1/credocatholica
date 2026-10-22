@@ -11,6 +11,9 @@ import { applyIngestionPackage } from '../src/applier.js';
 import { mapModernPsalmToDouayRheims } from '../src/scripture-resolver.js';
 import { SourceIngestionPackage } from '../src/types.js';
 
+// Mutation tests must never inherit an arbitrary production DATABASE_URL.
+const databaseIntegrationEnabled = Boolean(process.env.TEST_DATABASE_URL) && process.env.DATABASE_URL === process.env.TEST_DATABASE_URL;
+
 const validFixture: SourceIngestionPackage = {
   metadata: {
     packageName: 'test-valid-pkg',
@@ -398,7 +401,7 @@ test('17. Liturgical Ingestion — Sub-Verse Manual Verification & Deterministic
   assert.equal(report.verdict, 'REQUIRES_REVIEW');
 });
 
-test('18. Liturgical Ingestion — Non-Destructive Apply Idempotency & Entity ID Preservation (Disposable Data)', async () => {
+test('18. Liturgical Ingestion — Non-Destructive Apply Idempotency & Entity ID Preservation (Disposable Data)', { skip: !databaseIntegrationEnabled && 'Requires a disposable TEST_DATABASE_URL matching DATABASE_URL' }, async () => {
   const { applyIngestionPackage } = await import('../src/applier.js');
   const { prisma } = await import('../../../src/lib/prisma/index.js');
 
@@ -448,6 +451,7 @@ test('18. Liturgical Ingestion — Non-Destructive Apply Idempotency & Entity ID
                 type: 'FIRST_READING',
                 readingOrder: 1,
                 citationRef: 'Genesis 1:1',
+                scriptureRef: 'Genesis 1:1',
                 text: 'In the beginning God created heaven, and earth.',
                 textStatus: 'VERIFIED_EXACT',
               },
@@ -523,7 +527,7 @@ test('18. Liturgical Ingestion — Non-Destructive Apply Idempotency & Entity ID
   }
 });
 
-test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Reordering, Middle Insertion & Set Shifts', async () => {
+test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Reordering, Middle Insertion & Set Shifts', { skip: !databaseIntegrationEnabled && 'Requires a disposable TEST_DATABASE_URL matching DATABASE_URL' }, async () => {
   const { applyIngestionPackage } = await import('../src/applier.js');
   const { prisma } = await import('../../../src/lib/prisma/index.js');
 
@@ -569,6 +573,7 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'first-reading-test-key',
                   readingOrder: 1,
                   citationRef: 'Genesis 1:1',
+                scriptureRef: 'Genesis 1:1',
                   text: 'In the beginning God created heaven, and earth.',
                   textStatus: 'VERIFIED_EXACT',
                 },
@@ -577,7 +582,8 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'gospel-test-key',
                   readingOrder: 2,
                   citationRef: 'John 1:1',
-                  text: 'In the beginning was the Word.',
+                  scriptureRef: 'John 1:1',
+                  text: 'In the beginning was the Word: and the Word was with God: and the Word was God.',
                   textStatus: 'VERIFIED_EXACT',
                 },
               ],
@@ -617,6 +623,7 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'first-reading-test-key',
                   readingOrder: 1,
                   citationRef: 'Genesis 1:1',
+                scriptureRef: 'Genesis 1:1',
                   text: 'In the beginning God created heaven, and earth.',
                   textStatus: 'VERIFIED_EXACT',
                 },
@@ -626,14 +633,15 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   readingOrder: 2,
                   citationRef: 'Alleluia',
                   text: 'Alleluia, alleluia.',
-                  textStatus: 'VERIFIED_EXACT',
+                  textStatus: 'REQUIRES_MANUAL_SEGMENT_REVIEW',
                 },
                 {
                   type: 'GOSPEL',
                   sourceKey: 'gospel-test-key',
                   readingOrder: 3,
                   citationRef: 'John 1:1',
-                  text: 'In the beginning was the Word.',
+                  scriptureRef: 'John 1:1',
+                  text: 'In the beginning was the Word: and the Word was with God: and the Word was God.',
                   textStatus: 'VERIFIED_EXACT',
                 },
               ],
@@ -684,7 +692,7 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   readingOrder: 1,
                   citationRef: 'Apocalypse 1:1',
                   text: 'The Revelation of Jesus Christ.',
-                  textStatus: 'VERIFIED_EXACT',
+                  textStatus: 'REQUIRES_MANUAL_SEGMENT_REVIEW',
                 },
               ],
             },
@@ -700,6 +708,7 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'first-reading-test-key',
                   readingOrder: 1,
                   citationRef: 'Genesis 1:1',
+                scriptureRef: 'Genesis 1:1',
                   text: 'In the beginning God created heaven, and earth.',
                   textStatus: 'VERIFIED_EXACT',
                 },
@@ -708,7 +717,8 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'gospel-test-key',
                   readingOrder: 2,
                   citationRef: 'John 1:1',
-                  text: 'In the beginning was the Word.',
+                  scriptureRef: 'John 1:1',
+                  text: 'In the beginning was the Word: and the Word was with God: and the Word was God.',
                   textStatus: 'VERIFIED_EXACT',
                 },
               ],
@@ -779,6 +789,7 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'first-reading-test-key',
                   readingOrder: 1,
                   citationRef: 'Genesis 1:1',
+                scriptureRef: 'Genesis 1:1',
                   text: 'In the beginning God created heaven, and earth.',
                   textStatus: 'VERIFIED_EXACT',
                 },
@@ -787,7 +798,8 @@ test('19. Liturgical Ingestion — Stable Source Key Identity Survival Across Re
                   sourceKey: 'gospel-test-key',
                   readingOrder: 2,
                   citationRef: 'John 1:1',
-                  text: 'In the beginning was the Word.',
+                  scriptureRef: 'John 1:1',
+                  text: 'In the beginning was the Word: and the Word was with God: and the Word was God.',
                   textStatus: 'VERIFIED_EXACT',
                 },
               ],

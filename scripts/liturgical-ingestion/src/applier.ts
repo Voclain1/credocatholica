@@ -7,6 +7,7 @@ import {
   getReadingSourceKey,
 } from './types.js';
 import { sanitizeScriptureText, generateSlug } from './normalizer.js';
+import { assertExactReadingTexts } from '../../content-audit/exact-reading-gate.js';
 import {
   LiturgicalColor,
   CelebrationRank,
@@ -32,6 +33,10 @@ export async function applyIngestionPackage(
       `APPLY ABORTED: Environment variable LITURGY_INGEST_ENV=development is required to execute database apply.`
     );
   }
+
+  // A hash-approved package can still contain paraphrases or incomplete ranges.
+  // Establish source fidelity before entering any per-day transaction.
+  assertExactReadingTexts(pkg);
 
   let insertedDays = 0;
   let updatedDays = 0;

@@ -353,6 +353,7 @@ export const CatechismEntryScalarFieldEnum = {
   magisterialWeight: 'magisterialWeight',
   councilSource: 'councilSource',
   bodyText: 'bodyText',
+  sourceUrl: 'sourceUrl',
   publicationStatus: 'publicationStatus',
   publishedAt: 'publishedAt',
   createdAt: 'createdAt',
